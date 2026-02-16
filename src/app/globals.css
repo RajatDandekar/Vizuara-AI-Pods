@@ -1,26 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import "tailwindcss";
+@import "highlight.js/styles/github.css";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
+  --card-bg: #ffffff;
+  --card-border: #d4d4d8;
+  --text-secondary: #525252;
+  --text-muted: #a3a3a3;
+  --accent-blue: #2563eb;
+  --accent-blue-light: #dbeafe;
+  --accent-green: #16a34a;
+  --accent-green-light: #dcfce7;
+  --accent-amber: #d97706;
+  --accent-amber-light: #fef3c7;
+  --accent-red: #dc2626;
+  --timeline-line: #d4d4d8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue-light: var(--accent-blue-light);
+  --color-accent-green: var(--accent-green);
+  --color-accent-green-light: var(--accent-green-light);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-amber-light: var(--accent-amber-light);
+  --color-accent-red: var(--accent-red);
+  --color-timeline-line: var(--timeline-line);
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Streaming cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.streaming-cursor::after {
+  content: "▊";
+  animation: blink 1s step-end infinite;
+  color: var(--accent-blue);
+  margin-left: 2px;
+}
+
+/* Pulse animation for loading indicators */
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* Fade-in for tooltips / hints */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+/* Ken Burns slow zoom-pan for expanded card thumbnails */
+@keyframes kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  25%  { transform: scale(1.08) translate(-1%, 1%); }
+  50%  { transform: scale(1.12) translate(1%, -0.5%); }
+  75%  { transform: scale(1.06) translate(-0.5%, 0.5%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.kenburns-active {
+  animation: kenburns 20s ease-in-out infinite;
+}
+
+/* Landing page theme (scoped — only applies inside .light-landing) */
+.light-landing {
+  --dl-bg: #fafafa;
+  --dl-surface: #ffffff;
+  --dl-surface-hover: #f8fafc;
+  --dl-border: #cbd5e1;
+  --dl-border-hover: #94a3b8;
+  --dl-text: #0f172a;
+  --dl-text-secondary: #475569;
+  --dl-text-muted: #94a3b8;
+  --dl-accent: #2563eb;
+}
+
+/* Dark landing theme (about, letter pages) */
+.dark-landing {
+  --dl-bg: #020617;
+  --dl-surface: rgba(255, 255, 255, 0.05);
+  --dl-surface-hover: rgba(255, 255, 255, 0.08);
+  --dl-border: rgba(255, 255, 255, 0.1);
+  --dl-border-hover: rgba(255, 255, 255, 0.18);
+  --dl-text: #f8fafc;
+  --dl-text-secondary: #cbd5e1;
+  --dl-text-muted: #64748b;
+  --dl-accent: #3b82f6;
+}
+
+.glass-card {
+  background: var(--dl-surface);
+  border: 1px solid var(--dl-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: var(--dl-surface-hover);
+  border-color: var(--dl-border-hover);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Hide scrollbar for horizontal scroll rows */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Code block styling */
+pre code.hljs {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Markdown content styling */
+.markdown-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Article title (h1) — large, bold, distinct */
+.markdown-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  letter-spacing: -0.025em;
+}
+
+/* Subtitle — h2 that immediately follows h1 */
+.markdown-content h1 + h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Subtitle — paragraph that immediately follows h1 (italic, bold, or plain) */
+.markdown-content h1 + p {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Separator after subtitle gets extra breathing room */
+.markdown-content h1 + p + hr,
+.markdown-content h1 + h2 + hr {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Main section headings — accent border to distinguish from subsections */
+.markdown-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  letter-spacing: -0.015em;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent-blue);
+}
+
+/* Subsection headings — blue tint to distinguish from bold body text */
+.markdown-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent-blue);
+}
+
+.markdown-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.markdown-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.markdown-content code:not(pre code) {
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+}
+
+.markdown-content pre {
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.markdown-content strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* Images — centered with breathing room */
+.markdown-content img {
+  margin: 1.5rem auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Image captions (italic text immediately after image, same paragraph) */
+.markdown-content img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid var(--card-border);
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background: var(--background);
+  font-weight: 600;
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--card-border);
+  margin: 2.5rem 0;
 }

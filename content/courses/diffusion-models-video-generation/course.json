@@ -1,0 +1,71 @@
+{
+  "title": "From Still to Motion: How Diffusion Models Learned to Generate Videos",
+  "slug": "diffusion-models-video-generation",
+  "description": "Extending image diffusion to the temporal dimension — from 2D noise to coherent video, one frame at a time.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "The Flipbook Intuition",
+    "What Makes Video Different from Images?",
+    "The Naive Approach — Why Frame-by-Frame Fails",
+    "Extending the Diffusion Framework to Video",
+    "The Architecture — How Neural Networks Learn Space and Time"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Video Diffusion from Scratch: Generating Moving Digits",
+      "slug": "01-video_diffusion_from_scratch",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/129hJPDejLcHvAYkv3ruNmdDLBY__ohA6",
+      "downloadPath": "/notebooks/diffusion-models-video-generation/01_video_diffusion_from_scratch.ipynb",
+      "estimatedMinutes": 51,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Factorized Space-Time Attention for Video Diffusion",
+      "slug": "02-factorized_spacetime_attention",
+      "objective": "In Notebook 1, we built a simple video diffusion model using 3D convolutions. It worked — but it was slow and inflexible. In this notebook, we will build the **real** architecture behind modern video ",
+      "colabUrl": "https://colab.research.google.com/drive/1qnNeN1kGzybVq7oGaHTMqF10LtTf3XT8",
+      "downloadPath": "/notebooks/diffusion-models-video-generation/02_factorized_spacetime_attention.ipynb",
+      "estimatedMinutes": 69,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Latent Video Diffusion and the Diffusion Transformer (DiT)",
+      "slug": "03-latent_video_diffusion_and_dit",
+      "objective": "In Notebooks 1 and 2, we built video diffusion models that operate directly on pixel space. This works for our 32×32 Moving MNIST examples, but real videos are 256×256 or higher — making pixel-space d",
+      "colabUrl": "https://colab.research.google.com/drive/17q19iAdgONUGR15C_mSl0GNQUtuGVQR4",
+      "downloadPath": "/notebooks/diffusion-models-video-generation/03_latent_video_diffusion_and_dit.ipynb",
+      "estimatedMinutes": 80,
+      "todoCount": 1,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Synthetic Driving Scenario Generation with Video Diffusion Models",
+    "subtitle": "Meridian Autonomy -- Generating Rare Driving Scenarios for Perception Model Training",
+    "company": "Meridian Autonomy",
+    "industry": "Autonomous Vehicles -- Long-Haul Freight",
+    "description": "Meridian's perception models perform well on the 99.5% of driving that is routine -- clear weather, standard lane markings, predictable traffic. But internal safety reviews have identified 23 categories of rare scenarios where the perception stack degrades significantly:",
+    "pdfPath": "/case-studies/diffusion-models-video-generation/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1TtXr2iruYzz1stTSJNkQhOBUz29LAaP8",
+    "notebookPath": "/case-studies/diffusion-models-video-generation/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

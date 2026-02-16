@@ -1,0 +1,104 @@
+{
+  "title": "5D Parallelism from Scratch",
+  "slug": "5d-parallelism-from-scratch",
+  "description": "How modern LLMs are trained across thousands of GPUs — understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism from first principles.",
+  "difficulty": "intermediate",
+  "estimatedHours": 17,
+  "prerequisites": [],
+  "tags": [
+    "Why Do We Need Parallelism?",
+    "Data Parallelism — \"Hire More Chefs\"",
+    "Tensor Parallelism — \"Split the Recipe Across Chefs\"",
+    "Pipeline Parallelism — \"The Assembly Line\"",
+    "Sequence Parallelism — \"Split the Sentence\""
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Why Do We Need Parallelism? Memory & Compute Bottlenecks",
+      "slug": "01-why_parallelism",
+      "objective": "In this notebook, you will learn to calculate exactly how much memory any model needs for training — and understand, with concrete numbers, why a single GPU is never enough for modern LLMs. By the end",
+      "colabUrl": "https://colab.research.google.com/drive/1gvgEj7aEmsTZBimf7KAtHP4ffeQ7qM0z",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/01_why_parallelism.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 123,
+      "todoCount": 0,
+      "order": 1
+    },
+    {
+      "title": "Data Parallelism & ZeRO: Splitting Data Across GPUs",
+      "slug": "02-data_parallelism",
+      "objective": "In this notebook, we will implement Data Parallelism from scratch. We will simulate 4 \"virtual GPUs\" on a single device, split mini-batches across them, implement the AllReduce gradient averaging algo",
+      "colabUrl": "https://colab.research.google.com/drive/1WGpJ5WRjiDujOJyFCKk8IMBQyCVMIKOf",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/02_data_parallelism.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 207,
+      "todoCount": 2,
+      "order": 2
+    },
+    {
+      "title": "Tensor Parallelism: Splitting Layers Across GPUs",
+      "slug": "03-tensor_parallelism",
+      "objective": "In this notebook, you will tear a single weight matrix apart, distribute its pieces across simulated GPUs, and stitch the results back together — all from scratch. By the end, you will have a working ",
+      "colabUrl": "https://colab.research.google.com/drive/1tkLo6zYIgZnwsqm6NPpbTVVuN9Tcjrb5",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/03_tensor_parallelism.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 186,
+      "todoCount": 1,
+      "order": 3
+    },
+    {
+      "title": "Pipeline Parallelism: The GPU Assembly Line",
+      "slug": "04-pipeline_parallelism",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1LKe9vsY5xtb3U9GSzmB3cv-Bt-hbIR4X",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/04_pipeline_parallelism.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 120,
+      "todoCount": 0,
+      "order": 4
+    },
+    {
+      "title": "Sequence & Expert Parallelism: The Final Two Dimensions",
+      "slug": "05-sequence_expert_parallelism",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1I3vxhz0ujXyLkeNR4x82vTKpbft_d6PK",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/05_sequence_expert_parallelism.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 190,
+      "todoCount": 3,
+      "order": 5
+    },
+    {
+      "title": "The 5D Grid: Composing All Parallelism Dimensions",
+      "slug": "06-5d_grid",
+      "objective": "In this final notebook, we bring everything together. We have learned five parallelism strategies individually — now we will see how they **compose** into a single, unified system that spans thousands",
+      "colabUrl": "https://colab.research.google.com/drive/10BXZrdL-j7_FS-czVPEnhz20Ni1-LNKi",
+      "downloadPath": "/notebooks/5d-parallelism-from-scratch/06_5d_grid.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 198,
+      "todoCount": 2,
+      "order": 6
+    }
+  ],
+  "caseStudy": {
+    "title": "Optimizing 5D Parallelism for Training a Financial Domain LLM",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "Meridian AI",
+    "industry": "Financial Services / AI Infrastructure",
+    "description": "Meridian's current production model is a fine-tuned Llama 3 70B, which achieves acceptable but not competitive performance on financial benchmarks. Internal evaluations show:",
+    "pdfPath": "/case-studies/5d-parallelism-from-scratch/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1-HnD7AsE3LtkRiI7RLOi5MjDsO3RCTpY",
+    "notebookPath": "/case-studies/5d-parallelism-from-scratch/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

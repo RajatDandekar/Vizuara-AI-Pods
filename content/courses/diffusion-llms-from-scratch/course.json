@@ -1,0 +1,82 @@
+{
+  "title": "Diffusion LLMs from Scratch",
+  "slug": "diffusion-llms-from-scratch",
+  "description": "What if language models could generate all tokens at once — like image diffusion, but for text?",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "A Quick Recap: How Diffusion Works for Images",
+    "\"But Wait — Diffusion Is for Images, Not Text!\"",
+    "The Big Intuition: Masking Is the \"Noise\" for Text",
+    "The Reverse Process: Learning to Unmask",
+    "Generation: How to Actually Create Text"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Image Diffusion Foundations: From Noise to Pictures",
+      "slug": "01-image_diffusion_foundations",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1nYxbikFaVejVn12PVqmsthugcFjGQ2Dg",
+      "downloadPath": "/notebooks/diffusion-llms-from-scratch/01_image_diffusion_foundations.ipynb",
+      "estimatedMinutes": 57,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Masked Diffusion for Text: The Forward Process",
+      "slug": "02-masked_diffusion_for_text",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1sc43HVVJNJLdp25YinmucB887IlkUQG2",
+      "downloadPath": "/notebooks/diffusion-llms-from-scratch/02_masked_diffusion_for_text.ipynb",
+      "estimatedMinutes": 52,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Training a Diffusion LLM: The ELBO and Beyond",
+      "slug": "03-training_diffusion_llm",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1NKTvuub-qm7AE7-vKcjv5F5MjFEX6hi_",
+      "downloadPath": "/notebooks/diffusion-llms-from-scratch/03_training_diffusion_llm.ipynb",
+      "estimatedMinutes": 51,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Generation: Iterative Unmasking — The Grand Finale",
+      "slug": "04-generation_iterative_unmasking",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1LFQ_BUvAOCY4GfcSiIGEVB2m-zs3AgA8",
+      "downloadPath": "/notebooks/diffusion-llms-from-scratch/04_generation_iterative_unmasking.ipynb",
+      "estimatedMinutes": 54,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Real-Time Code Completion with Diffusion Language Models",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "Velocode",
+    "industry": "AI-Assisted Developer Tools",
+    "description": "Velocode is losing enterprise deals — and the reason is latency.",
+    "pdfPath": "/case-studies/diffusion-llms-from-scratch/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/15qshkIYGDqxQT1ehifEPvD77CJ61HMPg",
+    "notebookPath": "/case-studies/diffusion-llms-from-scratch/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

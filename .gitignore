@@ -33,6 +33,23 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Google service account credentials
+.service-account.json
+
+# Python venv
+.venv/
+
+# SQLite database
+/data/*.db
+/data/*.db-wal
+/data/*.db-shm
+
+# working output (drafts, narration source, generated notebooks)
+/output/
+
+# logs
+excalidraw.log
+
 # vercel
 .vercel
 

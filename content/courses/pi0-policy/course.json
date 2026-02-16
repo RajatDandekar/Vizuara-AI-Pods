@@ -1,0 +1,20 @@
+{
+  "title": "How Does the Pi0 Policy from Physical Intelligence Exactly Work?",
+  "slug": "pi0-policy",
+  "description": "Inside the architecture that taught a single AI model to fold laundry, assemble boxes, and bus tables",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "A Robot That Folds Your Laundry",
+    "Why Not Just Use a Regular VLA?",
+    "Flow Matching: Learning to Transform Noise into Actions",
+    "The Pi0 Architecture: Putting It All Together",
+    "The Training Recipe: Three Stages"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

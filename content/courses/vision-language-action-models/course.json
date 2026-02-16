@@ -1,0 +1,20 @@
+{
+  "title": "Vision Language Action Models (VLAs)",
+  "slug": "vision-language-action-models",
+  "description": "How a single AI model can see, understand language, and control a robot — all at once",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "The Dream: One Brain for Seeing, Understanding, and Acting",
+    "The Old Way: Pipelines That Break",
+    "How VLAs Work: The Architecture",
+    "The Pioneers: RT-2, Octo, and OpenVLA",
+    "Training VLAs: The Two-Stage Recipe"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

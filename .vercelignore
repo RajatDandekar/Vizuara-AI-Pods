@@ -1,0 +1,8 @@
+output/
+reference-articles/
+scripts/
+.claude/
+excalidraw.log
+notebook_pedagogy.md
+narration-guide.md
+style-profile.md

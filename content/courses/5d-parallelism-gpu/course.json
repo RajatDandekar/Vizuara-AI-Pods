@@ -1,0 +1,20 @@
+{
+  "title": "5D Parallelism: How We Train Models That Don't Fit on a Single GPU",
+  "slug": "5d-parallelism-gpu",
+  "description": "Understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism — the five dimensions that power today's largest AI models",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "The \"One GPU Is Not Enough\" Problem",
+    "The Big Picture: Five Dimensions",
+    "Dimension 1: Data Parallelism (DP)",
+    "Dimension 2: Tensor Parallelism (TP)",
+    "Dimension 3: Pipeline Parallelism (PP)"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

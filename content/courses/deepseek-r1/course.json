@@ -1,0 +1,20 @@
+{
+  "title": "DeepSeek-R1 Explained From Scratch",
+  "slug": "deepseek-r1",
+  "description": "How Reinforcement Learning Teaches Language Models to Reason Step by Step",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "Why Do LLMs Need to \"Think\"?",
+    "DeepSeek-R1-Zero: Pure RL, No Supervision",
+    "The \"Aha Moment\"",
+    "GRPO: The RL Algorithm Behind R1",
+    "From R1-Zero to R1: The Full Pipeline"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Reinforcement Learning in DeepSeek-R1 — How Pure RL Taught a Language Model to Think",
+  "slug": "reinforcement-learning-deepseek-r1",
+  "description": "## Understanding GRPO, rule-based rewards, and the \"aha moment\" from first principles",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "Quick Refresher: RL for Language Models",
+    "What Makes DeepSeek-R1 Different?",
+    "Group Relative Policy Optimization (GRPO) — The Core Idea",
+    "Why GRPO Works — The Intuition",
+    "Rule-Based Rewards — No Reward Model Needed"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "RT-1 and RT-2: Google's Robotics Transformers",
+  "slug": "rt1-rt2-google",
+  "description": "How Google taught robots to understand 700 tasks — and then gave them the power of language models",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "The Robot That Understands \"Pick Up the Unhealthy Option\"",
+    "The Problem: Why Was Robot Learning So Hard?",
+    "RT-1: The Robotics Transformer",
+    "RT-2: When Robots Learn to Think",
+    "RT-1 vs RT-2: Head-to-Head"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

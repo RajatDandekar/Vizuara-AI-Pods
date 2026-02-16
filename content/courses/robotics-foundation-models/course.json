@@ -1,0 +1,20 @@
+{
+  "title": "Developments in Robotics Foundation Models",
+  "slug": "robotics-foundation-models",
+  "description": "From task-specific controllers to general-purpose robot brains — how foundation models are transforming robotics",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "One Model to Rule Them All",
+    "Why Robotics Needed Foundation Models",
+    "The Timeline: A Revolution in Three Years",
+    "The Open X-Embodiment Dataset: ImageNet for Robots",
+    "The Architecture Blueprint: How They All Work"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

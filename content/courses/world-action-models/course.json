@@ -1,0 +1,97 @@
+{
+  "title": "World Action Models: How AI Learns to Imagine Before It Acts",
+  "slug": "world-action-models",
+  "description": "From mental simulations to robot control — a complete guide to world models, imagination-based learning, and Vision-Language-Action architectures",
+  "difficulty": "intermediate",
+  "estimatedHours": 10,
+  "prerequisites": [],
+  "tags": [
+    "What is a World Model?",
+    "The Birth of World Models — Ha & Schmidhuber (2018)",
+    "Learning in Imagination — DreamerV3",
+    "Predicting in Abstract Space — JEPA",
+    "Interactive Worlds — Genie"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "World Models from First Principles",
+      "slug": "01-world_models_first_principles",
+      "objective": "In this notebook, we will build a world model from scratch. Not a toy example — a real neural network that learns the physics of CartPole and uses that learned physics to make intelligent decisions.",
+      "colabUrl": "https://colab.research.google.com/drive/1r34yAgz9ST5XYfBua8Ld4d7Xg3zVOSeu",
+      "downloadPath": "/notebooks/world-action-models/01_world_models_first_principles.ipynb",
+      "estimatedMinutes": 63,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Ha & Schmidhuber World Models: Teaching Agents to Dream",
+      "slug": "02-ha_schmidhuber_world_models",
+      "objective": "In this notebook, we will build the landmark **World Models** architecture from Ha & Schmidhuber (2018) — a system where an agent learns a compressed model of its environment and then trains entirely ",
+      "colabUrl": "https://colab.research.google.com/drive/1x7CsziVrqBJSDsnjXt7SAYPYP4OAfxxe",
+      "downloadPath": "/notebooks/world-action-models/02_ha_schmidhuber_world_models.ipynb",
+      "estimatedMinutes": 96,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "DreamerV3: Imagination-Based Reinforcement Learning with the RSSM",
+      "slug": "03-dreamerv3_rssm",
+      "objective": "In this notebook, we will build a Recurrent State-Space Model (RSSM) from scratch, train it as a world model on CartPole, and then train an actor-critic agent entirely inside the world model's imagina",
+      "colabUrl": "https://colab.research.google.com/drive/1aOBzDl6rm-J4rVR1FWTP20Y-RKwbbDoI",
+      "downloadPath": "/notebooks/world-action-models/03_dreamerv3_rssm.ipynb",
+      "estimatedMinutes": 100,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "JEPA: Predicting in Abstract Space — Why Pixels Don't Matter",
+      "slug": "04-jepa_abstract_prediction",
+      "objective": "In this notebook, we will build **I-JEPA (Image-based Joint Embedding Predictive Architecture)** from scratch and discover why predicting in abstract representation space is far more powerful than pre",
+      "colabUrl": "https://colab.research.google.com/drive/1bVeseLxAYqVkFYUd2OolPUpOmVjoWn-p",
+      "downloadPath": "/notebooks/world-action-models/04_jepa_abstract_prediction.ipynb",
+      "estimatedMinutes": 99,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": false
+    },
+    {
+      "title": "Genie: From a Single Image to an Interactive World",
+      "slug": "05-genie_interactive_worlds",
+      "objective": "What if you could sketch a game level on a napkin and then *play* it? What if a single photograph of a mountain trail could become a world you walk through? This is exactly what Genie does — it genera",
+      "colabUrl": "https://colab.research.google.com/drive/112sSPv3eU_fonSGpvWh82AEXbnKZ20Ps",
+      "downloadPath": "/notebooks/world-action-models/05_genie_interactive_worlds.ipynb",
+      "estimatedMinutes": 99,
+      "todoCount": 2,
+      "order": 5,
+      "hasNarration": false
+    },
+    {
+      "title": "Vision-Language-Action Models: Teaching Robots to See, Understand, and Act",
+      "slug": "06-vision_language_action",
+      "objective": "In the previous notebooks, we built world models that imagine the future, learned latent dynamics, and explored how agents can plan inside a learned simulator. But there has always been a missing piec",
+      "colabUrl": "https://colab.research.google.com/drive/1ZeVPX1beJAvpypY4QFHUoEEvO4B0o0eC",
+      "downloadPath": "/notebooks/world-action-models/06_vision_language_action.ipynb",
+      "estimatedMinutes": 108,
+      "todoCount": 7,
+      "order": 6,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Autonomous Pick-and-Place for High-SKU E-Commerce Fulfillment",
+    "subtitle": "A World Model + Vision-Language-Action Approach to Generalizable Robotic Manipulation",
+    "company": "NovaPick Robotics",
+    "industry": "E-Commerce Fulfillment and Warehouse Robotics",
+    "description": "NovaPick's current system uses a classical pipeline: point cloud segmentation, object pose estimation, analytical grasp planning (GraspIt!), and trajectory optimization (TrajOpt). This pipeline works reliably for a curated catalog of ~500 SKUs that have been individually scanned, modeled, and tested",
+    "pdfPath": "/case-studies/world-action-models/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1TzgrK3YKNlggvveb1BbttjWp5eyNFJoi",
+    "notebookPath": "/case-studies/world-action-models/case_study_notebook.ipynb"
+  }
+}

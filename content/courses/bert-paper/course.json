@@ -1,0 +1,20 @@
+{
+  "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "slug": "bert-paper",
+  "description": "How one paper changed the way machines understand language — from reading left-to-right to reading the whole sentence at once",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "The Fill-in-the-Blank Game",
+    "Why Reading Left-to-Right Is Not Enough",
+    "The Architecture: Transformer Encoder Stack",
+    "Input Representation: How BERT Reads Text",
+    "Pre-training Objective 1: Masked Language Modeling (MLM)"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

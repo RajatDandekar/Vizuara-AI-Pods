@@ -1,0 +1,20 @@
+{
+  "title": "Agentic RAG Explained From Scratch",
+  "slug": "agentic-rag",
+  "description": "How giving an LLM the ability to think before it retrieves transforms RAG from a lookup tool into a reasoning engine.",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "(1) The Two Librarians",
+    "(2) A Quick RAG Refresher",
+    "(3) Where Standard RAG Breaks Down",
+    "(4) Enter Agentic RAG",
+    "(5) The Building Blocks of Agentic RAG"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

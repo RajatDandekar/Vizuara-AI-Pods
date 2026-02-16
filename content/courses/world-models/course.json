@@ -1,0 +1,82 @@
+{
+  "title": "Understanding World Models from Scratch",
+  "slug": "world-models",
+  "description": "## How AI agents learn to dream about their environment — and use those dreams to make better decisions",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Model-Free vs Model-Based: Two Ways to Learn",
+    "The World Model Architecture: V, M, and C",
+    "The Vision Component (V): Seeing in Compressed Form",
+    "The Memory Component (M): Learning to Predict the Future",
+    "The Controller (C): Keeping It Simple"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "VAE: Compressing the Visual World from First Principles",
+      "slug": "01-vae_compressing_the_visual_world",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1avPnYGyh9hRBSHXsbucpz2RpUiOgEmnp",
+      "downloadPath": "/notebooks/world-models/01_vae_compressing_the_visual_world.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "MDN-RNN: Learning to Predict the Future from First Principles",
+      "slug": "02-mdn_rnn_learning_to_predict_the_future",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1jh6dt1gzZC_dInGwmaYDSaJEx_EsiJCW",
+      "downloadPath": "/notebooks/world-models/02_mdn_rnn_learning_to_predict_the_future.ipynb",
+      "estimatedMinutes": 44,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Controller + CMA-ES: Deciding with 867 Parameters from First Principles",
+      "slug": "03-controller_and_cma_es",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1pc1WK8tnGgL1OYXK0fB2V9etUDlNeXDW",
+      "downloadPath": "/notebooks/world-models/03_controller_and_cma_es.ipynb",
+      "estimatedMinutes": 39,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Full World Model: Dream to Drive from First Principles",
+      "slug": "04-full_world_model_dream_to_drive",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1PGitAIVlEH936FxAXqCLteyp-YtQ7OhD",
+      "downloadPath": "/notebooks/world-models/04_full_world_model_dream_to_drive.ipynb",
+      "estimatedMinutes": 54,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Dream-Trained Navigation for Autonomous Warehouse Robots",
+    "subtitle": "Using World Models to Eliminate Real-World Training Collisions at FleetPath Robotics",
+    "company": "FleetPath Robotics",
+    "industry": "Autonomous Logistics and Warehouse Automation",
+    "description": "FleetPath's current navigation stack uses **Proximal Policy Optimization (PPO)**, a model-free reinforcement learning algorithm. The policy is trained by running the robot in the physical warehouse, collecting millions of state-action-reward tuples, and updating the neural network weights over thous",
+    "pdfPath": "/case-studies/world-models/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1PeuKtYIja56PEjJ3UiLJzL8CyKRZau9z",
+    "notebookPath": "/case-studies/world-models/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "5D Parallelism: How We Train Models Too Large for Any Single GPU",
+  "slug": "5d-parallelism-gpu-programming",
+  "description": "A visual, analogy-driven guide to the five dimensions of parallelism that power trillion-parameter training.",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "Data Parallelism — Open More Kitchens",
+    "Tensor Parallelism — Split the Recipe",
+    "Pipeline Parallelism — The Assembly Line",
+    "Context Parallelism — The Long Banquet Table",
+    "Expert Parallelism — Specialist Chefs"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

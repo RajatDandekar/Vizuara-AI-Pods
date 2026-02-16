@@ -1,0 +1,82 @@
+{
+  "title": "Vision-Language-Action Models for Autonomous Driving: From Pixels and Words to Steering Wheels",
+  "slug": "vla-autonomous-driving",
+  "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving — explained from scratch.",
+  "difficulty": "advanced",
+  "estimatedHours": 5,
+  "prerequisites": [],
+  "tags": [
+    "The Building Blocks: Vision, Language, and Action",
+    "Two Paradigms: End-to-End vs. Dual-System VLAs",
+    "How VLAs are Trained",
+    "Landmark VLA Architectures",
+    "The Critical Challenges"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Vision Encoders & Patch Embeddings: How VLAs \"See\" the Road",
+      "slug": "01-vision_encoders_patch_embeddings",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1UnXoE5CGUhPesdQ8GnM6b29hUSWBTOBa",
+      "downloadPath": "/notebooks/vla-autonomous-driving/01_vision_encoders_patch_embeddings.ipynb",
+      "estimatedMinutes": 70,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Action Tokenization & Behavioral Cloning: Teaching a Language Model to Drive by Imitation",
+      "slug": "02-action_tokenization_behavioral_cloning",
+      "objective": "Let us start with a simple question. Language models output words — sequences of discrete tokens like \"the\", \"cat\", \"sat\". But a car needs continuous signals: steer 15.3 degrees left, accelerate at 2.",
+      "colabUrl": "https://colab.research.google.com/drive/1OBU-ASyTUyANtFfahHMN021bm84gneGn",
+      "downloadPath": "/notebooks/vla-autonomous-driving/02_action_tokenization_behavioral_cloning.ipynb",
+      "estimatedMinutes": 52,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Building a Mini VLA: Unifying Vision, Language, and Action",
+      "slug": "03-building_mini_vla",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1x5Cc2zLGz3JG2zydo3xAJqlKWujB96tu",
+      "downloadPath": "/notebooks/vla-autonomous-driving/03_building_mini_vla.ipynb",
+      "estimatedMinutes": 75,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Diffusion Action Decoder: Sculpting Trajectories from Noise",
+      "slug": "04-diffusion_action_decoder",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1kPLrTrJaG1fXueiiyTH2TOg58qkQnhgT",
+      "downloadPath": "/notebooks/vla-autonomous-driving/04_diffusion_action_decoder.ipynb",
+      "estimatedMinutes": 66,
+      "todoCount": 3,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Vision-Language-Action Models for Autonomous Port Terminal Tractors",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "PacificTow Robotics",
+    "industry": "Maritime Container Logistics",
+    "description": "PacificTow's current autonomous system uses a traditional modular pipeline: LiDAR-based perception, rule-based path planning on a precomputed port map, and PID-controlled trajectory following. The system works well for **static, pre-planned routes** — moving a container from a known yard position to",
+    "pdfPath": "/case-studies/vla-autonomous-driving/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1wKQh0HlArDpROzWQoMjhwhb-kdtta7QJ",
+    "notebookPath": "/case-studies/vla-autonomous-driving/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

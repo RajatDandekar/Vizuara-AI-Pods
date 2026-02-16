@@ -1,0 +1,82 @@
+{
+  "title": "Tiny Recursive Models: Less is More for AI Reasoning",
+  "slug": "tiny-recursive-models",
+  "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks — by thinking again, and again, and again.",
+  "difficulty": "beginner",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "The Sudoku Insight",
+    "The Scaling Wall",
+    "The Predecessor: Hierarchical Reasoning Models",
+    "Enter the Tiny Recursive Model",
+    "Deep Supervision: The Training Secret"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Recursive Reasoning Fundamentals: Why Thinking Again Beats Thinking Bigger",
+      "slug": "01-recursive_reasoning_fundamentals",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1JEIUdcdwbKuuIBhd-3-CBDYsaaPeIA9h",
+      "downloadPath": "/notebooks/tiny-recursive-models/01_recursive_reasoning_fundamentals.ipynb",
+      "estimatedMinutes": 42,
+      "todoCount": 1,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Building the Tiny Recursive Model Architecture from Scratch",
+      "slug": "02-building_the_trm_architecture",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1TCA0-1Mh1Ds8N_gtO7KfMqNMYlNW8mR0",
+      "downloadPath": "/notebooks/tiny-recursive-models/02_building_the_trm_architecture.ipynb",
+      "estimatedMinutes": 57,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Deep Supervision Training: Teaching a Tiny Model to Reason",
+      "slug": "03-deep_supervision_training",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1V7Yj0veO8Tf3TPzX5trxcwJ0RsTIZ88a",
+      "downloadPath": "/notebooks/tiny-recursive-models/03_deep_supervision_training.ipynb",
+      "estimatedMinutes": 46,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Ablation Studies: What Really Matters in Recursive Reasoning?",
+      "slug": "04-ablation_studies",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/17P-X8P16Zyt_aIOlBtowD4SAv96pOJXF",
+      "downloadPath": "/notebooks/tiny-recursive-models/04_ablation_studies.ipynb",
+      "estimatedMinutes": 42,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Edge-Deployed Wafer Defect Pattern Classification Using Recursive Reasoning",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "SilicaAI",
+    "industry": "Semiconductor Manufacturing (Yield Optimization)",
+    "description": "SilicaAI's current defect classification model is a cloud-based convolutional neural network (CNN) with 45 million parameters. It achieves 89% accuracy on their internal benchmark, which is acceptable but not market-leading. However, the real problem is **latency and reliability**:",
+    "pdfPath": "/case-studies/tiny-recursive-models/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1WfO6c78lvNKANUSZQPphkiv8xCUwA90a",
+    "notebookPath": "/case-studies/tiny-recursive-models/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

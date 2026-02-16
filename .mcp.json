@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "substack-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@danielsimonjr/substack-mcp"
+      ],
+      "env": {
+        "SUBSTACK_API_KEY": "s:bBVZMe5l9BE1jTznBakvt_hVWiAWyTxd.nJ172PVitfUMcLu+8sqvDrELWuGoznHcghOjvWwoJEM",
+        "SUBSTACK_HOSTNAME": "vizuara.substack.com"
+      }
+    },
+    "excalidraw": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/tmp/mcp_excalidraw/dist/index.js"],
+      "env": {
+        "EXPRESS_SERVER_URL": "http://localhost:3000",
+        "ENABLE_CANVAS_SYNC": "true"
+      }
+    },
+    "notion": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer ntn_Sw5325638252XON3aR1OpyG2D5ENwO23csbWrO2506m0AT\",\"Notion-Version\":\"2022-06-28\"}"
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Diffusion LLMs: What If Language Models Could Think Before They Speak?",
+  "slug": "diffusion-llms",
+  "description": "From masking to unmasking — how diffusion models are challenging the autoregressive paradigm in text generation.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "The Typewriter vs. The Painter",
+    "From Pixels to Words — Can We Diffuse Text?",
+    "Masked Diffusion — The Winning Recipe",
+    "The Training Objective — Simpler Than You Think",
+    "Generation — How Diffusion LLMs Write"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Masked Diffusion from First Principles",
+      "slug": "01-masked_diffusion_from_first_principles",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1WHXMZXu3D1VAzIhK6qpqCbK7wJkaNTCc",
+      "downloadPath": "/notebooks/diffusion-llms/01_masked_diffusion_from_first_principles.ipynb",
+      "estimatedMinutes": 48,
+      "todoCount": 1,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "The Reversal Curse — Why Direction Matters in Language Models",
+      "slug": "02-the_reversal_curse",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/14_1qnoZGKm-wIagvE7qEGxMqhiNcmBA9",
+      "downloadPath": "/notebooks/diffusion-llms/02_the_reversal_curse.ipynb",
+      "estimatedMinutes": 40,
+      "todoCount": 1,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Sampling Strategies & Speed Tradeoffs in Diffusion LLMs",
+      "slug": "03-sampling_strategies_and_speed",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1uS8UFOFPmBlyirLfPBd__f0NIQFKRFlX",
+      "downloadPath": "/notebooks/diffusion-llms/03_sampling_strategies_and_speed.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 1,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Building a Diffusion LLM on TinyStories",
+      "slug": "04-diffusion_llm_on_tinystories",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1eGZaVBUVvDzv8ejSCcuq6lHfSZah3qw9",
+      "downloadPath": "/notebooks/diffusion-llms/04_diffusion_llm_on_tinystories.ipynb",
+      "estimatedMinutes": 62,
+      "todoCount": 1,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Real-Time Clinical Documentation with Diffusion Language Models",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "MedScribe AI",
+    "industry": "Healthcare -- Clinical Documentation",
+    "description": "Despite the product's success, MedScribe faces three critical technical limitations that are blocking growth into its next phase:",
+    "pdfPath": "/case-studies/diffusion-llms/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1g8a6ay3wNZPe_BsOfI14_Fh2fPJCax5F",
+    "notebookPath": "/case-studies/diffusion-llms/case_study_notebook.ipynb"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Diffusion Policy: Teaching Robots to Act Using Diffusion Models",
+  "slug": "diffusion-policy",
+  "description": "## How the denoising process from image generation became the secret weapon for robot learning",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "From Images to Actions — The Key Insight",
+    "The Diffusion Policy Formulation",
+    "Action Chunking — Why Predict a Sequence?",
+    "Two Network Architectures",
+    "How Diffusion Policy Handles Multimodality"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,20 @@
+{
+  "title": "The Sim-to-Real Problem in Robotics",
+  "slug": "sim-to-real",
+  "description": "Why robots trained in virtual worlds stumble in reality — and how we are closing the gap",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [
+    "The Virtual Apprentice",
+    "The Reality Gap: What Makes Simulation Different?",
+    "Domain Randomization: The Breakthrough Idea",
+    "Domain Adaptation: Learning to Bridge the Gap",
+    "Popular Simulators: The Tools of the Trade"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": []
+}
