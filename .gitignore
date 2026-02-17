@@ -50,6 +50,9 @@ yarn-error.log*
 # logs
 excalidraw.log
 
+# claude code local settings
+.claude/settings.local.json
+
 # vercel
 .vercel
 
