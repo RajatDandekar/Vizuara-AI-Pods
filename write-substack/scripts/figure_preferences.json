@@ -1,0 +1,5 @@
+{
+  "default": "paperbanana",
+  "fallback_order": ["paperbanana", "gemini", "matplotlib"],
+  "notes": "PaperBanana consistently produces better publication-quality figures than Gemini across all figure types (illustrations, flowcharts, bar charts, radar charts). Gemini is faster (~10s vs ~60-130s) but quality is noticeably lower."
+}
