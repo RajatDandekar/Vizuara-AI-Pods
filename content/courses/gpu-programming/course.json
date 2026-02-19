@@ -28,7 +28,8 @@
       "order": 2,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/gpu-architecture-deep-dive/figures/figure_1.png"
     },
     {
       "slug": "cuda-programming-from-scratch",
@@ -37,7 +38,8 @@
       "order": 3,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/cuda-programming-from-scratch/figures/figure_1.png"
     },
     {
       "slug": "memory-hierarchy-optimization",
@@ -46,7 +48,8 @@
       "order": 4,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/memory-hierarchy-optimization/figures/figure_1.png"
     },
     {
       "slug": "memory-coalescing-throughput",
@@ -55,7 +58,8 @@
       "order": 5,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/memory-coalescing-throughput/figures/figure_1.png"
     },
     {
       "slug": "high-performance-cuda-kernels",
@@ -64,7 +68,8 @@
       "order": 6,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/high-performance-cuda-kernels/figures/figure_1.png"
     },
     {
       "slug": "kernel-fusion-optimization",
@@ -73,7 +78,8 @@
       "order": 7,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/kernel-fusion-optimization/figures/figure_1.png"
     },
     {
       "slug": "mixed-precision-tensor-cores",
@@ -82,7 +88,8 @@
       "order": 8,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/mixed-precision-tensor-cores/figures/figure_1.png"
     },
     {
       "slug": "profiling-debugging",
@@ -91,7 +98,8 @@
       "order": 9,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/profiling-debugging/figures/figure_1.png"
     },
     {
       "slug": "distributed-gpu-systems",
@@ -100,7 +108,8 @@
       "order": 10,
       "notebookCount": 0,
       "estimatedHours": 1,
-      "hasCaseStudy": false
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/distributed-gpu-systems/figures/figure_1.png"
     }
   ],
   "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
