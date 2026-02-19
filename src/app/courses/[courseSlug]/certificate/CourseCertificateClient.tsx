@@ -37,7 +37,7 @@ export default function CourseCertificateClient({
 
   useEffect(() => {
     if (!user) {
-      router.replace('/auth/login');
+      window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(window.location.pathname)}`;
       return;
     }
 

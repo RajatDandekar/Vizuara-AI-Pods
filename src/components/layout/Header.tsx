@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import UserDropdown from '@/components/auth/UserDropdown';
 
+const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
+const PODS_CALLBACK_URL = process.env.NEXT_PUBLIC_PODS_CALLBACK_URL || 'https://pods.vizuara.ai/api/auth/session';
 const darkPages = ['/about', '/letter'];
 
 export default function Header() {
@@ -69,6 +71,16 @@ export default function Header() {
           >
             About
           </Link>
+          <Link
+            href="/pricing"
+            className={`text-sm transition-colors ${
+              pathname === '/pricing'
+                ? isDark ? 'text-white font-medium' : 'text-foreground font-medium'
+                : isDark ? 'text-blue-200/60 hover:text-white' : 'text-text-muted hover:text-foreground'
+            }`}
+          >
+            Pricing
+          </Link>
 
           {/* Auth section */}
           {!loading && (
@@ -77,8 +89,8 @@ export default function Header() {
                 <UserDropdown isHome={isDark} />
               ) : (
                 <div className="flex items-center gap-3">
-                  <Link
-                    href="/auth/login"
+                  <a
+                    href={`${VIZUARA_URL}/auth/login?redirect=${encodeURIComponent(PODS_CALLBACK_URL)}`}
                     className={`text-sm font-medium transition-colors ${
                       isDark
                         ? 'text-blue-200/80 hover:text-white'
@@ -86,13 +98,13 @@ export default function Header() {
                     }`}
                   >
                     Log in
-                  </Link>
-                  <Link
-                    href="/auth/signup"
+                  </a>
+                  <a
+                    href={`${VIZUARA_URL}/auth/signup?redirect=${encodeURIComponent(PODS_CALLBACK_URL)}`}
                     className="text-sm font-medium bg-accent-blue text-white px-4 py-1.5 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Sign Up
-                  </Link>
+                  </a>
                 </div>
               )}
             </>

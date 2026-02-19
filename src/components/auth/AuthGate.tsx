@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 
 interface AuthGateProps {
@@ -10,13 +10,13 @@ interface AuthGateProps {
 
 export default function AuthGate({ children }: AuthGateProps) {
   const { user, loading } = useAuth();
-  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!loading && !user) {
-      router.replace('/auth/login');
+      window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(pathname)}`;
     }
-  }, [user, loading, router]);
+  }, [user, loading, pathname]);
 
   if (loading) {
     return (

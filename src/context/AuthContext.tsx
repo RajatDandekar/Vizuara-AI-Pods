@@ -4,6 +4,8 @@ import { createContext, useContext, useReducer, useEffect, useCallback, type Rea
 import type { User, AuthState } from '@/types/auth';
 import { setProgressUser } from '@/lib/progress';
 
+const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
+
 type AuthAction =
   | { type: 'SET_USER'; user: User | null }
   | { type: 'SET_LOADING'; loading: boolean }
@@ -26,8 +28,6 @@ function authReducer(state: AuthState, action: AuthAction): AuthState {
 interface AuthContextValue {
   user: User | null;
   loading: boolean;
-  login: (email: string, password: string, rememberMe?: boolean) => Promise<{ error?: string }>;
-  signup: (fullName: string, email: string, password: string, confirmPassword: string) => Promise<{ error?: string }>;
   logout: () => Promise<void>;
   refreshUser: () => Promise<void>;
   updateUser: (updates: Partial<User>) => void;
@@ -54,42 +54,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     refreshUser();
   }, [refreshUser]);
 
-  // Keep progress system in sync whenever user state changes
-  // (also handles dev server hot reloads where module state resets)
   useEffect(() => {
     setProgressUser(state.user?.id ?? null);
   }, [state.user?.id]);
-
-  const login = useCallback(async (email: string, password: string, rememberMe = false) => {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, rememberMe }),
-    });
-    const data = await res.json();
-    if (!res.ok) return { error: data.error };
-    setProgressUser(data.user.id);
-    dispatch({ type: 'SET_USER', user: data.user });
-    return {};
-  }, []);
-
-  const signup = useCallback(async (fullName: string, email: string, password: string, confirmPassword: string) => {
-    const res = await fetch('/api/auth/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ fullName, email, password, confirmPassword }),
-    });
-    const data = await res.json();
-    if (!res.ok) return { error: data.error };
-    setProgressUser(data.user.id);
-    dispatch({ type: 'SET_USER', user: data.user });
-    return {};
-  }, []);
 
   const logout = useCallback(async () => {
     await fetch('/api/auth/logout', { method: 'POST' });
     setProgressUser(null);
     dispatch({ type: 'SET_USER', user: null });
+    window.location.href = VIZUARA_URL;
   }, []);
 
   const updateUser = useCallback((updates: Partial<User>) => {
@@ -101,8 +74,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       value={{
         user: state.user,
         loading: state.loading,
-        login,
-        signup,
         logout,
         refreshUser,
         updateUser,

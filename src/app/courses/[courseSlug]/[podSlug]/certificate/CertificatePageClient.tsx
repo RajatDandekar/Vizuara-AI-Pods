@@ -46,7 +46,7 @@ export default function CertificatePageClient({
   useEffect(() => {
     // Gate: redirect if not logged in
     if (!user) {
-      router.replace('/auth/login');
+      window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(window.location.pathname)}`;
       return;
     }
 

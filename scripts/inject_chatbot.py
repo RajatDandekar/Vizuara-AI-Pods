@@ -24,7 +24,7 @@ PUBLIC_NB_DIR = PROJECT_ROOT / "public" / "notebooks"
 OUTPUT_NB_DIR = PROJECT_ROOT / "output" / "notebooks"
 PUBLIC_CS_DIR = PROJECT_ROOT / "public" / "case-studies"
 
-SITE_URL = "https://course-creator-brown.vercel.app"
+SITE_URL = "https://pods.vizuara.ai"
 
 
 # ── Context extraction (kept for external use) ───────────────────────────────

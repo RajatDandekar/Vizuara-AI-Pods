@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { useSubscription } from '@/context/SubscriptionContext';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import UserAvatar from '@/components/auth/UserAvatar';
 import FadeIn from '@/components/animations/FadeIn';
 import catalogData from '@/../content/courses/catalog.json';
+
+const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
 
 const ALL_INTEREST_TAGS = Array.from(
   new Set(
@@ -41,7 +43,7 @@ const TAG_LABELS: Record<string, string> = {
 
 export default function ProfilePage() {
   const { user, logout, refreshUser } = useAuth();
-  const router = useRouter();
+  const { enrolled } = useSubscription();
 
   const [editingName, setEditingName] = useState(false);
   const [fullName, setFullName] = useState('');
@@ -58,9 +60,9 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (user === null) {
-      router.push('/auth/login');
+      window.location.href = `/api/auth/redirect?returnTo=/profile`;
     }
-  }, [user, router]);
+  }, [user]);
 
   if (!user) return null;
 
@@ -96,7 +98,6 @@ export default function ProfilePage() {
 
   async function handleLogout() {
     await logout();
-    router.push('/');
   }
 
   return (
@@ -203,6 +204,42 @@ export default function ProfilePage() {
                   </button>
                 </p>
               )}
+            </div>
+          )}
+        </div>
+
+        {/* Enrollment section */}
+        <div className="bg-card-bg border border-card-border rounded-2xl p-6 mb-6">
+          <h3 className="font-semibold text-foreground mb-4">Enrollment</h3>
+          {enrolled ? (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-medium">
+                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+                  Enrolled
+                </span>
+              </div>
+              <p className="text-sm text-text-muted">
+                Manage your subscription on{' '}
+                <a href={`${VIZUARA_URL}/pricing`} className="text-accent-blue hover:underline">
+                  vizuara.ai
+                </a>
+              </p>
+            </div>
+          ) : (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 text-text-muted rounded-lg text-sm font-medium">
+                  <span className="w-1.5 h-1.5 bg-gray-400 rounded-full" />
+                  Not Enrolled
+                </span>
+              </div>
+              <p className="text-sm text-text-muted mb-4">
+                Subscribe to access all courses and content.
+              </p>
+              <a href={`${VIZUARA_URL}/pricing`}>
+                <Button size="sm">View Plans</Button>
+              </a>
             </div>
           )}
         </div>

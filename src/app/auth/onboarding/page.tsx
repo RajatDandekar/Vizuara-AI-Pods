@@ -60,12 +60,12 @@ export default function OnboardingPage() {
   const [experienceLevel, setExperienceLevel] = useState<string>('');
   const [saving, setSaving] = useState(false);
 
-  // Redirect if not logged in or already onboarded
+  // Redirect if not logged in
   useEffect(() => {
     if (user === null) {
-      router.push('/auth/login');
+      window.location.href = '/api/auth/redirect?returnTo=/auth/onboarding';
     }
-  }, [user, router]);
+  }, [user]);
 
   function toggleInterest(tag: string) {
     setSelectedInterests((prev) =>

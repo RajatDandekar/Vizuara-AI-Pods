@@ -284,21 +284,21 @@ export default function HomeClient({
             {/* CTA for guests */}
             {!user && (
               <div className="mt-10 flex items-center justify-center gap-3">
-                <Link
-                  href="/auth/signup"
+                <a
+                  href={`${process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai'}/auth/signup?redirect=${encodeURIComponent(process.env.NEXT_PUBLIC_PODS_CALLBACK_URL || 'https://pods.vizuara.ai/api/auth/session')}`}
                   className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-7 py-3 rounded-xl transition-colors shadow-lg shadow-blue-600/20"
                 >
                   Get Started Free
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
-                </Link>
-                <Link
-                  href="/auth/login"
+                </a>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai'}/auth/login?redirect=${encodeURIComponent(process.env.NEXT_PUBLIC_PODS_CALLBACK_URL || 'https://pods.vizuara.ai/api/auth/session')}`}
                   className="text-sm text-slate-500 hover:text-slate-900 font-medium transition-colors px-5 py-3 rounded-xl border border-slate-200 hover:border-slate-300"
                 >
                   Log in
-                </Link>
+                </a>
               </div>
             )}
           </FadeIn>
@@ -439,15 +439,15 @@ export default function HomeClient({
               <p className="text-slate-700 text-base mb-6 max-w-lg mx-auto">
                 Join Vizuara AI Pods to access all courses, notebooks, case studies, and certificates.
               </p>
-              <Link
-                href="/auth/signup"
+              <a
+                href={`${process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai'}/auth/signup?redirect=${encodeURIComponent(process.env.NEXT_PUBLIC_PODS_CALLBACK_URL || 'https://pods.vizuara.ai/api/auth/session')}`}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-7 py-3 rounded-xl transition-colors shadow-lg shadow-blue-600/20"
               >
                 Sign Up Free
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </FadeIn>
         </div>
