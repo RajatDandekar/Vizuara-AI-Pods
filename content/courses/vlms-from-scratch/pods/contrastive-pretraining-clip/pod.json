@@ -35,7 +35,7 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/01_contrastive_learning_and_infonce_loss.ipynb",
       "order": 1,
       "estimatedMinutes": 45,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/contrastive-pretraining-clip/01_contrastive_learning_and_infonce_loss.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1bcnrrrXGXFLmYVfjgM8WiaiHAuCCtrRp"
     },
     {
       "title": "Building CLIP from Scratch",
@@ -43,7 +43,7 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/02_building_clip_from_scratch.ipynb",
       "order": 2,
       "estimatedMinutes": 60,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/contrastive-pretraining-clip/02_building_clip_from_scratch.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1Sl3mg-uihCWwzf6eylKM2dHjrFmSRlAW"
     },
     {
       "title": "Zero-Shot Transfer and Evaluation",
@@ -51,7 +51,7 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/03_zero_shot_transfer_and_evaluation.ipynb",
       "order": 3,
       "estimatedMinutes": 45,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/contrastive-pretraining-clip/03_zero_shot_transfer_and_evaluation.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1ZLKuGoxztDToN1o-4sSY3PY9Ni4FablJ"
     }
   ],
   "caseStudy": {
@@ -62,7 +62,7 @@
     "description": "Build a contrastive pretraining system (CLIP-style) that learns a shared embedding space between radiology images and clinical text descriptions, enabling zero-shot classification of 50+ pathological findings without per-condition labeled data.",
     "pdfPath": "/case-studies/contrastive-pretraining-clip/case_study.pdf",
     "notebookPath": "/case-studies/contrastive-pretraining-clip/case_study_notebook.ipynb",
-    "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/case-studies/contrastive-pretraining-clip/case_study_notebook.ipynb"
+    "colabUrl": "https://colab.research.google.com/drive/1s34VpvIOFKjr7MihWncCEm6rm9U9gwTD"
   },
   "curator": {
     "name": "Dr. Rajat Dandekar",

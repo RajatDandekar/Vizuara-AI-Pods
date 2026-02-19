@@ -40,7 +40,7 @@
       "todoCount": 2,
       "order": 1,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/01_fusion_strategies.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1g9BCt5rhnh0-C8OEh0TmQhUcfrV900lh"
     },
     {
       "title": "Building LLaVA and Flamingo from Scratch",
@@ -51,7 +51,7 @@
       "todoCount": 2,
       "order": 2,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/02_llava_and_flamingo.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1ayGc_DkqV9kMzTc8pS0MfccOoknHsTFx"
     },
     {
       "title": "Training Multimodal Models: Contrastive Learning and Instruction Tuning",
@@ -62,7 +62,7 @@
       "todoCount": 2,
       "order": 3,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/03_training_multimodal_models.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1fSTJaEpgU91w1mH1JY0dAGhjA7dhOOtR"
     }
   ],
   "caseStudy": {
@@ -73,7 +73,7 @@
     "description": "Stratos Manufacturing loses $47M annually from fragmented quality inspection. Their vision-only CNN achieves 89% accuracy but suffers 3.2% defect escape rate and 32% false positive rate. By fusing microscope images with process logs and operator notes using gated cross-attention, the multimodal system reduces the escape rate below 1%.",
     "pdfPath": "/case-studies/multimodal-fusion/case_study.pdf",
     "notebookPath": "/case-studies/multimodal-fusion/case_study_notebook.ipynb",
-    "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/case-studies/multimodal-fusion/case_study_notebook.ipynb"
+    "colabUrl": "https://colab.research.google.com/drive/1TIwFlRQ_SuQI6F1dswXvvCy8IsmN_zPV"
   },
   "curator": {
     "name": "Dr. Rajat Dandekar",

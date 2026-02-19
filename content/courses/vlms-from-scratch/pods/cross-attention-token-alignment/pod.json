@@ -37,7 +37,7 @@
       "todoCount": 1,
       "order": 1,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/cross-attention-token-alignment/01_self_and_cross_attention.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1HVBM26TkERUyf-b1t8VUmDlU22Jr7rPZ"
     },
     {
       "title": "Token Alignment and Multi-Head Cross-Attention",
@@ -48,7 +48,7 @@
       "todoCount": 1,
       "order": 2,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/cross-attention-token-alignment/02_token_alignment_multihead.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/1cdvhlzwWB0krDQeARMYIFGBhL8coxIWu"
     },
     {
       "title": "Building a Mini Vision-Language Model from Scratch",
@@ -59,7 +59,7 @@
       "todoCount": 2,
       "order": 3,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/cross-attention-token-alignment/03_mini_vlm.ipynb"
+      "colabUrl": "https://colab.research.google.com/drive/18nsoUib3OqvCjABkekEu8oe3SvWVxfdM"
     }
   ],
   "caseStudy": {
@@ -70,7 +70,7 @@
     "description": "MedSight AI builds AI-assisted clinical decision support for radiology. Their grounded report generation system uses cross-attention to generate preliminary radiology reports where every finding is visually grounded in the medical image, satisfying FDA explainability requirements.",
     "pdfPath": "/case-studies/cross-attention-token-alignment/case_study.pdf",
     "notebookPath": "/case-studies/cross-attention-token-alignment/case_study_notebook.ipynb",
-    "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/case-studies/cross-attention-token-alignment/case_study_notebook.ipynb"
+    "colabUrl": "https://colab.research.google.com/drive/1n3Q6KtQ3QZDTZwpESqxVsEvrRqEL06OX"
   },
   "curator": {
     "name": "Dr. Rajat Dandekar",
