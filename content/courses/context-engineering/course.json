@@ -1,0 +1,65 @@
+{
+  "title": "Context Engineering from Scratch",
+  "slug": "context-engineering",
+  "description": "The art and science of filling the context window with the right information.",
+  "difficulty": "intermediate",
+  "estimatedHours": 7,
+  "tags": [
+    "context-engineering",
+    "rag",
+    "prompt-design"
+  ],
+  "pods": [
+    {
+      "slug": "context-engineering-for-llms",
+      "title": "Context Engineering for LLMs",
+      "description": "The art and science of filling the context window with just the right information for the next step",
+      "order": 1,
+      "notebookCount": 5,
+      "estimatedHours": 7,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/context-engineering/pods/context-engineering-for-llms/figures/figure_1.png"
+    },
+    {
+      "slug": "prompt-design-principles",
+      "title": "Prompt Design Principles",
+      "description": "Coming soon: Prompt Design Principles",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/context-engineering/pods/prompt-design-principles/figures/figure_1.png"
+    },
+    {
+      "slug": "rag-systems",
+      "title": "Retrieval-Augmented Generation (RAG) Systems",
+      "description": "Coming soon: Retrieval-Augmented Generation (RAG) Systems",
+      "order": 3,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/context-engineering/pods/rag-systems/figures/figure_1.png"
+    },
+    {
+      "slug": "memory-architectures",
+      "title": "Memory Architectures",
+      "description": "Coming soon: Memory Architectures",
+      "order": 4,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/context-engineering/pods/memory-architectures/figures/figure_1.png"
+    },
+    {
+      "slug": "context-optimization-evaluation",
+      "title": "Context Optimization & Evaluation",
+      "description": "Coming soon: Context Optimization & Evaluation",
+      "order": 5,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/context-engineering/pods/context-optimization-evaluation/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/context-engineering/pods/context-engineering-for-llms/figures/figure_1.png"
+}

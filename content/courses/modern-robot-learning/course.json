@@ -1,0 +1,85 @@
+{
+  "title": "Modern Robot Learning",
+  "slug": "modern-robot-learning",
+  "description": "From world models to VLAs \u2014 build modern robot learning systems from scratch.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "tags": [
+    "robotics",
+    "world-models",
+    "vla"
+  ],
+  "pods": [
+    {
+      "slug": "act-policies",
+      "title": "ACT (Action Chunking Transformer) Policies",
+      "description": "Coming soon: ACT (Action Chunking Transformer) Policies",
+      "order": 1,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/act-policies/figures/figure_1.png"
+    },
+    {
+      "slug": "diffusion-policy-visuomotor",
+      "title": "Diffusion Policy for Visuomotor Control",
+      "description": "Coming soon: Diffusion Policy for Visuomotor Control",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/diffusion-policy-visuomotor/figures/figure_1.png"
+    },
+    {
+      "slug": "vla-models",
+      "title": "Vision-Language-Action (VLA) Models",
+      "description": "Coming soon: Vision-Language-Action (VLA) Models",
+      "order": 3,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/vla-models/figures/figure_1.png"
+    },
+    {
+      "slug": "world-models",
+      "title": "Understanding World Models from Scratch",
+      "description": "## How AI agents learn to dream about their environment \u2014 and use those dreams to make better decisions",
+      "order": 4,
+      "notebookCount": 4,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/modern-robot-learning/pods/world-models/figures/figure_1.png"
+    },
+    {
+      "slug": "offline-rl-robot-learning",
+      "title": "Offline RL & Dataset-Driven Robot Learning",
+      "description": "Coming soon: Offline RL & Dataset-Driven Robot Learning",
+      "order": 5,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/offline-rl-robot-learning/figures/figure_1.png"
+    },
+    {
+      "slug": "behavior-cloning-at-scale",
+      "title": "Behavior Cloning at Scale (RT-X Style)",
+      "description": "Coming soon: Behavior Cloning at Scale (RT-X Style)",
+      "order": 6,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/behavior-cloning-at-scale/figures/figure_1.png"
+    },
+    {
+      "slug": "foundation-models-embodied",
+      "title": "Foundation Models for Embodied Intelligence",
+      "description": "Coming soon: Foundation Models for Embodied Intelligence",
+      "order": 7,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/modern-robot-learning/pods/foundation-models-embodied/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/modern-robot-learning/pods/world-models/figures/figure_1.png"
+}
