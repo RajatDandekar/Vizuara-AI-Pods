@@ -33,10 +33,10 @@
   },
   "notebooks": [
     {
-      "title": "Reward Modeling — Teaching a Neural Network Human Preferences",
+      "title": "Reward Modeling \u2014 Teaching a Neural Network Human Preferences",
       "slug": "01-reward_modeling",
       "objective": "Build a reward model from scratch using the Bradley-Terry preference model, train it on pairwise comparisons, and verify it learns to rank responses correctly.",
-      "colabUrl": "https://colab.research.google.com/drive/1D6b6bNCV9tPQuxNRarwJSlLnyBaIgW-m",
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/rlhf-theory-implementation/01_reward_modeling.ipynb",
       "downloadPath": "/notebooks/rlhf-theory-implementation/01_reward_modeling.ipynb",
       "estimatedMinutes": 45,
       "todoCount": 2,
@@ -47,7 +47,7 @@
       "title": "Policy Gradients and PPO for Language Models",
       "slug": "02-policy_gradients_and_ppo",
       "objective": "Implement vanilla REINFORCE and PPO with clipped surrogate objectives, training an actor-critic on a contextual bandit environment.",
-      "colabUrl": "https://colab.research.google.com/drive/1Y8vDJknZWZD8h1NtQpTL1N17f0dpRVgV",
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/rlhf-theory-implementation/02_policy_gradients_and_ppo.ipynb",
       "downloadPath": "/notebooks/rlhf-theory-implementation/02_policy_gradients_and_ppo.ipynb",
       "estimatedMinutes": 60,
       "todoCount": 2,
@@ -55,10 +55,10 @@
       "hasNarration": false
     },
     {
-      "title": "End-to-End RLHF Pipeline — Sentiment Alignment with GPT-2",
+      "title": "End-to-End RLHF Pipeline \u2014 Sentiment Alignment with GPT-2",
       "slug": "03-end_to_end_rlhf",
       "objective": "Combine reward modeling and PPO to build a complete RLHF pipeline that aligns GPT-2 towards positive sentiment using KL-penalized policy gradients.",
-      "colabUrl": "https://colab.research.google.com/drive/1zCoKxLJFypUrfFs7JzpfSctuKDTz45Mp",
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/rlhf-theory-implementation/03_end_to_end_rlhf.ipynb",
       "downloadPath": "/notebooks/rlhf-theory-implementation/03_end_to_end_rlhf.ipynb",
       "estimatedMinutes": 75,
       "todoCount": 2,
@@ -68,12 +68,12 @@
   ],
   "caseStudy": {
     "title": "Aligning a Clinical AI Assistant Using RLHF",
-    "subtitle": "MedAlign Health — Deploying Safe and Empathetic Patient-Facing AI in Telehealth",
+    "subtitle": "MedAlign Health \u2014 Deploying Safe and Empathetic Patient-Facing AI in Telehealth",
     "company": "MedAlign Health",
     "industry": "Digital Health / Telehealth",
-    "description": "MedAlign Health's clinical assistant ClinAssist suffers from tone insensitivity, over-specificity, and safety boundary violations. This case study applies the full RLHF pipeline — reward modeling on physician preferences, PPO optimization with KL penalty, and safety-aware training — to align the assistant for safe, empathetic patient interactions.",
+    "description": "MedAlign Health's clinical assistant ClinAssist suffers from tone insensitivity, over-specificity, and safety boundary violations. This case study applies the full RLHF pipeline \u2014 reward modeling on physician preferences, PPO optimization with KL penalty, and safety-aware training \u2014 to align the assistant for safe, empathetic patient interactions.",
     "pdfPath": "/case-studies/rlhf-theory-implementation/case_study.pdf",
-    "colabUrl": "https://colab.research.google.com/drive/1-QhEuo4KIuJ0WKV8grt9g1OZA3Pc5tIy",
+    "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/case-studies/rlhf-theory-implementation/case_study_notebook.ipynb",
     "notebookPath": "/case-studies/rlhf-theory-implementation/case_study_notebook.ipynb"
   },
   "curator": {

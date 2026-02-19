@@ -1,9 +1,9 @@
 {
-  "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen — All at Once",
+  "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen \u2014 All at Once",
   "slug": "multimodal-fusion",
   "courseSlug": "vlms-from-scratch",
   "order": 2,
-  "description": "From early fusion to cross-attention — building the bridges that connect vision and language inside modern AI systems.",
+  "description": "From early fusion to cross-attention \u2014 building the bridges that connect vision and language inside modern AI systems.",
   "difficulty": "intermediate",
   "estimatedHours": 3,
   "prerequisites": [],
@@ -40,7 +40,7 @@
       "todoCount": 2,
       "order": 1,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/drive/1My_cHdgqheT-qWyzA-yCs2k4srfkbC5I"
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/01_fusion_strategies.ipynb"
     },
     {
       "title": "Building LLaVA and Flamingo from Scratch",
@@ -51,7 +51,7 @@
       "todoCount": 2,
       "order": 2,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/drive/1zU2OhM8xbKgsn1zKTuh8yzHSqCBTDTpr"
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/02_llava_and_flamingo.ipynb"
     },
     {
       "title": "Training Multimodal Models: Contrastive Learning and Instruction Tuning",
@@ -62,7 +62,7 @@
       "todoCount": 2,
       "order": 3,
       "hasNarration": false,
-      "colabUrl": "https://colab.research.google.com/drive/1uTBEHh9zaLscdR-nQwkfAELqQcYONGHV"
+      "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/notebooks/multimodal-fusion/03_training_multimodal_models.ipynb"
     }
   ],
   "caseStudy": {
@@ -73,7 +73,7 @@
     "description": "Stratos Manufacturing loses $47M annually from fragmented quality inspection. Their vision-only CNN achieves 89% accuracy but suffers 3.2% defect escape rate and 32% false positive rate. By fusing microscope images with process logs and operator notes using gated cross-attention, the multimodal system reduces the escape rate below 1%.",
     "pdfPath": "/case-studies/multimodal-fusion/case_study.pdf",
     "notebookPath": "/case-studies/multimodal-fusion/case_study_notebook.ipynb",
-    "colabUrl": "https://colab.research.google.com/drive/16XeUBfGdi1p-SGWiLO5QX7_ZIjVgitzv"
+    "colabUrl": "https://colab.research.google.com/github/RajatDandekar/Vizuara-AI-Pods/blob/main/public/case-studies/multimodal-fusion/case_study_notebook.ipynb"
   },
   "curator": {
     "name": "Dr. Rajat Dandekar",
