@@ -587,14 +587,32 @@ export default function HomeClient({
                                   className="flex-shrink-0 w-[280px] sm:w-[320px]"
                                 >
                                   <div className="bg-white/60 rounded-2xl border border-slate-200/60 overflow-hidden h-full flex flex-col opacity-50">
-                                    <div className="w-full aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center relative">
-                                      <span className="text-2xl font-bold text-slate-200">{pod.order}</span>
-                                      <div className="absolute top-2 left-2">
-                                        <span className="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-200">
-                                          Coming Soon
-                                        </span>
+                                    {pod.thumbnail ? (
+                                      <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-50">
+                                        <Image
+                                          src={pod.thumbnail}
+                                          alt={pod.title}
+                                          fill
+                                          className="object-cover"
+                                          sizes="320px"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                                        <div className="absolute top-2 left-2">
+                                          <span className="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-200">
+                                            Coming Soon
+                                          </span>
+                                        </div>
                                       </div>
-                                    </div>
+                                    ) : (
+                                      <div className="w-full aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center relative">
+                                        <span className="text-2xl font-bold text-slate-200">{pod.order}</span>
+                                        <div className="absolute top-2 left-2">
+                                          <span className="bg-amber-100 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-200">
+                                            Coming Soon
+                                          </span>
+                                        </div>
+                                      </div>
+                                    )}
                                     <div className="p-4 flex flex-col flex-1">
                                       <h4 className="font-bold text-slate-500 text-lg leading-snug line-clamp-2 mb-1.5">
                                         {pod.title}

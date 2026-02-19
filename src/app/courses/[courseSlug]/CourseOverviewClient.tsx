@@ -159,6 +159,18 @@ export default function CourseOverviewClient({
                   key={pod.slug}
                   className="bg-card-bg border border-card-border rounded-xl p-5 opacity-60"
                 >
+                  {/* Thumbnail */}
+                  {pod.thumbnail && (
+                    <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-3 bg-gray-50">
+                      <Image
+                        src={pod.thumbnail}
+                        alt={pod.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 320px"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-lg bg-gray-100 text-text-muted flex items-center justify-center flex-shrink-0 text-sm font-semibold">
                       {pod.order}
