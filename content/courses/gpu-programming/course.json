@@ -1,0 +1,107 @@
+{
+  "title": "GPU Programming from Scratch",
+  "slug": "gpu-programming",
+  "description": "From CUDA basics to distributed GPU systems \u2014 master GPU programming for deep learning.",
+  "difficulty": "intermediate",
+  "estimatedHours": 17,
+  "tags": [
+    "gpu",
+    "cuda",
+    "distributed-training",
+    "systems"
+  ],
+  "pods": [
+    {
+      "slug": "5d-parallelism-from-scratch",
+      "title": "5D Parallelism from Scratch",
+      "description": "How modern LLMs are trained across thousands of GPUs \u2014 understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism from first principles.",
+      "order": 1,
+      "notebookCount": 6,
+      "estimatedHours": 17,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "gpu-architecture-deep-dive",
+      "title": "GPU Architecture Deep Dive",
+      "description": "Coming soon: GPU Architecture Deep Dive",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "cuda-programming-from-scratch",
+      "title": "CUDA Programming Model from Scratch",
+      "description": "Coming soon: CUDA Programming Model from Scratch",
+      "order": 3,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "memory-hierarchy-optimization",
+      "title": "Memory Hierarchy Optimization",
+      "description": "Coming soon: Memory Hierarchy Optimization",
+      "order": 4,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "memory-coalescing-throughput",
+      "title": "Memory Coalescing, Bank Conflicts & Throughput",
+      "description": "Coming soon: Memory Coalescing, Bank Conflicts & Throughput",
+      "order": 5,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "high-performance-cuda-kernels",
+      "title": "Writing High-Performance CUDA Kernels",
+      "description": "Coming soon: Writing High-Performance CUDA Kernels",
+      "order": 6,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "kernel-fusion-optimization",
+      "title": "Kernel Fusion & Operator Optimization",
+      "description": "Coming soon: Kernel Fusion & Operator Optimization",
+      "order": 7,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "mixed-precision-tensor-cores",
+      "title": "Mixed Precision & Tensor Cores",
+      "description": "Coming soon: Mixed Precision & Tensor Cores",
+      "order": 8,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "profiling-debugging",
+      "title": "Profiling & Debugging",
+      "description": "Coming soon: Profiling & Debugging",
+      "order": 9,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "distributed-gpu-systems",
+      "title": "Distributed GPU Systems",
+      "description": "Coming soon: Distributed GPU Systems",
+      "order": 10,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    }
+  ],
+  "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
+}

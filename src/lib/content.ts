@@ -1,9 +1,18 @@
 import fs from 'fs';
 import path from 'path';
-import type { CourseManifest, CourseCard, CaseStudySection } from '@/types/course';
+import type {
+  CourseManifest,
+  CourseCard,
+  PodManifest,
+  PodCard,
+  CaseStudySection,
+} from '@/types/course';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'courses');
 
+// ─── Course-level functions ──────────────────────────────────────────
+
+/** Returns all course-level cards from the catalog (filters out drafts). */
 export function getCatalog(): CourseCard[] {
   const catalogPath = path.join(CONTENT_DIR, 'catalog.json');
   const raw = fs.readFileSync(catalogPath, 'utf-8');
@@ -11,36 +20,102 @@ export function getCatalog(): CourseCard[] {
   return data.courses.filter((c) => c.status !== 'draft');
 }
 
-export function getCourse(slug: string): CourseManifest & { articleContent: string } {
-  const courseDir = path.join(CONTENT_DIR, slug);
-  const manifestPath = path.join(courseDir, 'course.json');
-  const articlePath = path.join(courseDir, 'article.md');
-
-  const manifest = JSON.parse(
-    fs.readFileSync(manifestPath, 'utf-8')
-  ) as CourseManifest;
-
-  const articleContent = fs.readFileSync(articlePath, 'utf-8');
-
-  return { ...manifest, articleContent };
-}
-
-export function getCourseSlugs(): string[] {
+/** Returns ALL courses including drafts. */
+export function getFullCatalog(): CourseCard[] {
   const catalogPath = path.join(CONTENT_DIR, 'catalog.json');
   const raw = fs.readFileSync(catalogPath, 'utf-8');
   const data = JSON.parse(raw) as { courses: CourseCard[] };
-  // Only return slugs that have a course.json and are not draft
-  return data.courses
+  return data.courses;
+}
+
+/** Returns the full course manifest (with pod listing) for a given course slug. */
+export function getCourseManifest(courseSlug: string): CourseManifest {
+  const manifestPath = path.join(CONTENT_DIR, courseSlug, 'course.json');
+  return JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as CourseManifest;
+}
+
+/** Returns course-level slugs that are not drafts and have a course.json with pods. */
+export function getCourseSlugs(): string[] {
+  const catalog = getCatalog();
+  return catalog
     .filter((c) => {
-      if (c.status === 'draft') return false;
       const manifestPath = path.join(CONTENT_DIR, c.slug, 'course.json');
-      return fs.existsSync(manifestPath);
+      if (!fs.existsSync(manifestPath)) return false;
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as CourseManifest;
+      return manifest.pods && manifest.pods.length > 0;
     })
     .map((c) => c.slug);
 }
 
-export function getCaseStudyContent(slug: string): string | null {
-  const mdPath = path.join(CONTENT_DIR, slug, 'case_study.md');
+// ─── Pod-level functions ─────────────────────────────────────────────
+
+/** Reads pod.json + article.md for a specific pod. */
+export function getPod(
+  courseSlug: string,
+  podSlug: string
+): PodManifest & { articleContent: string } {
+  const podDir = path.join(CONTENT_DIR, courseSlug, 'pods', podSlug);
+  const manifestPath = path.join(podDir, 'pod.json');
+  const articlePath = path.join(podDir, 'article.md');
+
+  const manifest = JSON.parse(
+    fs.readFileSync(manifestPath, 'utf-8')
+  ) as PodManifest;
+
+  let articleContent = '';
+  if (fs.existsSync(articlePath)) {
+    articleContent = fs.readFileSync(articlePath, 'utf-8');
+  }
+
+  return { ...manifest, articleContent };
+}
+
+/** Returns non-draft pod slugs for a course (those with a pod.json). */
+export function getPodSlugs(courseSlug: string): string[] {
+  const manifest = getCourseManifest(courseSlug);
+  return manifest.pods
+    .filter((p: PodCard) => {
+      const podJsonPath = path.join(CONTENT_DIR, courseSlug, 'pods', p.slug, 'pod.json');
+      return fs.existsSync(podJsonPath);
+    })
+    .sort((a: PodCard, b: PodCard) => a.order - b.order)
+    .map((p: PodCard) => p.slug);
+}
+
+/** Returns all {courseSlug, podSlug} pairs for generateStaticParams(). */
+export function getAllPodParams(): { courseSlug: string; podSlug: string }[] {
+  const courseSlugs = getCourseSlugs();
+  const params: { courseSlug: string; podSlug: string }[] = [];
+
+  for (const courseSlug of courseSlugs) {
+    const podSlugs = getPodSlugs(courseSlug);
+    for (const podSlug of podSlugs) {
+      // Only include pods that have an article (i.e., are live)
+      const articlePath = path.join(CONTENT_DIR, courseSlug, 'pods', podSlug, 'article.md');
+      if (fs.existsSync(articlePath)) {
+        params.push({ courseSlug, podSlug });
+      }
+    }
+  }
+
+  return params;
+}
+
+/** Returns the list of live pods (those with article.md) for a course. */
+export function getLivePods(courseSlug: string): PodCard[] {
+  const manifest = getCourseManifest(courseSlug);
+  return manifest.pods
+    .filter((p: PodCard) => {
+      const articlePath = path.join(CONTENT_DIR, courseSlug, 'pods', p.slug, 'article.md');
+      return fs.existsSync(articlePath);
+    })
+    .sort((a: PodCard, b: PodCard) => a.order - b.order);
+}
+
+// ─── Case Study ──────────────────────────────────────────────────────
+
+export function getPodCaseStudyContent(courseSlug: string, podSlug: string): string | null {
+  const mdPath = path.join(CONTENT_DIR, courseSlug, 'pods', podSlug, 'case_study.md');
   try {
     const raw = fs.readFileSync(mdPath, 'utf-8');
     return escapeCurrencyDollars(raw);
@@ -67,7 +142,6 @@ export function parseCaseStudySections(md: string): CaseStudySection[] {
   for (const line of lines) {
     const sectionMatch = line.match(/^## Section (\d+):\s*(.+)/i);
     if (sectionMatch) {
-      // Flush previous section
       if (currentLines.length > 0) {
         const content = currentLines.join('\n').trim();
         if (content) {
@@ -84,7 +158,6 @@ export function parseCaseStudySections(md: string): CaseStudySection[] {
     currentLines.push(line);
   }
 
-  // Flush last section
   if (currentLines.length > 0) {
     const content = currentLines.join('\n').trim();
     if (content) {
@@ -92,7 +165,6 @@ export function parseCaseStudySections(md: string): CaseStudySection[] {
     }
   }
 
-  // Process sections: replace Section 3, remove Section 5
   return sections
     .map((s) => {
       if (s.id === 'section-3') {
@@ -113,12 +185,8 @@ export function parseCaseStudySections(md: string): CaseStudySection[] {
 
 /**
  * Escape bare `$` signs used for currency so remarkMath doesn't interpret
- * them as LaTeX delimiters. Targets patterns like $23, $180M, $5.50, $0.80/hr.
- * Leaves `$$...$$` (block math) and `$...$` (inline math with non-digit start)
- * untouched.
+ * them as LaTeX delimiters.
  */
 function escapeCurrencyDollars(md: string): string {
-  // Match $ followed by a digit (currency pattern), but NOT $$ (block math)
-  // and NOT already escaped \$
   return md.replace(/(?<![\\$])\$(?=\d)/g, '\\$');
 }

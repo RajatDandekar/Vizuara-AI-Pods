@@ -1,0 +1,15 @@
+{
+  "title": "Reasoning & Chain-of-Thought Evaluation",
+  "slug": "reasoning-cot-evaluation",
+  "courseSlug": "llm-evaluation",
+  "order": 2,
+  "description": "Coming soon: Reasoning & Chain-of-Thought Evaluation",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

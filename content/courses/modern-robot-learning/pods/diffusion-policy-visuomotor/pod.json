@@ -1,0 +1,15 @@
+{
+  "title": "Diffusion Policy for Visuomotor Control",
+  "slug": "diffusion-policy-visuomotor",
+  "courseSlug": "modern-robot-learning",
+  "order": 2,
+  "description": "Coming soon: Diffusion Policy for Visuomotor Control",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

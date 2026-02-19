@@ -1,0 +1,59 @@
+{
+  "title": "AI in Production",
+  "slug": "ai-in-production",
+  "description": "Deploy, monitor, and govern ML systems \u2014 from model serving to CI/CD for ML.",
+  "difficulty": "intermediate",
+  "estimatedHours": 5,
+  "tags": [
+    "mlops",
+    "deployment",
+    "monitoring"
+  ],
+  "pods": [
+    {
+      "slug": "model-deployment-serving",
+      "title": "Model Deployment & Serving",
+      "description": "Coming soon: Model Deployment & Serving",
+      "order": 1,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "monitoring-observability",
+      "title": "Monitoring & Observability",
+      "description": "Coming soon: Monitoring & Observability",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "mlops-cicd",
+      "title": "MLOps & CI/CD for ML",
+      "description": "Coming soon: MLOps & CI/CD for ML",
+      "order": 3,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "data-engineering-feature-stores",
+      "title": "Data Engineering & Feature Stores",
+      "description": "Coming soon: Data Engineering & Feature Stores",
+      "order": 4,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "model-governance-reliability",
+      "title": "Model Governance & Reliability",
+      "description": "Coming soon: Model Governance & Reliability",
+      "order": 5,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    }
+  ]
+}

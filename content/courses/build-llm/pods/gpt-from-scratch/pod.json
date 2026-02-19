@@ -1,0 +1,74 @@
+{
+  "title": "Building a GPT-style Model from Scratch",
+  "slug": "gpt-from-scratch",
+  "courseSlug": "build-llm",
+  "order": 4,
+  "description": "Forward pass, loss computation, and backpropagation — build a GPT-style autoregressive language model from the ground up.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [
+    "self-attention-first-principles"
+  ],
+  "tags": [
+    "gpt",
+    "autoregressive",
+    "forward-pass",
+    "backpropagation"
+  ],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Embeddings and the GPT Architecture",
+      "slug": "01-embeddings_and_gpt_architecture",
+      "objective": "Build the input pipeline of a GPT model from scratch: character tokenizer, token embeddings, positional embeddings, and the combined embedding module.",
+      "colabUrl": "https://colab.research.google.com/drive/1YN4SU8nAxcttnDOrAS2W3pYjgTWlg5iw",
+      "downloadPath": "/notebooks/gpt-from-scratch/01_embeddings_and_gpt_architecture.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Self-Attention and the Forward Pass",
+      "slug": "02-self_attention_and_forward_pass",
+      "objective": "Implement scaled dot-product attention with causal masking, multi-head attention, the Transformer block, and the complete GPT forward pass.",
+      "colabUrl": "https://colab.research.google.com/drive/1Iq96RqUHWJK_G2o9pzQsueANo5RkFS3R",
+      "downloadPath": "/notebooks/gpt-from-scratch/02_self_attention_and_forward_pass.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Loss and Backpropagation",
+      "slug": "03-loss_and_backpropagation",
+      "objective": "Implement cross-entropy loss, the full training loop with AdamW optimizer, and autoregressive text generation from a trained GPT model.",
+      "colabUrl": "https://colab.research.google.com/drive/1zK8YXPo3LresZRr7HSUb4Ww9IpWyOS9U",
+      "downloadPath": "/notebooks/gpt-from-scratch/03_loss_and_backpropagation.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Autoregressive Contract Clause Generation for Legal Document Drafting",
+    "subtitle": "Lexis Draft AI -- Training a GPT-Style Model to Generate Legal Contract Clauses",
+    "company": "Lexis Draft AI",
+    "industry": "Legal Technology -- Contract Lifecycle Management",
+    "description": "Lexis Draft AI's retrieval-based contract drafting assistant achieves only 62% clause relevance and 38% first-draft acceptance. The system cannot generate novel clauses for unprecedented deal structures, maintain defined-term consistency across sections, or adapt to firm-specific drafting conventions.",
+    "pdfPath": "/case-studies/gpt-from-scratch/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1hej7zcZ0EVquej_BiIqL7hc23l1XF-kN",
+    "notebookPath": "/case-studies/gpt-from-scratch/case_study_notebook.ipynb"
+  },
+  "thumbnail": "/courses/build-llm/pods/gpt-from-scratch/figures/figure_1.png",
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

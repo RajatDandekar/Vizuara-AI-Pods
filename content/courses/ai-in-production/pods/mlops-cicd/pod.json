@@ -1,0 +1,15 @@
+{
+  "title": "MLOps & CI/CD for ML",
+  "slug": "mlops-cicd",
+  "courseSlug": "ai-in-production",
+  "order": 3,
+  "description": "Coming soon: MLOps & CI/CD for ML",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

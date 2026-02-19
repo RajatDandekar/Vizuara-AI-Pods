@@ -1,0 +1,15 @@
+{
+  "title": "Distributed GPU Systems",
+  "slug": "distributed-gpu-systems",
+  "courseSlug": "gpu-programming",
+  "order": 10,
+  "description": "Coming soon: Distributed GPU Systems",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

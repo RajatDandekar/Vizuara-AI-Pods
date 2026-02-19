@@ -1,0 +1,85 @@
+{
+  "title": "Self-Attention from First Principles",
+  "slug": "self-attention-first-principles",
+  "courseSlug": "build-llm",
+  "order": 3,
+  "description": "Queries, Keys, Values, Multi-Head Attention, and Positional Encoding — derive the self-attention mechanism from first principles.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [
+    "foundations-of-language-modeling"
+  ],
+  "tags": [
+    "self-attention",
+    "qkv",
+    "multi-head-attention",
+    "positional-encoding"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "QKV Projections from Scratch",
+      "slug": "01-qkv_projections",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1RPOVDVj9OR6LJ3iq2HtjLGMWt52uFDnE",
+      "downloadPath": "/notebooks/self-attention-first-principles/01_qkv_projections.ipynb",
+      "estimatedMinutes": 35,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Scaled Dot-Product Attention",
+      "slug": "02-scaled_dot_product_attention",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1JjdsjRwIVDfv0cG_EeaqwhgpWWTUV50A",
+      "downloadPath": "/notebooks/self-attention-first-principles/02_scaled_dot_product_attention.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Multi-Head Attention and Positional Encoding",
+      "slug": "03-multi_head_attention_and_positional_encoding",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1HqN9pFcxDiw0ItsAjgKiPtGNI3LgqxFF",
+      "downloadPath": "/notebooks/self-attention-first-principles/03_multi_head_attention_and_positional_encoding.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Full Transformer Block",
+      "slug": "04-full_transformer_block",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1JUrwaufnHUU3Z3G7ubDiWgI9gi1Ntr9R",
+      "downloadPath": "/notebooks/self-attention-first-principles/04_full_transformer_block.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Automated Clinical Note Classification with Self-Attention",
+    "subtitle": "MedScribe Analytics — Reducing Diagnostic Coding Errors in Hospital Documentation",
+    "company": "MedScribe Analytics",
+    "industry": "Healthcare — Clinical Documentation",
+    "description": "MedScribe Analytics builds a Transformer-based multi-label classifier for clinical notes, using self-attention to model long-range dependencies and negation patterns in medical text.",
+    "pdfPath": "/case-studies/self-attention-first-principles/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1jJA_Zq79pzcrIP0rOfith47iL7TncnkI",
+    "notebookPath": "/case-studies/self-attention-first-principles/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

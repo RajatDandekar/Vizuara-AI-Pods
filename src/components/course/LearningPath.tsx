@@ -1,10 +1,10 @@
 'use client';
 
-import type { NotebookMeta, CourseProgress } from '@/types/course';
+import type { NotebookMeta, PodProgress } from '@/types/course';
 
 interface LearningPathProps {
   notebooks: NotebookMeta[];
-  progress: CourseProgress;
+  progress: PodProgress;
   hasCaseStudy?: boolean;
 }
 

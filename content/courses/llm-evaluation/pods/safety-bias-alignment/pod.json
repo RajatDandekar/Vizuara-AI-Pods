@@ -1,0 +1,15 @@
+{
+  "title": "Safety, Bias & Alignment Audits",
+  "slug": "safety-bias-alignment",
+  "courseSlug": "llm-evaluation",
+  "order": 3,
+  "description": "Coming soon: Safety, Bias & Alignment Audits",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

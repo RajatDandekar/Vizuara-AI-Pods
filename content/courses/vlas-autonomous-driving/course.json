@@ -1,0 +1,25 @@
+{
+  "title": "VLAs for Autonomous Driving",
+  "slug": "vlas-autonomous-driving",
+  "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving.",
+  "difficulty": "advanced",
+  "estimatedHours": 5,
+  "tags": [
+    "autonomous-driving",
+    "vla",
+    "robotics"
+  ],
+  "pods": [
+    {
+      "slug": "vla-autonomous-driving",
+      "title": "Vision-Language-Action Models for Autonomous Driving: From Pixels and Words to Steering Wheels",
+      "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving \u2014 explained from scratch.",
+      "order": 1,
+      "notebookCount": 4,
+      "estimatedHours": 5,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlas-autonomous-driving/pods/vla-autonomous-driving/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/vlas-autonomous-driving/pods/vla-autonomous-driving/figures/figure_1.png"
+}

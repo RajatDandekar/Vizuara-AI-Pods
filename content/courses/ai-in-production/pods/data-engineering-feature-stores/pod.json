@@ -1,0 +1,15 @@
+{
+  "title": "Data Engineering & Feature Stores",
+  "slug": "data-engineering-feature-stores",
+  "courseSlug": "ai-in-production",
+  "order": 4,
+  "description": "Coming soon: Data Engineering & Feature Stores",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

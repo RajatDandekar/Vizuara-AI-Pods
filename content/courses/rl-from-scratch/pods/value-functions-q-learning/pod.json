@@ -1,0 +1,96 @@
+{
+  "title": "Value Functions and Q-Learning",
+  "slug": "value-functions-q-learning",
+  "description": "From Bellman's recursive insight to teaching machines to learn optimal behavior through trial and error.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "State Value Functions",
+    "Action Value Functions (Q-Values)",
+    "The Bellman Equation",
+    "The Bellman Optimality Equation",
+    "Q-Learning",
+    "Exploration vs Exploitation",
+    "Deep Q-Networks (DQN)"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Value-Functions-and-Q-Learning-From-Bellman-s-Insight-to-Learning-Optimal-Behavior-30b01fbe477181bfada7e113e9e47adb",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1AakQVVy-elX7BG_LTqv0sXhlMk9hMljz=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/19XstGJjnuNU49uBPvz2Nd9oKqvKhQZ4K=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/126zknTs2NFeqPzhn5Lc0mnkonnjZvBAx=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1zTU-tBdYVIPXMMFqHvITlxZtMVcpBZLK=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/199D8SjnVm05kppYoQjofzne4Tv-DnZKs=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1mlQhBqHQjSctaMOlTI2YOznmzp9huVDU=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1-0xWxUuBeG23jtAECUqZC7mKvjrmc2Nk=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1hGdu7vQB-RDAwhbr3EpbEQVL06mRtnPO=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1I4-sYYK2dFzYX0A9m3q705yzjMF19fif=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Value Functions: Teaching Machines to Evaluate Positions",
+      "slug": "01-value_functions",
+      "objective": "Implement state value functions and action value functions from scratch, visualize value landscapes on grid worlds, and understand how policies shape values.",
+      "colabUrl": "https://colab.research.google.com/drive/1kzOdeFEn1lMIebFgmMaTNNsrTRbzWToj",
+      "downloadPath": "/notebooks/value-functions-q-learning/01_value_functions.ipynb",
+      "estimatedMinutes": 35,
+      "todoCount": 1,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "The Bellman Equation: Breaking the Future into One Step at a Time",
+      "slug": "02-bellman_equations",
+      "objective": "Derive and implement the Bellman equation for V and Q, solve the Bellman optimality equation, and implement value iteration from scratch.",
+      "colabUrl": "https://colab.research.google.com/drive/1sMkAEW5Vlv6D8EczkzDeQhNWvh5HRolb",
+      "downloadPath": "/notebooks/value-functions-q-learning/02_bellman_equations.ipynb",
+      "estimatedMinutes": 40,
+      "todoCount": 1,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Q-Learning from Scratch: Learning Without a Map",
+      "slug": "03-q_learning",
+      "objective": "Implement Q-Learning from scratch, train an agent on FrozenLake, understand epsilon-greedy exploration, and compare exploration strategies.",
+      "colabUrl": "https://colab.research.google.com/drive/1alI7YNQ6fLGx6JntCKp1dF0dUoyClLPr",
+      "downloadPath": "/notebooks/value-functions-q-learning/03_q_learning.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 1,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "From Q-Tables to Neural Networks: The Path to Deep Q-Learning",
+      "slug": "04-scaling_q_learning",
+      "objective": "Build a DQN agent with experience replay and target networks to solve CartPole, bridging tabular Q-learning to deep RL.",
+      "colabUrl": "https://colab.research.google.com/drive/1ucQmcfk1I3zd6aWDXwS1nxWKLxfM-CGh",
+      "downloadPath": "/notebooks/value-functions-q-learning/04_scaling_q_learning.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 1,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Q-Learning for Battery Storage Optimization in Energy Markets",
+    "subtitle": "Volterra Energy Solutions -- Optimizing Grid-Scale Battery Dispatch with Reinforcement Learning",
+    "company": "Volterra Energy Solutions",
+    "industry": "Energy -- Grid-Scale Battery Storage",
+    "description": "Volterra operates 14 grid-scale battery systems for energy arbitrage. Their rule-based dispatch captured only 44% of theoretical maximum revenue. A tabular Q-Learning agent learned to time charge/discharge cycles to electricity price patterns, improving revenue by 43% and reducing battery degradation.",
+    "pdfPath": "/case-studies/value-functions-q-learning/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1f3z_DnnocjM5zFGSwEwqAJEaBGOAGGPP",
+    "notebookPath": "/case-studies/value-functions-q-learning/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "rl-from-scratch",
+  "order": 2
+}

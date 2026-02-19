@@ -1,0 +1,15 @@
+{
+  "title": "Profiling & Debugging",
+  "slug": "profiling-debugging",
+  "courseSlug": "gpu-programming",
+  "order": 9,
+  "description": "Coming soon: Profiling & Debugging",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

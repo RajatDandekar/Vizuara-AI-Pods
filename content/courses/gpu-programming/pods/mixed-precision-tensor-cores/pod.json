@@ -1,0 +1,15 @@
+{
+  "title": "Mixed Precision & Tensor Cores",
+  "slug": "mixed-precision-tensor-cores",
+  "courseSlug": "gpu-programming",
+  "order": 8,
+  "description": "Coming soon: Mixed Precision & Tensor Cores",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

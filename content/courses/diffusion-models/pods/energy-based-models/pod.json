@@ -1,0 +1,98 @@
+{
+  "title": "Energy-Based Models and the Score Function",
+  "slug": "energy-based-models",
+  "courseSlug": "diffusion-models",
+  "order": 2,
+  "description": "How an energy landscape, a gradient, and a drunk hiker unlock modern generative modeling.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "energy-based models",
+    "score function",
+    "Boltzmann distribution",
+    "Langevin dynamics",
+    "score matching"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Energy-Based-Models-and-the-Score-Function-30b01fbe477181159e7fd6e8d419cfb0",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/13dMUun_GGnI77EGhiUa7QdiWHNlybQZe=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1OmbBjF4pxfGzr5XnUAebJJuNqwQineER=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1hLpj_93A4yKyhbpo2Npoc6_pqnXZAM1A=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1-0t26MaW_hBg569gReDvP37KZnJ0YJA4=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/10p8s0cuAgD6pf-L7SYlxXuZqSADQmRe9=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1SL3hey2SlQ5eu8_xHHXh59ld79PofaOi=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1lHFXnjcbCWbUnKOxAj_RVkDoJmfFwhkB=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/162enq9ZqvjDyM7UXGXEOTFjmAAYd9RkY=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/13stNhg6TUaKojbGC-c4zXoC_zz6U-TXg=w2000",
+      "figures/figure_10.png": "https://lh3.googleusercontent.com/d/12EphA2OlSXKkXD91rxu3MirvLhtTy403=w2000",
+      "figures/figure_11.png": "https://lh3.googleusercontent.com/d/1U7JchuMrwd6kmBIK4GyeMO67-TmnjGUw=w2000",
+      "figures/figure_12.png": "https://lh3.googleusercontent.com/d/1qoSzHt9E3Yzg-NSGWKTJEplW_sdSKojF=w2000",
+      "figures/figure_13.png": "https://lh3.googleusercontent.com/d/19qRv0Ktq3b71GryxpUsNFCXyl5MH-Ilq=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Energy Functions and Boltzmann Distribution",
+      "slug": "01-energy_functions_boltzmann",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1iYUOC3Ffxj5YZSUI8RjeadffLaiK_jyL",
+      "downloadPath": "/notebooks/energy-based-models/01_energy_functions_boltzmann.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Score Function and Langevin Dynamics",
+      "slug": "02-score_function_langevin",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1d7Z2litiUadJhSG7pAkSo2f8d4NOnWuk",
+      "downloadPath": "/notebooks/energy-based-models/02_score_function_langevin.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Score Matching and Denoising Score Matching",
+      "slug": "03-score_matching_dsm",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1IX9rW8ASNX9NwRpAeQnYkWgYDglXSPMj",
+      "downloadPath": "/notebooks/energy-based-models/03_score_matching_dsm.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Full Pipeline: Multi-Scale Energy Models",
+      "slug": "04-full_pipeline_multi_scale",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1m9Z3KkHXd3xwXey6RIrWQu9GOeP-v1N_",
+      "downloadPath": "/notebooks/energy-based-models/04_full_pipeline_multi_scale.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Anomaly Detection in High-Energy Particle Physics Using Energy-Based Models",
+    "subtitle": "NovaCERN Analytics -- Score-Guided Anomaly Detection in Particle Collider Data",
+    "company": "NovaCERN Analytics",
+    "industry": "Particle Physics -- High-Energy Research",
+    "description": "NovaCERN Analytics uses energy-based models and score-guided sampling to detect rare anomalous particle interactions in collider experiment data.",
+    "pdfPath": "/case-studies/energy-based-models/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/17i71y4adrQohgpCxHLys5TwUGtroH8Hc",
+    "notebookPath": "/case-studies/energy-based-models/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

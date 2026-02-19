@@ -1,0 +1,84 @@
+{
+  "title": "RL From Scratch",
+  "slug": "rl-from-scratch",
+  "description": "From Q-learning to GRPO \u2014 build reinforcement learning from first principles.",
+  "difficulty": "intermediate",
+  "estimatedHours": 17,
+  "tags": [
+    "reinforcement-learning",
+    "reasoning",
+    "rlhf"
+  ],
+  "pods": [
+    {
+      "slug": "basics-of-rl",
+      "title": "Basics of Reinforcement Learning",
+      "description": "From the agent-environment loop to Bellman equations, rewards, and your first OpenAI Gymnasium agent -- all from first principles.",
+      "order": 1,
+      "notebookCount": 3,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png"
+    },
+    {
+      "slug": "value-functions-q-learning",
+      "title": "Value Functions and Q-Learning",
+      "description": "From Bellman's recursive insight to teaching machines to learn optimal behavior through trial and error.",
+      "order": 2,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/value-functions-q-learning/figures/figure_1.png"
+    },
+    {
+      "slug": "dqn-atari-agents",
+      "title": "Building DQN Atari Agents",
+      "description": "How DeepMind combined Q-learning with convolutional neural networks to play Atari games at superhuman levels -- and why this 2013 paper changed everything.",
+      "order": 3,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/dqn-atari-agents/figures/figure_4.png"
+    },
+    {
+      "slug": "policy-gradient-methods",
+      "title": "Policy Gradient Methods",
+      "description": "From REINFORCE to Actor-Critic -- how gradient ascent on policy parameters unlocks continuous and high-dimensional action spaces.",
+      "order": 4,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/policy-gradient-methods/figures/figure_1.png"
+    },
+    {
+      "slug": "rlhf-theory-implementation",
+      "title": "RLHF Theory and Implementation: Teaching Machines to Learn from Human Preferences",
+      "description": "A complete guide to aligning language models with human preferences: from reward modeling to PPO, with full code implementations.",
+      "order": 5,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/rlhf-theory-implementation/figures/figure_1.png"
+    },
+    {
+      "slug": "grpo",
+      "title": "Group-Relative Policy Optimization (GRPO) -- From Scratch",
+      "description": "How DeepSeek eliminated the critic network and made RLHF simpler, cheaper, and better. From group-relative advantages to training reasoning models.",
+      "order": 6,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/grpo/figures/figure_1.png"
+    },
+    {
+      "slug": "building-reasoning-model",
+      "title": "Building a Reasoning Model from Scratch",
+      "description": "How to teach a small language model to think step-by-step using reinforcement learning with verifiable rewards -- from SFT on chain-of-thought data to GRPO training to distillation.",
+      "order": 7,
+      "notebookCount": 4,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/building-reasoning-model/figures/figure_1.png"
+    }
+  ]
+}

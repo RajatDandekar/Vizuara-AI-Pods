@@ -11,8 +11,8 @@ export default function ForgotPasswordPage() {
       <FadeIn className="w-full max-w-md">
         <div className="bg-card-bg border border-card-border rounded-2xl p-8 shadow-sm text-center">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <Image src="/vizuara-logo.png" alt="VIZflix" width={32} height={32} className="rounded-md" />
-            <span className="font-bold text-lg text-foreground">VIZflix</span>
+            <Image src="/vizuara-logo.png" alt="Vizuara AI Pods" width={32} height={32} className="rounded-md" />
+            <span className="font-bold text-lg text-foreground">Vizuara AI Pods</span>
           </Link>
 
           <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">

@@ -1,0 +1,84 @@
+{
+  "title": "Cross-Attention & Token Alignment: How Vision-Language Models Learn to See and Speak",
+  "slug": "cross-attention-token-alignment",
+  "description": "Understanding the mechanism that allows language models to look at images - from first principles to a working implementation.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "cross-attention",
+    "token alignment",
+    "vision-language models",
+    "multi-head attention",
+    "Q/K/V projections",
+    "LLaVA",
+    "Flamingo"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Cross-Attention-Token-Alignment-How-Vision-Language-Models-Learn-to-See-and-Speak-30b01fbe47718154bc6ce06a74cecd39",
+    "figureUrls": {
+      "figure_1": "https://drive.google.com/uc?export=view&id=1fpG_Zs23dB477SnWLXjkAmhAdh6cjbA7",
+      "figure_2": "https://drive.google.com/uc?export=view&id=1TrAeCCnB6gC-zAnch5df5Wp-Hes1hnI1",
+      "figure_3": "https://drive.google.com/uc?export=view&id=1TK7uCzUgkP1vRUYdmVnco44KCPN4CdCt",
+      "figure_4": "https://drive.google.com/uc?export=view&id=12dQgyqaz_BQLqYJE8Jn-oyofBvVxkGo8",
+      "figure_5": "https://drive.google.com/uc?export=view&id=1aNV1DZWbW3iyUsG7weoeO3ouiRR9ccca",
+      "figure_6": "https://drive.google.com/uc?export=view&id=1CFEXMrnkTJRUTfyIVW5XVOyHmOTBX4qA",
+      "figure_7": "https://drive.google.com/uc?export=view&id=18JVS2e8NEC_nnt8uxTdaYgzXwghCINnN",
+      "figure_8": "https://drive.google.com/uc?export=view&id=1vcPt7hiP1K-2gVy1wITAzSPewegrAdq_"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Self-Attention and Cross-Attention from Scratch",
+      "slug": "01-self_and_cross_attention",
+      "objective": "Build scaled dot-product attention from first principles, then extend to cross-attention where text tokens query image patches.",
+      "downloadPath": "/notebooks/cross-attention-token-alignment/01_self_and_cross_attention.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 1,
+      "order": 1,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1vCfFosbaoD5pTnSgSA3ow8qUjoEacpca"
+    },
+    {
+      "title": "Token Alignment and Multi-Head Cross-Attention",
+      "slug": "02-token_alignment_multihead",
+      "objective": "Solve the dimensionality mismatch between vision and language tokens, then implement multi-head cross-attention with head specialization.",
+      "downloadPath": "/notebooks/cross-attention-token-alignment/02_token_alignment_multihead.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 1,
+      "order": 2,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1ZqyL8n-zi5eT9ot-WVVu9yHJW0vhVDjV"
+    },
+    {
+      "title": "Building a Mini Vision-Language Model from Scratch",
+      "slug": "03-mini_vlm",
+      "objective": "Combine everything into a working mini VLM with training loop and attention visualization.",
+      "downloadPath": "/notebooks/cross-attention-token-alignment/03_mini_vlm.ipynb",
+      "estimatedMinutes": 65,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1fMywzEKx6bbcBgRWVRLq3bc953qtsW8a"
+    }
+  ],
+  "caseStudy": {
+    "title": "Grounded Radiology Report Generation Using Cross-Attention",
+    "subtitle": "MedSight AI - Building Explainable AI for Clinical Radiology",
+    "company": "MedSight AI",
+    "industry": "Healthcare - Diagnostic Radiology",
+    "description": "MedSight AI builds AI-assisted clinical decision support for radiology. Their grounded report generation system uses cross-attention to generate preliminary radiology reports where every finding is visually grounded in the medical image, satisfying FDA explainability requirements.",
+    "pdfPath": "/case-studies/cross-attention-token-alignment/case_study.pdf",
+    "notebookPath": "/case-studies/cross-attention-token-alignment/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/1Nv7SnnFy6xBVk7nAtI7qcatRiB-7l4zy"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "vlms-from-scratch",
+  "order": 4
+}

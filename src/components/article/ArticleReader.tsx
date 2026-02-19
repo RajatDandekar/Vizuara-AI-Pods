@@ -14,8 +14,10 @@ export default function ArticleReader({ content, figureUrls, courseSlug }: Artic
     let processed = content;
 
     // Replace local figure paths with Drive URLs if available
-    for (const [localPath, driveUrl] of Object.entries(figureUrls)) {
-      processed = processed.replaceAll(localPath, driveUrl);
+    for (const [key, driveUrl] of Object.entries(figureUrls)) {
+      // Keys may be short ("figure_1") or full paths ("figures/figure_1.png")
+      const fullPath = key.includes('/') ? key : `figures/${key}.png`;
+      processed = processed.replaceAll(`(${fullPath})`, `(${driveUrl})`);
     }
 
     // Replace remaining relative figure paths with public directory paths

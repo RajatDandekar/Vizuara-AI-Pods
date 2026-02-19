@@ -144,7 +144,7 @@ export default function OnboardingPage() {
               className="bg-card-bg border border-card-border rounded-2xl p-10 shadow-sm text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Image src="/vizuara-logo.png" alt="VIZflix" width={48} height={48} className="rounded-lg" />
+                <Image src="/vizuara-logo.png" alt="Vizuara AI Pods" width={48} height={48} className="rounded-lg" />
               </div>
               <h1 className="text-3xl font-bold text-foreground mb-3">
                 Welcome, {user.fullName.split(' ')[0]}!

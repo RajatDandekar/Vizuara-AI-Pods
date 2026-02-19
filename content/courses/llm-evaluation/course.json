@@ -1,0 +1,50 @@
+{
+  "title": "LLM Evaluation",
+  "slug": "llm-evaluation",
+  "description": "Benchmark, evaluate, and audit large language models \u2014 from reasoning to safety.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "tags": [
+    "evaluation",
+    "benchmarking",
+    "safety"
+  ],
+  "pods": [
+    {
+      "slug": "benchmarking-fundamentals",
+      "title": "Benchmarking Fundamentals",
+      "description": "Coming soon: Benchmarking Fundamentals",
+      "order": 1,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "reasoning-cot-evaluation",
+      "title": "Reasoning & Chain-of-Thought Evaluation",
+      "description": "Coming soon: Reasoning & Chain-of-Thought Evaluation",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "safety-bias-alignment",
+      "title": "Safety, Bias & Alignment Audits",
+      "description": "Coming soon: Safety, Bias & Alignment Audits",
+      "order": 3,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "human-eval-llm-judge",
+      "title": "Human Evaluation & LLM-as-a-Judge",
+      "description": "Coming soon: Human Evaluation & LLM-as-a-Judge",
+      "order": 4,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    }
+  ]
+}

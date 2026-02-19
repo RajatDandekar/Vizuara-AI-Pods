@@ -1,0 +1,15 @@
+{
+  "title": "Monitoring & Observability",
+  "slug": "monitoring-observability",
+  "courseSlug": "ai-in-production",
+  "order": 2,
+  "description": "Coming soon: Monitoring & Observability",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

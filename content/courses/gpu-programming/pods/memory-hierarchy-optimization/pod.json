@@ -1,0 +1,15 @@
+{
+  "title": "Memory Hierarchy Optimization",
+  "slug": "memory-hierarchy-optimization",
+  "courseSlug": "gpu-programming",
+  "order": 4,
+  "description": "Coming soon: Memory Hierarchy Optimization",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

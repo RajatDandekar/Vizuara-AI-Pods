@@ -1,0 +1,15 @@
+{
+  "title": "Model Governance & Reliability",
+  "slug": "model-governance-reliability",
+  "courseSlug": "ai-in-production",
+  "order": 5,
+  "description": "Coming soon: Model Governance & Reliability",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

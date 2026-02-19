@@ -1,426 +1,212 @@
 {
   "courses": [
     {
-      "slug": "5d-parallelism-from-scratch",
-      "title": "5D Parallelism from Scratch",
-      "description": "How modern LLMs are trained across thousands of GPUs — understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism from first principles.",
+      "slug": "diffusion-models",
+      "title": "Principles of Diffusion Models",
+      "description": "From variational autoencoders to video generation \u2014 understanding diffusion models from first principles.",
       "difficulty": "intermediate",
-      "estimatedHours": 17,
+      "estimatedHours": 23,
       "tags": [
-        "Why Do We Need Parallelism?",
-        "Data Parallelism — \"Hire More Chefs\"",
-        "Tensor Parallelism — \"Split the Recipe Across Chefs\"",
-        "Pipeline Parallelism — \"The Assembly Line\"",
-        "Sequence Parallelism — \"Split the Sentence\""
+        "diffusion",
+        "generative-models",
+        "video-generation"
       ],
-      "notebookCount": 6,
+      "podCount": 6,
+      "totalNotebooks": 22,
       "status": "live",
-      "thumbnail": "/courses/5d-parallelism-from-scratch/figures/figure_1.png"
+      "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png"
     },
     {
-      "slug": "5d-parallelism-gpu",
-      "title": "5D Parallelism: How We Train Models That Don't Fit on a Single GPU",
-      "description": "Understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism — the five dimensions that power today's largest AI models",
+      "slug": "rl-from-scratch",
+      "title": "RL From Scratch",
+      "description": "From Q-learning to GRPO \u2014 build reinforcement learning from first principles.",
       "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/5d-parallelism-gpu/figures/figure_1.png",
-      "tags": [
-        "distributed-training",
-        "gpu",
-        "systems"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "5d-parallelism-gpu-programming",
-      "title": "5D Parallelism: How We Train Models Too Large for Any Single GPU",
-      "description": "A visual, analogy-driven guide to the five dimensions of parallelism that power trillion-parameter training.",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/5d-parallelism-gpu-programming/figures/figure_1.png",
-      "tags": [
-        "distributed-training",
-        "gpu",
-        "systems"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "agentic-rag",
-      "title": "Agentic RAG Explained From Scratch",
-      "description": "How giving an LLM the ability to think before it retrieves transforms RAG from a lookup tool into a reasoning engine.",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/agentic-rag/figures/figure_1.png",
-      "tags": [
-        "rag",
-        "agents",
-        "nlp"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "bert-paper",
-      "title": "BERT: Pre-training of Deep Bidirectional Transformers",
-      "description": "How one paper changed the way machines understand language — from reading left-to-right to reading the whole sentence at once",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/bert-paper/figures/figure_1.png",
-      "tags": [
-        "nlp",
-        "transformers",
-        "language-models"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "context-engineering-for-llms",
-      "title": "Context Engineering for LLMs",
-      "description": "The art and science of filling the context window with just the right information for the next step",
-      "difficulty": "intermediate",
-      "estimatedHours": 7,
-      "tags": [
-        "From Prompt Engineering to Context Engineering",
-        "Anatomy of the Context Window",
-        "When Context Goes Wrong — Four Failure Modes",
-        "Four Core Strategies for Context Engineering",
-        "RAG — The Most Common Context Engineering Pattern"
-      ],
-      "notebookCount": 5,
-      "status": "live",
-      "thumbnail": "/courses/context-engineering-for-llms/figures/figure_1.png"
-    },
-    {
-      "slug": "deepseek-r1",
-      "title": "DeepSeek-R1 Explained From Scratch",
-      "description": "How Reinforcement Learning Teaches Language Models to Reason Step by Step",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/deepseek-r1/figures/figure_1.png",
+      "estimatedHours": 24,
       "tags": [
         "reinforcement-learning",
         "reasoning",
-        "language-models"
+        "rlhf"
       ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "robotics-foundation-models",
-      "title": "Developments in Robotics Foundation Models",
-      "description": "From task-specific controllers to general-purpose robot brains — how foundation models are transforming robotics",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/robotics-foundation-models/figures/figure_1.png",
-      "tags": [
-        "robotics",
-        "foundation-models"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "diffusion-llms-from-scratch",
-      "title": "Diffusion LLMs from Scratch",
-      "description": "What if language models could generate all tokens at once — like image diffusion, but for text?",
-      "difficulty": "intermediate",
-      "estimatedHours": 4,
-      "tags": [
-        "A Quick Recap: How Diffusion Works for Images",
-        "\"But Wait — Diffusion Is for Images, Not Text!\"",
-        "The Big Intuition: Masking Is the \"Noise\" for Text",
-        "The Reverse Process: Learning to Unmask",
-        "Generation: How to Actually Create Text"
-      ],
-      "notebookCount": 4,
+      "podCount": 7,
+      "totalNotebooks": 24,
       "status": "live",
-      "thumbnail": "/courses/diffusion-llms-from-scratch/figures/figure_1.png"
+      "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png"
     },
     {
-      "slug": "diffusion-llms",
-      "title": "Diffusion LLMs: What If Language Models Could Think Before They Speak?",
-      "description": "From masking to unmasking — how diffusion models are challenging the autoregressive paradigm in text generation.",
+      "slug": "ai-in-production",
+      "title": "AI in Production",
+      "description": "Deploy, monitor, and govern ML systems \u2014 from model serving to CI/CD for ML.",
       "difficulty": "intermediate",
-      "estimatedHours": 4,
-      "thumbnail": "/courses/diffusion-llms/figures/figure_1.png",
+      "estimatedHours": 5,
       "tags": [
-        "The Typewriter vs. The Painter",
-        "From Pixels to Words — Can We Diffuse Text?",
-        "Masked Diffusion — The Winning Recipe",
-        "The Training Objective — Simpler Than You Think",
-        "Generation — How Diffusion LLMs Write"
+        "mlops",
+        "deployment",
+        "monitoring"
       ],
-      "notebookCount": 4,
-      "status": "draft"
+      "podCount": 5,
+      "totalNotebooks": 0,
+      "status": "draft",
+      "thumbnail": "/courses/ai-in-production/thumbnail.png"
     },
     {
-      "slug": "diffusion-policy",
-      "title": "Diffusion Policy: Teaching Robots to Act",
-      "description": "How the denoising process from image generation became the secret weapon for robot learning",
+      "slug": "vlms-from-scratch",
+      "title": "VLMs from Scratch",
+      "description": "Build vision-language models from first principles \u2014 from ViT to multimodal instruction tuning.",
       "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/diffusion-policy/figures/figure_1.png",
+      "estimatedHours": 24,
       "tags": [
-        "robotics",
-        "diffusion-models"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "diffusion-models-video-generation",
-      "title": "From Still to Motion: How Diffusion Models Learned to Generate Videos",
-      "description": "Extending image diffusion to the temporal dimension — from 2D noise to coherent video, one frame at a time.",
-      "difficulty": "intermediate",
-      "estimatedHours": 4,
-      "tags": [
-        "The Flipbook Intuition",
-        "What Makes Video Different from Images?",
-        "The Naive Approach — Why Frame-by-Frame Fails",
-        "Extending the Diffusion Framework to Video",
-        "The Architecture — How Neural Networks Learn Space and Time"
-      ],
-      "notebookCount": 3,
-      "status": "live",
-      "thumbnail": "/courses/diffusion-models-video-generation/figures/figure_1.png"
-    },
-    {
-      "slug": "graph-neural-networks",
-      "title": "Graph Neural Networks from Scratch",
-      "description": "Message passing, graph attention, and geometric deep learning — learning on non-Euclidean data",
-      "difficulty": "advanced",
-      "estimatedHours": 3,
-      "tags": [
-        "graph-networks",
-        "geometric-dl"
-      ],
-      "notebookCount": 0,
-      "status": "upcoming",
-      "expectedLaunchDate": "2026-05-01",
-      "thumbnail": "/courses/graph-neural-networks/figures/figure_1.png"
-    },
-    {
-      "slug": "pi0-policy",
-      "title": "How Does the Pi0 Policy from Physical Intelligence Work?",
-      "description": "Inside the architecture that taught a single AI model to fold laundry, assemble boxes, and bus tables",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/pi0-policy/figures/figure_1.png",
-      "tags": [
-        "robotics",
-        "foundation-models"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "mixture-of-experts",
-      "title": "Mixture of Experts: How Sparse Models Scale to Trillions of Parameters",
-      "description": "From routing networks to switch transformers — understanding how MoE enables efficient scaling of large language models",
-      "difficulty": "advanced",
-      "estimatedHours": 2,
-      "tags": [
+        "vision-language",
         "transformers",
-        "efficiency",
-        "language-models"
+        "multimodal"
       ],
-      "notebookCount": 0,
-      "status": "upcoming",
-      "expectedLaunchDate": "2026-03-15",
-      "thumbnail": "/courses/mixture-of-experts/figures/figure_1.png"
-    },
-    {
-      "slug": "rl-from-human-feedback",
-      "title": "RLHF: Teaching AI to Follow Human Preferences",
-      "description": "The complete pipeline from reward modeling to PPO that aligns large language models with human values",
-      "difficulty": "intermediate",
-      "estimatedHours": 3,
-      "tags": [
-        "reinforcement-learning",
-        "alignment",
-        "language-models"
-      ],
-      "notebookCount": 0,
-      "status": "upcoming",
-      "expectedLaunchDate": "2026-04-01",
-      "thumbnail": "/courses/rl-from-human-feedback/figures/figure_1.png"
-    },
-    {
-      "slug": "rt1-rt2-google",
-      "title": "RT-1 and RT-2: Google's Robotics Transformers",
-      "description": "How Google taught robots to understand 700 tasks — and then gave them the power of language models",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "tags": [
-        "The Robot That Understands \"Pick Up the Unhealthy Option\"",
-        "The Problem: Why Was Robot Learning So Hard?",
-        "RT-1: The Robotics Transformer",
-        "RT-2: When Robots Learn to Think",
-        "RT-1 vs RT-2: Head-to-Head"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "reinforcement-learning-deepseek-r1",
-      "title": "Reinforcement Learning in DeepSeek-R1",
-      "description": "Understanding GRPO, rule-based rewards, and the \"aha moment\" from first principles",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/reinforcement-learning-deepseek-r1/figures/figure_1.png",
-      "tags": [
-        "reinforcement-learning",
-        "reasoning"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "sim-to-real",
-      "title": "The Sim-to-Real Problem in Robotics",
-      "description": "Why robots trained in virtual worlds stumble in reality — and how we are closing the gap",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/sim-to-real/figures/figure_1.png",
-      "tags": [
-        "robotics",
-        "simulation"
-      ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "tiny-recursive-models",
-      "title": "Tiny Recursive Models: Less is More for AI Reasoning",
-      "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks — by thinking again, and again, and again.",
-      "difficulty": "beginner",
-      "estimatedHours": 3,
-      "tags": [
-        "The Sudoku Insight",
-        "The Scaling Wall",
-        "The Predecessor: Hierarchical Reasoning Models",
-        "Enter the Tiny Recursive Model",
-        "Deep Supervision: The Training Secret"
-      ],
-      "notebookCount": 4,
+      "podCount": 6,
+      "totalNotebooks": 18,
       "status": "live",
-      "thumbnail": "/courses/tiny-recursive-models/figures/figure_2.png"
+      "thumbnail": "/courses/vlms-from-scratch/pods/vision-encoders/figures/figure_1.png"
     },
     {
-      "slug": "understanding-bert-from-scratch",
-      "title": "Understanding BERT from Scratch",
-      "description": "## How a simple idea — reading in both directions — changed NLP forever",
+      "slug": "build-llm",
+      "title": "Build LLM from Scratch",
+      "description": "From BERT to GPT \u2014 build large language models from first principles.",
+      "difficulty": "intermediate",
+      "estimatedHours": 23,
+      "tags": [
+        "language-models",
+        "transformers",
+        "nlp"
+      ],
+      "podCount": 6,
+      "totalNotebooks": 24,
+      "status": "live",
+      "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "build-diffusion-llm",
+      "title": "Build Diffusion LLM from Scratch",
+      "description": "What if language models could generate all tokens at once \u2014 like image diffusion, but for text?",
       "difficulty": "intermediate",
       "estimatedHours": 4,
       "tags": [
-        "The Problem with Previous Approaches",
-        "The Transformer Encoder — BERT's Engine",
-        "BERT's Architecture — Putting It Together",
-        "Pre-training Objective 1: Masked Language Modeling (MLM)",
-        "Pre-training Objective 2: Next Sentence Prediction (NSP)"
+        "diffusion",
+        "language-models"
       ],
-      "notebookCount": 4,
+      "podCount": 1,
+      "totalNotebooks": 4,
       "status": "live",
-      "thumbnail": "/courses/understanding-bert-from-scratch/figures/figure_1.png"
+      "thumbnail": "/courses/build-diffusion-llm/pods/diffusion-llms-from-scratch/figures/figure_1.png"
     },
     {
-      "slug": "world-models",
-      "title": "Understanding World Models from Scratch",
-      "description": "## How AI agents learn to dream about their environment — and use those dreams to make better decisions",
+      "slug": "gpu-programming",
+      "title": "GPU Programming from Scratch",
+      "description": "From CUDA basics to distributed GPU systems \u2014 master GPU programming for deep learning.",
+      "difficulty": "intermediate",
+      "estimatedHours": 17,
+      "tags": [
+        "gpu",
+        "cuda",
+        "distributed-training",
+        "systems"
+      ],
+      "podCount": 10,
+      "totalNotebooks": 6,
+      "status": "live",
+      "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "modern-robot-learning",
+      "title": "Modern Robot Learning",
+      "description": "From world models to VLAs \u2014 build modern robot learning systems from scratch.",
       "difficulty": "intermediate",
       "estimatedHours": 3,
       "tags": [
-        "Model-Free vs Model-Based: Two Ways to Learn",
-        "The World Model Architecture: V, M, and C",
-        "The Vision Component (V): Seeing in Compressed Form",
-        "The Memory Component (M): Learning to Predict the Future",
-        "The Controller (C): Keeping It Simple"
-      ],
-      "notebookCount": 4,
-      "status": "live",
-      "thumbnail": "/courses/world-models/figures/figure_1.png"
-    },
-    {
-      "slug": "vision-language-action-models",
-      "title": "Vision Language Action Models (VLAs)",
-      "description": "How a single AI model can see, understand language, and control a robot — all at once",
-      "difficulty": "intermediate",
-      "estimatedHours": 1,
-      "thumbnail": "/courses/vision-language-action-models/figures/figure_1.png",
-      "tags": [
         "robotics",
-        "vision-language"
+        "world-models",
+        "vla"
       ],
-      "notebookCount": 0,
-      "status": "draft"
-    },
-    {
-      "slug": "vision-transformers-from-scratch",
-      "title": "Vision Transformers from Scratch: How Treating Images as Sentences Changed Computer Vision",
-      "description": "We break down the Vision Transformer (ViT) paper step by step — from image patches to self-attention — with intuition, math, and a full PyTorch implementation.",
-      "difficulty": "beginner",
-      "estimatedHours": 7,
-      "tags": [
-        "The Big Idea: Reading Images Like Sentences",
-        "A Quick Refresher: Why CNNs Were King",
-        "The Core Idea: Images as Sequences of Patches",
-        "Patch Embedding and Position Embedding",
-        "The Transformer Encoder: Self-Attention on Patches"
-      ],
-      "notebookCount": 3,
+      "podCount": 7,
+      "totalNotebooks": 4,
       "status": "live",
-      "thumbnail": "/courses/vision-transformers-from-scratch/figures/figure_1.png"
+      "thumbnail": "/courses/modern-robot-learning/pods/world-models/figures/figure_1.png"
     },
     {
-      "slug": "vision-transformers",
-      "title": "Vision Transformers: From ViT to DINOv2",
-      "description": "How the transformer architecture conquered computer vision — from patch embeddings to self-supervised visual features",
-      "difficulty": "intermediate",
-      "estimatedHours": 2,
-      "tags": [
-        "computer-vision",
-        "transformers",
-        "foundation-models"
-      ],
-      "notebookCount": 0,
-      "status": "upcoming",
-      "expectedLaunchDate": "2026-04-15",
-      "thumbnail": "/courses/vision-transformers/figures/figure_1.png"
-    },
-    {
-      "slug": "vla-autonomous-driving",
-      "title": "Vision-Language-Action Models for Autonomous Driving: From Pixels and Words to Steering Wheels",
-      "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving — explained from scratch.",
+      "slug": "vlas-autonomous-driving",
+      "title": "VLAs for Autonomous Driving",
+      "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving.",
       "difficulty": "advanced",
       "estimatedHours": 5,
       "tags": [
-        "The Building Blocks: Vision, Language, and Action",
-        "Two Paradigms: End-to-End vs. Dual-System VLAs",
-        "How VLAs are Trained",
-        "Landmark VLA Architectures",
-        "The Critical Challenges"
+        "autonomous-driving",
+        "vla",
+        "robotics"
       ],
-      "notebookCount": 4,
+      "podCount": 1,
+      "totalNotebooks": 4,
       "status": "live",
-      "thumbnail": "/courses/vla-autonomous-driving/figures/figure_4.png"
+      "thumbnail": "/courses/vlas-autonomous-driving/thumbnail.png"
     },
     {
-      "slug": "world-action-models",
-      "title": "World Action Models: How AI Learns to Imagine Before It Acts",
-      "description": "From mental simulations to robot control — a complete guide to world models, imagination-based learning, and Vision-Language-Action architectures",
-      "difficulty": "intermediate",
-      "estimatedHours": 10,
-      "thumbnail": "/courses/world-action-models/figures/figure_01.png",
+      "slug": "tiny-recursive-models",
+      "title": "Tiny Recursive Models",
+      "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks.",
+      "difficulty": "beginner",
+      "estimatedHours": 3,
       "tags": [
-        "robotics",
-        "world-models"
+        "reasoning",
+        "efficiency",
+        "recursive-models"
       ],
-      "notebookCount": 6,
-      "status": "draft"
+      "podCount": 1,
+      "totalNotebooks": 4,
+      "status": "live",
+      "thumbnail": "/courses/tiny-recursive-models/pods/tiny-recursive-models/figures/figure_2.png"
+    },
+    {
+      "slug": "context-engineering",
+      "title": "Context Engineering from Scratch",
+      "description": "The art and science of filling the context window with the right information.",
+      "difficulty": "intermediate",
+      "estimatedHours": 7,
+      "tags": [
+        "context-engineering",
+        "rag",
+        "prompt-design"
+      ],
+      "podCount": 5,
+      "totalNotebooks": 5,
+      "status": "live",
+      "thumbnail": "/courses/context-engineering/pods/context-engineering-for-llms/figures/figure_1.png"
+    },
+    {
+      "slug": "voice-ai-agents",
+      "title": "Voice AI Agents from Scratch",
+      "description": "Build real-time voice AI agents with speech pipelines and conversational state management.",
+      "difficulty": "intermediate",
+      "estimatedHours": 2,
+      "tags": [
+        "voice-ai",
+        "agents",
+        "speech"
+      ],
+      "podCount": 2,
+      "totalNotebooks": 0,
+      "status": "draft",
+      "thumbnail": "/courses/voice-ai-agents/thumbnail.png"
+    },
+    {
+      "slug": "llm-evaluation",
+      "title": "LLM Evaluation",
+      "description": "Benchmark, evaluate, and audit large language models \u2014 from reasoning to safety.",
+      "difficulty": "intermediate",
+      "estimatedHours": 4,
+      "tags": [
+        "evaluation",
+        "benchmarking",
+        "safety"
+      ],
+      "podCount": 4,
+      "totalNotebooks": 0,
+      "status": "draft",
+      "thumbnail": "/courses/llm-evaluation/thumbnail.png"
     }
   ]
 }

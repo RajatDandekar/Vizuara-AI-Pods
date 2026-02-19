@@ -1,0 +1,15 @@
+{
+  "title": "Benchmarking Fundamentals",
+  "slug": "benchmarking-fundamentals",
+  "courseSlug": "llm-evaluation",
+  "order": 1,
+  "description": "Coming soon: Benchmarking Fundamentals",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Retrieval-Augmented Generation (RAG) Systems",
+  "slug": "rag-systems",
+  "courseSlug": "context-engineering",
+  "order": 3,
+  "description": "Coming soon: Retrieval-Augmented Generation (RAG) Systems",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

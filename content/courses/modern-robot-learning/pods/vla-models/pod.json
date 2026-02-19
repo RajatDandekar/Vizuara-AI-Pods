@@ -1,0 +1,15 @@
+{
+  "title": "Vision-Language-Action (VLA) Models",
+  "slug": "vla-models",
+  "courseSlug": "modern-robot-learning",
+  "order": 3,
+  "description": "Coming soon: Vision-Language-Action (VLA) Models",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -40,8 +40,8 @@ export default function LoginPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <Image src="/vizuara-logo.png" alt="VIZflix" width={32} height={32} className="rounded-md" />
-              <span className="font-bold text-lg text-foreground">VIZflix</span>
+              <Image src="/vizuara-logo.png" alt="Vizuara AI Pods" width={32} height={32} className="rounded-md" />
+              <span className="font-bold text-lg text-foreground">Vizuara AI Pods</span>
             </Link>
             <h1 className="text-2xl font-bold text-foreground">Welcome back</h1>
             <p className="text-sm text-text-secondary mt-1">Log in to continue learning</p>

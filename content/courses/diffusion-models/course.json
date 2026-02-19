@@ -1,0 +1,75 @@
+{
+  "title": "Principles of Diffusion Models",
+  "slug": "diffusion-models",
+  "description": "From variational autoencoders to video generation \u2014 understanding diffusion models from first principles.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "tags": [
+    "diffusion",
+    "generative-models",
+    "video-generation"
+  ],
+  "pods": [
+    {
+      "slug": "intro-ddpm",
+      "title": "Denoising Diffusion Probabilistic Models (DDPM)",
+      "description": "A step-by-step guide to understanding how DDPMs learn to generate images by mastering the art of denoising.",
+      "order": 1,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png"
+    },
+    {
+      "slug": "energy-based-models",
+      "title": "Energy-Based Models and the Score Function",
+      "description": "How an energy landscape, a gradient, and a drunk hiker unlock modern generative modeling.",
+      "order": 2,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/energy-based-models/figures/figure_1.png"
+    },
+    {
+      "slug": "denoising-score-matching",
+      "title": "Denoising Score Matching",
+      "description": "How a simple trick of adding noise solves the hardest problem in score-based generative models.",
+      "order": 3,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/denoising-score-matching/figures/figure_1.png"
+    },
+    {
+      "slug": "noise-conditional-score-networks",
+      "title": "Noise Conditioned Score Networks (NCSN)",
+      "description": "How Song & Ermon solved the low-density problem in score matching by conditioning on multiple noise levels.",
+      "order": 4,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/noise-conditional-score-networks/figures/figure_1.png"
+    },
+    {
+      "slug": "diffusion-models-video-generation",
+      "title": "From Still to Motion: How Diffusion Models Learned to Generate Videos",
+      "description": "Extending image diffusion to the temporal dimension \u2014 from 2D noise to coherent video, one frame at a time.",
+      "order": 5,
+      "notebookCount": 3,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/diffusion-models-video-generation/figures/figure_1.png"
+    },
+    {
+      "slug": "vae-explained",
+      "title": "Variational Autoencoders From Scratch",
+      "description": "Building VAEs from first principles \u2014 intuition, math, and a full PyTorch implementation.",
+      "order": 6,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/diffusion-models/pods/vae-explained/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png"
+}

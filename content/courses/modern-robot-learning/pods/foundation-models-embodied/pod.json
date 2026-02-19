@@ -1,0 +1,15 @@
+{
+  "title": "Foundation Models for Embodied Intelligence",
+  "slug": "foundation-models-embodied",
+  "courseSlug": "modern-robot-learning",
+  "order": 7,
+  "description": "Coming soon: Foundation Models for Embodied Intelligence",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

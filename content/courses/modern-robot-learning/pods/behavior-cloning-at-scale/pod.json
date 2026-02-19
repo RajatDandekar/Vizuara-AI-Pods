@@ -1,0 +1,15 @@
+{
+  "title": "Behavior Cloning at Scale (RT-X Style)",
+  "slug": "behavior-cloning-at-scale",
+  "courseSlug": "modern-robot-learning",
+  "order": 6,
+  "description": "Coming soon: Behavior Cloning at Scale (RT-X Style)",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Build LLM from Scratch",
+  "slug": "build-llm",
+  "description": "From BERT to GPT \u2014 build large language models from first principles.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "tags": [
+    "language-models",
+    "transformers",
+    "nlp"
+  ],
+  "pods": [
+    {
+      "slug": "understanding-bert-from-scratch",
+      "title": "Understanding BERT from Scratch",
+      "description": "## How a simple idea \u2014 reading in both directions \u2014 changed NLP forever",
+      "order": 1,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "foundations-of-language-modeling",
+      "title": "Foundations of Language Modeling",
+      "description": "From N-grams to Neural LMs to Transformers \u2014 trace the evolution of language modeling and understand why each breakthrough was necessary.",
+      "order": 2,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/foundations-of-language-modeling/figures/figure_1.png"
+    },
+    {
+      "slug": "self-attention-first-principles",
+      "title": "Self-Attention from First Principles",
+      "description": "Queries, Keys, Values, Multi-Head Attention, and Positional Encoding \u2014 derive the self-attention mechanism from first principles.",
+      "order": 3,
+      "notebookCount": 4,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/self-attention-first-principles/figures/figure_1.png"
+    },
+    {
+      "slug": "gpt-from-scratch",
+      "title": "Building a GPT-style Model from Scratch",
+      "description": "Forward pass, loss computation, and backpropagation \u2014 build a GPT-style autoregressive language model from the ground up.",
+      "order": 4,
+      "notebookCount": 3,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/gpt-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "training-pipeline-engineering",
+      "title": "Training Pipeline Engineering",
+      "description": "Tokenization, data loading, and optimization \u2014 engineer the full training pipeline that turns raw text into a working language model.",
+      "order": 5,
+      "notebookCount": 5,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/training-pipeline-engineering/figures/figure_1.png"
+    },
+    {
+      "slug": "inference-and-scaling",
+      "title": "Inference & Scaling",
+      "description": "KV cache, sampling strategies, fine-tuning, and alignment \u2014 take a trained model from raw outputs to production-ready inference.",
+      "order": 6,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/inference-and-scaling/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
+}

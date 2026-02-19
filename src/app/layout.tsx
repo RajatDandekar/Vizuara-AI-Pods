@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'VIZflix — Learn AI from First Principles',
+  title: 'Vizuara AI Pods — Learn AI from First Principles',
   description:
     'The FPR Technique: Fundamentals, Practicals and Research. Master AI through curated articles, hands-on Colab notebooks, and real-world case studies.',
 };

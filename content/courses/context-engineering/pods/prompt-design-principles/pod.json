@@ -1,0 +1,15 @@
+{
+  "title": "Prompt Design Principles",
+  "slug": "prompt-design-principles",
+  "courseSlug": "context-engineering",
+  "order": 2,
+  "description": "Coming soon: Prompt Design Principles",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

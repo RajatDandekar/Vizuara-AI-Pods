@@ -1,0 +1,77 @@
+{
+  "title": "VLMs from Scratch",
+  "slug": "vlms-from-scratch",
+  "description": "Build vision-language models from first principles — from ViT to multimodal instruction tuning.",
+  "difficulty": "intermediate",
+  "estimatedHours": 14,
+  "tags": [
+    "vision-language",
+    "transformers",
+    "multimodal",
+    "cnn",
+    "vision-encoders"
+  ],
+  "pods": [
+    {
+      "slug": "vision-encoders",
+      "title": "Vision Encoders: How Machines Learned to See -- From Convolutions to Vision Transformers",
+      "description": "Understanding the two paradigms of visual representation learning -- from local feature extraction with CNNs to global attention with Vision Transformers.",
+      "order": 1,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/vision-encoders/figures/figure_1.png"
+    },
+    {
+      "slug": "vision-transformers-from-scratch",
+      "title": "Vision Transformers from Scratch: How Treating Images as Sentences Changed Computer Vision",
+      "description": "We break down the Vision Transformer (ViT) paper step by step — from image patches to self-attention — with intuition, math, and a full PyTorch implementation.",
+      "order": 2,
+      "notebookCount": 3,
+      "estimatedHours": 7,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/vision-transformers-from-scratch/figures/figure_1.png"
+    },
+    {
+      "slug": "multimodal-fusion",
+      "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen — All at Once",
+      "description": "From early fusion to cross-attention — building the bridges that connect vision and language inside modern AI systems.",
+      "order": 3,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/multimodal-fusion/figures/figure_1.png"
+    },
+    {
+      "slug": "contrastive-pretraining-clip",
+      "title": "Contrastive Pretraining (CLIP-style): Teaching Machines to See and Read at the Same Time",
+      "description": "How CLIP learned to connect images and text in a shared space -- from first principles to implementation.",
+      "order": 4,
+      "notebookCount": 3,
+      "estimatedHours": 3,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/contrastive-pretraining-clip/figures/figure_1.png"
+    },
+    {
+      "slug": "cross-attention-token-alignment",
+      "title": "Cross-Attention & Token Alignment: How Vision-Language Models Learn to See and Speak",
+      "description": "Understanding the mechanism that allows language models to look at images - from first principles to a working implementation.",
+      "order": 5,
+      "notebookCount": 3,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/cross-attention-token-alignment/figures/figure_1.png"
+    },
+    {
+      "slug": "multimodal-instruction-tuning",
+      "title": "Multimodal Instruction Tuning: Teaching Language Models to See and Think",
+      "description": "How LLaVA-style visual instruction tuning transforms a language model into a multimodal reasoner -- from projection layers to two-stage training to cross-modal attention.",
+      "order": 6,
+      "notebookCount": 3,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/vlms-from-scratch/pods/multimodal-instruction-tuning/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/vlms-from-scratch/pods/vision-transformers-from-scratch/figures/figure_1.png"
+}

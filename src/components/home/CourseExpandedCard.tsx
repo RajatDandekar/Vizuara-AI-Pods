@@ -195,12 +195,17 @@ export default function CourseExpandedCard({
               {course.difficulty}
             </Badge>
             <span className="text-sm text-slate-400">~{course.estimatedHours}h</span>
-            {course.notebookCount > 0 && (
+            {course.podCount > 0 && (
+              <span className="text-sm text-slate-400">
+                {course.podCount} pod{course.podCount !== 1 ? 's' : ''}
+              </span>
+            )}
+            {(course.totalNotebooks || course.notebookCount || 0) > 0 && (
               <span className="text-sm text-slate-400 flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                 </svg>
-                {course.notebookCount} notebooks
+                {course.totalNotebooks || course.notebookCount} notebooks
               </span>
             )}
             {isUpcoming && course.expectedLaunchDate && (

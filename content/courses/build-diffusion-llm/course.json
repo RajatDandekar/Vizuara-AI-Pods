@@ -1,0 +1,24 @@
+{
+  "title": "Build Diffusion LLM from Scratch",
+  "slug": "build-diffusion-llm",
+  "description": "What if language models could generate all tokens at once \u2014 like image diffusion, but for text?",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "tags": [
+    "diffusion",
+    "language-models"
+  ],
+  "pods": [
+    {
+      "slug": "diffusion-llms-from-scratch",
+      "title": "Diffusion LLMs from Scratch",
+      "description": "What if language models could generate all tokens at once \u2014 like image diffusion, but for text?",
+      "order": 1,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-diffusion-llm/pods/diffusion-llms-from-scratch/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/build-diffusion-llm/pods/diffusion-llms-from-scratch/figures/figure_1.png"
+}

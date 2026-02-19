@@ -1,0 +1,15 @@
+{
+  "title": "Context Optimization & Evaluation",
+  "slug": "context-optimization-evaluation",
+  "courseSlug": "context-engineering",
+  "order": 5,
+  "description": "Coming soon: Context Optimization & Evaluation",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -17,7 +17,7 @@ export default function FoundersLetter() {
         </p>
 
         <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 leading-tight max-w-2xl">
-          Why we built VizFlix
+          Why we built Vizuara AI Pods
         </h2>
 
         <div className="space-y-5 text-slate-700 leading-relaxed text-base sm:text-lg max-w-3xl">
@@ -39,7 +39,7 @@ export default function FoundersLetter() {
           </p>
 
           <p className="text-slate-900 font-medium">
-            VizFlix was built to solve exactly this problem.
+            Vizuara AI Pods was built to solve exactly this problem.
           </p>
 
           <p>
@@ -61,7 +61,7 @@ export default function FoundersLetter() {
           <p>
             Many students who joined our bootcamps at Vizuara told us the same thing: they
             wanted a single place where new AI concepts are added as they emerge, taught
-            from scratch, without having to pay for each topic individually. VizFlix is
+            from scratch, without having to pay for each topic individually. Vizuara AI Pods is
             that place &mdash; a subscription-based platform that stays up to date with
             the evolving landscape of AI, delivering each concept through our{' '}
             <span className="text-blue-600 font-medium">FPR framework</span>: Fundamentals,

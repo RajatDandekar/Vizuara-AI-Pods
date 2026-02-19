@@ -1,0 +1,81 @@
+{
+  "title": "Group-Relative Policy Optimization (GRPO) -- From Scratch",
+  "slug": "grpo",
+  "courseSlug": "rl-from-scratch",
+  "order": 6,
+  "description": "How DeepSeek eliminated the critic network and made RLHF simpler, cheaper, and better. From group-relative advantages to training reasoning models.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "GRPO",
+    "Group-Relative Advantages",
+    "PPO vs GRPO",
+    "DeepSeek-R1",
+    "Verifiable Rewards",
+    "RLHF without Critic"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Group-Relative-Policy-Optimization-GRPO-From-Scratch-30b01fbe477181e5a50af8ea1959ed49",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1YwaMHvyVmVOXdSFbGd9j4L3lxKQgNasN=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/15YFPExzkHEzL7x51-kLra5i8CAUhu_xo=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1RlQKTfsQ116NJacPC3LkWjE4oVFPbnd8=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1DzNoVXXHjKomKsuK0rZX23dOc34pXYXM=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/127gHs_531EIGpk9D4ZPB0ZlsDEoRgde1=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1MWTtWc8_FRWrmu4_csN8brpb6jQFVAHE=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Understanding GRPO: From PPO to Group-Relative Advantages",
+      "slug": "01-understanding_grpo",
+      "objective": "Understand why PPO needs a critic, build the core intuition behind group-relative advantages, and implement advantage computation from scratch.",
+      "colabUrl": "https://colab.research.google.com/drive/10zFKjCGOsvd08r1fJ8TgofkS1--X0JfH",
+      "downloadPath": "/notebooks/grpo/01_understanding_grpo.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Implementing the GRPO Loss Function",
+      "slug": "02-implementing_grpo_loss",
+      "objective": "Build the three components of the GRPO loss (clipped surrogate, group-relative advantages, KL penalty) from scratch and verify with numerical examples.",
+      "colabUrl": "https://colab.research.google.com/drive/1o4PlbQ98M_m-lao0qFruAhGUYRasnhbU",
+      "downloadPath": "/notebooks/grpo/02_implementing_grpo_loss.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Training a Reasoning Model with GRPO",
+      "slug": "03-training_reasoning_with_grpo",
+      "objective": "Train a tiny transformer to solve arithmetic using GRPO with binary verifiable rewards -- the same approach DeepSeek used for R1.",
+      "colabUrl": "https://colab.research.google.com/drive/1DYkjxArgFO63hJMLojUrq762WP4lORsW",
+      "downloadPath": "/notebooks/grpo/03_training_reasoning_with_grpo.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Automated Financial Report Reasoning with GRPO",
+    "subtitle": "Training Verifiable AI Analysts at QuantaLedger Analytics",
+    "company": "QuantaLedger Analytics",
+    "industry": "Financial Technology -- Document Analysis",
+    "description": "QuantaLedger's AI-powered financial Q&A system achieves 91% on lookup queries but only 43% on multi-step reasoning. GRPO with verifiable rewards improves reasoning accuracy to 75%+ without requiring a reward model or critic network, saving 42% on infrastructure costs.",
+    "pdfPath": "/case-studies/grpo/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/17a4YCG8XFpBo5wAvJ5hnumqG3-n7z0iL",
+    "notebookPath": "/case-studies/grpo/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

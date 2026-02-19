@@ -1,0 +1,88 @@
+{
+  "title": "Policy Gradient Methods: Teaching Your Agent to Climb Mountains",
+  "slug": "policy-gradient-methods",
+  "courseSlug": "rl-from-scratch",
+  "order": 4,
+  "description": "From REINFORCE to Actor-Critic -- how gradient ascent on policy parameters unlocks continuous and high-dimensional action spaces.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Policy Parameterization",
+    "Softmax Policy",
+    "Policy Gradient Theorem",
+    "REINFORCE Algorithm",
+    "Variance Reduction",
+    "Baseline Methods",
+    "Actor-Critic",
+    "Advantage Function"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Policy-Gradient-Methods-Teaching-Your-Agent-to-Climb-Mountains-30b01fbe477181d59e3be1aa89cbd877",
+    "figureUrls": {
+      "figure_1": "https://lh3.googleusercontent.com/d/1j_i7vA1G1whlAVfP6Vy55chmaWoig26y=w2000",
+      "figure_2": "https://lh3.googleusercontent.com/d/1lqzlNLSPKinWdVcIerKAMo_2fS2ZOcly=w2000",
+      "figure_3": "https://lh3.googleusercontent.com/d/1XqK7DiyCG36w5izmRJRQCi-2wxpcg8xr=w2000",
+      "figure_4": "https://lh3.googleusercontent.com/d/1droD797nRXLCqh6JvThDgdH0fwC0gbmL=w2000",
+      "figure_5": "https://lh3.googleusercontent.com/d/1cjgjNCJsvDMchIXr4uB-IT6B9tiaw76o=w2000",
+      "figure_6": "https://lh3.googleusercontent.com/d/1H41qKK1X5vt9ZRgOK0WmFHrnyHYTKy0j=w2000",
+      "figure_7": "https://lh3.googleusercontent.com/d/1HO2wl5UMuqq7QAmd6OZEveqBBWZTUMWW=w2000",
+      "figure_8": "https://lh3.googleusercontent.com/d/1Afb5pUCJ_IJNYcqvTwbFomDFqGcUr1hZ=w2000",
+      "figure_9": "https://lh3.googleusercontent.com/d/1UPnAtKFOv9_qnGkyQi7nEXKMiZWMIgHg=w2000",
+      "figure_10": "https://lh3.googleusercontent.com/d/1ZL0lJ81YjlHzKLyhbJKm9HsEf-3hKvUm=w2000",
+      "figure_11": "https://lh3.googleusercontent.com/d/148VifqLEY0xup0XLgHIjl2Dqnx9cLuYs=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Policy Gradient Foundations: From Preferences to Gradient Ascent",
+      "slug": "01-policy_gradient_foundations",
+      "objective": "Build a softmax policy from scratch, implement the performance measure, derive and code the policy gradient theorem step by step.",
+      "colabUrl": "https://colab.research.google.com/drive/1IpQYU9LClHXJ1tNkQsD92Pi6yPkRl-2R",
+      "downloadPath": "/notebooks/policy-gradient-methods/01_policy_gradient_foundations.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "REINFORCE from Scratch: Variance, Baselines, and Convergence",
+      "slug": "02-reinforce_from_scratch",
+      "objective": "Diagnose the variance problem, build REINFORCE from scratch, implement baseline variance reduction, and compare convergence.",
+      "colabUrl": "https://colab.research.google.com/drive/1V5T86L3JSFMMQyrBtNXVBu9OYdVopwxO",
+      "downloadPath": "/notebooks/policy-gradient-methods/02_reinforce_from_scratch.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Actor-Critic Methods: The Student-Teacher Framework",
+      "slug": "03-actor_critic_cartpole",
+      "objective": "Build an Actor-Critic agent with separate policy and value networks, compare against vanilla REINFORCE, and visualize the learned value function.",
+      "colabUrl": "https://colab.research.google.com/drive/1sghnd86Az68-W4Q0nZzUQklNNdEM27hf",
+      "downloadPath": "/notebooks/policy-gradient-methods/03_actor_critic_cartpole.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Adaptive Content Recommendation with Policy Gradient Methods",
+    "subtitle": "NovaMind AI -- Personalizing Learning Paths in Real-Time",
+    "company": "NovaMind AI",
+    "industry": "EdTech -- Adaptive Learning Platforms",
+    "description": "NovaMind AI uses Actor-Critic policy gradient methods to build an adaptive content recommendation system that personalizes learning paths, improving completion rates from 34% to over 50%.",
+    "pdfPath": "/case-studies/policy-gradient-methods/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1hr1AilfWh3Rg40CWnF2lB_4O7sdQsBKx",
+    "notebookPath": "/case-studies/policy-gradient-methods/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

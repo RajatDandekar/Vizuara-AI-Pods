@@ -1,0 +1,86 @@
+{
+  "title": "Basics of Reinforcement Learning",
+  "slug": "basics-of-rl",
+  "description": "From the agent-environment loop to Bellman equations, rewards, and your first OpenAI Gymnasium agent -- all from first principles.",
+  "difficulty": "beginner",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "Reinforcement Learning Fundamentals",
+    "The Four Elements of RL",
+    "Markov Decision Processes",
+    "Rewards, Returns, and Discounting",
+    "OpenAI Gymnasium",
+    "Q-Learning"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Basics-of-Reinforcement-Learning-Teaching-Machines-to-Learn-from-Experience-30b01fbe477181f6a2ebc0acafcc0671",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1xOR-cXtiXilqKoC5yiL6CVdtqSgN8s2O=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1fkkjB_AMXB8KO1siSwPElc7Y63GTVzo4=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1ud1XWLlYSraYiGZgmInf_3-0GZt1orNF=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1glySZUgNus9Mq44f3ii9p2vjAn0nT8gb=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1uF88v-k266nMzZ3YBt1YwBjWUPHIBP1a=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1hSdrsINOJndnGP84OhuDfd45Qt-gMyGd=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1eYyMpN8euy9YfWoAAPPzexHXWoHU4r76=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1hrWD8JsldY0Ekw5f3quFV_e0PfqAEc48=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1Pdc4BuFvSeLEj_rMqbsJ8KUQSsBxmy87=w2000",
+      "figures/figure_10.png": "https://lh3.googleusercontent.com/d/1E4HXNjJcq4TF9-Zbi9MSkd6tPSJLQQV3=w2000",
+      "figures/figure_11.png": "https://lh3.googleusercontent.com/d/1P2vw940Xja3xXmcDZMIHbkbU4_bCGw4j=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "RL Foundations: The Four Elements",
+      "slug": "01-rl_foundations",
+      "objective": "Compare RL to supervised and unsupervised learning, understand the four elements of RL (policy, reward, value function, model), and build a Tic-Tac-Toe agent that learns through self-play.",
+      "colabUrl": "https://colab.research.google.com/drive/1uIDV3D1JFpQAMly0rL01IbW_WON5yh_K",
+      "downloadPath": "/notebooks/basics-of-rl/01_rl_foundations.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "MDPs, Rewards, and the Markov Property",
+      "slug": "02-mdps_rewards_and_markov_property",
+      "objective": "Implement a complete MDP from scratch (the recycling robot), compute returns with and without discounting, verify the Markov property computationally, and find optimal policies through exhaustive search.",
+      "colabUrl": "https://colab.research.google.com/drive/1N4Q8gFIXpIYTIumwz6Bo5p-QOk_mkbZz",
+      "downloadPath": "/notebooks/basics-of-rl/02_mdps_rewards_and_markov_property.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Your First RL Agent with Gymnasium",
+      "slug": "03-gymnasium_first_rl_agent",
+      "objective": "Use OpenAI Gymnasium to interact with the CartPole environment, compare random agents to heuristic agents, and implement a Q-learning agent that learns to balance the pole from scratch.",
+      "colabUrl": "https://colab.research.google.com/drive/1KkM-Wp3luvSmU2JDgvQMzDPowq054S1R",
+      "downloadPath": "/notebooks/basics-of-rl/03_gymnasium_first_rl_agent.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "RL-Guided Adaptive Dose Optimization for Chemotherapy",
+    "subtitle": "NovaCure Therapeutics -- Personalizing Cancer Treatment Through Sequential Decision-Making",
+    "company": "NovaCure Therapeutics",
+    "industry": "Healthcare -- Oncology",
+    "description": "NovaCure's lead drug NC-4817 shows promising efficacy in Phase II trials for advanced non-small-cell lung cancer, but 34% of patients require dose reductions due to toxicity and 18% discontinue treatment entirely. An RL-guided adaptive dosing protocol models chemotherapy as an MDP, where the agent learns to personalize dose levels based on each patient's tumor response, blood counts, and toxicity grade.",
+    "pdfPath": "/case-studies/basics-of-rl/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1kwJQYFBFXxaqClCrjuOqKDfQrpEuOecb",
+    "notebookPath": "/case-studies/basics-of-rl/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "rl-from-scratch",
+  "order": 1
+}

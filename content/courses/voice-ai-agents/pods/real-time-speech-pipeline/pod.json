@@ -1,0 +1,15 @@
+{
+  "title": "Real-Time Speech Pipeline",
+  "slug": "real-time-speech-pipeline",
+  "courseSlug": "voice-ai-agents",
+  "order": 1,
+  "description": "Coming soon: Real-Time Speech Pipeline",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

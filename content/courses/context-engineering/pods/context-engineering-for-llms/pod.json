@@ -1,0 +1,95 @@
+{
+  "title": "Context Engineering for LLMs",
+  "slug": "context-engineering-for-llms",
+  "description": "The art and science of filling the context window with just the right information for the next step",
+  "difficulty": "intermediate",
+  "estimatedHours": 7,
+  "prerequisites": [],
+  "tags": [
+    "From Prompt Engineering to Context Engineering",
+    "Anatomy of the Context Window",
+    "When Context Goes Wrong \u2014 Four Failure Modes",
+    "Four Core Strategies for Context Engineering",
+    "RAG \u2014 The Most Common Context Engineering Pattern"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Context Windows & Token Budgeting: Understanding the LLM's Working Desk",
+      "slug": "01-context_windows_token_budgeting",
+      "objective": "Let us start with an analogy. Imagine you are sitting in an open-book exam. You have a desk of fixed size \u2014 say, enough room for exactly 10 pages of notes. You brought your textbook, your formula shee",
+      "colabUrl": "https://colab.research.google.com/drive/1RX3Dg6yrJ1FqSSA6yhiSAJea_H5PG7zM",
+      "downloadPath": "/notebooks/context-engineering-for-llms/01_context_windows_token_budgeting.ipynb",
+      "estimatedMinutes": 62,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Context Failure Modes: When Good Models Get Bad Context",
+      "slug": "02-context_failure_modes",
+      "objective": "In Part 1, we learned that context engineering is the art of filling an LLM's context window with exactly the right information. But what happens when we get it *wrong*?",
+      "colabUrl": "https://colab.research.google.com/drive/12RLl5cofqpM79LYv7dmwSfZHKbd2NIXP",
+      "downloadPath": "/notebooks/context-engineering-for-llms/02_context_failure_modes.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Building a RAG Pipeline from Scratch: From Documents to Answers",
+      "slug": "03-rag_pipeline_from_scratch",
+      "objective": "In the previous notebooks, we explored what context engineering is and how the context window works. Now we tackle the single most common context engineering pattern in production: **Retrieval-Augment",
+      "colabUrl": "https://colab.research.google.com/drive/15GqqtOuB3eMzY5HZ7WtMb3bYM5kgXFeC",
+      "downloadPath": "/notebooks/context-engineering-for-llms/03_rag_pipeline_from_scratch.ipynb",
+      "estimatedMinutes": 93,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": true
+    },
+    {
+      "title": "Building a Complete Context Engine: The Four Strategies in Action",
+      "slug": "04-complete_context_engine",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1hM_-5HlSlw57abSf9rTYOYAgr_mvU-0E",
+      "downloadPath": "/notebooks/context-engineering-for-llms/04_complete_context_engine.ipynb",
+      "estimatedMinutes": 80,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": true
+    },
+    {
+      "title": "Capstone: Build a Personalized FAQ Chatbot with Context Engineering",
+      "slug": "05-faq_chatbot_capstone",
+      "objective": "You have spent four notebooks mastering every dimension of context engineering \u2014 token budgets, failure modes, retrieval-augmented generation, and the four context strategies. Now it is time to combin",
+      "colabUrl": "https://colab.research.google.com/drive/1WkMo34Xl7Usj7T0piDAhWA0sz6tnwfOE",
+      "downloadPath": "/notebooks/context-engineering-for-llms/05_faq_chatbot_capstone.ipynb",
+      "estimatedMinutes": 100,
+      "todoCount": 0,
+      "order": 5,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Rebuilding the Context Pipeline for an AI Legal Research Assistant",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "BriefEngine",
+    "industry": "Legal Technology",
+    "description": "BriefEngine's product works \u2014 but not well enough. The original system was built in early 2023 using a straightforward RAG pipeline: chunk case law into passages, embed with a general-purpose embedding model, retrieve top-K results, and pass them to an LLM for synthesis. This approach was sufficient",
+    "pdfPath": "/case-studies/context-engineering-for-llms/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1tkcZm9ICe37-fBAIijjXtjU51ea3Ekrn",
+    "notebookPath": "/case-studies/context-engineering-for-llms/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "context-engineering",
+  "order": 1
+}

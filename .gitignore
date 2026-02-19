@@ -56,6 +56,13 @@ excalidraw.log
 # vercel
 .vercel
 
+# Python packages (local installs)
+.pip_packages/
+paperbanana_pkg/
+
+# Backup files
+*.bak
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

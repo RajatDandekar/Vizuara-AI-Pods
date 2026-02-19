@@ -1,0 +1,82 @@
+{
+  "title": "Denoising Score Matching",
+  "slug": "denoising-score-matching",
+  "courseSlug": "diffusion-models",
+  "order": 3,
+  "description": "How a simple trick of adding noise solves the hardest problem in score-based generative models.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "denoising score matching",
+    "score estimation",
+    "Langevin dynamics",
+    "generative models"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/What-exactly-is-Denoising-Score-Matching-30b01fbe47718170bdbbf479d1fe85a4",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1c7UiYbQn1t635CdAgN2q3PXJgOlBXaw-=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1ogGqBgblUNzeI-qWQzyXYMn_Hti5nOSR=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/16-kCXYqe-z2g4z_bdge-qiuDH9OzKd5W=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1WpO3W_2LokJt1MJ8aIpcnlT5xNwAK-qq=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1Y_M8qxf8liH89gCSLMm4heeFeAlzewtu=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1KoNmA_d96K3oTK7MWsiUiV-jXdJ6I6TD=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1qpu475YNJw61Rre8rVJm95Com6d_Q5bW=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/19CoNk2EEfRLxtXlbR30gUV2joyWGyaRo=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1lu8lFfHqFsitiGuvY7TXNZ1yhS6i4DYc=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Score Functions and Energy-Based Models",
+      "slug": "01-score_functions_and_energy_based_models",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1zNoaGJawj7PIfHCYvCu_cZ24RxOJoI1u",
+      "downloadPath": "/notebooks/denoising-score-matching/01_score_functions_and_energy_based_models.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Denoising Score Matching",
+      "slug": "02-denoising_score_matching",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1h-i-xcnGgCvWnjB0hrCv8xdCMNA5OdfY",
+      "downloadPath": "/notebooks/denoising-score-matching/02_denoising_score_matching.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Langevin Dynamics Sampling",
+      "slug": "03-langevin_dynamics_sampling",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1mHQoZedmV6si9jClwTcVrvmUZEhjvUaj",
+      "downloadPath": "/notebooks/denoising-score-matching/03_langevin_dynamics_sampling.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Synthetic Medical Image Generation Using Denoising Score Matching",
+    "subtitle": "RadiSynth AI -- Score-Based MRI Generation for Brain Tumor Detection",
+    "company": "RadiSynth AI",
+    "industry": "Healthcare -- Medical Imaging",
+    "description": "RadiSynth AI uses denoising score matching to generate synthetic MRI scans for training brain tumor detection models, addressing data scarcity under HIPAA/GDPR constraints.",
+    "pdfPath": "/case-studies/denoising-score-matching/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1tiP-Ztvyzn0PJ965e0-sJNo8RykPDHf6",
+    "notebookPath": "/case-studies/denoising-score-matching/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

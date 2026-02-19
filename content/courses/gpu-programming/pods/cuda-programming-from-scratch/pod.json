@@ -1,0 +1,15 @@
+{
+  "title": "CUDA Programming Model from Scratch",
+  "slug": "cuda-programming-from-scratch",
+  "courseSlug": "gpu-programming",
+  "order": 3,
+  "description": "Coming soon: CUDA Programming Model from Scratch",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

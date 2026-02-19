@@ -38,8 +38,8 @@ def save_catalog(catalog: dict):
 def list_courses(catalog: dict):
     courses = catalog["courses"]
     print()
-    print(f"  {'#':>3}  {'Status':>9}  Title")
-    print(f"  {'─' * 3}  {'─' * 9}  {'─' * 50}")
+    print(f"  {'#':>3}  {'Status':>9}  {'Pods':>5}  {'NBs':>4}  Title")
+    print(f"  {'─' * 3}  {'─' * 9}  {'─' * 5}  {'─' * 4}  {'─' * 45}")
     for i, c in enumerate(courses, 1):
         status = c.get("status", "live")
         marker = {
@@ -48,10 +48,13 @@ def list_courses(catalog: dict):
             "draft": "\033[90m   draft\033[0m",      # gray
             "archived": "\033[90marchived\033[0m",   # gray
         }.get(status, status)
-        print(f"  {i:3d}  {marker:>18s}  {c['title'][:55]}")
+        pods = c.get("podCount", 0)
+        nbs = c.get("totalNotebooks", c.get("notebookCount", 0))
+        print(f"  {i:3d}  {marker:>18s}  {pods:5d}  {nbs:4d}  {c['title'][:45]}")
     print()
     live_count = sum(1 for c in courses if c.get("status", "live") == "live")
-    print(f"  {live_count} live / {len(courses)} total")
+    total_pods = sum(c.get("podCount", 0) for c in courses)
+    print(f"  {live_count} live / {len(courses)} total courses, {total_pods} total pods")
     print()
 
 

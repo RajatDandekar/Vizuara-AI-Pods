@@ -1,0 +1,15 @@
+{
+  "title": "Offline RL & Dataset-Driven Robot Learning",
+  "slug": "offline-rl-robot-learning",
+  "courseSlug": "modern-robot-learning",
+  "order": 5,
+  "description": "Coming soon: Offline RL & Dataset-Driven Robot Learning",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

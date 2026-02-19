@@ -1,0 +1,85 @@
+{
+  "title": "Vision Encoders: How Machines Learned to See — From Convolutions to Vision Transformers",
+  "slug": "vision-encoders",
+  "description": "Understanding the two paradigms of visual representation learning — from local feature extraction with CNNs to global attention with Vision Transformers.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Convolution Operation",
+    "Convolutional Neural Networks",
+    "Vision Transformers",
+    "Patch Embeddings",
+    "Self-Attention",
+    "Image Classification"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Vision-Encoders-How-Machines-Learned-to-See-From-Convolutions-to-Vision-Transformers-30b01fbe4771815ab354c81ce896f186",
+    "figureUrls": {
+      "figure_1": "https://lh3.googleusercontent.com/d/176scj3c24Gdnfe2UYEOVoYn46f98Vl1-=w2000",
+      "figure_2": "https://lh3.googleusercontent.com/d/1ZTsYE6lJR4ttrX-rGwdvuZj7HCy6Dn6U=w2000",
+      "figure_3": "https://lh3.googleusercontent.com/d/1ypaC845X2IiOuXT3qhUZRPp_Bu7bEVyL=w2000",
+      "figure_4": "https://lh3.googleusercontent.com/d/14ATtTmH2VVsTQBN3eZe48zdrTfrUhOAc=w2000",
+      "figure_5": "https://lh3.googleusercontent.com/d/11zWvJlXxQAIiFGBuOlDUBBxt6Fud9wP7=w2000",
+      "figure_6": "https://lh3.googleusercontent.com/d/18AZt40oVRtTeRbLGW_M2Bhczos2d2010=w2000",
+      "figure_7": "https://lh3.googleusercontent.com/d/1zZJ0JdHqKR6aXwNeB2lzgVa3ZC7KnSSR=w2000",
+      "figure_8": "https://lh3.googleusercontent.com/d/1eQI--L4OO-6QRuAG-umnUNO2Bke3atwY=w2000",
+      "figure_9": "https://lh3.googleusercontent.com/d/1vNPFuWcy3KfMfPzHs1zE6hGG7myUIOcE=w2000",
+      "figure_10": "https://lh3.googleusercontent.com/d/1FUMnFbXBfdj_hOYBRhBqZJIsvvg1Wg2n=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Convolutions from Scratch",
+      "slug": "01-convolutions_from_scratch",
+      "objective": "Implement the convolution operation from scratch, understand learnable filters, ReLU, and max pooling, then build and train a complete CNN on CIFAR-10.",
+      "colabUrl": "https://colab.research.google.com/drive/14J1Z5b4U8BNPRJKF6s33AKs13JKnsdE2",
+      "downloadPath": "/notebooks/vision-encoders/01_convolutions_from_scratch.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Vision Transformers from Scratch",
+      "slug": "02-vision_transformers_from_scratch",
+      "objective": "Build the Vision Transformer from first principles: patch embeddings, self-attention, and the full encoder — all implemented manually before using PyTorch.",
+      "colabUrl": "https://colab.research.google.com/drive/1nyQS3AHyGk4iSt8ncc4AxixBpK672bvu",
+      "downloadPath": "/notebooks/vision-encoders/02_vision_transformers_from_scratch.ipynb",
+      "estimatedMinutes": 65,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "CNN vs. Vision Transformer: A Hands-On Comparison",
+      "slug": "03-cnn_vs_vit_comparison",
+      "objective": "Train both a CNN and a ViT on the same dataset and directly compare their behavior, accuracy, computational cost, and what they learn.",
+      "colabUrl": "https://colab.research.google.com/drive/1ojrbHBuzRJRhPGFr7UaxMYTOnn8scpvS",
+      "downloadPath": "/notebooks/vision-encoders/03_cnn_vs_vit_comparison.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Vision Encoders for Automated Dermatology Screening",
+    "subtitle": "DermaScan AI — Building a Melanoma Detection System with CNNs and Vision Transformers",
+    "company": "DermaScan AI",
+    "industry": "Digital Health — AI-Assisted Dermatology",
+    "description": "DermaScan AI needs to improve melanoma detection sensitivity from 74% to >90% on their dermoscopic image classification system. Students compare ResNet-50 and ViT-B/16 encoders with custom focal loss, class-weighted sampling, and deployment optimization for clinical edge devices.",
+    "pdfPath": "/case-studies/vision-encoders/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1MxJItxyvqgqs5cR7i2hhOsJI-e9oG0UR",
+    "notebookPath": "/case-studies/vision-encoders/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "vlms-from-scratch",
+  "order": 0
+}

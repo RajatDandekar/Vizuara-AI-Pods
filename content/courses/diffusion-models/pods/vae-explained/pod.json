@@ -1,0 +1,96 @@
+{
+  "title": "Variational Autoencoders From Scratch",
+  "slug": "vae-explained",
+  "courseSlug": "diffusion-models",
+  "order": 6,
+  "description": "Building VAEs from first principles — intuition, math, and a full PyTorch implementation.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "VAE",
+    "variational autoencoders",
+    "ELBO",
+    "KL divergence",
+    "reparameterization trick",
+    "latent space"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Variational-Autoencoders-From-Scratch-30b01fbe477181aa9111c3f09e4111ee",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1oofNPJ-W2Nj0PHHpRKBzl9L7uTlezXy3=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1v97k5r8NL4CGJytPmDsW6haXo4fMSUnA=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1vxOpSB9lZb-SfFOqiRtX0AbqwdNe8Vli=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1RZSFMyCwiXRvUyH0sXKOHGl_OpqXQtRK=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/11Qt7InXTrAGkLseZTncnmW06sM44jchT=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1z6aCAM9fHqcynIpiVhuYJ3cgKTkOiGZN=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1XdePbhm8a_IQ8wtVOP9x1vbSmYkF0aus=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1S21cP4aeIpkD3Ck8jIm_KnBpifviiW8r=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1HbYSLC0NNEn9wC4_7hjn4UZmNpiAr10N=w2000",
+      "figures/figure_10.png": "https://lh3.googleusercontent.com/d/1gh4mNp9zo18iJJePTgINLNtudfY-NApk=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Latent Variables and Autoencoders",
+      "slug": "01-latent_variables_and_autoencoders",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1p21l6PAUnBrMzEz03yUgNnWBCovP5x6L",
+      "downloadPath": "/notebooks/vae-explained/01_latent_variables_and_autoencoders.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "ELBO, KL Divergence, and Reparameterization",
+      "slug": "02-elbo_kl_divergence_and_reparameterization",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1CfENSFw7-HZcUozl-Eb9FkzfbAlplgc9",
+      "downloadPath": "/notebooks/vae-explained/02_elbo_kl_divergence_and_reparameterization.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Building a VAE From Scratch",
+      "slug": "03-building_a_vae_from_scratch",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/19-3M7v53LgMZpyCpnFxCjJFsFr2r4Ysy",
+      "downloadPath": "/notebooks/vae-explained/03_building_a_vae_from_scratch.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Exploring the Latent Space",
+      "slug": "04-exploring_the_latent_space",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1FEdKzhuxhE-Q34wz8yHZxIhqn5T4-Qpy",
+      "downloadPath": "/notebooks/vae-explained/04_exploring_the_latent_space.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Automated Wafer Defect Detection Using Variational Autoencoders",
+    "subtitle": "Semiconductor Manufacturing -- VAE-Based Anomaly Detection for Quality Control",
+    "company": "Semiconductor Fab",
+    "industry": "Semiconductor Manufacturing",
+    "description": "Using VAEs for automated wafer defect detection in semiconductor fabrication, where a single undetected defect can render a wafer worth USD 5,000-50,000 worthless.",
+    "pdfPath": "/case-studies/vae-explained/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1BjgxtpEiicVzLdHPRD3nX6OuhKsPdoqI",
+    "notebookPath": "/case-studies/vae-explained/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

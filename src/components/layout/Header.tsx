@@ -35,7 +35,7 @@ export default function Header() {
             height={28}
             className="rounded-md"
           />
-          <span className="font-bold text-lg tracking-tight">VIZflix</span>
+          <span className="font-bold text-lg tracking-tight">Vizuara AI Pods</span>
         </Link>
 
         <nav className="flex items-center gap-6">

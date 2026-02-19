@@ -1,0 +1,15 @@
+{
+  "title": "Kernel Fusion & Operator Optimization",
+  "slug": "kernel-fusion-optimization",
+  "courseSlug": "gpu-programming",
+  "order": 7,
+  "description": "Coming soon: Kernel Fusion & Operator Optimization",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

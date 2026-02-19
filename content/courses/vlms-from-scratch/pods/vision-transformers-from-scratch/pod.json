@@ -1,0 +1,73 @@
+{
+  "title": "Vision Transformers from Scratch: How Treating Images as Sentences Changed Computer Vision",
+  "slug": "vision-transformers-from-scratch",
+  "description": "We break down the Vision Transformer (ViT) paper step by step \u2014 from image patches to self-attention \u2014 with intuition, math, and a full PyTorch implementation.",
+  "difficulty": "beginner",
+  "estimatedHours": 7,
+  "prerequisites": [],
+  "tags": [
+    "The Big Idea: Reading Images Like Sentences",
+    "A Quick Refresher: Why CNNs Were King",
+    "The Core Idea: Images as Sequences of Patches",
+    "Patch Embedding and Position Embedding",
+    "The Transformer Encoder: Self-Attention on Patches"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Patches & Embeddings: Teaching a Transformer to See",
+      "slug": "01-patches_and_embeddings",
+      "objective": "In this notebook, we will build the **input pipeline** for a Vision Transformer (ViT) completely from scratch. By the end, you will understand how an image gets converted into a sequence of tokens \u2014 t",
+      "colabUrl": "https://colab.research.google.com/drive/16jb2PXx-lYv93xLA8rx9aafHsD8Bc3gi",
+      "downloadPath": "/notebooks/vision-transformers-from-scratch/01_patches_and_embeddings.ipynb",
+      "estimatedMinutes": 120,
+      "todoCount": 5,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Self-Attention on Image Patches: How Patches Learn to Talk to Each Other",
+      "slug": "02-self_attention_on_patches",
+      "objective": "In Notebook 1 we learned how to chop an image into patches and project them into an embedding space. But those patch tokens are still strangers to each other \u2014 each one knows only about the small rect",
+      "colabUrl": "https://colab.research.google.com/drive/1-hhi0SyKvxgqCZ4NPxgGI5s1FPsG4DgT",
+      "downloadPath": "/notebooks/vision-transformers-from-scratch/02_self_attention_on_patches.ipynb",
+      "estimatedMinutes": 141,
+      "todoCount": 7,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Building a Complete Vision Transformer from Scratch",
+      "slug": "03-complete_vit_from_scratch",
+      "objective": "In Notebook 1, we learned how to turn images into patch embeddings. In Notebook 2, we built a Transformer encoder from scratch. Now, in this final notebook, we assemble everything into a **complete, t",
+      "colabUrl": "https://colab.research.google.com/drive/17ocSkbHUBcsrOJr6Tgoa7WdJ_h512Up4",
+      "downloadPath": "/notebooks/vision-transformers-from-scratch/03_complete_vit_from_scratch.ipynb",
+      "estimatedMinutes": 138,
+      "todoCount": 4,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "AI-Powered Skin Lesion Triage with Vision Transformers",
+    "subtitle": "Section 1: Industry Context and Business Problem",
+    "company": "SkinSight AI",
+    "industry": "Digital Dermatology and Clinical Decision Support",
+    "description": "SkinSight's current production model is an **EfficientNet-B4** convolutional neural network, fine-tuned on 120,000 dermoscopic images. It performs well on typical lesions \u2014 achieving 91.2% sensitivity and 89.5% specificity on the company's held-out clinical validation set.",
+    "pdfPath": "/case-studies/vision-transformers-from-scratch/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1rdyf3uMHBYtUUDxrt0CbMGW7E-n47sD_",
+    "notebookPath": "/case-studies/vision-transformers-from-scratch/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "vlms-from-scratch",
+  "order": 1
+}

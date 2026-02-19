@@ -1,0 +1,15 @@
+{
+  "title": "Memory Coalescing, Bank Conflicts & Throughput",
+  "slug": "memory-coalescing-throughput",
+  "courseSlug": "gpu-programming",
+  "order": 5,
+  "description": "Coming soon: Memory Coalescing, Bank Conflicts & Throughput",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

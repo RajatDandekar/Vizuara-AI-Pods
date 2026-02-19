@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
-"""Convert final.md to Notion blocks and publish via API."""
+"""Convert article markdown to Notion blocks and publish via API.
 
+Usage:
+  python publish_to_notion.py <article.md> --pod-json <pod.json> [--update]
+
+When --update is given, the script finds the existing Notion page via
+the notionUrl in pod.json, deletes all its child blocks, and re-adds
+the new content (preserving the same page URL).
+"""
+
+import argparse
 import json
 import re
 import sys
@@ -16,20 +25,8 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 
-# Figure URL mapping — use lh3.googleusercontent.com direct URLs (Notion-compatible)
-# Uniquely named as 5d-parallelism-figure_N.png to avoid Drive filename collisions
-FIGURE_URLS = {
-    "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1_IY1ySUrWNzcDWgh8kOitbwj3s_lyzFS=w2000",
-    "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1em_WMJfeWz4eBWazRq5jseF1dbYU7SO5=w2000",
-    "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1W5w__oHbApNjW_27ijPSRiGkXNFTMogM=w2000",
-    "figures/figure_4.png": "https://lh3.googleusercontent.com/d/15qugrILaZIkZvyyInGktoRaeeBhN0tM_=w2000",
-    "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1TpsUvrPtVk26_iy7wVsBhBF-q8P3M35k=w2000",
-    "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1RRR_OOkE-8rVG9Fmwb75Q77fy7tG1z-7=w2000",
-    "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1rW9yMt5L7DX4XH4JUZ1IfGjgQLcE8wBj=w2000",
-    "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1DrrKxQcc98g2WpKMEMbb-wamEpZCPJ1U=w2000",
-    "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1g3r8O4qrF8L4e_x9m8ifd-ZW6P6peKCp=w2000",
-    "figures/figure_10.png": "https://lh3.googleusercontent.com/d/1FuD6nY1HIM3MMuF69Yd0NBpeIkV59Soj=w2000",
-}
+# Default figure URL mapping (used when no pod.json supplied)
+FIGURE_URLS = {}
 
 
 def parse_rich_text(text):
@@ -107,7 +104,6 @@ def parse_rich_text(text):
 
 
 def make_paragraph(text):
-    """Create a paragraph block with rich text."""
     return {
         "object": "block",
         "type": "paragraph",
@@ -116,8 +112,6 @@ def make_paragraph(text):
 
 
 def make_heading2(text):
-    """Create a heading_2 block."""
-    # Strip markdown bold from headings
     clean = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
     return {
         "object": "block",
@@ -127,7 +121,6 @@ def make_heading2(text):
 
 
 def make_heading3(text):
-    """Create a heading_3 block."""
     clean = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
     return {
         "object": "block",
@@ -198,14 +191,12 @@ def make_numbered(text):
 
 
 def make_table(rows):
-    """Create a table block from list of rows (each row is a list of cell strings)."""
     width = max(len(r) for r in rows)
     table_rows = []
     for row in rows:
         cells = []
         for cell in row:
             cells.append(parse_rich_text(cell.strip()))
-        # Pad if needed
         while len(cells) < width:
             cells.append([{"type": "text", "text": {"content": ""}}])
         table_rows.append({
@@ -225,7 +216,7 @@ def make_table(rows):
     }
 
 
-def parse_markdown(md_text):
+def parse_markdown(md_text, figure_urls):
     """Parse markdown text into Notion blocks."""
     blocks = []
     lines = md_text.split('\n')
@@ -279,21 +270,18 @@ def parse_markdown(md_text):
 
         # Block equation: $$...$$
         if line.strip().startswith('$$'):
-            # Could be single-line or multi-line
             if line.strip().endswith('$$') and len(line.strip()) > 4:
-                # Single line $$...$$
                 latex = line.strip()[2:-2].strip()
                 blocks.append(make_equation(latex))
                 i += 1
                 continue
             else:
-                # Multi-line
                 eq_lines = []
                 i += 1
                 while i < len(lines) and not lines[i].strip().startswith('$$'):
                     eq_lines.append(lines[i])
                     i += 1
-                i += 1  # skip closing $$
+                i += 1
                 latex = '\n'.join(eq_lines).strip()
                 blocks.append(make_equation(latex))
                 continue
@@ -303,8 +291,7 @@ def parse_markdown(md_text):
         if img_match:
             alt = img_match.group(1)
             path = img_match.group(2)
-            url = FIGURE_URLS.get(path, path)
-            # Check if next non-empty line is an italic caption
+            url = figure_urls.get(path, path)
             caption = ""
             j = i + 1
             while j < len(lines) and not lines[j].strip():
@@ -334,13 +321,12 @@ def parse_markdown(md_text):
             i += 1
             continue
 
-        # Table: detect | ... | ... |
+        # Table
         if '|' in line and i + 1 < len(lines) and re.match(r'^\|[-|: ]+\|$', lines[i + 1].strip()):
-            # Parse table header
             rows = []
             header_cells = [c.strip() for c in line.strip().strip('|').split('|')]
             rows.append(header_cells)
-            i += 2  # skip header + separator
+            i += 2
             while i < len(lines) and '|' in lines[i] and lines[i].strip().startswith('|'):
                 cells = [c.strip() for c in lines[i].strip().strip('|').split('|')]
                 rows.append(cells)
@@ -363,12 +349,11 @@ def parse_markdown(md_text):
             i += 1
             continue
 
-        # Regular paragraph - may span multiple lines
+        # Regular paragraph
         para_lines = [line]
         i += 1
         while i < len(lines):
             next_line = lines[i]
-            # Stop at empty lines, headings, dividers, code, images, lists, tables, equations
             if (not next_line.strip() or
                 next_line.startswith('#') or
                 next_line.strip() == '---' or
@@ -384,9 +369,7 @@ def parse_markdown(md_text):
             para_lines.append(next_line)
             i += 1
         full_para = ' '.join(l.strip() for l in para_lines)
-        # Notion has a 2000-char limit per rich text block
         if len(full_para) > 1900:
-            # Split into sentences
             sentences = re.split(r'(?<=[.!?]) ', full_para)
             chunk = ""
             for s in sentences:
@@ -405,13 +388,13 @@ def parse_markdown(md_text):
 
 
 def create_page(title, blocks):
-    """Create a Notion page and add blocks in batches of 100."""
+    """Create a new Notion page and add blocks in batches of 100."""
     first_batch = blocks[:100]
     remaining = blocks[100:]
 
     data = {
         "parent": {"page_id": PARENT_PAGE_ID},
-        "icon": {"type": "emoji", "emoji": "🖥️"},
+        "icon": {"type": "emoji", "emoji": "\U0001f5a5\ufe0f"},
         "properties": {
             "title": [{"text": {"content": title}}]
         },
@@ -435,8 +418,49 @@ def create_page(title, blocks):
     print(f"Page created: {page_url}")
     print(f"  First batch: {len(first_batch)} blocks")
 
-    # Append remaining blocks in batches of 100
-    batch_num = 1
+    append_remaining_blocks(page_id, remaining)
+    return page_url
+
+
+def update_page(page_id, blocks):
+    """Update an existing Notion page: delete all child blocks, then add new ones."""
+    print(f"Updating existing page: {page_id}")
+
+    # Step 1: Get all existing child blocks
+    all_block_ids = []
+    url = f"https://api.notion.com/v1/blocks/{page_id}/children?page_size=100"
+    while url:
+        resp = requests.get(url, headers=HEADERS)
+        if resp.status_code != 200:
+            print(f"Error fetching children: {resp.status_code}")
+            print(resp.text[:500])
+            return None
+        data = resp.json()
+        for block in data.get("results", []):
+            all_block_ids.append(block["id"])
+        if data.get("has_more"):
+            cursor = data.get("next_cursor")
+            url = f"https://api.notion.com/v1/blocks/{page_id}/children?page_size=100&start_cursor={cursor}"
+        else:
+            url = None
+
+    print(f"  Found {len(all_block_ids)} existing blocks to delete")
+
+    # Step 2: Delete all existing blocks
+    for bid in all_block_ids:
+        resp = requests.delete(
+            f"https://api.notion.com/v1/blocks/{bid}",
+            headers=HEADERS
+        )
+        if resp.status_code != 200:
+            print(f"  Warning: failed to delete block {bid}: {resp.status_code}")
+        time.sleep(0.1)  # rate limiting
+
+    print(f"  Deleted {len(all_block_ids)} blocks")
+
+    # Step 3: Add new blocks in batches of 100
+    remaining = blocks
+    batch_num = 0
     while remaining:
         batch = remaining[:100]
         remaining = remaining[100:]
@@ -455,27 +479,117 @@ def create_page(title, blocks):
         else:
             print(f"  Batch {batch_num} appended ({len(batch)} blocks)")
 
-    return page_url
+    # Get the page URL
+    resp = requests.get(
+        f"https://api.notion.com/v1/pages/{page_id}",
+        headers=HEADERS
+    )
+    if resp.status_code == 200:
+        return resp.json().get("url", f"https://notion.so/{page_id}")
+    return f"https://notion.so/{page_id}"
+
+
+def append_remaining_blocks(page_id, remaining):
+    """Append remaining blocks in batches of 100."""
+    batch_num = 1
+    while remaining:
+        batch = remaining[:100]
+        remaining = remaining[100:]
+        batch_num += 1
+        time.sleep(0.4)
+        resp = requests.patch(
+            f"https://api.notion.com/v1/blocks/{page_id}/children",
+            headers=HEADERS,
+            json={"children": batch}
+        )
+        if resp.status_code != 200:
+            print(f"  Error appending batch {batch_num}: {resp.status_code}")
+            print(f"  {resp.text[:300]}")
+        else:
+            print(f"  Batch {batch_num} appended ({len(batch)} blocks)")
+
+
+def extract_page_id_from_url(notion_url):
+    """Extract Notion page ID from a Notion URL.
+
+    URLs look like: https://www.notion.so/Page-Title-<32hex>
+    The last 32 hex chars (no dashes) are the page ID.
+    """
+    # Match the 32-char hex at the end of the URL
+    m = re.search(r'([0-9a-f]{32})$', notion_url.rstrip('/'))
+    if m:
+        raw = m.group(1)
+        # Format as UUID: 8-4-4-4-12
+        return f"{raw[:8]}-{raw[8:12]}-{raw[12:16]}-{raw[16:20]}-{raw[20:]}"
+    return None
+
+
+def build_figure_urls(pod_data):
+    """Build figure URL mapping from pod.json figureUrls."""
+    urls = {}
+    figure_urls = pod_data.get("article", {}).get("figureUrls", {})
+    for key, url in figure_urls.items():
+        # Map both "figures/figure_1.png" and "figures/figure_1" formats
+        urls[f"figures/{key}.png"] = url
+        urls[f"figures/{key}"] = url
+    return urls
 
 
 def main():
-    with open("/Users/raj/Desktop/Course_Creator/output/articles/5d-parallelism-gpu-programming/final.md") as f:
+    parser = argparse.ArgumentParser(description="Publish a markdown article to Notion")
+    parser.add_argument("article", help="Path to the article markdown file")
+    parser.add_argument("--pod-json", help="Path to pod.json for figure URLs and metadata")
+    parser.add_argument("--update", action="store_true",
+                        help="Update existing Notion page (uses notionUrl from pod.json)")
+    args = parser.parse_args()
+
+    # Read article
+    with open(args.article) as f:
         md = f.read()
 
-    # Skip the H1 title line since it becomes the page title
-    lines = md.split('\n')
-    start = 0
-    for idx, line in enumerate(lines):
-        if line.startswith('# '):
-            start = idx + 1
-            break
-    md_body = '\n'.join(lines[start:])
+    # Load pod.json if provided
+    pod_data = None
+    figure_urls = {}
+    if args.pod_json:
+        with open(args.pod_json) as f:
+            pod_data = json.load(f)
+        figure_urls = build_figure_urls(pod_data)
+        print(f"Loaded {len(figure_urls) // 2} figure URLs from pod.json")
 
+    # Extract title from H1 in markdown
+    title = "Untitled"
+    for line in md.split('\n'):
+        if line.startswith('# ') and not line.startswith('## '):
+            title = line[2:].strip()
+            # Remove any markdown formatting from title
+            title = re.sub(r'[*_`]', '', title)
+            break
+
+    # If pod.json has a title, prefer that
+    if pod_data and pod_data.get("title"):
+        title = pod_data["title"]
+
+    print(f"Title: {title}")
     print("Parsing markdown...")
-    blocks = parse_markdown(md_body)
+    blocks = parse_markdown(md, figure_urls)
     print(f"Generated {len(blocks)} Notion blocks")
 
-    url = create_page("5D Parallelism: How We Train Models Too Large for Any Single GPU", blocks)
+    if args.update and pod_data:
+        notion_url = pod_data.get("article", {}).get("notionUrl", "")
+        if notion_url:
+            page_id = extract_page_id_from_url(notion_url)
+            if page_id:
+                url = update_page(page_id, blocks)
+                if url:
+                    print(f"\nUpdated: {url}")
+                return
+            else:
+                print(f"Could not extract page ID from URL: {notion_url}")
+                print("Creating new page instead...")
+        else:
+            print("No notionUrl found in pod.json, creating new page...")
+
+    url = create_page(title, blocks)
     if url:
         print(f"\nPublished to: {url}")
 

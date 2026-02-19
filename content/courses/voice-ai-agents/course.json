@@ -1,0 +1,32 @@
+{
+  "title": "Voice AI Agents from Scratch",
+  "slug": "voice-ai-agents",
+  "description": "Build real-time voice AI agents with speech pipelines and conversational state management.",
+  "difficulty": "intermediate",
+  "estimatedHours": 2,
+  "tags": [
+    "voice-ai",
+    "agents",
+    "speech"
+  ],
+  "pods": [
+    {
+      "slug": "real-time-speech-pipeline",
+      "title": "Real-Time Speech Pipeline",
+      "description": "Coming soon: Real-Time Speech Pipeline",
+      "order": 1,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    },
+    {
+      "slug": "conversational-voice-agents",
+      "title": "Conversational State & Tool-Integrated Voice Agents",
+      "description": "Coming soon: Conversational State & Tool-Integrated Voice Agents",
+      "order": 2,
+      "notebookCount": 0,
+      "estimatedHours": 1,
+      "hasCaseStudy": false
+    }
+  ]
+}

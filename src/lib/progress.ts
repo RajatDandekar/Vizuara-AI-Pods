@@ -1,9 +1,10 @@
-import type { CourseProgress, CertificateData } from '@/types/course';
+import type { PodProgress, CertificateData, CourseCertificateData, PodCard } from '@/types/course';
 
 const STORAGE_KEY_PREFIX = 'vizuara_progress_';
 const CERT_KEY_PREFIX = 'vizuara_cert_';
+const COURSE_CERT_KEY_PREFIX = 'vizuara_coursecert_';
 
-const DEFAULTS: CourseProgress = {
+const DEFAULTS: PodProgress = {
   articleRead: false,
   completedNotebooks: [],
   caseStudyComplete: false,
@@ -11,8 +12,6 @@ const DEFAULTS: CourseProgress = {
 };
 
 // --- User scoping ---
-// Progress is scoped per user. The current user ID is persisted in localStorage
-// so it survives dev server hot reloads (module-level variables reset on HMR).
 const USER_KEY = 'vizuara_current_user';
 
 function getCurrentUserId(): string {
@@ -22,7 +21,6 @@ function getCurrentUserId(): string {
 
 /**
  * Migrate progress from one key namespace to another, merging if the target already has data.
- * Handles both old unscoped keys (no userId) and anon-scoped keys.
  */
 function migrateKeys(sourcePrefix: string, targetUserId: string): void {
   if (typeof window === 'undefined') return;
@@ -46,11 +44,10 @@ function migrateKeys(sourcePrefix: string, targetUserId: string): void {
 
       const existingData = localStorage.getItem(newKey);
       if (existingData && basePrefix === STORAGE_KEY_PREFIX) {
-        // Merge progress: combine both sets
         try {
-          const src = { ...DEFAULTS, ...JSON.parse(sourceData) } as CourseProgress;
-          const dst = { ...DEFAULTS, ...JSON.parse(existingData) } as CourseProgress;
-          const merged: CourseProgress = {
+          const src = { ...DEFAULTS, ...JSON.parse(sourceData) } as PodProgress;
+          const dst = { ...DEFAULTS, ...JSON.parse(existingData) } as PodProgress;
+          const merged: PodProgress = {
             articleRead: dst.articleRead || src.articleRead,
             completedNotebooks: [...new Set([...dst.completedNotebooks, ...src.completedNotebooks])],
             caseStudyComplete: dst.caseStudyComplete || src.caseStudyComplete,
@@ -78,7 +75,6 @@ export function setProgressUser(userId: string | null): void {
     localStorage.setItem(USER_KEY, newId);
 
     if (newId !== 'anon') {
-      // Migrate old unscoped keys (vizuara_progress_<slug> with no underscore in slug)
       const migrationFlag = `vizuara_migrated_${newId}`;
       if (!localStorage.getItem(migrationFlag)) {
         for (const prefix of [STORAGE_KEY_PREFIX, CERT_KEY_PREFIX]) {
@@ -104,8 +100,6 @@ export function setProgressUser(userId: string | null): void {
         localStorage.setItem(migrationFlag, '1');
       }
 
-      // Migrate anon keys to the real user (handles race condition
-      // where progress was written before auth resolved on page load)
       if (previousId === 'anon') {
         migrateKeys('anon_', newId);
       }
@@ -115,7 +109,7 @@ export function setProgressUser(userId: string | null): void {
   }
 }
 
-// --- Event emitter for reactive progress updates ---
+// --- Event emitter ---
 type ProgressListener = () => void;
 const listeners = new Set<ProgressListener>();
 
@@ -128,16 +122,27 @@ function notifyListeners() {
   listeners.forEach((l) => l());
 }
 
-// --- Core functions ---
+// ─── Pod-level progress ──────────────────────────────────────────────
 
-function getStorageKey(courseSlug: string): string {
-  return `${STORAGE_KEY_PREFIX}${getCurrentUserId()}_${courseSlug}`;
+/** Storage key for pod progress. Uses double underscore to separate course and pod slugs. */
+function getPodStorageKey(courseSlug: string, podSlug: string): string {
+  return `${STORAGE_KEY_PREFIX}${getCurrentUserId()}_${courseSlug}__${podSlug}`;
 }
 
-export function getProgress(courseSlug: string): CourseProgress {
+/** Legacy storage key (old flat structure — single slug). */
+function getLegacyStorageKey(slug: string): string {
+  return `${STORAGE_KEY_PREFIX}${getCurrentUserId()}_${slug}`;
+}
+
+export function getPodProgress(courseSlug: string, podSlug: string): PodProgress {
   if (typeof window === 'undefined') return { ...DEFAULTS };
   try {
-    const raw = localStorage.getItem(getStorageKey(courseSlug));
+    // Try new key first
+    let raw = localStorage.getItem(getPodStorageKey(courseSlug, podSlug));
+    // Fall back to legacy key (old flat structure)
+    if (!raw) {
+      raw = localStorage.getItem(getLegacyStorageKey(podSlug));
+    }
     if (!raw) return { ...DEFAULTS };
     return { ...DEFAULTS, ...JSON.parse(raw) };
   } catch {
@@ -145,80 +150,66 @@ export function getProgress(courseSlug: string): CourseProgress {
   }
 }
 
-export function setProgress(courseSlug: string, progress: CourseProgress): void {
+export function setPodProgress(courseSlug: string, podSlug: string, progress: PodProgress): void {
   if (typeof window === 'undefined') return;
-  localStorage.setItem(getStorageKey(courseSlug), JSON.stringify(progress));
+  localStorage.setItem(getPodStorageKey(courseSlug, podSlug), JSON.stringify(progress));
   notifyListeners();
 }
 
-export function clearAllProgress(): void {
-  if (typeof window === 'undefined') return;
-  const uid = getCurrentUserId();
-  const userPrefix = `${STORAGE_KEY_PREFIX}${uid}_`;
-  const certPrefix = `${CERT_KEY_PREFIX}${uid}_`;
-  const keysToRemove: string[] = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key && (key.startsWith(userPrefix) || key.startsWith(certPrefix))) {
-      keysToRemove.push(key);
-    }
-  }
-  keysToRemove.forEach((key) => localStorage.removeItem(key));
-  notifyListeners();
-}
-
-export function markArticleRead(courseSlug: string): void {
-  const progress = getProgress(courseSlug);
+export function markPodArticleRead(courseSlug: string, podSlug: string): void {
+  const progress = getPodProgress(courseSlug, podSlug);
   progress.articleRead = true;
   progress.lastVisited = new Date().toISOString();
-  setProgress(courseSlug, progress);
+  setPodProgress(courseSlug, podSlug, progress);
 }
 
-export function markNotebookComplete(courseSlug: string, notebookSlug: string): void {
-  const progress = getProgress(courseSlug);
+export function markPodNotebookComplete(courseSlug: string, podSlug: string, notebookSlug: string): void {
+  const progress = getPodProgress(courseSlug, podSlug);
   if (!progress.completedNotebooks.includes(notebookSlug)) {
     progress.completedNotebooks.push(notebookSlug);
   }
   progress.lastVisited = new Date().toISOString();
-  setProgress(courseSlug, progress);
+  setPodProgress(courseSlug, podSlug, progress);
 }
 
-export function isNotebookComplete(courseSlug: string, notebookSlug: string): boolean {
-  const progress = getProgress(courseSlug);
-  return progress.completedNotebooks.includes(notebookSlug);
+export function isPodNotebookComplete(courseSlug: string, podSlug: string, notebookSlug: string): boolean {
+  return getPodProgress(courseSlug, podSlug).completedNotebooks.includes(notebookSlug);
 }
 
-export function markCaseStudyComplete(courseSlug: string): void {
-  const progress = getProgress(courseSlug);
+export function markPodCaseStudyComplete(courseSlug: string, podSlug: string): void {
+  const progress = getPodProgress(courseSlug, podSlug);
   progress.caseStudyComplete = true;
   progress.lastVisited = new Date().toISOString();
-  setProgress(courseSlug, progress);
+  setPodProgress(courseSlug, podSlug, progress);
 }
 
-export function isCaseStudyComplete(courseSlug: string): boolean {
-  return getProgress(courseSlug).caseStudyComplete;
+export function isPodCaseStudyComplete(courseSlug: string, podSlug: string): boolean {
+  return getPodProgress(courseSlug, podSlug).caseStudyComplete;
 }
 
-export function isCourseFullyComplete(
+export function isPodFullyComplete(
   courseSlug: string,
+  podSlug: string,
   totalNotebooks: number,
   hasCaseStudy: boolean
 ): boolean {
-  const p = getProgress(courseSlug);
+  const p = getPodProgress(courseSlug, podSlug);
   if (!p.articleRead) return false;
   if (totalNotebooks > 0 && p.completedNotebooks.length < totalNotebooks) return false;
   if (hasCaseStudy && !p.caseStudyComplete) return false;
   return true;
 }
 
-export function getCourseCompletion(
+export function getPodCompletion(
   courseSlug: string,
+  podSlug: string,
   totalNotebooks: number,
   hasCaseStudy: boolean = false
 ): number {
-  const progress = getProgress(courseSlug);
+  const progress = getPodProgress(courseSlug, podSlug);
   const caseStudyWeight = hasCaseStudy ? 1 : 0;
   const totalSteps = 1 + totalNotebooks + caseStudyWeight;
+  if (totalSteps === 0) return 0;
   const completedSteps =
     (progress.articleRead ? 1 : 0) +
     progress.completedNotebooks.length +
@@ -226,40 +217,119 @@ export function getCourseCompletion(
   return Math.round((completedSteps / totalSteps) * 100);
 }
 
-// --- Certificate ---
+// ─── Course-level aggregation ────────────────────────────────────────
 
-function generateCertificateId(courseSlug: string): string {
+export function getCourseCompletion(
+  courseSlug: string,
+  pods: PodCard[]
+): { completedPods: number; totalPods: number; percentage: number } {
+  let completedPods = 0;
+
+  for (const pod of pods) {
+    if (isPodFullyComplete(courseSlug, pod.slug, pod.notebookCount, pod.hasCaseStudy)) {
+      completedPods++;
+    }
+  }
+
+  const totalPods = pods.length;
+  const percentage = totalPods > 0 ? Math.round((completedPods / totalPods) * 100) : 0;
+
+  return { completedPods, totalPods, percentage };
+}
+
+export function isCourseComplete(courseSlug: string, pods: PodCard[]): boolean {
+  return pods.every((pod) =>
+    isPodFullyComplete(courseSlug, pod.slug, pod.notebookCount, pod.hasCaseStudy)
+  );
+}
+
+// ─── Pod Certificate ─────────────────────────────────────────────────
+
+function generateCertificateId(slug: string): string {
   const timestamp = Date.now().toString(16).toUpperCase();
-  const slug = courseSlug.replace(/[^a-zA-Z0-9]/g, '').substring(0, 8).toUpperCase();
-  return `VIZ-${slug}-${timestamp}`;
+  const cleanSlug = slug.replace(/[^a-zA-Z0-9]/g, '').substring(0, 8).toUpperCase();
+  return `VIZ-${cleanSlug}-${timestamp}`;
 }
 
-function getCertKey(courseSlug: string): string {
-  return `${CERT_KEY_PREFIX}${getCurrentUserId()}_${courseSlug}`;
+function getPodCertKey(courseSlug: string, podSlug: string): string {
+  return `${CERT_KEY_PREFIX}${getCurrentUserId()}_${courseSlug}__${podSlug}`;
 }
 
-export function getCertificate(courseSlug: string): CertificateData | null {
+function getLegacyCertKey(slug: string): string {
+  return `${CERT_KEY_PREFIX}${getCurrentUserId()}_${slug}`;
+}
+
+export function getPodCertificate(courseSlug: string, podSlug: string): CertificateData | null {
   if (typeof window === 'undefined') return null;
   try {
-    const raw = localStorage.getItem(getCertKey(courseSlug));
+    let raw = localStorage.getItem(getPodCertKey(courseSlug, podSlug));
+    if (!raw) {
+      raw = localStorage.getItem(getLegacyCertKey(podSlug));
+    }
     return raw ? (JSON.parse(raw) as CertificateData) : null;
   } catch {
     return null;
   }
 }
 
-export function issueCertificate(
+export function issuePodCertificate(
   courseSlug: string,
-  courseTitle: string,
+  podSlug: string,
+  podTitle: string,
   difficulty: 'beginner' | 'intermediate' | 'advanced',
   estimatedHours: number,
   notebookCount: number,
   studentName: string = 'Student'
 ): CertificateData {
-  const existing = getCertificate(courseSlug);
+  const existing = getPodCertificate(courseSlug, podSlug);
   if (existing) return existing;
 
   const cert: CertificateData = {
+    certificateId: generateCertificateId(podSlug),
+    studentName,
+    courseTitle: podTitle,
+    courseSlug,
+    podSlug,
+    completionDate: new Date().toISOString(),
+    difficulty,
+    estimatedHours,
+    notebookCount,
+  };
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(getPodCertKey(courseSlug, podSlug), JSON.stringify(cert));
+  }
+  return cert;
+}
+
+// ─── Course Certificate ──────────────────────────────────────────────
+
+function getCourseCertKey(courseSlug: string): string {
+  return `${COURSE_CERT_KEY_PREFIX}${getCurrentUserId()}_${courseSlug}`;
+}
+
+export function getCourseCertificate(courseSlug: string): CourseCertificateData | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = localStorage.getItem(getCourseCertKey(courseSlug));
+    return raw ? (JSON.parse(raw) as CourseCertificateData) : null;
+  } catch {
+    return null;
+  }
+}
+
+export function issueCourseCertificate(
+  courseSlug: string,
+  courseTitle: string,
+  difficulty: 'beginner' | 'intermediate' | 'advanced',
+  estimatedHours: number,
+  podCount: number,
+  totalNotebooks: number,
+  studentName: string = 'Student'
+): CourseCertificateData {
+  const existing = getCourseCertificate(courseSlug);
+  if (existing) return existing;
+
+  const cert: CourseCertificateData = {
     certificateId: generateCertificateId(courseSlug),
     studentName,
     courseTitle,
@@ -267,10 +337,67 @@ export function issueCertificate(
     completionDate: new Date().toISOString(),
     difficulty,
     estimatedHours,
-    notebookCount,
+    podCount,
+    totalNotebooks,
   };
   if (typeof window !== 'undefined') {
-    localStorage.setItem(getCertKey(courseSlug), JSON.stringify(cert));
+    localStorage.setItem(getCourseCertKey(courseSlug), JSON.stringify(cert));
   }
   return cert;
+}
+
+// ─── Migration helper ────────────────────────────────────────────────
+
+/**
+ * One-time migration of old flat progress keys to new pod-scoped keys.
+ * Maps old `vizuara_progress_{uid}_{podSlug}` → new `vizuara_progress_{uid}_{courseSlug}__{podSlug}`.
+ */
+export function migrateProgressToPodStructure(
+  legacyPodMappings: { podSlug: string; courseSlug: string }[]
+): void {
+  if (typeof window === 'undefined') return;
+  const migrationFlag = 'vizuara_pod_migration_v1';
+  if (localStorage.getItem(migrationFlag)) return;
+
+  const uid = getCurrentUserId();
+
+  for (const { podSlug, courseSlug } of legacyPodMappings) {
+    const oldProgressKey = `${STORAGE_KEY_PREFIX}${uid}_${podSlug}`;
+    const newProgressKey = `${STORAGE_KEY_PREFIX}${uid}_${courseSlug}__${podSlug}`;
+    const oldProgress = localStorage.getItem(oldProgressKey);
+    if (oldProgress && !localStorage.getItem(newProgressKey)) {
+      localStorage.setItem(newProgressKey, oldProgress);
+    }
+
+    const oldCertKey = `${CERT_KEY_PREFIX}${uid}_${podSlug}`;
+    const newCertKey = `${CERT_KEY_PREFIX}${uid}_${courseSlug}__${podSlug}`;
+    const oldCert = localStorage.getItem(oldCertKey);
+    if (oldCert && !localStorage.getItem(newCertKey)) {
+      localStorage.setItem(newCertKey, oldCert);
+    }
+  }
+
+  localStorage.setItem(migrationFlag, '1');
+  notifyListeners();
+}
+
+// ─── Utility ─────────────────────────────────────────────────────────
+
+export function clearAllProgress(): void {
+  if (typeof window === 'undefined') return;
+  const uid = getCurrentUserId();
+  const prefixes = [
+    `${STORAGE_KEY_PREFIX}${uid}_`,
+    `${CERT_KEY_PREFIX}${uid}_`,
+    `${COURSE_CERT_KEY_PREFIX}${uid}_`,
+  ];
+  const keysToRemove: string[] = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && prefixes.some((p) => key.startsWith(p))) {
+      keysToRemove.push(key);
+    }
+  }
+  keysToRemove.forEach((key) => localStorage.removeItem(key));
+  notifyListeners();
 }

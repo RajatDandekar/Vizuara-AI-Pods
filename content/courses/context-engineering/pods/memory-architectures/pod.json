@@ -1,0 +1,15 @@
+{
+  "title": "Memory Architectures",
+  "slug": "memory-architectures",
+  "courseSlug": "context-engineering",
+  "order": 4,
+  "description": "Coming soon: Memory Architectures",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Noise Conditioned Score Networks (NCSN)",
+  "slug": "noise-conditional-score-networks",
+  "courseSlug": "diffusion-models",
+  "order": 4,
+  "description": "How Song & Ermon solved the low-density problem in score matching by conditioning on multiple noise levels.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "NCSN",
+    "noise conditioning",
+    "annealed Langevin dynamics",
+    "multi-scale score matching"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Noise-Conditioned-Score-Networks-Teaching-a-Neural-Network-to-Denoise-at-Every-Scale-30b01fbe477181afb1c3f324f0f4da1e",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1lechP1e0E4uTg8aqotjcHwNooyzOREoP=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1rNDRwFeaiwTPnRPgXXhEwoq6i-H7E8GM=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1js1YQHhhox6CW2Aw3KgibDtdHcIzaJ4s=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1SXXoiESvP_HwBS-WGRMLTzfmfsan9V1p=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1FPgasrqjcyl7larId-U_D9rfYsQkWrf5=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1Z_nAnYs_THSRZ5XnUl2xPcrVgtmmATHc=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1wjdhWumGFw97EZDHjpYTgFPfZYXeWKUq=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1Ac4ScjIpn9Q7zSGFhtP2nIhQFsSaMGvx=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1CpVgrEF8Rqr9JOO5VD9oCTdar5YV-Fon=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Score Estimation and the Low-Density Problem",
+      "slug": "01-score_estimation_low_density",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1SX1e7qTZRIJCCghM_xIXsTWc16GknDxI",
+      "downloadPath": "/notebooks/noise-conditional-score-networks/01_score_estimation_low_density.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "NCSN Architecture",
+      "slug": "02-ncsn_architecture",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1E-4vN-PGFypBKcEphyMk6KM2Eishx_3k",
+      "downloadPath": "/notebooks/noise-conditional-score-networks/02_ncsn_architecture.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Annealed Langevin Dynamics",
+      "slug": "03-annealed_langevin_dynamics",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1aZNAsIEVuM3lxXqENY-Gcfpg-InDissD",
+      "downloadPath": "/notebooks/noise-conditional-score-networks/03_annealed_langevin_dynamics.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "From NCSN to Diffusion Models",
+      "slug": "04-ncsn_to_diffusion_models",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1kgIowGtk9kyu0gLaLLMVH1haOmPyKyG_",
+      "downloadPath": "/notebooks/noise-conditional-score-networks/04_ncsn_to_diffusion_models.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Accelerated MRI Reconstruction Using Score-Based Generative Priors",
+    "subtitle": "MedScanAI -- NCSN-Based MRI Reconstruction for Faster Clinical Imaging",
+    "company": "MedScanAI",
+    "industry": "Medical Imaging -- Radiology",
+    "description": "MedScanAI uses noise conditioned score networks as learned priors for accelerated MRI reconstruction, reducing scan times while maintaining diagnostic image quality.",
+    "pdfPath": "/case-studies/noise-conditional-score-networks/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1p7987PFoUMyLdc9XTfeCUkp2E36VJdGh",
+    "notebookPath": "/case-studies/noise-conditional-score-networks/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

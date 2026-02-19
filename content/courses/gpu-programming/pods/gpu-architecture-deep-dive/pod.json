@@ -1,0 +1,15 @@
+{
+  "title": "GPU Architecture Deep Dive",
+  "slug": "gpu-architecture-deep-dive",
+  "courseSlug": "gpu-programming",
+  "order": 2,
+  "description": "Coming soon: GPU Architecture Deep Dive",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Inference & Scaling",
+  "slug": "inference-and-scaling",
+  "courseSlug": "build-llm",
+  "order": 6,
+  "description": "KV cache, sampling strategies, fine-tuning, and alignment — take a trained model from raw outputs to production-ready inference.",
+  "difficulty": "advanced",
+  "estimatedHours": 4,
+  "prerequisites": [
+    "training-pipeline-engineering"
+  ],
+  "tags": [
+    "kv-cache",
+    "sampling",
+    "fine-tuning",
+    "alignment"
+  ],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Autoregressive Generation and the KV Cache",
+      "slug": "01-autoregressive-generation-kv-cache",
+      "objective": "Build naive autoregressive generation, derive the KV cache from the attention equations, and implement a working KV cache that delivers dramatic speedups.",
+      "colabUrl": "https://colab.research.google.com/drive/1TezRU649o-dD3aq1AUEM_n90YIbVBawS",
+      "downloadPath": "/notebooks/inference-and-scaling/01_autoregressive_generation_kv_cache.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Sampling Strategies",
+      "slug": "02-sampling-strategies",
+      "objective": "Implement greedy decoding, temperature scaling, top-k sampling, and top-p (nucleus) sampling from scratch, and compare their effects on output quality and diversity.",
+      "colabUrl": "https://colab.research.google.com/drive/16RAkUcvBFCJS8A68jxsn8zj2TLPqaBfQ",
+      "downloadPath": "/notebooks/inference-and-scaling/02_sampling_strategies.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Complete Inference Engine",
+      "slug": "03-complete-inference-engine",
+      "objective": "Combine KV cache and sampling into a production-grade inference pipeline with batched inference, latency profiling, and stopping criteria.",
+      "colabUrl": "https://colab.research.google.com/drive/1n8bKN9wyaFX3CLzQ8_DdAp8Se7K_OUL_",
+      "downloadPath": "/notebooks/inference-and-scaling/03_complete_inference_engine.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "LoRA Fine-Tuning",
+      "slug": "04-lora-finetuning",
+      "objective": "Implement LoRA (Low-Rank Adaptation) from scratch, apply adapters to a transformer, and fine-tune on a downstream task with 0.1% of the parameters.",
+      "colabUrl": "https://colab.research.google.com/drive/1Nd1JVqgJGY-L6WgdGtLzT924OKraWITs",
+      "downloadPath": "/notebooks/inference-and-scaling/04_lora_finetuning.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Optimizing Cloud LLM Inference at Stratos AI",
+    "subtitle": "Stratos AI -- Reducing Latency and Cost for Multi-Tenant LLM Inference at Scale",
+    "company": "Stratos AI",
+    "industry": "Cloud AI Platform -- Multi-Tenant LLM Serving",
+    "description": "Stratos AI serves LLM inference for 120+ enterprise clients on 256 A100 GPUs but faces compounding bottlenecks: KV cache memory pressure limits concurrency to 20 requests per GPU, CPU-side sampling adds per-token latency, and static batching leaves GPUs at 18% utilization during decode. The case study implements paged KV cache, GPU-fused sampling, continuous batching, and multi-tenant LoRA serving to achieve 3.5x throughput improvement.",
+    "pdfPath": "/case-studies/inference-and-scaling/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1IIzKsmZ3FKWM-KKzNueIGXv84AY-jAIA",
+    "notebookPath": "/case-studies/inference-and-scaling/case_study_notebook.ipynb"
+  },
+  "hasCaseStudy": true,
+  "thumbnail": "/courses/build-llm/pods/inference-and-scaling/figures/figure_1.png",
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

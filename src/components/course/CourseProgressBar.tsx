@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { NotebookMeta } from '@/types/course';
-import { getProgress, onProgressChange } from '@/lib/progress';
+import { getPodProgress, onProgressChange } from '@/lib/progress';
 
 interface Props {
   courseSlug: string;
+  podSlug: string;
   courseTitle: string;
   notebooks: NotebookMeta[];
   hasCaseStudy: boolean;
@@ -16,6 +17,7 @@ interface Props {
 
 export default function CourseProgressBar({
   courseSlug,
+  podSlug,
   courseTitle,
   notebooks,
   hasCaseStudy,
@@ -29,9 +31,9 @@ export default function CourseProgressBar({
   }));
 
   useEffect(() => {
-    setProgressState(getProgress(courseSlug));
-    return onProgressChange(() => setProgressState(getProgress(courseSlug)));
-  }, [courseSlug]);
+    setProgressState(getPodProgress(courseSlug, podSlug));
+    return onProgressChange(() => setProgressState(getPodProgress(courseSlug, podSlug)));
+  }, [courseSlug, podSlug]);
 
   const allNbDone = notebooks.length > 0 && progress.completedNotebooks.length === notebooks.length;
   const articleAndNbDone = progress.articleRead && (notebooks.length === 0 || allNbDone);
@@ -39,11 +41,13 @@ export default function CourseProgressBar({
   type Step = { id: string; label: string; href: string; status: 'completed' | 'current' | 'locked' };
   const steps: Step[] = [];
 
+  const basePath = `/courses/${courseSlug}/${podSlug}`;
+
   // Article
   steps.push({
     id: 'article',
     label: 'Article',
-    href: `/courses/${courseSlug}/article`,
+    href: `${basePath}/article`,
     status: progress.articleRead ? 'completed' : 'current',
   });
 
@@ -54,7 +58,7 @@ export default function CourseProgressBar({
     steps.push({
       id: `nb-${nb.order}`,
       label: `NB ${nb.order}`,
-      href: `/courses/${courseSlug}/practice/${nb.order}`,
+      href: `${basePath}/practice/${nb.order}`,
       status: done ? 'completed' : accessible ? 'current' : 'locked',
     });
   }
@@ -64,7 +68,7 @@ export default function CourseProgressBar({
     steps.push({
       id: 'case-study',
       label: 'Case Study',
-      href: `/courses/${courseSlug}/case-study`,
+      href: `${basePath}/case-study`,
       status: progress.caseStudyComplete ? 'completed' : articleAndNbDone ? 'current' : 'locked',
     });
   }
@@ -74,7 +78,7 @@ export default function CourseProgressBar({
   steps.push({
     id: 'certificate',
     label: 'Certificate',
-    href: `/courses/${courseSlug}/certificate`,
+    href: `${basePath}/certificate`,
     status: allDone ? 'current' : 'locked',
   });
 
@@ -83,7 +87,7 @@ export default function CourseProgressBar({
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Course title row */}
         <div className="flex items-center gap-2 pt-2 pb-1">
-          <Link href={`/courses/${courseSlug}`} className="text-xs font-medium text-accent-blue hover:underline truncate">
+          <Link href={`/courses/${courseSlug}/${podSlug}`} className="text-xs font-medium text-accent-blue hover:underline truncate">
             {courseTitle}
           </Link>
         </div>

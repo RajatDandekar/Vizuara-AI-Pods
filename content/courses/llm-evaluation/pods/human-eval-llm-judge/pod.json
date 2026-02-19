@@ -1,0 +1,15 @@
+{
+  "title": "Human Evaluation & LLM-as-a-Judge",
+  "slug": "human-eval-llm-judge",
+  "courseSlug": "llm-evaluation",
+  "order": 4,
+  "description": "Coming soon: Human Evaluation & LLM-as-a-Judge",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

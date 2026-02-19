@@ -1,0 +1,88 @@
+{
+  "title": "RLHF Theory and Implementation: Teaching Machines to Learn from Human Preferences",
+  "slug": "rlhf-theory-implementation",
+  "description": "A complete guide to aligning language models with human preferences: from reward modeling to PPO, with full code implementations.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "RLHF",
+    "Reward Modeling",
+    "PPO",
+    "Policy Gradients",
+    "KL Divergence",
+    "Language Model Alignment",
+    "Bradley-Terry Model"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/RLHF-Theory-and-Implementation-Teaching-Machines-to-Learn-from-Human-Preferences-30b01fbe477181e88943fa6b0df0ca47",
+    "figureUrls": {
+      "figure_1": "https://lh3.googleusercontent.com/d/18_oQA0AhCw1PgBbtEsR9tQr_D7L9FLYu=w2000",
+      "figure_2": "https://lh3.googleusercontent.com/d/14Mbeos9YB27b6NMQsrYoLE_lX-OFqjzr=w2000",
+      "figure_3": "https://lh3.googleusercontent.com/d/10lESYXU8Rq6Nn1Qq22L0nPNfT1kSp7mY=w2000",
+      "figure_4": "https://lh3.googleusercontent.com/d/1Fl4w46W-U-vtPbHFGT66I0Fj6j5tVIX2=w2000",
+      "figure_5": "https://lh3.googleusercontent.com/d/1JWu5DEeWHWvwvf-2_cbPG5h3klPuRQeo=w2000",
+      "figure_6": "https://lh3.googleusercontent.com/d/1f306a7DfowO1feDoWe8moZR8Mn2feuRX=w2000",
+      "figure_7": "https://lh3.googleusercontent.com/d/1CC1qUP7GH4lcrfa1mx5EmFsMioiJnGqU=w2000",
+      "figure_8": "https://lh3.googleusercontent.com/d/1fu7rayBVI3axhjpiCLY1UxJL69MbjZbC=w2000",
+      "figure_9": "https://lh3.googleusercontent.com/d/1-xjNKRseaQZQu7q6Cfs9SgxAdieEjKps=w2000",
+      "figure_10": "https://lh3.googleusercontent.com/d/1f2L4g8oqvIzCPTCYDCjJR7qUcO3YSqND=w2000",
+      "figure_11": "https://lh3.googleusercontent.com/d/14W5J23oMpNW0U4QjmryigqoTWrVMIzSB=w2000",
+      "figure_12": "https://lh3.googleusercontent.com/d/1-k9mJ0w3MKoQYuHgK03h-eUnkJe17JWh=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Reward Modeling — Teaching a Neural Network Human Preferences",
+      "slug": "01-reward_modeling",
+      "objective": "Build a reward model from scratch using the Bradley-Terry preference model, train it on pairwise comparisons, and verify it learns to rank responses correctly.",
+      "colabUrl": "https://colab.research.google.com/drive/1D6b6bNCV9tPQuxNRarwJSlLnyBaIgW-m",
+      "downloadPath": "/notebooks/rlhf-theory-implementation/01_reward_modeling.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Policy Gradients and PPO for Language Models",
+      "slug": "02-policy_gradients_and_ppo",
+      "objective": "Implement vanilla REINFORCE and PPO with clipped surrogate objectives, training an actor-critic on a contextual bandit environment.",
+      "colabUrl": "https://colab.research.google.com/drive/1Y8vDJknZWZD8h1NtQpTL1N17f0dpRVgV",
+      "downloadPath": "/notebooks/rlhf-theory-implementation/02_policy_gradients_and_ppo.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "End-to-End RLHF Pipeline — Sentiment Alignment with GPT-2",
+      "slug": "03-end_to_end_rlhf",
+      "objective": "Combine reward modeling and PPO to build a complete RLHF pipeline that aligns GPT-2 towards positive sentiment using KL-penalized policy gradients.",
+      "colabUrl": "https://colab.research.google.com/drive/1zCoKxLJFypUrfFs7JzpfSctuKDTz45Mp",
+      "downloadPath": "/notebooks/rlhf-theory-implementation/03_end_to_end_rlhf.ipynb",
+      "estimatedMinutes": 75,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Aligning a Clinical AI Assistant Using RLHF",
+    "subtitle": "MedAlign Health — Deploying Safe and Empathetic Patient-Facing AI in Telehealth",
+    "company": "MedAlign Health",
+    "industry": "Digital Health / Telehealth",
+    "description": "MedAlign Health's clinical assistant ClinAssist suffers from tone insensitivity, over-specificity, and safety boundary violations. This case study applies the full RLHF pipeline — reward modeling on physician preferences, PPO optimization with KL penalty, and safety-aware training — to align the assistant for safe, empathetic patient interactions.",
+    "pdfPath": "/case-studies/rlhf-theory-implementation/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1-QhEuo4KIuJ0WKV8grt9g1OZA3Pc5tIy",
+    "notebookPath": "/case-studies/rlhf-theory-implementation/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "rl-from-scratch",
+  "order": 5
+}

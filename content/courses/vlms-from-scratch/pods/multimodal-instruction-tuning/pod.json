@@ -1,0 +1,84 @@
+{
+  "title": "Multimodal Instruction Tuning: Teaching Language Models to See and Think",
+  "slug": "multimodal-instruction-tuning",
+  "description": "How LLaVA-style visual instruction tuning transforms a language model into a multimodal reasoner -- from projection layers to two-stage training to cross-modal attention.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "Multimodal Projection",
+    "LLaVA Architecture",
+    "Two-Stage Training",
+    "Cross-Modal Attention",
+    "Visual Instruction Tuning"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Multimodal-Instruction-Tuning-The-Training-Recipe-That-Teaches-LLMs-to-See-30b01fbe47718173b908e592b3f8d8d7",
+    "figureUrls": {
+      "figure_1": "https://lh3.googleusercontent.com/d/1VquDsg67YlTK2SxSPpkYKJ8L2_ANzIYW=w2000",
+      "figure_2": "https://lh3.googleusercontent.com/d/1zF_W7Awc8DuuIsw_gFfzYhLu6_jnw0Pw=w2000",
+      "figure_3": "https://lh3.googleusercontent.com/d/1JYHLCvWnSIZGXoBxmpRQOY6ED9Bl8pgx=w2000",
+      "figure_4": "https://lh3.googleusercontent.com/d/1l6A5IdghGHXG_anDCa1J2z_f4ExGHJPi=w2000",
+      "figure_5": "https://lh3.googleusercontent.com/d/1ON0fmrvvhvaF_n6Y_06TuxM0GFSaNRPd=w2000",
+      "figure_6": "https://lh3.googleusercontent.com/d/1ujh-it1L6PD9Dg8sJS6ydFLzz71WXbvc=w2000",
+      "figure_7": "https://lh3.googleusercontent.com/d/1BnSwmqDbOTSPrgcPdNdOKLO4nYkJC40I=w2000",
+      "figure_8": "https://lh3.googleusercontent.com/d/1pgejaJgJEGWWbXMINnJl8bN2PZLvHydk=w2000",
+      "figure_9": "https://lh3.googleusercontent.com/d/1wOfDvRHtMDQvnEqthKRPkWyRHZoLPgOL=w2000",
+      "figure_10": "https://lh3.googleusercontent.com/d/1mLJjK_mD9YxWr_cttxHKwf4UXB_UR7fv=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Multimodal Projection: Bridging Vision and Language",
+      "slug": "01-multimodal_projection",
+      "objective": "Build a multimodal projection layer from scratch that maps vision encoder features into LLM embedding space, and train a simple multimodal model on image-to-word prediction.",
+      "colabUrl": "https://colab.research.google.com/drive/1A6c5f8q5YYgHMtB--buvGcgNyRP0Xsvl",
+      "downloadPath": "/notebooks/multimodal-instruction-tuning/01_multimodal_projection.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Instruction Tuning Pipeline: Two-Stage Training",
+      "slug": "02-instruction_tuning_pipeline",
+      "objective": "Implement the complete two-stage training pipeline used by LLaVA: feature alignment pretraining followed by visual instruction tuning on a synthetic VQA dataset.",
+      "colabUrl": "https://colab.research.google.com/drive/1smC_NyoMUrRJysocd6B52xQZcQHc3Jzg",
+      "downloadPath": "/notebooks/multimodal-instruction-tuning/02_instruction_tuning_pipeline.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Cross-Modal Attention: How Language Models Learn to See",
+      "slug": "03-cross_modal_attention",
+      "objective": "Visualize and analyze cross-modal attention patterns to understand how text tokens attend to image patches during multimodal reasoning.",
+      "colabUrl": "https://colab.research.google.com/drive/1tnV4YHCMcN9sXutSXuTALIJU_unAHOqN",
+      "downloadPath": "/notebooks/multimodal-instruction-tuning/03_cross_modal_attention.ipynb",
+      "estimatedMinutes": 40,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Radiology Report Generation with Multimodal Instruction Tuning",
+    "subtitle": "Meridian Diagnostic Intelligence -- Automated Chest X-ray Report Generation",
+    "company": "Meridian Diagnostic Intelligence",
+    "industry": "Healthcare -- Diagnostic Radiology",
+    "description": "Meridian Diagnostic Intelligence processes 2.3 million imaging studies annually across 14 hospital systems. Radiologist shortages have driven turnaround times above 12 hours. This case study applies multimodal instruction tuning to automate structured radiology report generation from chest X-rays.",
+    "pdfPath": "/case-studies/multimodal-instruction-tuning/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/10ho7XouQp1HphWP90brFLZSPQ7ZEOROT",
+    "notebookPath": "/case-studies/multimodal-instruction-tuning/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "vlms-from-scratch",
+  "order": 5
+}

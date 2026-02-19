@@ -7,10 +7,11 @@ import type { NotebookMeta } from '@/types/course';
 interface NotebookCardProps {
   notebook: NotebookMeta;
   courseSlug: string;
+  podSlug: string;
   status: 'completed' | 'current' | 'locked';
 }
 
-export default function NotebookCard({ notebook, courseSlug, status }: NotebookCardProps) {
+export default function NotebookCard({ notebook, courseSlug, podSlug, status }: NotebookCardProps) {
   const isLocked = status === 'locked';
 
   const card = (
@@ -91,7 +92,7 @@ export default function NotebookCard({ notebook, courseSlug, status }: NotebookC
   if (isLocked) return card;
 
   return (
-    <Link href={`/courses/${courseSlug}/practice/${notebook.order}`}>
+    <Link href={`/courses/${courseSlug}/${podSlug}/practice/${notebook.order}`}>
       {card}
     </Link>
   );

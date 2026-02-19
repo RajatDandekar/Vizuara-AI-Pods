@@ -1,0 +1,15 @@
+{
+  "title": "Writing High-Performance CUDA Kernels",
+  "slug": "high-performance-cuda-kernels",
+  "courseSlug": "gpu-programming",
+  "order": 6,
+  "description": "Coming soon: Writing High-Performance CUDA Kernels",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

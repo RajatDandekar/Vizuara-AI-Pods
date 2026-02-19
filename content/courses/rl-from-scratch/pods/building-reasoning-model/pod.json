@@ -1,0 +1,98 @@
+{
+  "title": "Building a Reasoning Model from Scratch",
+  "slug": "building-reasoning-model",
+  "courseSlug": "rl-from-scratch",
+  "order": 7,
+  "description": "How to teach a small language model to think step-by-step using reinforcement learning with verifiable rewards -- from SFT on chain-of-thought data to GRPO training to distillation.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Reasoning Models",
+    "Chain-of-Thought",
+    "Supervised Fine-Tuning",
+    "GRPO",
+    "Verifiable Rewards",
+    "Rejection Sampling",
+    "Distillation",
+    "DeepSeek-R1"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Building-a-Reasoning-Model-from-Scratch-30b01fbe47718126bd7cd9ae1c2c2612",
+    "figureUrls": {
+      "figure_1": "https://lh3.googleusercontent.com/d/1Q3GRY3YjzhOAnW4rhr5hEZAw1w_SOyx1=w2000",
+      "figure_2": "https://lh3.googleusercontent.com/d/1UQj1NVd5nyJKD4H0ldb8H3TnkDtSCdpu=w2000",
+      "figure_3": "https://lh3.googleusercontent.com/d/1PJQB8qw5FcuudDNzpHus0jbGdOFaM18D=w2000",
+      "figure_4": "https://lh3.googleusercontent.com/d/15qly6dg214TuGsCyR--JT_Pf0Df47pRT=w2000",
+      "figure_5": "https://lh3.googleusercontent.com/d/12T-emZ6wvK1wvyMMomvLZI1Xtg4NHvj6=w2000",
+      "figure_6": "https://lh3.googleusercontent.com/d/1L-02EHK_IahSP4kOJQWijLux5VarDLHh=w2000",
+      "figure_7": "https://lh3.googleusercontent.com/d/1hcpLvhD7Pykqhr2StOn0wxmJfd_7qJqH=w2000",
+      "figure_8": "https://lh3.googleusercontent.com/d/1V9_GCUQW-whK2CgvWGxTslwDHJukM_gB=w2000",
+      "figure_9": "https://lh3.googleusercontent.com/d/126JubHEJOYnYSVT1cHsIP1wR1GqTYNJN=w2000",
+      "figure_10": "https://lh3.googleusercontent.com/d/11NOjJwnUHBRHhaEMDpP65Cu_MJTy_0yG=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Chain-of-Thought Supervised Fine-Tuning",
+      "slug": "01-chain_of_thought_sft",
+      "objective": "Understand the SFT stage of reasoning model training: build chain-of-thought data, implement next-token prediction loss, and fine-tune a small model to produce reasoning traces.",
+      "colabUrl": "https://colab.research.google.com/drive/1qvSoBUot-IiAGfJtYkYFVRvHrEXtq6ib",
+      "downloadPath": "/notebooks/building-reasoning-model/01_chain_of_thought_sft.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "GRPO from Scratch",
+      "slug": "02-grpo_from_scratch",
+      "objective": "Implement Group Relative Policy Optimization from scratch: group-relative advantages, clipped surrogate loss, and KL penalty for training reasoning models.",
+      "colabUrl": "https://colab.research.google.com/drive/1GObPAjtxwj9bfM4sfvySfmiYmV_BAmZ3",
+      "downloadPath": "/notebooks/building-reasoning-model/02_grpo_from_scratch.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Training a Reasoning Model End-to-End",
+      "slug": "03-training_a_reasoning_model",
+      "objective": "Put the full pipeline together: SFT warm-up followed by GRPO training on GSM8K math problems, observing emergent reasoning behaviors.",
+      "colabUrl": "https://colab.research.google.com/drive/15xsNzFrVORFmBsQiBlP9qOv0ssWuoI87",
+      "downloadPath": "/notebooks/building-reasoning-model/03_training_a_reasoning_model.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Emergent Reasoning Behaviors and Distillation",
+      "slug": "04-emergent_reasoning_and_distillation",
+      "objective": "Explore emergent behaviors (self-verification, backtracking, extended thinking) and implement rejection sampling distillation to transfer reasoning to smaller models.",
+      "colabUrl": "https://colab.research.google.com/drive/1wgT5Ji4JK7CsC9S-ToyFp8iwplqrVY1N",
+      "downloadPath": "/notebooks/building-reasoning-model/04_emergent_reasoning_and_distillation.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Teaching an Insurance Claims Engine to Reason Step by Step",
+    "subtitle": "ClearClaim AI -- Building a Verifiable Reasoning Model for Multi-Step Claims Adjudication",
+    "company": "ClearClaim AI",
+    "industry": "Insurance Technology -- Property and Casualty Claims",
+    "description": "ClearClaim AI's LLM-based claims engine achieves only 69% accuracy on multi-step claims, costing carrier clients $2.8M/year. This case study applies the full reasoning model pipeline (SFT + GRPO with verifiable rewards + distillation) to build an auditable claims reasoning system that exceeds 85% accuracy while meeting regulatory explainability requirements.",
+    "pdfPath": "/case-studies/building-reasoning-model/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1CBBoVqiemUxCJ3f3UPyXj5UJXP8zkkXr",
+    "notebookPath": "/case-studies/building-reasoning-model/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

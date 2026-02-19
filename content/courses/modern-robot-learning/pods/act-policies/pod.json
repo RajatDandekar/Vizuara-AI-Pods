@@ -1,0 +1,15 @@
+{
+  "title": "ACT (Action Chunking Transformer) Policies",
+  "slug": "act-policies",
+  "courseSlug": "modern-robot-learning",
+  "order": 1,
+  "description": "Coming soon: ACT (Action Chunking Transformer) Policies",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

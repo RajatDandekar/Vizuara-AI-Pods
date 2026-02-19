@@ -1,0 +1,15 @@
+{
+  "title": "Model Deployment & Serving",
+  "slug": "model-deployment-serving",
+  "courseSlug": "ai-in-production",
+  "order": 1,
+  "description": "Coming soon: Model Deployment & Serving",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

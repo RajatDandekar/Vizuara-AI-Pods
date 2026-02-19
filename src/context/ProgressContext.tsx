@@ -1,16 +1,16 @@
 'use client';
 
 import { createContext, useContext, useReducer, useEffect, useCallback, type ReactNode } from 'react';
-import type { CourseProgress } from '@/types/course';
+import type { PodProgress } from '@/types/course';
 import {
-  getProgress,
-  setProgress,
-  markArticleRead as markArticleReadStorage,
-  markNotebookComplete as markNotebookCompleteStorage,
-  markCaseStudyComplete as markCaseStudyCompleteStorage,
+  getPodProgress,
+  setPodProgress,
+  markPodArticleRead as markArticleReadStorage,
+  markPodNotebookComplete as markNotebookCompleteStorage,
+  markPodCaseStudyComplete as markCaseStudyCompleteStorage,
 } from '@/lib/progress';
 
-const PROGRESS_DEFAULTS: CourseProgress = {
+const PROGRESS_DEFAULTS: PodProgress = {
   articleRead: false,
   completedNotebooks: [],
   caseStudyComplete: false,
@@ -18,59 +18,60 @@ const PROGRESS_DEFAULTS: CourseProgress = {
 };
 
 interface ProgressState {
-  courses: Record<string, CourseProgress>;
+  /** keyed by `{courseSlug}__{podSlug}` */
+  pods: Record<string, PodProgress>;
 }
 
 type ProgressAction =
-  | { type: 'LOAD'; courseSlug: string; progress: CourseProgress }
-  | { type: 'MARK_ARTICLE_READ'; courseSlug: string }
-  | { type: 'MARK_NOTEBOOK_COMPLETE'; courseSlug: string; notebookSlug: string }
-  | { type: 'MARK_CASE_STUDY_COMPLETE'; courseSlug: string };
+  | { type: 'LOAD'; courseSlug: string; podSlug: string; progress: PodProgress }
+  | { type: 'MARK_ARTICLE_READ'; courseSlug: string; podSlug: string }
+  | { type: 'MARK_NOTEBOOK_COMPLETE'; courseSlug: string; podSlug: string; notebookSlug: string }
+  | { type: 'MARK_CASE_STUDY_COMPLETE'; courseSlug: string; podSlug: string };
+
+function makeKey(courseSlug: string, podSlug: string) {
+  return `${courseSlug}__${podSlug}`;
+}
 
 function progressReducer(state: ProgressState, action: ProgressAction): ProgressState {
   switch (action.type) {
-    case 'LOAD':
-      return {
-        ...state,
-        courses: { ...state.courses, [action.courseSlug]: action.progress },
-      };
+    case 'LOAD': {
+      const key = makeKey(action.courseSlug, action.podSlug);
+      return { ...state, pods: { ...state.pods, [key]: action.progress } };
+    }
     case 'MARK_ARTICLE_READ': {
-      const current = state.courses[action.courseSlug] || { ...PROGRESS_DEFAULTS };
-      const updated: CourseProgress = {
-        ...current,
-        articleRead: true,
-        lastVisited: new Date().toISOString(),
-      };
+      const key = makeKey(action.courseSlug, action.podSlug);
+      const current = state.pods[key] || { ...PROGRESS_DEFAULTS };
       return {
         ...state,
-        courses: { ...state.courses, [action.courseSlug]: updated },
+        pods: {
+          ...state.pods,
+          [key]: { ...current, articleRead: true, lastVisited: new Date().toISOString() },
+        },
       };
     }
     case 'MARK_NOTEBOOK_COMPLETE': {
-      const current = state.courses[action.courseSlug] || { ...PROGRESS_DEFAULTS };
+      const key = makeKey(action.courseSlug, action.podSlug);
+      const current = state.pods[key] || { ...PROGRESS_DEFAULTS };
       const notebooks = current.completedNotebooks.includes(action.notebookSlug)
         ? current.completedNotebooks
         : [...current.completedNotebooks, action.notebookSlug];
-      const updated: CourseProgress = {
-        ...current,
-        completedNotebooks: notebooks,
-        lastVisited: new Date().toISOString(),
-      };
       return {
         ...state,
-        courses: { ...state.courses, [action.courseSlug]: updated },
+        pods: {
+          ...state.pods,
+          [key]: { ...current, completedNotebooks: notebooks, lastVisited: new Date().toISOString() },
+        },
       };
     }
     case 'MARK_CASE_STUDY_COMPLETE': {
-      const current = state.courses[action.courseSlug] || { ...PROGRESS_DEFAULTS };
-      const updated: CourseProgress = {
-        ...current,
-        caseStudyComplete: true,
-        lastVisited: new Date().toISOString(),
-      };
+      const key = makeKey(action.courseSlug, action.podSlug);
+      const current = state.pods[key] || { ...PROGRESS_DEFAULTS };
       return {
         ...state,
-        courses: { ...state.courses, [action.courseSlug]: updated },
+        pods: {
+          ...state.pods,
+          [key]: { ...current, caseStudyComplete: true, lastVisited: new Date().toISOString() },
+        },
       };
     }
     default:
@@ -79,62 +80,52 @@ function progressReducer(state: ProgressState, action: ProgressAction): Progress
 }
 
 interface ProgressContextValue {
-  getCourseProgress: (courseSlug: string) => CourseProgress;
-  markArticleRead: (courseSlug: string) => void;
-  markNotebookComplete: (courseSlug: string, notebookSlug: string) => void;
-  markCaseStudyComplete: (courseSlug: string) => void;
+  getPodProgressState: (courseSlug: string, podSlug: string) => PodProgress;
+  markArticleRead: (courseSlug: string, podSlug: string) => void;
+  markNotebookComplete: (courseSlug: string, podSlug: string, notebookSlug: string) => void;
+  markCaseStudyComplete: (courseSlug: string, podSlug: string) => void;
 }
 
 const ProgressContext = createContext<ProgressContextValue | null>(null);
 
 export function ProgressProvider({ children }: { children: ReactNode }) {
-  const [state, dispatch] = useReducer(progressReducer, { courses: {} });
+  const [state, dispatch] = useReducer(progressReducer, { pods: {} });
 
-  const getCourseProgress = useCallback(
-    (courseSlug: string): CourseProgress => {
-      return state.courses[courseSlug] || { ...PROGRESS_DEFAULTS };
+  const getPodProgressState = useCallback(
+    (courseSlug: string, podSlug: string): PodProgress => {
+      return state.pods[makeKey(courseSlug, podSlug)] || { ...PROGRESS_DEFAULTS };
     },
-    [state.courses]
+    [state.pods]
   );
 
-  const handleMarkArticleRead = useCallback((courseSlug: string) => {
-    markArticleReadStorage(courseSlug);
-    dispatch({ type: 'MARK_ARTICLE_READ', courseSlug });
+  const handleMarkArticleRead = useCallback((courseSlug: string, podSlug: string) => {
+    markArticleReadStorage(courseSlug, podSlug);
+    dispatch({ type: 'MARK_ARTICLE_READ', courseSlug, podSlug });
   }, []);
 
   const handleMarkNotebookComplete = useCallback(
-    (courseSlug: string, notebookSlug: string) => {
-      markNotebookCompleteStorage(courseSlug, notebookSlug);
-      dispatch({ type: 'MARK_NOTEBOOK_COMPLETE', courseSlug, notebookSlug });
+    (courseSlug: string, podSlug: string, notebookSlug: string) => {
+      markNotebookCompleteStorage(courseSlug, podSlug, notebookSlug);
+      dispatch({ type: 'MARK_NOTEBOOK_COMPLETE', courseSlug, podSlug, notebookSlug });
     },
     []
   );
 
-  const handleMarkCaseStudyComplete = useCallback((courseSlug: string) => {
-    markCaseStudyCompleteStorage(courseSlug);
-    dispatch({ type: 'MARK_CASE_STUDY_COMPLETE', courseSlug });
+  const handleMarkCaseStudyComplete = useCallback((courseSlug: string, podSlug: string) => {
+    markCaseStudyCompleteStorage(courseSlug, podSlug);
+    dispatch({ type: 'MARK_CASE_STUDY_COMPLETE', courseSlug, podSlug });
   }, []);
 
-  // Load progress for known courses on mount
+  // This context is currently unused — progress is managed via direct localStorage calls.
+  // Kept for potential future use.
   useEffect(() => {
-    const loadAllProgress = () => {
-      // Scan localStorage for all vizuara_progress_ keys
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && key.startsWith('vizuara_progress_')) {
-          const slug = key.replace('vizuara_progress_', '');
-          const progress = getProgress(slug);
-          dispatch({ type: 'LOAD', courseSlug: slug, progress });
-        }
-      }
-    };
-    loadAllProgress();
+    // No-op on mount for now
   }, []);
 
   return (
     <ProgressContext.Provider
       value={{
-        getCourseProgress,
+        getPodProgressState,
         markArticleRead: handleMarkArticleRead,
         markNotebookComplete: handleMarkNotebookComplete,
         markCaseStudyComplete: handleMarkCaseStudyComplete,

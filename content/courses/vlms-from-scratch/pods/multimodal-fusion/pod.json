@@ -1,0 +1,85 @@
+{
+  "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen — All at Once",
+  "slug": "multimodal-fusion",
+  "courseSlug": "vlms-from-scratch",
+  "order": 2,
+  "description": "From early fusion to cross-attention — building the bridges that connect vision and language inside modern AI systems.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "multimodal fusion",
+    "cross-attention",
+    "LLaVA",
+    "Flamingo",
+    "contrastive learning",
+    "vision-language models"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Multimodal-Fusion-Architectures-How-AI-Learns-to-See-Read-and-Listen-All-at-Once-30b01fbe4771814b9be2f1143150d762",
+    "figureUrls": {
+      "figures/figure_1.png": "https://drive.google.com/uc?export=view&id=1MGcmxnHnU_M3AXVO0KW33B5d3ijgOIXt",
+      "figures/figure_2.png": "https://drive.google.com/uc?export=view&id=1_lZuXw47bq757aVXMMf--OrwQMLSl_rO",
+      "figures/figure_3.png": "https://drive.google.com/uc?export=view&id=12-guIEsG_quVH_LLKVRccTAPQDwLuvUN",
+      "figures/figure_4.png": "https://drive.google.com/uc?export=view&id=1C_AIe7IO3qkSMPYQ-mXVyhpYxS7r7FMl",
+      "figures/figure_5.png": "https://drive.google.com/uc?export=view&id=1BHHKDuR2N3SRGEiLqX3tWDDNVYD58Jzm",
+      "figures/figure_6.png": "https://drive.google.com/uc?export=view&id=1oBTynCeyT4R9JANNxNpb0zMMgHMFd9_2",
+      "figures/figure_7.png": "https://drive.google.com/uc?export=view&id=1Bzx3bsa_9Krllrq8eVXo6dyHsBakbwX4",
+      "figures/figure_8.png": "https://drive.google.com/uc?export=view&id=1ErpLGUJkMP-Y2UdLteJ9Do8Kj2uMv1UW",
+      "figures/figure_9.png": "https://drive.google.com/uc?export=view&id=1D2Xlk1dXrEoiIu9T3v6I1QanHh2raEkx",
+      "figures/figure_10.png": "https://drive.google.com/uc?export=view&id=1eTV_8m91ITX3BzJMmNgFFAtUWYiwIAdW"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Multimodal Fusion Strategies from First Principles",
+      "slug": "01-fusion_strategies",
+      "objective": "Build and compare early, late, and cross-attention fusion architectures on a synthetic multimodal classification task.",
+      "downloadPath": "/notebooks/multimodal-fusion/01_fusion_strategies.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1My_cHdgqheT-qWyzA-yCs2k4srfkbC5I"
+    },
+    {
+      "title": "Building LLaVA and Flamingo from Scratch",
+      "slug": "02-llava_and_flamingo",
+      "objective": "Implement simplified LLaVA and Flamingo architectures for visual question answering on CIFAR-10.",
+      "downloadPath": "/notebooks/multimodal-fusion/02_llava_and_flamingo.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1zU2OhM8xbKgsn1zKTuh8yzHSqCBTDTpr"
+    },
+    {
+      "title": "Training Multimodal Models: Contrastive Learning and Instruction Tuning",
+      "slug": "03-training_multimodal_models",
+      "objective": "Train a mini-CLIP model with contrastive loss for zero-shot image retrieval and classification.",
+      "downloadPath": "/notebooks/multimodal-fusion/03_training_multimodal_models.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false,
+      "colabUrl": "https://colab.research.google.com/drive/1uTBEHh9zaLscdR-nQwkfAELqQcYONGHV"
+    }
+  ],
+  "caseStudy": {
+    "title": "Multimodal Product Defect Detection at Stratos Manufacturing",
+    "subtitle": "Stratos Manufacturing -- Fusing Vision, Process Data, and Operator Notes for Semiconductor Quality Inspection",
+    "company": "Stratos Manufacturing",
+    "industry": "Advanced Manufacturing -- Semiconductor Fabrication",
+    "description": "Stratos Manufacturing loses $47M annually from fragmented quality inspection. Their vision-only CNN achieves 89% accuracy but suffers 3.2% defect escape rate and 32% false positive rate. By fusing microscope images with process logs and operator notes using gated cross-attention, the multimodal system reduces the escape rate below 1%.",
+    "pdfPath": "/case-studies/multimodal-fusion/case_study.pdf",
+    "notebookPath": "/case-studies/multimodal-fusion/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/16XeUBfGdi1p-SGWiLO5QX7_ZIjVgitzv"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

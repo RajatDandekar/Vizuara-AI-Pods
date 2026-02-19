@@ -76,12 +76,12 @@ export default function HeroCarousel({ courses }: HeroCarouselProps) {
                 {course.difficulty}
               </Badge>
               <span className="text-white/50 text-xs">~{course.estimatedHours}h</span>
-              {course.notebookCount > 0 && (
+              {(course.totalNotebooks || course.notebookCount || 0) > 0 && (
                 <span className="text-white/50 text-xs flex items-center gap-1">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                   </svg>
-                  {course.notebookCount} notebooks
+                  {course.totalNotebooks || course.notebookCount} notebooks
                 </span>
               )}
             </div>

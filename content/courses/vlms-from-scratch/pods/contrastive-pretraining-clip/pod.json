@@ -1,0 +1,76 @@
+{
+  "title": "Contrastive Pretraining (CLIP-style): Teaching Machines to See and Read at the Same Time",
+  "slug": "contrastive-pretraining-clip",
+  "description": "How CLIP learned to connect images and text in a shared space -- from first principles to implementation.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Contrastive Learning",
+    "CLIP",
+    "InfoNCE Loss",
+    "Zero-Shot Classification",
+    "Dual Encoders",
+    "Vision Transformers",
+    "Multimodal Embeddings"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Contrastive-Pretraining-CLIP-style-Teaching-Machines-to-See-and-Read-at-the-Same-Time-30b01fbe4771819fa387f7354f586a11",
+    "figureUrls": {
+      "figure_1.png": "https://drive.google.com/uc?export=view&id=1LQvyJfDI66Ysx_LaXb_WhdAnbaOeHe4f",
+      "figure_2.png": "https://drive.google.com/uc?export=view&id=1oRd4rg4mzpknfuiLHRb_IxsSF71z93Gx",
+      "figure_3.png": "https://drive.google.com/uc?export=view&id=1ysxVsO1r5hU9gaQLCkyM98Zyy9dyeP13",
+      "figure_4.png": "https://drive.google.com/uc?export=view&id=1yPW0b5dJ6CL1OvbwwefSg16sL7YUAL8v",
+      "figure_5.png": "https://drive.google.com/uc?export=view&id=1zBMSYAiTpnQHPIcX4Hx0CD35Jg5AYDE5",
+      "figure_6.png": "https://drive.google.com/uc?export=view&id=1gNPtl22hRb9rYoKRZwUbisuiAMOHO5V1",
+      "figure_7.png": "https://drive.google.com/uc?export=view&id=1mRiAtJ7mcD0FZGHw4FNfb0A2NDegsGy4",
+      "figure_8.png": "https://drive.google.com/uc?export=view&id=1Md4fKL2EiXLrPo-ZLQpXFdQ5evV_wqYp",
+      "figure_9.png": "https://drive.google.com/uc?export=view&id=1iv_GlNaseyfiopqdi_FcyLVcSc4ylaGB"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Contrastive Learning and the InfoNCE Loss",
+      "slug": "01-contrastive_learning_and_infonce_loss",
+      "downloadPath": "/notebooks/contrastive-pretraining-clip/01_contrastive_learning_and_infonce_loss.ipynb",
+      "order": 1,
+      "estimatedMinutes": 45,
+      "colabUrl": "https://colab.research.google.com/drive/1fxcG8PHt1A_Gy9f0LjeLGYPU1LjcQEzS"
+    },
+    {
+      "title": "Building CLIP from Scratch",
+      "slug": "02-building_clip_from_scratch",
+      "downloadPath": "/notebooks/contrastive-pretraining-clip/02_building_clip_from_scratch.ipynb",
+      "order": 2,
+      "estimatedMinutes": 60,
+      "colabUrl": "https://colab.research.google.com/drive/1mtW5KAMkegbGVS1D8LJ3e-AjBgNvLzFi"
+    },
+    {
+      "title": "Zero-Shot Transfer and Evaluation",
+      "slug": "03-zero_shot_transfer_and_evaluation",
+      "downloadPath": "/notebooks/contrastive-pretraining-clip/03_zero_shot_transfer_and_evaluation.ipynb",
+      "order": 3,
+      "estimatedMinutes": 45,
+      "colabUrl": "https://colab.research.google.com/drive/1fEe1-Iqn9RvT_DWcJgPKVUROP7GZRfDn"
+    }
+  ],
+  "caseStudy": {
+    "title": "Zero-Shot Radiological Screening with Contrastive Pretraining",
+    "subtitle": "MedVista Diagnostics -- Building a Language-Guided Medical Image Retrieval System",
+    "company": "MedVista Diagnostics",
+    "industry": "Healthcare -- Diagnostic Radiology",
+    "description": "Build a contrastive pretraining system (CLIP-style) that learns a shared embedding space between radiology images and clinical text descriptions, enabling zero-shot classification of 50+ pathological findings without per-condition labeled data.",
+    "pdfPath": "/case-studies/contrastive-pretraining-clip/case_study.pdf",
+    "notebookPath": "/case-studies/contrastive-pretraining-clip/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/1xjkhBFKTMXZTdfQMmBVCecVhDxAc3DNF"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "vlms-from-scratch",
+  "order": 3
+}

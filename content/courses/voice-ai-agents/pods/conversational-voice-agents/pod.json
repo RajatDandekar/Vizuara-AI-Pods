@@ -1,0 +1,15 @@
+{
+  "title": "Conversational State & Tool-Integrated Voice Agents",
+  "slug": "conversational-voice-agents",
+  "courseSlug": "voice-ai-agents",
+  "order": 2,
+  "description": "Coming soon: Conversational State & Tool-Integrated Voice Agents",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "figureUrls": {}
+  },
+  "notebooks": []
+}

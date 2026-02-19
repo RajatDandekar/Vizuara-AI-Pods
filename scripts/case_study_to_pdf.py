@@ -269,6 +269,14 @@ def _render_latex(latex: str, fontsize: int, dpi: int, tmp_dir: Path,
 def render_math_in_markdown(md_text: str, tmp_dir: Path) -> str:
     """Replace $$...$$ and $...$ with rendered PNG images."""
 
+    # 0) Protect code blocks from math processing
+    _code_blocks = []
+    def _save_code(m):
+        _code_blocks.append(m.group(0))
+        return f"__CODE_BLOCK_{len(_code_blocks)-1}__"
+    md_text = re.sub(r"```.*?```", _save_code, md_text, flags=re.DOTALL)
+    md_text = re.sub(r"`[^`]+`", _save_code, md_text)
+
     # 1) Block math (multi-line between $$ fences)
     def _replace_block(m):
         latex = m.group(1).strip()
@@ -316,6 +324,10 @@ def render_math_in_markdown(md_text: str, tmp_dir: Path) -> str:
 
     md_text = re.sub(r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)",
                      _replace_single, md_text)
+
+    # Restore code blocks
+    for i, block in enumerate(_code_blocks):
+        md_text = md_text.replace(f"__CODE_BLOCK_{i}__", block)
 
     return md_text
 

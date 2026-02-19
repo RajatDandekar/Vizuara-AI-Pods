@@ -1,0 +1,98 @@
+{
+  "title": "Building DQN Atari Agents: When Q-Learning Learned to See",
+  "slug": "dqn-atari-agents",
+  "description": "How DeepMind combined Q-learning with convolutional neural networks to play Atari games at superhuman levels -- and why this 2013 paper changed everything.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "The Tabletop Problem",
+    "Function Approximation",
+    "DQN Architecture",
+    "Experience Replay",
+    "Target Networks",
+    "Epsilon-Greedy Exploration",
+    "Double DQN"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Building-DQN-Atari-Agents-When-Q-Learning-Learned-to-See-30b01fbe477181659772da90b46cf8dc",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1POnL6uVzCgpoomszw9DBpPTOheiAKsfC=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1RMMqtSUmdDr0O1YmpGgvM8j-HA0Ys0tI=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/196p63XkqbTTXiOC3q2wmLVrsqeyqvDuv=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1WSSp8UvYxh7nCA8rBbiv7Ogdm4ne6n5S=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/152qbx2FTI2MsKECdG4I4sFOETou5eT04=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1i0OlGNpSfk1VOVENFWBU0wVGBYvy_I_C=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1IO7oQ5HeVIPD8zEyjNDfP-QtaeXdUfkj=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/10Ipn2jfqWCRs8d_Wyzea3lj9cM0qB6A1=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1i09SI8bedUuu0RAlZEBGzYfttbWVuQa5=w2000",
+      "figures/figure_10.png": "https://lh3.googleusercontent.com/d/1OsTZt5JlqkAn7bks4f6gkJsFY6ytAiIO=w2000",
+      "figures/figure_11.png": "https://lh3.googleusercontent.com/d/1hIRNncqfevuoE0KYULF6IF2_Fl8jyi3Y=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "From Tables to Neural Networks: The DQN Architecture",
+      "slug": "01-function_approximation_and_dqn_architecture",
+      "objective": "Build the DQN convolutional neural network from scratch, understand function approximation, and implement the Atari preprocessing pipeline.",
+      "colabUrl": "https://colab.research.google.com/drive/1Eawco61heHj4Ktz7a_5MbLFzt9f0NY0k",
+      "downloadPath": "/notebooks/dqn-atari-agents/01_function_approximation_and_dqn_architecture.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Experience Replay and Target Networks",
+      "slug": "02-experience_replay_and_target_networks",
+      "objective": "Implement the replay buffer and target network, understand why both are essential for stable DQN training, and compare training with and without each.",
+      "colabUrl": "https://colab.research.google.com/drive/1i4tACwIeojx4FsjoP62XH9cm5Zps1UhD",
+      "downloadPath": "/notebooks/dqn-atari-agents/02_experience_replay_and_target_networks.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Training a DQN Agent to Play Pong",
+      "slug": "03-training_dqn_on_pong",
+      "objective": "Put all DQN components together into a complete training loop and train an agent to play Pong from raw pixels.",
+      "colabUrl": "https://colab.research.google.com/drive/1Hbj-cWcLUGpvW3jM2EmQe-3wrz2eyrMO",
+      "downloadPath": "/notebooks/dqn-atari-agents/03_training_dqn_on_pong.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "Double DQN and Game Generalization",
+      "slug": "04-double_dqn_and_game_generalization",
+      "objective": "Implement Double DQN to fix Q-value overestimation, analyze DQN performance across Atari games, and survey the Rainbow family of improvements.",
+      "colabUrl": "https://colab.research.google.com/drive/1seu54iZrYcHH81U-MsNu0iE8aD3u_tmH",
+      "downloadPath": "/notebooks/dqn-atari-agents/04_double_dqn_and_game_generalization.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Adaptive Game Testing with Deep Q-Networks",
+    "subtitle": "Nexus Interactive -- Using DQN Agents to Automate Quality Assurance for Mobile Games",
+    "company": "Nexus Interactive",
+    "industry": "Gaming -- Mobile Game QA",
+    "description": "A mid-sized mobile gaming studio uses DQN agents to automate quality assurance for their dungeon crawler game, reducing QA cycle time by 65% and enabling weekly content releases.",
+    "pdfPath": "/case-studies/dqn-atari-agents/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1OVUnY8lGl3nnIDUaAt9BKkaIGteKIDUB",
+    "notebookPath": "/case-studies/dqn-atari-agents/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "rl-from-scratch",
+  "order": 3
+}

@@ -1,0 +1,96 @@
+{
+  "title": "Training Pipeline Engineering",
+  "slug": "training-pipeline-engineering",
+  "courseSlug": "build-llm",
+  "order": 5,
+  "description": "Tokenization, data loading, and optimization — engineer the full training pipeline that turns raw text into a working language model.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [
+    "gpt-from-scratch"
+  ],
+  "tags": [
+    "tokenization",
+    "data-loader",
+    "optimization",
+    "training"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Tokenization and BPE",
+      "slug": "01-tokenization_and_bpe",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/14ASNGnG9aaQdLz0BFpYtPW19U9oEHG1_",
+      "downloadPath": "/notebooks/training-pipeline-engineering/01_tokenization_and_bpe.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 0,
+      "order": 1,
+      "hasNarration": false
+    },
+    {
+      "title": "Dataset and DataLoader",
+      "slug": "02-dataset_and_dataloader",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1AqqNzeV9RbM1PVziJBJEMt2ls5q0jJH_",
+      "downloadPath": "/notebooks/training-pipeline-engineering/02_dataset_and_dataloader.ipynb",
+      "estimatedMinutes": 40,
+      "todoCount": 0,
+      "order": 2,
+      "hasNarration": false
+    },
+    {
+      "title": "Optimization: SGD, Momentum, and Adam",
+      "slug": "03-optimization_sgd_momentum_adam",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1zOccsFHZJqPl9hnVaUmbJgdXsQPuOX6C",
+      "downloadPath": "/notebooks/training-pipeline-engineering/03_optimization_sgd_momentum_adam.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 0,
+      "order": 3,
+      "hasNarration": false
+    },
+    {
+      "title": "LR Scheduling and Gradient Clipping",
+      "slug": "04-lr_scheduling_and_gradient_clipping",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1jePW39DuNSdG2P8QWSG-QNfE3mmfmX11",
+      "downloadPath": "/notebooks/training-pipeline-engineering/04_lr_scheduling_and_gradient_clipping.ipynb",
+      "estimatedMinutes": 40,
+      "todoCount": 0,
+      "order": 4,
+      "hasNarration": false
+    },
+    {
+      "title": "The Complete Training Loop",
+      "slug": "05-complete_training_loop",
+      "objective": "",
+      "colabUrl": "https://colab.research.google.com/drive/1KRr3ZwqYDyIuQbntpuY7rJQ8vVl2ToTU",
+      "downloadPath": "/notebooks/training-pipeline-engineering/05_complete_training_loop.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 0,
+      "order": 5,
+      "hasNarration": false
+    }
+  ],
+  "caseStudy": {
+    "title": "Training Pipeline Engineering for a Domain-Specific Medical Language Model",
+    "subtitle": "Aethon Health — Automating Radiology Report Generation for Community Hospitals",
+    "company": "Aethon Health",
+    "industry": "Healthcare — Medical AI",
+    "description": "Aethon Health engineers a complete training pipeline for a domain-specific medical language model, from custom BPE tokenization on radiology vocabulary to distributed training with mixed precision.",
+    "pdfPath": "/case-studies/training-pipeline-engineering/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1Ngy1TYwvpDWs_mAbcB3RblGTLxrDVIEw",
+    "notebookPath": "/case-studies/training-pipeline-engineering/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}
