@@ -37,7 +37,7 @@ export default function PricingPage() {
           {/* Price */}
           <div className="text-center mb-8">
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-4xl font-bold text-foreground">₹849</span>
+              <span className="text-4xl font-bold text-foreground">₹900</span>
               <span className="text-text-muted">/month</span>
             </div>
             <p className="text-sm text-text-muted mt-1">Cancel anytime</p>
