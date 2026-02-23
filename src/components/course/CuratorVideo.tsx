@@ -8,19 +8,6 @@ interface Props {
 }
 
 export default function CuratorVideo({ curator }: Props) {
-  // Convert Google Drive share URL to embeddable preview URL
-  const getEmbedUrl = (url: string) => {
-    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
-    if (match) {
-      return `https://drive.google.com/file/d/${match[1]}/preview`;
-    }
-    return url;
-  };
-
-  const embedUrl = curator.videoUrl ? getEmbedUrl(curator.videoUrl) : null;
-
-  if (!embedUrl) return null;
-
   return (
     <div className="relative rounded-2xl overflow-hidden mb-8">
       {/* Decorative gradient border */}
@@ -37,26 +24,13 @@ export default function CuratorVideo({ curator }: Props) {
             </div>
             <div>
               <h2 className="text-sm font-semibold text-foreground tracking-wide">
-                Hear from the Curator of this Module
+                Curator of this Module
               </h2>
             </div>
           </div>
         </div>
 
-        {/* Video */}
-        <div className="px-6">
-          <div className="relative w-full rounded-xl overflow-hidden bg-gray-100" style={{ aspectRatio: '16/9' }}>
-            <iframe
-              src={embedUrl}
-              className="absolute inset-0 w-full h-full"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title={`${curator.name} introduces this module`}
-            />
-          </div>
-        </div>
-
-        {/* Instructor info */}
+        {/* Curator info */}
         <div className="px-6 py-5">
           <div className="flex items-start gap-4">
             {/* Avatar — photo with gradient ring, or initials fallback */}
