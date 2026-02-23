@@ -80,13 +80,13 @@ export default function PricingPage() {
               </div>
               <p className="text-xs text-text-muted mt-2">
                 Manage your subscription on{' '}
-                <a href={`${VIZUARA_URL}/pricing`} className="text-accent-blue hover:underline">
+                <a href={`${VIZUARA_URL}/courses/ai-pods`} className="text-accent-blue hover:underline">
                   vizuara.ai
                 </a>
               </p>
             </div>
           ) : user ? (
-            <a href={`${VIZUARA_URL}/pricing`}>
+            <a href={`${VIZUARA_URL}/courses/ai-pods`}>
               <Button size="lg" className="w-full">
                 Subscribe Now
               </Button>

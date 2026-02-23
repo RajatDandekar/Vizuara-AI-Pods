@@ -4,7 +4,7 @@ import { getAdminFirestore } from '@/lib/firebase-admin';
 
 export const dynamic = 'force-dynamic';
 
-const PODS_ENROLLMENT_ID = process.env.PODS_ENROLLMENT_ID || 'vizuara-pods';
+const PODS_ENROLLMENT_ID = process.env.PODS_ENROLLMENT_ID || 'course_20006198';
 
 export async function GET() {
   try {

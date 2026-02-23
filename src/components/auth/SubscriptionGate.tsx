@@ -24,7 +24,7 @@ export default function SubscriptionGate({ children }: SubscriptionGateProps) {
       // Server-side redirect sets return cookie, then sends to vizuara.ai login
       window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(pathname)}`;
     } else if (!enrolled) {
-      window.location.href = `${VIZUARA_URL}/pricing`;
+      window.location.href = `${VIZUARA_URL}/courses/ai-pods`;
     }
   }, [user, enrolled, loading, pathname]);
 

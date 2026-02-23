@@ -96,7 +96,7 @@ export function generateId(): string {
 }
 
 // Check if user is enrolled via Firestore (written by vizuara.ai)
-const PODS_ENROLLMENT_ID = process.env.PODS_ENROLLMENT_ID || 'vizuara-pods';
+const PODS_ENROLLMENT_ID = process.env.PODS_ENROLLMENT_ID || 'course_20006198';
 
 export async function checkEnrollment(uid: string): Promise<boolean> {
   try {

@@ -221,7 +221,7 @@ export default function ProfilePage() {
               </div>
               <p className="text-sm text-text-muted">
                 Manage your subscription on{' '}
-                <a href={`${VIZUARA_URL}/pricing`} className="text-accent-blue hover:underline">
+                <a href={`${VIZUARA_URL}/courses/ai-pods`} className="text-accent-blue hover:underline">
                   vizuara.ai
                 </a>
               </p>
@@ -237,7 +237,7 @@ export default function ProfilePage() {
               <p className="text-sm text-text-muted mb-4">
                 Subscribe to access all courses and content.
               </p>
-              <a href={`${VIZUARA_URL}/pricing`}>
+              <a href={`${VIZUARA_URL}/courses/ai-pods`}>
                 <Button size="sm">View Plans</Button>
               </a>
             </div>
