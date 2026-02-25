@@ -8,6 +8,7 @@ import CourseProgressBar from '@/components/course/CourseProgressBar';
 import ArticleReader from '@/components/article/ArticleReader';
 import ReadingProgress from '@/components/article/ReadingProgress';
 import { markPodArticleRead } from '@/lib/progress';
+import InlineFeedback from '@/components/feedback/InlineFeedback';
 import type { NotebookMeta } from '@/types/course';
 
 interface Props {
@@ -67,6 +68,10 @@ export default function ArticlePageClient({
 
         <FadeIn delay={0.1}>
           <ArticleReader content={articleContent} figureUrls={figureUrls} courseSlug={`${courseSlug}/pods/${podSlug}`} />
+        </FadeIn>
+
+        <FadeIn delay={0.12}>
+          <InlineFeedback courseSlug={courseSlug} podSlug={podSlug} contentType="article" />
         </FadeIn>
 
         <FadeIn delay={0.15}>

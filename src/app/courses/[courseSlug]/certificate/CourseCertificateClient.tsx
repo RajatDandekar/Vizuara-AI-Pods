@@ -9,6 +9,8 @@ import Button from '@/components/ui/Button';
 import CertificateCard from '@/components/certificate/CertificateCard';
 import ShareButtons from '@/components/certificate/ShareButtons';
 import type { PodCard, CourseCertificateData } from '@/types/course';
+import NpsPrompt from '@/components/feedback/NpsPrompt';
+import CompletionSurvey from '@/components/feedback/CompletionSurvey';
 import { isCourseComplete, issueCourseCertificate, getCourseCertificate } from '@/lib/progress';
 import { useAuth } from '@/context/AuthContext';
 
@@ -150,6 +152,11 @@ export default function CourseCertificateClient({
             Share your achievement with your network and inspire others to learn!
           </p>
         </div>
+      </FadeIn>
+
+      <FadeIn delay={0.38}>
+        <NpsPrompt courseSlug={courseSlug} contentType="course" />
+        <CompletionSurvey courseSlug={courseSlug} contentType="course" />
       </FadeIn>
     </div>
   );

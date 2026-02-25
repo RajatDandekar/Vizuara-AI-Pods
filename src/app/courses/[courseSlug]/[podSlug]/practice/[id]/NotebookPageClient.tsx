@@ -8,6 +8,7 @@ import CourseProgressBar from '@/components/course/CourseProgressBar';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import type { NotebookMeta } from '@/types/course';
+import InlineFeedback from '@/components/feedback/InlineFeedback';
 import { getPodProgress, markPodNotebookComplete, isPodNotebookComplete } from '@/lib/progress';
 
 interface Props {
@@ -189,6 +190,12 @@ export default function NotebookPageClient({
               Mark as Complete
             </button>
           </div>
+        </FadeIn>
+      )}
+
+      {completed && (
+        <FadeIn delay={0.26}>
+          <InlineFeedback courseSlug={courseSlug} podSlug={podSlug} contentType="notebook" notebookOrder={notebook.order} />
         </FadeIn>
       )}
 

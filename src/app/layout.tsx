@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { AuthProvider } from '@/context/AuthContext';
+import { SubscriptionProvider } from '@/context/SubscriptionContext';
+import FeedbackTab from '@/components/feedback/FeedbackTab';
 
 const figtree = Figtree({
   variable: '--font-figtree',
@@ -35,9 +37,12 @@ export default function RootLayout({
         style={{ fontFamily: 'var(--font-figtree), system-ui, sans-serif' }}
       >
         <AuthProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <SubscriptionProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <FeedbackTab />
+          </SubscriptionProvider>
         </AuthProvider>
       </body>
     </html>
