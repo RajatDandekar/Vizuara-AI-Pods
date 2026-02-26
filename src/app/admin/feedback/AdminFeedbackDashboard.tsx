@@ -197,8 +197,8 @@ export default function AdminFeedbackDashboard() {
                   <td className="py-2.5 px-3">
                     <RatingDisplay type={f.type} rating={f.rating} />
                   </td>
-                  <td className="py-2.5 px-3 text-xs text-text-secondary max-w-xs">
-                    {f.comment && <p className="truncate">{f.comment}</p>}
+                  <td className="py-2.5 px-3 text-xs text-text-secondary min-w-[200px] max-w-md">
+                    {f.comment && <p className="whitespace-pre-wrap break-words">{f.comment}</p>}
                     {f.tags && f.tags.length > 0 && (
                       <div className="flex flex-wrap gap-1 mt-1">
                         {f.tags.map(tag => (
