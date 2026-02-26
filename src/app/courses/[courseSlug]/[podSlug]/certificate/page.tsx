@@ -1,6 +1,6 @@
 import { getPod, getAllPodParams, getCourseManifest } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import CertificatePageClient from './CertificatePageClient';
 
 export function generateStaticParams() {
@@ -19,7 +19,7 @@ export default async function CertificatePage({ params }: PageProps) {
     const course = getCourseManifest(courseSlug);
 
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <CertificatePageClient
           courseSlug={courseSlug}
           courseTitle={course.title}
@@ -31,7 +31,7 @@ export default async function CertificatePage({ params }: PageProps) {
           notebooks={pod.notebooks}
           hasCaseStudy={!!pod.caseStudy}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

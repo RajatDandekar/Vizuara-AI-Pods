@@ -1,6 +1,6 @@
 import { getPod, getAllPodParams, getCourseManifest } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import ArticlePageClient from './ArticlePageClient';
 
 export function generateStaticParams() {
@@ -18,7 +18,7 @@ export default async function ArticlePage({ params }: PageProps) {
     const pod = getPod(courseSlug, podSlug);
     const course = getCourseManifest(courseSlug);
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <ArticlePageClient
           courseSlug={courseSlug}
           courseTitle={course.title}
@@ -30,7 +30,7 @@ export default async function ArticlePage({ params }: PageProps) {
           notebooks={pod.notebooks}
           hasCaseStudy={!!pod.caseStudy}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

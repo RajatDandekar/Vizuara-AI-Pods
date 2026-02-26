@@ -1,6 +1,6 @@
 import { getPod, getAllPodParams, getCourseManifest } from '@/lib/content';
 import { notFound, redirect } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import PracticeHubClient from './PracticeHubClient';
 
 export function generateStaticParams() {
@@ -23,7 +23,7 @@ export default async function PracticePage({ params }: PageProps) {
     }
 
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <PracticeHubClient
           courseSlug={courseSlug}
           courseTitle={course.title}
@@ -31,7 +31,7 @@ export default async function PracticePage({ params }: PageProps) {
           title={pod.title}
           notebooks={pod.notebooks}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

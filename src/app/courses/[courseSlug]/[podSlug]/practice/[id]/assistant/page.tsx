@@ -3,7 +3,7 @@ import { extractNotebookContext, extractNotebookTOC } from '@/lib/notebook-conte
 import { notFound } from 'next/navigation';
 import path from 'path';
 import fs from 'fs';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import AssistantPageClient from './AssistantPageClient';
 
 export function generateStaticParams() {
@@ -50,7 +50,7 @@ export default async function AssistantPage({ params }: PageProps) {
     }
 
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <AssistantPageClient
           courseSlug={courseSlug}
           courseTitle={pod.title}
@@ -61,7 +61,7 @@ export default async function AssistantPage({ params }: PageProps) {
           toc={toc}
           podSlug={podSlug}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

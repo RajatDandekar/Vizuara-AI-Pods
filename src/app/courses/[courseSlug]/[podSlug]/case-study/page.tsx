@@ -1,6 +1,6 @@
 import { getPod, getAllPodParams, getCourseManifest, getPodCaseStudyContent, parseCaseStudySections } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import CaseStudyPageClient from './CaseStudyPageClient';
 
 export function generateStaticParams() {
@@ -30,7 +30,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
     const sections = parseCaseStudySections(content);
 
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <CaseStudyPageClient
           courseSlug={courseSlug}
           courseTitle={course.title}
@@ -40,7 +40,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           sections={sections}
           notebooks={pod.notebooks}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

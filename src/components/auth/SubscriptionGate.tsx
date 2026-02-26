@@ -7,26 +7,35 @@ import { useSubscription } from '@/context/SubscriptionContext';
 
 const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
 
+// Pods that are free for all logged-in users (no subscription required)
+const FREE_PODS = new Set([
+  'intro-ddpm',
+  'basics-of-rl',
+  'vision-encoders',
+]);
+
 interface SubscriptionGateProps {
   children: React.ReactNode;
+  podSlug?: string;
 }
 
-export default function SubscriptionGate({ children }: SubscriptionGateProps) {
+export default function SubscriptionGate({ children, podSlug }: SubscriptionGateProps) {
   const { user, loading: authLoading } = useAuth();
   const { enrolled, loading: subLoading } = useSubscription();
   const pathname = usePathname();
 
-  const loading = authLoading || subLoading;
+  const isFree = podSlug ? FREE_PODS.has(podSlug) : false;
+  const loading = authLoading || (isFree ? false : subLoading);
+  const hasAccess = isFree ? !!user : !!user && enrolled;
 
   useEffect(() => {
     if (loading) return;
     if (!user) {
-      // Server-side redirect sets return cookie, then sends to vizuara.ai login
       window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(pathname)}`;
-    } else if (!enrolled) {
+    } else if (!isFree && !enrolled) {
       window.location.href = `${VIZUARA_URL}/courses/ai-pods`;
     }
-  }, [user, enrolled, loading, pathname]);
+  }, [user, enrolled, loading, pathname, isFree]);
 
   if (loading) {
     return (
@@ -39,7 +48,7 @@ export default function SubscriptionGate({ children }: SubscriptionGateProps) {
     );
   }
 
-  if (!user || !enrolled) return null;
+  if (!hasAccess) return null;
 
   return <>{children}</>;
 }

@@ -1,6 +1,6 @@
 import { getPod, getAllPodParams, getCourseManifest } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import NotebookPageClient from './NotebookPageClient';
 
 export function generateStaticParams() {
@@ -33,7 +33,7 @@ export default async function NotebookPage({ params }: PageProps) {
     const nextNotebook = pod.notebooks.find((nb) => nb.order === order + 1);
 
     return (
-      <AuthGate>
+      <SubscriptionGate podSlug={podSlug}>
         <NotebookPageClient
           courseSlug={courseSlug}
           courseTitle={course.title}
@@ -46,7 +46,7 @@ export default async function NotebookPage({ params }: PageProps) {
           notebooks={pod.notebooks}
           hasCaseStudy={!!pod.caseStudy}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();
