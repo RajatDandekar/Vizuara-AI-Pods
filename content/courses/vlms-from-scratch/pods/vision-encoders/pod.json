@@ -1,9 +1,10 @@
 {
-  "title": "Vision Encoders: How Machines Learned to See \u2014 From Convolutions to Vision Transformers",
+  "title": "Vision Encoders: How Machines Learned to See — From Convolutions to Vision Transformers",
   "slug": "vision-encoders",
-  "description": "Understanding the two paradigms of visual representation learning \u2014 from local feature extraction with CNNs to global attention with Vision Transformers.",
+  "description": "Understanding the two paradigms of visual representation learning — from local feature extraction with CNNs to global attention with Vision Transformers.",
   "difficulty": "intermediate",
   "estimatedHours": 3,
+  "thumbnail": "/courses/vlms-from-scratch/pods/vision-encoders/figures/figure_1.png",
   "prerequisites": [],
   "tags": [
     "Convolution Operation",
@@ -38,18 +39,18 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Vision Transformers from Scratch",
       "slug": "02-vision_transformers_from_scratch",
-      "objective": "Build the Vision Transformer from first principles: patch embeddings, self-attention, and the full encoder \u2014 all implemented manually before using PyTorch.",
+      "objective": "Build the Vision Transformer from first principles: patch embeddings, self-attention, and the full encoder — all implemented manually before using PyTorch.",
       "colabUrl": "https://colab.research.google.com/drive/1ebKMeuAKvCwdD_w8XOAxeycke3GQiv4N",
       "downloadPath": "/notebooks/vision-encoders/02_vision_transformers_from_scratch.ipynb",
       "estimatedMinutes": 65,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "CNN vs. Vision Transformer: A Hands-On Comparison",
@@ -60,14 +61,14 @@
       "estimatedMinutes": 55,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
     "title": "Vision Encoders for Automated Dermatology Screening",
-    "subtitle": "DermaScan AI \u2014 Building a Melanoma Detection System with CNNs and Vision Transformers",
+    "subtitle": "DermaScan AI — Building a Melanoma Detection System with CNNs and Vision Transformers",
     "company": "DermaScan AI",
-    "industry": "Digital Health \u2014 AI-Assisted Dermatology",
+    "industry": "Digital Health — AI-Assisted Dermatology",
     "description": "DermaScan AI needs to improve melanoma detection sensitivity from 74% to >90% on their dermoscopic image classification system. Students compare ResNet-50 and ViT-B/16 encoders with custom focal loss, class-weighted sampling, and deployment optimization for clinical edge devices.",
     "pdfPath": "/case-studies/vision-encoders/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/1Tw0fEZuTwcNaS48mis9XrqdJ4tW05zPN",

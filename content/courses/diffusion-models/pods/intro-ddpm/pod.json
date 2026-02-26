@@ -6,6 +6,7 @@
   "description": "A step-by-step guide to understanding how DDPMs learn to generate images by mastering the art of denoising.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
+  "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png",
   "prerequisites": [],
   "tags": [
     "DDPM",
@@ -39,7 +40,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Reverse Process and Loss",
@@ -50,7 +51,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "U-Net and Full DDPM",
@@ -61,7 +62,7 @@
       "estimatedMinutes": 60,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Sampling and Score Connection",
@@ -72,7 +73,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

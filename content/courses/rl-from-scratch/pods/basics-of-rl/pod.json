@@ -4,6 +4,7 @@
   "description": "From the agent-environment loop to Bellman equations, rewards, and your first OpenAI Gymnasium agent -- all from first principles.",
   "difficulty": "beginner",
   "estimatedHours": 4,
+  "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png",
   "prerequisites": [],
   "tags": [
     "Reinforcement Learning Fundamentals",
@@ -39,7 +40,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "MDPs, Rewards, and the Markov Property",
@@ -50,7 +51,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Your First RL Agent with Gymnasium",
@@ -61,7 +62,7 @@
       "estimatedMinutes": 55,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
