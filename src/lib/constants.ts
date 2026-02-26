@@ -11,3 +11,12 @@ export const SUGGESTED_CONCEPTS = [
   'Variational Autoencoders',
   'Graph Neural Networks',
 ];
+
+// Pods that are fully free — accessible without login or subscription
+export const FREE_POD_SLUGS = new Set(['intro-ddpm', 'basics-of-rl', 'vision-encoders']);
+
+export const FREE_POD_SPECS = [
+  { courseSlug: 'diffusion-models', podSlug: 'intro-ddpm' },
+  { courseSlug: 'rl-from-scratch', podSlug: 'basics-of-rl' },
+  { courseSlug: 'vlms-from-scratch', podSlug: 'vision-encoders' },
+] as const;

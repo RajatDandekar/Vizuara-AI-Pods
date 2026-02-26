@@ -120,6 +120,22 @@ export interface CourseProgressSummary {
   percentage: number;
 }
 
+// ─── Free pod showcase (homepage guest view) ─────────────────────────
+
+export interface FreePodShowcase {
+  courseSlug: string;
+  courseTitle: string;
+  podSlug: string;
+  title: string;
+  description: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  estimatedHours: number;
+  notebooks: NotebookMeta[];
+  caseStudy?: CaseStudyMeta;
+  thumbnail?: string;
+  tags: string[];
+}
+
 // ─── Certificate types ───────────────────────────────────────────────
 
 /** Certificate for completing a single pod */

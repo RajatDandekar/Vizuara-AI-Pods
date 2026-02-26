@@ -14,51 +14,10 @@ import DarkSectionHeader from '@/components/home/DarkSectionHeader';
 import FoundersLetter from '@/components/home/FoundersLetter';
 import SearchBar from '@/components/home/SearchBar';
 import PodExpandedCard from '@/components/home/PodExpandedCard';
+import FreeModuleCard from '@/components/home/FreeModuleCard';
 import { useAuth } from '@/context/AuthContext';
-import type { CourseCard, PodCard } from '@/types/course';
+import type { CourseCard, PodCard, FreePodShowcase } from '@/types/course';
 import { getCourseCompletion } from '@/lib/progress';
-
-// Showcase courses — real examples shown to visitors (optimized images in /showcase)
-const showcaseCourses = [
-  {
-    title: '5D Parallelism from Scratch',
-    hero: '/showcase/5dp-hero.png',
-    article: 'How modern LLMs are trained across thousands of GPUs — understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism from first principles.',
-    notebooks: [
-      'Why Do We Need Parallelism?',
-      'Data Parallelism — "Hire More Chefs"',
-      'Tensor Parallelism — "Split the Recipe"',
-      'Pipeline Parallelism — "The Assembly Line"',
-      'Sequence & Expert Parallelism',
-      'The 5D Parallelism Grid',
-    ],
-    caseStudy: 'Optimizing 5D Parallelism for Training a Financial Domain LLM',
-  },
-  {
-    title: 'Diffusion LLMs from Scratch',
-    hero: '/showcase/dllm-hero.png',
-    article: 'What if language models could generate all tokens at once — like image diffusion, but for text?',
-    notebooks: [
-      'Image Diffusion Foundations',
-      'Masked Diffusion for Text',
-      'Training a Diffusion LLM',
-      'Generation: Iterative Unmasking',
-    ],
-    caseStudy: 'Real-Time Code Completion with Diffusion Language Models',
-  },
-  {
-    title: 'VLAs for Autonomous Driving',
-    hero: '/showcase/vlad-hero.png',
-    article: 'How combining vision, language understanding, and action generation is reshaping autonomous driving — explained from scratch.',
-    notebooks: [
-      'Vision Encoders & Patch Embeddings',
-      'Action Tokenization & Behavioral Cloning',
-      'Building a Mini VLA',
-      'Diffusion Action Decoder',
-    ],
-    caseStudy: 'Vision-Language-Action Models for Autonomous Port Terminal Tractors',
-  },
-];
 
 // Topic pills shown to guests as a sneak peek
 const topicPills = [
@@ -75,11 +34,14 @@ const difficultyColor: Record<string, string> = {
 const HOVER_OPEN_DELAY = 400;
 const HOVER_CLOSE_DELAY = 300;
 
+const freePodAccents = ['blue', 'emerald', 'violet'] as const;
+
 interface HomeClientProps {
   courses: CourseCard[];
   coursePods: Record<string, PodCard[]>;
   courseAllPods: Record<string, PodCard[]>;
   draftCourses: CourseCard[];
+  freePods: FreePodShowcase[];
 }
 
 export default function HomeClient({
@@ -87,6 +49,7 @@ export default function HomeClient({
   coursePods,
   courseAllPods,
   draftCourses,
+  freePods,
 }: HomeClientProps) {
   const { user, loading } = useAuth();
 
@@ -291,64 +254,29 @@ export default function HomeClient({
       {!user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-16" style={{ zIndex: 1 }}>
 
-          {/* Course Showcase — real examples */}
+          {/* Free Modules — real content, no login required */}
           <FadeIn delay={0.1}>
             <div className="text-center mb-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
-                See what you&apos;ll learn
+                Try a full module &mdash; free, no login required
               </h2>
               <p className="text-base text-slate-500 max-w-lg mx-auto">
-                Here&apos;s a preview from three of our courses.
+                Read the article, run the notebooks, tackle the case study. Experience the full learning journey before committing.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {showcaseCourses.map((course) => (
-                <div key={course.title} className="glass-card rounded-2xl overflow-hidden group flex flex-col">
-                  <div className="relative h-44 overflow-hidden bg-slate-50">
-                    <Image
-                      src={course.hero}
-                      alt={course.title}
-                      fill
-                      className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 640px) 90vw, 380px"
-                      unoptimized
-                    />
-                  </div>
-                  <div className="p-5 flex-1 flex flex-col gap-3">
-                    <h3 className="font-bold text-slate-900 text-lg">{course.title}</h3>
-                    <div>
-                      <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-1">Article</p>
-                      <p className="text-base text-slate-700 leading-relaxed">{course.article}</p>
-                    </div>
-                    {course.notebooks.length > 0 && (
-                      <div>
-                        <p className="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1">
-                          {course.notebooks.length} Notebook{course.notebooks.length > 1 ? 's' : ''}
-                        </p>
-                        <ul className="space-y-0.5">
-                          {course.notebooks.map((nb) => (
-                            <li key={nb} className="text-base text-slate-700 flex items-start gap-1.5">
-                              <span className="text-emerald-500/60 mt-px">&#8250;</span>
-                              {nb}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                    {course.caseStudy && (
-                      <div className="mt-auto">
-                        <p className="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Case Study</p>
-                        <p className="text-base text-slate-700">{course.caseStudy}</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
+              {freePods.map((pod, i) => (
+                <FreeModuleCard
+                  key={pod.podSlug}
+                  pod={pod}
+                  accentColor={freePodAccents[i % freePodAccents.length]}
+                />
               ))}
             </div>
 
             <p className="text-center text-sm text-slate-400 mt-5">
-              + {liveCourses.length - 3} more courses across diffusion models, reinforcement learning, RAG, agents, and more
+              + {liveCourses.length} courses with {totalNotebooks}+ notebooks available with a subscription
             </p>
           </FadeIn>
 
