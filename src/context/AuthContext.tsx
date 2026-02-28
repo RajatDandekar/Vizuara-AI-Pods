@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await fetch('/api/auth/logout', { method: 'POST' });
     setProgressUser(null);
     dispatch({ type: 'SET_USER', user: null });
-    window.location.href = VIZUARA_URL;
+    window.location.href = '/';
   }, []);
 
   const updateUser = useCallback((updates: Partial<User>) => {
