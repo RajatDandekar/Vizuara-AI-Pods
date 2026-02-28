@@ -21,14 +21,14 @@
       "title": "RL From Scratch",
       "description": "From Q-learning to GRPO \u2014 build reinforcement learning from first principles.",
       "difficulty": "intermediate",
-      "estimatedHours": 24,
+      "estimatedHours": 21,
       "tags": [
         "reinforcement-learning",
         "reasoning",
         "rlhf"
       ],
-      "podCount": 7,
-      "totalNotebooks": 24,
+      "podCount": 8,
+      "totalNotebooks": 28,
       "status": "live",
       "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png"
     },

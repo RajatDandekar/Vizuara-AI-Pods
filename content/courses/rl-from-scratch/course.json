@@ -3,7 +3,7 @@
   "slug": "rl-from-scratch",
   "description": "From Q-learning to GRPO \u2014 build reinforcement learning from first principles.",
   "difficulty": "intermediate",
-  "estimatedHours": 17,
+  "estimatedHours": 21,
   "tags": [
     "reinforcement-learning",
     "reasoning",
@@ -79,6 +79,16 @@
       "estimatedHours": 3,
       "hasCaseStudy": true,
       "thumbnail": "/courses/rl-from-scratch/pods/building-reasoning-model/figures/figure_1.png"
+    },
+    {
+      "slug": "openclaw-rl",
+      "title": "OpenClaw-RL: Personalizing AI Agents from Conversation Feedback",
+      "description": "How to make your AI assistant learn your preferences from natural conversations. Build the full OpenClaw-RL pipeline: session-aware rollouts, Binary RL with GRPO-TCR, On-Policy Distillation with hindsight hints, and the RLAnything closed loop.",
+      "order": 8,
+      "notebookCount": 4,
+      "estimatedHours": 4,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/rl-from-scratch/pods/openclaw-rl/figures/figure_1.png"
     }
   ]
 }

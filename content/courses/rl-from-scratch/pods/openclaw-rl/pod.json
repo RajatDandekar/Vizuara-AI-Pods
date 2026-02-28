@@ -1,0 +1,96 @@
+{
+  "title": "OpenClaw-RL: Personalizing AI Agents from Conversation Feedback",
+  "slug": "openclaw-rl",
+  "courseSlug": "rl-from-scratch",
+  "order": 8,
+  "description": "How to make your AI assistant learn your preferences from natural conversations. Build the full OpenClaw-RL pipeline: session-aware rollouts, Binary RL with GRPO-TCR, On-Policy Distillation with hindsight hints, and the RLAnything closed loop.",
+  "difficulty": "intermediate",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "OpenClaw-RL",
+    "Personalization",
+    "GRPO-TCR",
+    "On-Policy Distillation",
+    "Process Reward Model",
+    "RLAnything",
+    "Conversation RL"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/OpenClaw-RL-Train-a-Personalized-AI-Agent-Simply-by-Talking-to-It-31501fbe4771819881aee758c2b4ca86",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1iECnGTVD58jfBjgVoh9nlSCHWYWZpw8i=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1NJg7JsRgiulcHEy7EjmXlzeKgOw8sNR8=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/14k6YTe3h6kevvYkloNoh023OIx3f-ZwW=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1wBRjboP8y7F55tiu0GjmccfSIbcpKBzv=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/156eQNAAObtY5g13CbqE_vlbk7mQW_3jA=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/12RxtgZqk-8RLmdqmvwSr949PvIZwUpxA=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1vwQtJYhPs0yyRUp-5uqQ82LbXvol1kqK=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1oYWSx-gKxMHA7umyl8Nekc02p2933P7c=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1fhrDhvQJEGLpdY1M_NMv5lCB4KYEdrIx=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Conversation Rollouts and Next-State Signals",
+      "slug": "01-conversation_rollouts_next_state_signals",
+      "objective": "Build the conversation-to-training-data pipeline from scratch: session tracking, turn classification, and next-state signal extraction.",
+      "colabUrl": "https://colab.research.google.com/drive/10x2s9RQCdtAtGgvYz1cgyVOjhlGoDAvl",
+      "downloadPath": "/notebooks/openclaw-rl/01_conversation_rollouts_next_state_signals.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Binary RL with GRPO-TCR",
+      "slug": "02-binary_rl_grpo_tcr",
+      "objective": "Implement PRM majority voting, GRPO advantage computation with clip-higher, overlong reward shaping, and the complete GRPO-TCR loss function.",
+      "colabUrl": "https://colab.research.google.com/drive/165sRqrA00iiEVQKyXEwDFJb2iD_sqmsT",
+      "downloadPath": "/notebooks/openclaw-rl/02_binary_rl_grpo_tcr.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "On-Policy Distillation with Hindsight Hints",
+      "slug": "03-on_policy_distillation",
+      "objective": "Build the OPD pipeline: hindsight hint extraction, teacher-student log-probability comparison, token-level advantage computation, and OPD loss.",
+      "colabUrl": "https://colab.research.google.com/drive/1h2XmwiPARoEHOG9SOcK60xUv4zKY-bcl",
+      "downloadPath": "/notebooks/openclaw-rl/03_on_policy_distillation.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": true
+    },
+    {
+      "title": "The RLAnything Closed Loop",
+      "slug": "04-rlanything_closed_loop",
+      "objective": "Build the full closed-loop pipeline: integrated rewards, consistency feedback for the PRM, automatic difficulty adaptation, and end-to-end co-optimization.",
+      "colabUrl": "https://colab.research.google.com/drive/1aj3IGxaLhbPg2g_1d4Z-iRlug5l8Jq80",
+      "downloadPath": "/notebooks/openclaw-rl/04_rlanything_closed_loop.ipynb",
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 4,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Personalizing an Enterprise AI Coding Assistant with Conversation-Based RL",
+    "subtitle": "Building the Developer Preference Learning Pipeline at NexaCode Technologies",
+    "company": "NexaCode Technologies",
+    "industry": "Enterprise Developer Tools",
+    "description": "NexaCode's AI coding assistant serves 12,400 developers but adoption plateaus at 34% because the model never learns individual preferences. Implement GRPO-TCR and OPD to personalize the assistant from conversation feedback, reducing developer correction rates by 50%+.",
+    "pdfPath": "/case-studies/openclaw-rl/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1eiKbnZN2LOM1iigpvDub-bTp-H29uZWy",
+    "notebookPath": "/case-studies/openclaw-rl/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}
