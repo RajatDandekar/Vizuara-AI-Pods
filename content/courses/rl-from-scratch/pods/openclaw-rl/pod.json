@@ -86,6 +86,17 @@
     "colabUrl": "https://colab.research.google.com/drive/1eiKbnZN2LOM1iigpvDub-bTp-H29uZWy",
     "notebookPath": "/case-studies/openclaw-rl/case_study_notebook.ipynb"
   },
+  "deployGuide": {
+    "title": "Deploy OpenClaw-RL on Your Own GPUs",
+    "description": "Go beyond the notebooks — deploy the full OpenClaw-RL system on RunPod with 3-4x H100 GPUs. Chat with the model and watch it improve in real time from your conversations.",
+    "repoUrl": "https://github.com/VizuaraAILabs/OpenClaw-RL-Tutorial",
+    "highlights": [
+      "One-command setup on RunPod with pre-built Docker image",
+      "Full async RL loop: SGLang serving, PRM judging, Megatron-LM training",
+      "Chat with Qwen3-4B and watch it personalize to your preferences",
+      "Costs ~$30-45 for a full training session on 4x H100s"
+    ]
+  },
   "curator": {
     "name": "Dr. Rajat Dandekar",
     "title": "Course Instructor",

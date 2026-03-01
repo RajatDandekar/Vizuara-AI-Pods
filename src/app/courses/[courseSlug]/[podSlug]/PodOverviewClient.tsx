@@ -11,7 +11,7 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import CourseProgressBar from '@/components/course/CourseProgressBar';
 import CuratorVideo from '@/components/course/CuratorVideo';
-import type { NotebookMeta, CaseStudyMeta, CuratorInfo, PodProgress } from '@/types/course';
+import type { NotebookMeta, CaseStudyMeta, DeployGuide, CuratorInfo, PodProgress } from '@/types/course';
 import { getPodProgress, onProgressChange } from '@/lib/progress';
 
 interface Props {
@@ -25,6 +25,7 @@ interface Props {
   tags: string[];
   notebooks: NotebookMeta[];
   caseStudy?: CaseStudyMeta;
+  deployGuide?: DeployGuide;
   curator?: CuratorInfo;
 }
 
@@ -39,6 +40,7 @@ export default function PodOverviewClient({
   tags,
   notebooks,
   caseStudy,
+  deployGuide,
   curator,
 }: Props) {
   const [progress, setProgress] = useState<PodProgress>({
@@ -359,15 +361,58 @@ export default function PodOverviewClient({
             </CoursePhase>
           )}
 
-          <CoursePhase
-            phase={caseStudy ? (notebooks.length > 0 ? 4 : 3) : (notebooks.length > 0 ? 3 : 2)}
-            title="Get Your Certificate"
-            subtitle="Download and share your achievement with the world"
-            status={certificateStatus}
-            statusLabel={certificateStatus === 'locked' ? 'Locked' : undefined}
-            expanded={expandedPhase === 4}
-            onToggle={() => togglePhase(4)}
-          >
+          {deployGuide && (() => {
+            const deployPhase = 1 + (notebooks.length > 0 ? 1 : 0) + (caseStudy ? 1 : 0) + 1;
+            return (
+              <CoursePhase
+                phase={deployPhase}
+                title={deployGuide.title}
+                subtitle="Deploy the full system on your own GPUs"
+                status="current"
+                expanded={expandedPhase === deployPhase}
+                onToggle={() => togglePhase(deployPhase)}
+              >
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 border border-card-border rounded-xl p-5">
+                    <p className="text-sm text-text-secondary leading-relaxed mb-4">
+                      {deployGuide.description}
+                    </p>
+                    <ul className="space-y-2 mb-5">
+                      {deployGuide.highlights.map((h, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                          <svg className="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                    <a href={deployGuide.repoUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="secondary" size="sm">
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </CoursePhase>
+            );
+          })()}
+
+          {(() => {
+            const certPhase = 1 + (notebooks.length > 0 ? 1 : 0) + (caseStudy ? 1 : 0) + (deployGuide ? 1 : 0) + 1;
+            return (
+              <CoursePhase
+                phase={certPhase}
+                title="Get Your Certificate"
+                subtitle="Download and share your achievement with the world"
+                status={certificateStatus}
+                statusLabel={certificateStatus === 'locked' ? 'Locked' : undefined}
+                expanded={expandedPhase === certPhase}
+                onToggle={() => togglePhase(certPhase)}
+              >
             {certificateStatus === 'locked' ? (
               <div className="text-center py-4 text-sm text-text-muted">
                 <svg className="w-8 h-8 mx-auto mb-2 text-text-muted/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -398,6 +443,8 @@ export default function PodOverviewClient({
               </Link>
             )}
           </CoursePhase>
+            );
+          })()}
         </div>
       </FadeIn>
     </div>

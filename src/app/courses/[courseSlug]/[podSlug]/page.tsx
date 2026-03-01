@@ -29,6 +29,7 @@ export default async function PodOverviewPage({ params }: PageProps) {
         tags={pod.tags}
         notebooks={pod.notebooks}
         caseStudy={pod.caseStudy}
+        deployGuide={pod.deployGuide}
         curator={pod.curator}
       />
     );

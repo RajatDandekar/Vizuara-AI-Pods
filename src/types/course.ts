@@ -25,6 +25,13 @@ export interface CaseStudyMeta {
   notebookPath: string;
 }
 
+export interface DeployGuide {
+  title: string;
+  description: string;
+  repoUrl: string;
+  highlights: string[];
+}
+
 export interface CuratorInfo {
   name: string;
   title?: string;
@@ -71,6 +78,7 @@ export interface PodManifest {
   };
   notebooks: NotebookMeta[];
   caseStudy?: CaseStudyMeta;
+  deployGuide?: DeployGuide;
   curator?: CuratorInfo;
 }
 
