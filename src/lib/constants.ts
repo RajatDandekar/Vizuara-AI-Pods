@@ -13,7 +13,10 @@ export const SUGGESTED_CONCEPTS = [
 ];
 
 // Pods that are fully free — accessible without login or subscription
-export const FREE_POD_SLUGS = new Set(['intro-ddpm', 'basics-of-rl', 'vision-encoders', 'openclaw-rl']);
+export const FREE_POD_SLUGS = new Set(['intro-ddpm', 'basics-of-rl', 'vision-encoders']);
+
+// Pods that are free but require login (no subscription needed)
+export const FREE_WITH_LOGIN_POD_SLUGS = new Set(['openclaw-rl']);
 
 export const FREE_POD_SPECS = [
   { courseSlug: 'diffusion-models', podSlug: 'intro-ddpm' },

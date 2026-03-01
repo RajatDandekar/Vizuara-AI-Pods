@@ -280,7 +280,7 @@ export default function HomeClient({
                     </div>
                     <h3 className="font-bold text-slate-900 text-base mb-0.5">OpenClaw-RL: Personalizing AI Agents from Conversation Feedback</h3>
                     <p className="text-sm text-slate-500">
-                      Teach AI assistants to learn your preferences just by chatting with them. Full article, 4 notebooks, and a case study &mdash; completely free, no login needed.
+                      Teach AI assistants to learn your preferences just by chatting with them. Full article, 4 notebooks, and a case study &mdash; completely free with a login.
                     </p>
                   </div>
                   <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

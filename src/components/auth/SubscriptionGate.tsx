@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useSubscription } from '@/context/SubscriptionContext';
-import { FREE_POD_SLUGS } from '@/lib/constants';
+import { FREE_POD_SLUGS, FREE_WITH_LOGIN_POD_SLUGS } from '@/lib/constants';
 
 const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
 
@@ -19,21 +19,22 @@ export default function SubscriptionGate({ children, podSlug }: SubscriptionGate
   const pathname = usePathname();
 
   const isFree = podSlug ? FREE_POD_SLUGS.has(podSlug) : false;
+  const isFreeWithLogin = podSlug ? FREE_WITH_LOGIN_POD_SLUGS.has(podSlug) : false;
 
-  // Free pods: no loading gate at all — allow immediate access
+  // Fully free pods: no loading gate at all — allow immediate access
   if (isFree) return <>{children}</>;
 
   const loading = authLoading || subLoading;
-  const hasAccess = !!user && enrolled;
+  const hasAccess = isFreeWithLogin ? !!user : !!user && enrolled;
 
   useEffect(() => {
     if (loading) return;
     if (!user) {
       window.location.href = `/api/auth/redirect?returnTo=${encodeURIComponent(pathname)}`;
-    } else if (!enrolled) {
+    } else if (!isFreeWithLogin && !enrolled) {
       window.location.href = `${VIZUARA_URL}/courses/ai-pods`;
     }
-  }, [user, enrolled, loading, pathname]);
+  }, [user, enrolled, loading, pathname, isFreeWithLogin]);
 
   if (loading) {
     return (
