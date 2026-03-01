@@ -48,6 +48,12 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
       cta: 'bg-violet-600 hover:bg-violet-700 text-white',
       ring: 'hover:ring-violet-200',
     },
+    amber: {
+      badge: 'from-amber-500 to-orange-500',
+      tab: 'bg-amber-600 text-white',
+      cta: 'bg-amber-600 hover:bg-amber-700 text-white',
+      ring: 'hover:ring-amber-200',
+    },
   };
 
   const accent = accentClasses[accentColor] || accentClasses.blue;

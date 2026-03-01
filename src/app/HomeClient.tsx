@@ -34,7 +34,7 @@ const difficultyColor: Record<string, string> = {
 const HOVER_OPEN_DELAY = 400;
 const HOVER_CLOSE_DELAY = 300;
 
-const freePodAccents = ['blue', 'emerald', 'violet'] as const;
+const freePodAccents = ['blue', 'emerald', 'violet', 'amber'] as const;
 
 interface HomeClientProps {
   courses: CourseCard[];
@@ -261,6 +261,36 @@ export default function HomeClient({
       {!user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-16" style={{ zIndex: 1 }}>
 
+          {/* New free module announcement */}
+          <FadeIn delay={0.05}>
+            <Link href="/courses/rl-from-scratch/openclaw-rl">
+              <div className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-r from-amber-50 via-white to-orange-50 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_60%)]" />
+                <div className="relative flex items-center gap-5 px-6 py-5">
+                  <div className="hidden sm:block flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-700 uppercase tracking-wide">New &amp; Free</span>
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-base mb-0.5">OpenClaw-RL: Personalizing AI Agents from Conversation Feedback</h3>
+                    <p className="text-sm text-slate-500">
+                      Teach AI assistants to learn your preferences just by chatting with them. Full article, 4 notebooks, and a case study &mdash; completely free, no login needed.
+                    </p>
+                  </div>
+                  <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </FadeIn>
+
           {/* Free Modules — real content, no login required */}
           <FadeIn delay={0.1}>
             <div className="text-center mb-10">
@@ -272,7 +302,7 @@ export default function HomeClient({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {freePods.map((pod, i) => (
                 <FreeModuleCard
                   key={pod.podSlug}
