@@ -29,6 +29,7 @@ export interface DeployGuide {
   title: string;
   description: string;
   repoUrl: string;
+  guideUrl?: string;
   highlights: string[];
 }
 

@@ -6,6 +6,7 @@
   "description": "How to make your AI assistant learn your preferences from natural conversations. Build the full OpenClaw-RL pipeline: session-aware rollouts, Binary RL with GRPO-TCR, On-Policy Distillation with hindsight hints, and the RLAnything closed loop.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
+  "thumbnail": "/courses/rl-from-scratch/pods/openclaw-rl/figures/figure_1.png",
   "prerequisites": [],
   "tags": [
     "OpenClaw-RL",
@@ -90,6 +91,7 @@
     "title": "Deploy OpenClaw-RL on Your Own GPUs",
     "description": "Go beyond the notebooks — deploy the full OpenClaw-RL system on RunPod with 3-4x H100 GPUs. Chat with the model and watch it improve in real time from your conversations.",
     "repoUrl": "https://github.com/VizuaraAILabs/OpenClaw-RL-Tutorial",
+    "guideUrl": "/guides/openclaw-rl/openclaw-rl-guide.pdf",
     "highlights": [
       "One-command setup on RunPod with pre-built Docker image",
       "Full async RL loop: SGLang serving, PRM judging, Megatron-LM training",
