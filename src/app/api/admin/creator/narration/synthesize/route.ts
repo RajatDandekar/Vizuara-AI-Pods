@@ -4,7 +4,7 @@ import { getProject, updateProject, uploadArtifact } from '@/lib/creator-project
 import type { NarrationSegment } from '@/types/creator';
 
 export const dynamic = 'force-dynamic';
-export const maxDuration = 600;
+export const maxDuration = 300;
 
 const ELEVENLABS_VOICE_ID = 'lZORFNDokoBmfd0S06vf';
 
