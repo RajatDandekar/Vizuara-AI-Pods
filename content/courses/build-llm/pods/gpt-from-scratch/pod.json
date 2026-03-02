@@ -3,7 +3,7 @@
   "slug": "gpt-from-scratch",
   "courseSlug": "build-llm",
   "order": 4,
-  "description": "Forward pass, loss computation, and backpropagation \u2014 build a GPT-style autoregressive language model from the ground up.",
+  "description": "Forward pass, loss computation, and backpropagation — build a GPT-style autoregressive language model from the ground up.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [
@@ -28,7 +28,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Self-Attention and the Forward Pass",
@@ -39,7 +39,7 @@
       "estimatedMinutes": 60,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Loss and Backpropagation",
@@ -50,7 +50,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

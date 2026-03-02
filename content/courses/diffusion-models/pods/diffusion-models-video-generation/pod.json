@@ -1,16 +1,16 @@
 {
   "title": "From Still to Motion: How Diffusion Models Learned to Generate Videos",
   "slug": "diffusion-models-video-generation",
-  "description": "Extending image diffusion to the temporal dimension \u2014 from 2D noise to coherent video, one frame at a time.",
+  "description": "Extending image diffusion to the temporal dimension — from 2D noise to coherent video, one frame at a time.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [],
   "tags": [
     "The Flipbook Intuition",
     "What Makes Video Different from Images?",
-    "The Naive Approach \u2014 Why Frame-by-Frame Fails",
+    "The Naive Approach — Why Frame-by-Frame Fails",
     "Extending the Diffusion Framework to Video",
-    "The Architecture \u2014 How Neural Networks Learn Space and Time"
+    "The Architecture — How Neural Networks Learn Space and Time"
   ],
   "article": {
     "notionUrl": null,
@@ -26,29 +26,29 @@
       "estimatedMinutes": 51,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Factorized Space-Time Attention for Video Diffusion",
       "slug": "02-factorized_spacetime_attention",
-      "objective": "In Notebook 1, we built a simple video diffusion model using 3D convolutions. It worked \u2014 but it was slow and inflexible. In this notebook, we will build the **real** architecture behind modern video ",
+      "objective": "In Notebook 1, we built a simple video diffusion model using 3D convolutions. It worked — but it was slow and inflexible. In this notebook, we will build the **real** architecture behind modern video ",
       "colabUrl": "https://colab.research.google.com/drive/1jGJxbept5rmN-_FknCajjXUjDvHv7yUw",
       "downloadPath": "/notebooks/diffusion-models-video-generation/02_factorized_spacetime_attention.ipynb",
       "estimatedMinutes": 69,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Latent Video Diffusion and the Diffusion Transformer (DiT)",
       "slug": "03-latent_video_diffusion_and_dit",
-      "objective": "In Notebooks 1 and 2, we built video diffusion models that operate directly on pixel space. This works for our 32\u00d732 Moving MNIST examples, but real videos are 256\u00d7256 or higher \u2014 making pixel-space d",
+      "objective": "In Notebooks 1 and 2, we built video diffusion models that operate directly on pixel space. This works for our 32×32 Moving MNIST examples, but real videos are 256×256 or higher — making pixel-space d",
       "colabUrl": "https://colab.research.google.com/drive/1ALvBIsjtWGGyFcIwN9NiQyR_YVlck3Tz",
       "downloadPath": "/notebooks/diffusion-models-video-generation/03_latent_video_diffusion_and_dit.ipynb",
       "estimatedMinutes": 80,
       "todoCount": 1,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

@@ -37,7 +37,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "NCSN Architecture",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Annealed Langevin Dynamics",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "From NCSN to Diffusion Models",
@@ -70,7 +70,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

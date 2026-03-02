@@ -42,7 +42,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Score Function and Langevin Dynamics",
@@ -53,7 +53,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Score Matching and Denoising Score Matching",
@@ -64,7 +64,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Full Pipeline: Multi-Scale Energy Models",
@@ -75,7 +75,7 @@
       "estimatedMinutes": 60,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

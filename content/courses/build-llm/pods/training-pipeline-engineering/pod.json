@@ -3,7 +3,7 @@
   "slug": "training-pipeline-engineering",
   "courseSlug": "build-llm",
   "order": 5,
-  "description": "Tokenization, data loading, and optimization \u2014 engineer the full training pipeline that turns raw text into a working language model.",
+  "description": "Tokenization, data loading, and optimization — engineer the full training pipeline that turns raw text into a working language model.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [
@@ -29,7 +29,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Dataset and DataLoader",
@@ -40,7 +40,7 @@
       "estimatedMinutes": 40,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Optimization: SGD, Momentum, and Adam",
@@ -51,7 +51,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "LR Scheduling and Gradient Clipping",
@@ -62,7 +62,7 @@
       "estimatedMinutes": 40,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "The Complete Training Loop",
@@ -73,14 +73,14 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 5,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
     "title": "Training Pipeline Engineering for a Domain-Specific Medical Language Model",
-    "subtitle": "Aethon Health \u2014 Automating Radiology Report Generation for Community Hospitals",
+    "subtitle": "Aethon Health — Automating Radiology Report Generation for Community Hospitals",
     "company": "Aethon Health",
-    "industry": "Healthcare \u2014 Medical AI",
+    "industry": "Healthcare — Medical AI",
     "description": "Aethon Health engineers a complete training pipeline for a domain-specific medical language model, from custom BPE tokenization on radiology vocabulary to distributed training with mixed precision.",
     "pdfPath": "/case-studies/training-pipeline-engineering/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/1CeUWwKrPAKNO3HfXpEtPVtzmv-hARUeL",

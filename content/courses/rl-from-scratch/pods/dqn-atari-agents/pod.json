@@ -40,7 +40,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Experience Replay and Target Networks",
@@ -51,7 +51,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Training a DQN Agent to Play Pong",
@@ -62,7 +62,7 @@
       "estimatedMinutes": 55,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Double DQN and Game Generalization",
@@ -73,7 +73,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

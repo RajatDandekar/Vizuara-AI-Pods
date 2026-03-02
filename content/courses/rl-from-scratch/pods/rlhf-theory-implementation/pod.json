@@ -33,7 +33,7 @@
   },
   "notebooks": [
     {
-      "title": "Reward Modeling \u2014 Teaching a Neural Network Human Preferences",
+      "title": "Reward Modeling — Teaching a Neural Network Human Preferences",
       "slug": "01-reward_modeling",
       "objective": "Build a reward model from scratch using the Bradley-Terry preference model, train it on pairwise comparisons, and verify it learns to rank responses correctly.",
       "colabUrl": "https://colab.research.google.com/drive/1gVJXQGywyIz_ldzjZ7wz2YuJ5QL8aD8u",
@@ -41,7 +41,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Policy Gradients and PPO for Language Models",
@@ -52,10 +52,10 @@
       "estimatedMinutes": 60,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
-      "title": "End-to-End RLHF Pipeline \u2014 Sentiment Alignment with GPT-2",
+      "title": "End-to-End RLHF Pipeline — Sentiment Alignment with GPT-2",
       "slug": "03-end_to_end_rlhf",
       "objective": "Combine reward modeling and PPO to build a complete RLHF pipeline that aligns GPT-2 towards positive sentiment using KL-penalized policy gradients.",
       "colabUrl": "https://colab.research.google.com/drive/1H27zcUu-yrh_bdkzKsrFFseZFErIbg5Y",
@@ -63,15 +63,15 @@
       "estimatedMinutes": 75,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
     "title": "Aligning a Clinical AI Assistant Using RLHF",
-    "subtitle": "MedAlign Health \u2014 Deploying Safe and Empathetic Patient-Facing AI in Telehealth",
+    "subtitle": "MedAlign Health — Deploying Safe and Empathetic Patient-Facing AI in Telehealth",
     "company": "MedAlign Health",
     "industry": "Digital Health / Telehealth",
-    "description": "MedAlign Health's clinical assistant ClinAssist suffers from tone insensitivity, over-specificity, and safety boundary violations. This case study applies the full RLHF pipeline \u2014 reward modeling on physician preferences, PPO optimization with KL penalty, and safety-aware training \u2014 to align the assistant for safe, empathetic patient interactions.",
+    "description": "MedAlign Health's clinical assistant ClinAssist suffers from tone insensitivity, over-specificity, and safety boundary violations. This case study applies the full RLHF pipeline — reward modeling on physician preferences, PPO optimization with KL penalty, and safety-aware training — to align the assistant for safe, empathetic patient interactions.",
     "pdfPath": "/case-studies/rlhf-theory-implementation/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/107txuqd_WJXE7Cn7gvHYJynjOF8MhFFd",
     "notebookPath": "/case-studies/rlhf-theory-implementation/case_study_notebook.ipynb"

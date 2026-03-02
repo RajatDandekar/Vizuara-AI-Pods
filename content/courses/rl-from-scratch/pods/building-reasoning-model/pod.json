@@ -42,7 +42,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "GRPO from Scratch",
@@ -53,7 +53,7 @@
       "estimatedMinutes": 55,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Training a Reasoning Model End-to-End",
@@ -64,7 +64,7 @@
       "estimatedMinutes": 60,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Emergent Reasoning Behaviors and Distillation",
@@ -75,7 +75,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

@@ -36,7 +36,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Implementing the GRPO Loss Function",
@@ -47,7 +47,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Training a Reasoning Model with GRPO",
@@ -58,7 +58,7 @@
       "estimatedMinutes": 60,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

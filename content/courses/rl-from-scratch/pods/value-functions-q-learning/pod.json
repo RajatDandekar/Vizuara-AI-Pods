@@ -38,7 +38,7 @@
       "estimatedMinutes": 35,
       "todoCount": 1,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "The Bellman Equation: Breaking the Future into One Step at a Time",
@@ -49,7 +49,7 @@
       "estimatedMinutes": 40,
       "todoCount": 1,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Q-Learning from Scratch: Learning Without a Map",
@@ -60,7 +60,7 @@
       "estimatedMinutes": 45,
       "todoCount": 1,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "From Q-Tables to Neural Networks: The Path to Deep Q-Learning",
@@ -71,7 +71,7 @@
       "estimatedMinutes": 50,
       "todoCount": 1,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

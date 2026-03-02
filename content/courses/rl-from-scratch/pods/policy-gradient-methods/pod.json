@@ -43,7 +43,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "REINFORCE from Scratch: Variance, Baselines, and Convergence",
@@ -54,7 +54,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Actor-Critic Methods: The Student-Teacher Framework",
@@ -65,7 +65,7 @@
       "estimatedMinutes": 55,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

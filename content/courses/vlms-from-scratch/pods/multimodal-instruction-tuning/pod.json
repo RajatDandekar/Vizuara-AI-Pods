@@ -37,7 +37,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Instruction Tuning Pipeline: Two-Stage Training",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Cross-Modal Attention: How Language Models Learn to See",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 40,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

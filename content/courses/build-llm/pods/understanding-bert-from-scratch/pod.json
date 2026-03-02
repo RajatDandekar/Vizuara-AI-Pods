@@ -1,14 +1,14 @@
 {
   "title": "Understanding BERT from Scratch",
   "slug": "understanding-bert-from-scratch",
-  "description": "## How a simple idea \u2014 reading in both directions \u2014 changed NLP forever",
+  "description": "## How a simple idea — reading in both directions — changed NLP forever",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [],
   "tags": [
     "The Problem with Previous Approaches",
-    "The Transformer Encoder \u2014 BERT's Engine",
-    "BERT's Architecture \u2014 Putting It Together",
+    "The Transformer Encoder — BERT's Engine",
+    "BERT's Architecture — Putting It Together",
     "Pre-training Objective 1: Masked Language Modeling (MLM)",
     "Pre-training Objective 2: Next Sentence Prediction (NSP)"
   ],
@@ -26,7 +26,7 @@
       "estimatedMinutes": 52,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Self-Attention & The Transformer Encoder from First Principles",
@@ -37,7 +37,7 @@
       "estimatedMinutes": 52,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "BERT Architecture & Pre-training from Scratch",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 48,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Fine-tuning BERT for Real Tasks",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 48,
       "todoCount": 2,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

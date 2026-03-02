@@ -35,7 +35,8 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/01_contrastive_learning_and_infonce_loss.ipynb",
       "order": 1,
       "estimatedMinutes": 45,
-      "colabUrl": "https://colab.research.google.com/drive/1bcnrrrXGXFLmYVfjgM8WiaiHAuCCtrRp"
+      "colabUrl": "https://colab.research.google.com/drive/1bcnrrrXGXFLmYVfjgM8WiaiHAuCCtrRp",
+      "hasNarration": true
     },
     {
       "title": "Building CLIP from Scratch",
@@ -43,7 +44,8 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/02_building_clip_from_scratch.ipynb",
       "order": 2,
       "estimatedMinutes": 60,
-      "colabUrl": "https://colab.research.google.com/drive/1Sl3mg-uihCWwzf6eylKM2dHjrFmSRlAW"
+      "colabUrl": "https://colab.research.google.com/drive/1Sl3mg-uihCWwzf6eylKM2dHjrFmSRlAW",
+      "hasNarration": true
     },
     {
       "title": "Zero-Shot Transfer and Evaluation",
@@ -51,7 +53,8 @@
       "downloadPath": "/notebooks/contrastive-pretraining-clip/03_zero_shot_transfer_and_evaluation.ipynb",
       "order": 3,
       "estimatedMinutes": 45,
-      "colabUrl": "https://colab.research.google.com/drive/1ZLKuGoxztDToN1o-4sSY3PY9Ni4FablJ"
+      "colabUrl": "https://colab.research.google.com/drive/1ZLKuGoxztDToN1o-4sSY3PY9Ni4FablJ",
+      "hasNarration": true
     }
   ],
   "caseStudy": {

@@ -36,7 +36,7 @@
       "estimatedMinutes": 50,
       "todoCount": 1,
       "order": 1,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/1HVBM26TkERUyf-b1t8VUmDlU22Jr7rPZ"
     },
     {
@@ -47,7 +47,7 @@
       "estimatedMinutes": 55,
       "todoCount": 1,
       "order": 2,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/1cdvhlzwWB0krDQeARMYIFGBhL8coxIWu"
     },
     {
@@ -58,7 +58,7 @@
       "estimatedMinutes": 65,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/18nsoUib3OqvCjABkekEu8oe3SvWVxfdM"
     }
   ],

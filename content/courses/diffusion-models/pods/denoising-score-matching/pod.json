@@ -37,7 +37,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Denoising Score Matching",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Langevin Dynamics Sampling",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

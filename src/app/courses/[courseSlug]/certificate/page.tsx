@@ -1,6 +1,6 @@
 import { getCourseManifest, getCourseSlugs, getLivePods } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import AuthGate from '@/components/auth/AuthGate';
+import SubscriptionGate from '@/components/auth/SubscriptionGate';
 import CourseCertificateClient from './CourseCertificateClient';
 
 export function generateStaticParams() {
@@ -19,7 +19,7 @@ export default async function CourseCertificatePage({ params }: PageProps) {
     const livePods = getLivePods(courseSlug);
 
     return (
-      <AuthGate>
+      <SubscriptionGate>
         <CourseCertificateClient
           courseSlug={manifest.slug}
           courseTitle={manifest.title}
@@ -27,7 +27,7 @@ export default async function CourseCertificatePage({ params }: PageProps) {
           estimatedHours={manifest.estimatedHours}
           livePods={livePods}
         />
-      </AuthGate>
+      </SubscriptionGate>
     );
   } catch {
     notFound();

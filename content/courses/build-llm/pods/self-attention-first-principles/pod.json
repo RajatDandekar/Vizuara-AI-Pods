@@ -3,7 +3,7 @@
   "slug": "self-attention-first-principles",
   "courseSlug": "build-llm",
   "order": 3,
-  "description": "Queries, Keys, Values, Multi-Head Attention, and Positional Encoding \u2014 derive the self-attention mechanism from first principles.",
+  "description": "Queries, Keys, Values, Multi-Head Attention, and Positional Encoding — derive the self-attention mechanism from first principles.",
   "difficulty": "intermediate",
   "estimatedHours": 3,
   "prerequisites": [
@@ -29,7 +29,7 @@
       "estimatedMinutes": 35,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Scaled Dot-Product Attention",
@@ -40,7 +40,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Multi-Head Attention and Positional Encoding",
@@ -51,7 +51,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Full Transformer Block",
@@ -62,14 +62,14 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
     "title": "Automated Clinical Note Classification with Self-Attention",
-    "subtitle": "MedScribe Analytics \u2014 Reducing Diagnostic Coding Errors in Hospital Documentation",
+    "subtitle": "MedScribe Analytics — Reducing Diagnostic Coding Errors in Hospital Documentation",
     "company": "MedScribe Analytics",
-    "industry": "Healthcare \u2014 Clinical Documentation",
+    "industry": "Healthcare — Clinical Documentation",
     "description": "MedScribe Analytics builds a Transformer-based multi-label classifier for clinical notes, using self-attention to model long-range dependencies and negation patterns in medical text.",
     "pdfPath": "/case-studies/self-attention-first-principles/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/121jlAwUl888rIBschIoyJv6Gi6WXbQRJ",

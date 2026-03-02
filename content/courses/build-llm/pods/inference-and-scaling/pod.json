@@ -3,7 +3,7 @@
   "slug": "inference-and-scaling",
   "courseSlug": "build-llm",
   "order": 6,
-  "description": "KV cache, sampling strategies, fine-tuning, and alignment \u2014 take a trained model from raw outputs to production-ready inference.",
+  "description": "KV cache, sampling strategies, fine-tuning, and alignment — take a trained model from raw outputs to production-ready inference.",
   "difficulty": "advanced",
   "estimatedHours": 4,
   "prerequisites": [
@@ -28,7 +28,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Sampling Strategies",
@@ -39,7 +39,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Complete Inference Engine",
@@ -50,7 +50,7 @@
       "estimatedMinutes": 60,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "LoRA Fine-Tuning",
@@ -61,7 +61,7 @@
       "estimatedMinutes": 60,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

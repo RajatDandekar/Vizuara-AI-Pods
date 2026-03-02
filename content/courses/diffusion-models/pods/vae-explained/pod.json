@@ -3,7 +3,7 @@
   "slug": "vae-explained",
   "courseSlug": "diffusion-models",
   "order": 6,
-  "description": "Building VAEs from first principles \u2014 intuition, math, and a full PyTorch implementation.",
+  "description": "Building VAEs from first principles — intuition, math, and a full PyTorch implementation.",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [],
@@ -40,7 +40,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "ELBO, KL Divergence, and Reparameterization",
@@ -51,7 +51,7 @@
       "estimatedMinutes": 55,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Building a VAE From Scratch",
@@ -62,7 +62,7 @@
       "estimatedMinutes": 60,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Exploring the Latent Space",
@@ -73,7 +73,7 @@
       "estimatedMinutes": 50,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

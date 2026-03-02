@@ -1,9 +1,9 @@
 {
-  "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen \u2014 All at Once",
+  "title": "Multimodal Fusion Architectures: How AI Learns to See, Read, and Listen — All at Once",
   "slug": "multimodal-fusion",
   "courseSlug": "vlms-from-scratch",
   "order": 2,
-  "description": "From early fusion to cross-attention \u2014 building the bridges that connect vision and language inside modern AI systems.",
+  "description": "From early fusion to cross-attention — building the bridges that connect vision and language inside modern AI systems.",
   "difficulty": "intermediate",
   "estimatedHours": 3,
   "prerequisites": [],
@@ -39,7 +39,7 @@
       "estimatedMinutes": 45,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/1g9BCt5rhnh0-C8OEh0TmQhUcfrV900lh"
     },
     {
@@ -50,7 +50,7 @@
       "estimatedMinutes": 60,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/1ayGc_DkqV9kMzTc8pS0MfccOoknHsTFx"
     },
     {
@@ -61,7 +61,7 @@
       "estimatedMinutes": 50,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false,
+      "hasNarration": true,
       "colabUrl": "https://colab.research.google.com/drive/1fSTJaEpgU91w1mH1JY0dAGhjA7dhOOtR"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "title": "Understanding World Models from Scratch",
   "slug": "world-models",
-  "description": "## How AI agents learn to dream about their environment \u2014 and use those dreams to make better decisions",
+  "description": "## How AI agents learn to dream about their environment — and use those dreams to make better decisions",
   "difficulty": "intermediate",
   "estimatedHours": 3,
   "prerequisites": [],
@@ -26,7 +26,7 @@
       "estimatedMinutes": 45,
       "todoCount": 0,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "MDN-RNN: Learning to Predict the Future from First Principles",
@@ -37,7 +37,7 @@
       "estimatedMinutes": 44,
       "todoCount": 0,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Controller + CMA-ES: Deciding with 867 Parameters from First Principles",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 39,
       "todoCount": 0,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Full World Model: Dream to Drive from First Principles",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 54,
       "todoCount": 0,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {

@@ -9,14 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@google/genai": "^1.40.0",
+    "@sparticuz/chromium": "^143.0.4",
     "@supabase/supabase-js": "^2.95.3",
+    "@types/archiver": "^7.0.0",
+    "archiver": "^7.0.1",
     "firebase-admin": "^13.6.1",
     "framer-motion": "^12.34.0",
+    "googleapis": "^171.4.0",
     "highlight.js": "^11.11.1",
     "html2canvas": "^1.4.1",
     "katex": "^0.16.28",
     "next": "16.1.6",
+    "octokit": "^5.0.5",
+    "puppeteer-core": "^24.37.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
@@ -32,6 +39,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "rehype-stringify": "^10.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

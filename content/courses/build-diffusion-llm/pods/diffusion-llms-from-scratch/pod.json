@@ -1,13 +1,13 @@
 {
   "title": "Diffusion LLMs from Scratch",
   "slug": "diffusion-llms-from-scratch",
-  "description": "What if language models could generate all tokens at once \u2014 like image diffusion, but for text?",
+  "description": "What if language models could generate all tokens at once — like image diffusion, but for text?",
   "difficulty": "intermediate",
   "estimatedHours": 4,
   "prerequisites": [],
   "tags": [
     "A Quick Recap: How Diffusion Works for Images",
-    "\"But Wait \u2014 Diffusion Is for Images, Not Text!\"",
+    "\"But Wait — Diffusion Is for Images, Not Text!\"",
     "The Big Intuition: Masking Is the \"Noise\" for Text",
     "The Reverse Process: Learning to Unmask",
     "Generation: How to Actually Create Text"
@@ -26,7 +26,7 @@
       "estimatedMinutes": 57,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Masked Diffusion for Text: The Forward Process",
@@ -37,7 +37,7 @@
       "estimatedMinutes": 52,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Training a Diffusion LLM: The ELBO and Beyond",
@@ -48,10 +48,10 @@
       "estimatedMinutes": 51,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
-      "title": "Generation: Iterative Unmasking \u2014 The Grand Finale",
+      "title": "Generation: Iterative Unmasking — The Grand Finale",
       "slug": "04-generation_iterative_unmasking",
       "objective": "",
       "colabUrl": "https://colab.research.google.com/drive/1_Pm4OQ6bpCJqrQOs4pGbKiFECUcxaT0l",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 54,
       "todoCount": 2,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
@@ -67,7 +67,7 @@
     "subtitle": "Section 1: Industry Context and Business Problem",
     "company": "Velocode",
     "industry": "AI-Assisted Developer Tools",
-    "description": "Velocode is losing enterprise deals \u2014 and the reason is latency.",
+    "description": "Velocode is losing enterprise deals — and the reason is latency.",
     "pdfPath": "/case-studies/diffusion-llms-from-scratch/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/1TS00ASj8Ab8Ru27qUBC6x2oGcu33n8a_",
     "notebookPath": "/case-studies/diffusion-llms-from-scratch/case_study_notebook.ipynb"

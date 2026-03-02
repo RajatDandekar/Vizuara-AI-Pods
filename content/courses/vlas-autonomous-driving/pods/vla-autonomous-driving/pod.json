@@ -1,7 +1,7 @@
 {
   "title": "Vision-Language-Action Models for Autonomous Driving: From Pixels and Words to Steering Wheels",
   "slug": "vla-autonomous-driving",
-  "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving \u2014 explained from scratch.",
+  "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving — explained from scratch.",
   "difficulty": "advanced",
   "estimatedHours": 5,
   "prerequisites": [],
@@ -26,18 +26,18 @@
       "estimatedMinutes": 70,
       "todoCount": 2,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Action Tokenization & Behavioral Cloning: Teaching a Language Model to Drive by Imitation",
       "slug": "02-action_tokenization_behavioral_cloning",
-      "objective": "Let us start with a simple question. Language models output words \u2014 sequences of discrete tokens like \"the\", \"cat\", \"sat\". But a car needs continuous signals: steer 15.3 degrees left, accelerate at 2.",
+      "objective": "Let us start with a simple question. Language models output words — sequences of discrete tokens like \"the\", \"cat\", \"sat\". But a car needs continuous signals: steer 15.3 degrees left, accelerate at 2.",
       "colabUrl": "https://colab.research.google.com/drive/11a9LlqyWQfIAIMdehxZLrJnclwpzplNi",
       "downloadPath": "/notebooks/vla-autonomous-driving/02_action_tokenization_behavioral_cloning.ipynb",
       "estimatedMinutes": 52,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Building a Mini VLA: Unifying Vision, Language, and Action",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 75,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Diffusion Action Decoder: Sculpting Trajectories from Noise",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 66,
       "todoCount": 3,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
@@ -67,7 +67,7 @@
     "subtitle": "Section 1: Industry Context and Business Problem",
     "company": "PacificTow Robotics",
     "industry": "Maritime Container Logistics",
-    "description": "PacificTow's current autonomous system uses a traditional modular pipeline: LiDAR-based perception, rule-based path planning on a precomputed port map, and PID-controlled trajectory following. The system works well for **static, pre-planned routes** \u2014 moving a container from a known yard position to",
+    "description": "PacificTow's current autonomous system uses a traditional modular pipeline: LiDAR-based perception, rule-based path planning on a precomputed port map, and PID-controlled trajectory following. The system works well for **static, pre-planned routes** — moving a container from a known yard position to",
     "pdfPath": "/case-studies/vla-autonomous-driving/case_study.pdf",
     "colabUrl": "https://colab.research.google.com/drive/1iRxqpQV1jxePlH4Jxw62KHco7jJEeyFc",
     "notebookPath": "/case-studies/vla-autonomous-driving/case_study_notebook.ipynb"

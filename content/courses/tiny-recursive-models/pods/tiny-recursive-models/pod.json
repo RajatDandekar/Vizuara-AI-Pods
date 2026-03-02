@@ -1,7 +1,7 @@
 {
   "title": "Tiny Recursive Models: Less is More for AI Reasoning",
   "slug": "tiny-recursive-models",
-  "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks \u2014 by thinking again, and again, and again.",
+  "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks — by thinking again, and again, and again.",
   "difficulty": "beginner",
   "estimatedHours": 3,
   "prerequisites": [],
@@ -26,7 +26,7 @@
       "estimatedMinutes": 42,
       "todoCount": 1,
       "order": 1,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Building the Tiny Recursive Model Architecture from Scratch",
@@ -37,7 +37,7 @@
       "estimatedMinutes": 57,
       "todoCount": 2,
       "order": 2,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Deep Supervision Training: Teaching a Tiny Model to Reason",
@@ -48,7 +48,7 @@
       "estimatedMinutes": 46,
       "todoCount": 2,
       "order": 3,
-      "hasNarration": false
+      "hasNarration": true
     },
     {
       "title": "Ablation Studies: What Really Matters in Recursive Reasoning?",
@@ -59,7 +59,7 @@
       "estimatedMinutes": 42,
       "todoCount": 2,
       "order": 4,
-      "hasNarration": false
+      "hasNarration": true
     }
   ],
   "caseStudy": {
