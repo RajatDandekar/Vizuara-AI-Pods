@@ -25,7 +25,7 @@ export default function ShareButtons({ certificate, certificateRef }: ShareButto
   const captureCertificate = async (): Promise<File | null> => {
     if (!certificateRef.current) return null;
     try {
-      const html2canvas = (await import('html2canvas')).default;
+      const html2canvas = (await import('html2canvas-pro')).default;
       const canvas = await html2canvas(certificateRef.current, {
         scale: 2,
         backgroundColor: null,

@@ -76,16 +76,21 @@ export default function CertificatePageClient({
 
   const handleDownload = useCallback(async () => {
     if (!certificateRef.current) return;
-    const html2canvas = (await import('html2canvas')).default;
-    const canvas = await html2canvas(certificateRef.current, {
-      scale: 2,
-      backgroundColor: null,
-      useCORS: true,
-    });
-    const link = document.createElement('a');
-    link.download = `vizuara-certificate-${courseSlug}-${podSlug}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
+    try {
+      const html2canvas = (await import('html2canvas-pro')).default;
+      const canvas = await html2canvas(certificateRef.current, {
+        scale: 2,
+        backgroundColor: null,
+        useCORS: true,
+      });
+      const link = document.createElement('a');
+      link.download = `vizuara-certificate-${courseSlug}-${podSlug}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } catch (err) {
+      console.error('Certificate download failed:', err);
+      alert('Download failed. Please try again or use a screenshot instead.');
+    }
   }, [courseSlug, podSlug]);
 
   if (!certificate) return null;

@@ -19,7 +19,7 @@
     "framer-motion": "^12.34.0",
     "googleapis": "^171.4.0",
     "highlight.js": "^11.11.1",
-    "html2canvas": "^1.4.1",
+    "html2canvas-pro": "^2.0.2",
     "katex": "^0.16.28",
     "next": "16.1.6",
     "octokit": "^5.0.5",
