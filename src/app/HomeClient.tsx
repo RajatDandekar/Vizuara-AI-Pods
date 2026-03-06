@@ -60,7 +60,7 @@ export default function HomeClient({
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setBannerDismissed(localStorage.getItem('dismiss_openclaw_banner') === '1');
+      setBannerDismissed(localStorage.getItem('dismiss_context_eng_banner') === '1');
     }
   }, []);
 
@@ -261,29 +261,29 @@ export default function HomeClient({
       {!user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-16" style={{ zIndex: 1 }}>
 
-          {/* New free module announcement */}
+          {/* New course announcement */}
           <FadeIn delay={0.05}>
-            <Link href="/courses/rl-from-scratch/openclaw-rl">
-              <div className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-r from-amber-50 via-white to-orange-50 hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_60%)]" />
+            <Link href="/courses/context-engineering">
+              <div className="relative overflow-hidden rounded-2xl border border-teal-200/60 bg-gradient-to-r from-teal-50 via-white to-cyan-50 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
                 <div className="relative flex items-center gap-5 px-6 py-5">
                   <div className="hidden sm:block flex-shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                       </svg>
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-700 uppercase tracking-wide">New &amp; Free</span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-teal-100 text-teal-700 uppercase tracking-wide">New Course</span>
                     </div>
-                    <h3 className="font-bold text-slate-900 text-base mb-0.5">OpenClaw-RL: Personalizing AI Agents from Conversation Feedback</h3>
+                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Context Engineering from Scratch &mdash; Now Complete</h3>
                     <p className="text-sm text-slate-500">
-                      Teach AI assistants to learn your preferences just by chatting with them. Full article, 4 notebooks, and a case study &mdash; completely free with a login.
+                      5 pods, 25 notebooks, 5 case studies. Master prompt design, RAG, memory architectures, and production evaluation.
                     </p>
                   </div>
-                  <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-5 h-5 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
                 </div>
@@ -461,30 +461,30 @@ export default function HomeClient({
       {user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-12" style={{ zIndex: 1 }}>
 
-          {/* New Pod Announcement Banner */}
+          {/* New Course Announcement Banner */}
           {!bannerDismissed && (
             <FadeIn delay={0.02}>
-              <div className="relative overflow-hidden rounded-2xl border border-purple-200/60 bg-gradient-to-r from-purple-50 via-white to-blue-50">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.08),transparent_60%)]" />
+              <div className="relative overflow-hidden rounded-2xl border border-teal-200/60 bg-gradient-to-r from-teal-50 via-white to-emerald-50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
                 <div className="relative flex items-start gap-5 px-6 py-5">
                   <div className="hidden sm:block flex-shrink-0 mt-1">
-                    <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                    <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                       </svg>
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 text-purple-700 uppercase tracking-wide">New</span>
-                      <h3 className="font-bold text-slate-900 text-base">OpenClaw-RL: Personalizing AI Agents from Conversation Feedback</h3>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-teal-100 text-teal-700 uppercase tracking-wide">New Course</span>
+                      <h3 className="font-bold text-slate-900 text-base">Context Engineering from Scratch &mdash; All 5 Pods Now Live</h3>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed mb-3">
-                      Learn how to make AI assistants learn your preferences just by talking to them. This pod covers the complete RL pipeline behind personalized agents — from GRPO-TCR to the RLAnything closed loop where the policy, reward model, and environment all improve together.
+                      From prompt design to production monitoring &mdash; 25 hands-on notebooks and 5 industry case studies. Complete all pods to earn your course certificate.
                     </p>
                     <Link
-                      href="/courses/rl-from-scratch/openclaw-rl"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-purple-700 hover:text-purple-900 transition-colors"
+                      href="/courses/context-engineering"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors"
                     >
                       Start learning
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -495,7 +495,7 @@ export default function HomeClient({
                   <button
                     onClick={() => {
                       setBannerDismissed(true);
-                      localStorage.setItem('dismiss_openclaw_banner', '1');
+                      localStorage.setItem('dismiss_context_eng_banner', '1');
                     }}
                     className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
                     aria-label="Dismiss"
