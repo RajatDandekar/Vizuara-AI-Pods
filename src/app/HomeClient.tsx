@@ -15,6 +15,7 @@ import FoundersLetter from '@/components/home/FoundersLetter';
 import SearchBar from '@/components/home/SearchBar';
 import PodExpandedCard from '@/components/home/PodExpandedCard';
 import FreeModuleCard from '@/components/home/FreeModuleCard';
+import ScrollableRow from '@/components/home/ScrollableRow';
 import { useAuth } from '@/context/AuthContext';
 import type { CourseCard, PodCard, FreePodShowcase } from '@/types/course';
 import { getCourseCompletion } from '@/lib/progress';
@@ -625,7 +626,7 @@ export default function HomeClient({
 
                       {/* Pod cards — horizontal scroll (live + coming soon) */}
                       {allPods.length > 0 ? (
-                        <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
+                        <ScrollableRow>
                           {allPods.map((pod) => {
                             const isLive = liveSlugs.has(pod.slug);
 
@@ -734,7 +735,7 @@ export default function HomeClient({
                               </div>
                             );
                           })}
-                        </div>
+                        </ScrollableRow>
                       ) : (
                         <p className="text-sm text-slate-400 italic">Pods coming soon</p>
                       )}
@@ -759,7 +760,7 @@ export default function HomeClient({
               {/* Draft courses */}
               {draftCourses.length > 0 && (
                 <div className="mb-6">
-                  <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
+                  <ScrollableRow>
                     {draftCourses.map((course) => (
                       <div
                         key={course.slug}
@@ -809,7 +810,7 @@ export default function HomeClient({
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </ScrollableRow>
                 </div>
               )}
             </FadeIn>

@@ -3,13 +3,89 @@
   "slug": "context-optimization-evaluation",
   "courseSlug": "context-engineering",
   "order": 5,
-  "description": "Coming soon: Context Optimization & Evaluation",
+  "description": "How to compress, budget, measure, and continuously improve the information you feed your LLM — from token budgeting and prompt compression to RAGAS evaluation, A/B testing, and production monitoring.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
-  "prerequisites": [],
-  "tags": [],
+  "estimatedHours": 5,
+  "prerequisites": [
+    "context-engineering-for-llms"
+  ],
+  "tags": [
+    "context-optimization",
+    "evaluation",
+    "RAGAS",
+    "prompt-compression",
+    "token-budgeting",
+    "A/B-testing",
+    "production-monitoring",
+    "Cohen-Kappa",
+    "faithfulness",
+    "context-precision"
+  ],
   "article": {
-    "figureUrls": {}
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/19zbfWW9pm3Pyr33d2bxxMoFka6kAPqEn=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1T3mUU3XkQm8iloDNBg9WOgGCSjdqsqKy=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/194r69lDgO_TpW9_lK9_G4FJ0XQMZhzie=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/10SC9eE83SqJGO3_wIXEmfpoIl6qFddLE=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1hl_Y_uAFtnGrvYvOpXsX1Q8wv6rkmCj_=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1rEH7H4YvsqrgFPuPZqnLelCQR05-xka9=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1RE1g3SrzGVB2q6M_fuhdGmZTidlNtkNQ=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/1RF9gC1Pz2vl6afk08dTsjB9pHJtYlURh=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1A9ITK6_Uf8bN9oPUZktqfHlqFJ9zH-19=w2000"
+    },
+    "notionUrl": "https://www.notion.so/Context-Optimization-Evaluation-31b01fbe47718112868bc1dd989786bc"
   },
-  "notebooks": []
+  "notebooks": [
+    {
+      "title": "Token Budgeting & Prompt Compression",
+      "slug": "token-budgeting-compression",
+      "order": 1,
+      "downloadPath": "/notebooks/context-optimization-evaluation/01_token_budgeting_and_compression.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/15pjh7USWlcCDuwISaLzT3cEm48-zAU3w",
+      "hasNarration": true
+    },
+    {
+      "title": "RAGAS Evaluation Framework",
+      "slug": "ragas-evaluation-framework",
+      "order": 2,
+      "downloadPath": "/notebooks/context-optimization-evaluation/02_ragas_evaluation_framework.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1EOMm64PtAV9TtFWKMVuX0WTSqp90Mqe_",
+      "hasNarration": true
+    },
+    {
+      "title": "Human Evaluation & Inter-Annotator Agreement",
+      "slug": "human-evaluation-agreement",
+      "order": 3,
+      "downloadPath": "/notebooks/context-optimization-evaluation/03_human_evaluation_and_agreement.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1xkwnKpMHDbRBklkQ6Amq5GYJvy1ngfw9",
+      "hasNarration": true
+    },
+    {
+      "title": "A/B Testing Context Strategies",
+      "slug": "ab-testing-context-strategies",
+      "order": 4,
+      "downloadPath": "/notebooks/context-optimization-evaluation/04_ab_testing_context_strategies.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/148gvJ-5xEWjr6QAvxWeIhuGneAo5muri",
+      "hasNarration": true
+    },
+    {
+      "title": "Production Monitoring for Context Quality (Capstone)",
+      "slug": "production-monitoring-capstone",
+      "order": 5,
+      "downloadPath": "/notebooks/context-optimization-evaluation/05_production_monitoring_capstone.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/12MMABxiZv2PvXAr-JWwzus-nffR_2EVA",
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Optimizing Context Quality for MedAssist AI — A Clinical Decision Support System",
+    "description": "Build a complete context optimization and evaluation pipeline for a clinical AI system that serves 45 hospitals, addressing faithfulness degradation, token bloat, and latency issues.",
+    "pdfUrl": "",
+    "notebookUrl": "",
+    "driveId": ""
+  },
+  "curator": {
+    "name": "Raj Dandekar",
+    "avatar": "/avatars/raj.png"
+  }
 }

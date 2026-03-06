@@ -165,14 +165,14 @@
       "title": "Context Engineering from Scratch",
       "description": "The art and science of filling the context window with the right information.",
       "difficulty": "intermediate",
-      "estimatedHours": 7,
+      "estimatedHours": 22,
       "tags": [
         "context-engineering",
         "rag",
         "prompt-design"
       ],
       "podCount": 5,
-      "totalNotebooks": 5,
+      "totalNotebooks": 25,
       "status": "live",
       "thumbnail": "/courses/context-engineering/pods/context-engineering-for-llms/figures/figure_1.png"
     },

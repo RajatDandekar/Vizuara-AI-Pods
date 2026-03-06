@@ -3,13 +3,78 @@
   "slug": "rag-systems",
   "courseSlug": "context-engineering",
   "order": 3,
-  "description": "Coming soon: Retrieval-Augmented Generation (RAG) Systems",
+  "description": "Build RAG systems from first principles — from chunking and embeddings to hybrid retrieval, reranking, and end-to-end evaluation with RAGAS.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
-  "prerequisites": [],
-  "tags": [],
+  "estimatedHours": 5,
+  "prerequisites": [
+    "context-engineering-for-llms"
+  ],
+  "tags": [
+    "RAG",
+    "retrieval",
+    "embeddings",
+    "vector-search",
+    "chunking",
+    "reranking",
+    "RAGAS",
+    "hybrid-search",
+    "BM25",
+    "FAISS"
+  ],
   "article": {
     "figureUrls": {}
   },
-  "notebooks": []
+  "notebooks": [
+    {
+      "title": "Why RAG? The Retrieval Revolution",
+      "slug": "why-rag",
+      "order": 1,
+      "downloadPath": "/notebooks/rag-systems/01_why_rag.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1Ejce5caorvymRasw-pI3Jzo3ewpABqT7",
+      "hasNarration": true
+    },
+    {
+      "title": "Chunking Strategies from First Principles",
+      "slug": "chunking-strategies",
+      "order": 2,
+      "downloadPath": "/notebooks/rag-systems/02_chunking_strategies.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1SPQCIQhKf2VEUJbTTuvro8k5Lh_ElHDZ",
+      "hasNarration": true
+    },
+    {
+      "title": "Embeddings and Vector Search",
+      "slug": "embeddings-and-vector-search",
+      "order": 3,
+      "downloadPath": "/notebooks/rag-systems/03_embeddings_and_vector_search.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1eHIZdAFKXdp_BwzhrexO1UpwMqm1CX9K",
+      "hasNarration": true
+    },
+    {
+      "title": "Retrieval Strategies and Reranking",
+      "slug": "retrieval-strategies",
+      "order": 4,
+      "downloadPath": "/notebooks/rag-systems/04_retrieval_strategies.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1KOaWMsPZowaBDt1pl5GDfGxhm23vRxDS",
+      "hasNarration": true
+    },
+    {
+      "title": "RAG Evaluation and the Complete Pipeline",
+      "slug": "rag-evaluation-capstone",
+      "order": 5,
+      "downloadPath": "/notebooks/rag-systems/05_rag_evaluation_capstone.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/16fwpnNytumdcw2FSm_sWzSUj85Mhe4OK",
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Building a Regulatory Compliance Assistant with RAG",
+    "description": "Build a RAG-powered compliance Q&A system for a fintech company using the CUAD legal dataset.",
+    "pdfUrl": "",
+    "notebookUrl": "https://colab.research.google.com/drive/1VicCgo_eYrNeDGImLWjnJEEy29Fec2rJ",
+    "driveId": "1VicCgo_eYrNeDGImLWjnJEEy29Fec2rJ"
+  },
+  "curator": {
+    "name": "Raj Dandekar",
+    "avatar": "/avatars/raj.png"
+  }
 }

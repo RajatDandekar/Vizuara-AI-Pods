@@ -3,13 +3,80 @@
   "slug": "prompt-design-principles",
   "courseSlug": "context-engineering",
   "order": 2,
-  "description": "Coming soon: Prompt Design Principles",
+  "description": "Master the science of steering LLMs through system prompts, few-shot learning, chain-of-thought reasoning, structured output, and prompt chaining.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
+  "estimatedHours": 4,
   "prerequisites": [],
-  "tags": [],
+  "tags": [
+    "system prompts",
+    "few-shot learning",
+    "chain-of-thought",
+    "structured output",
+    "prompt chaining",
+    "right altitude"
+  ],
   "article": {
     "figureUrls": {}
   },
-  "notebooks": []
+  "notebooks": [
+    {
+      "title": "Series Index",
+      "slug": "index",
+      "order": 0,
+      "downloadPath": "/notebooks/prompt-design-principles/00_index.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/14sEmM_vzTvs-9o931VwV7Za_BX3jjNFb",
+      "hasNarration": true
+    },
+    {
+      "title": "System Prompts and the Right Altitude",
+      "slug": "system-prompts-and-the-right-altitude",
+      "order": 1,
+      "downloadPath": "/notebooks/prompt-design-principles/01_system_prompts_and_the_right_altitude.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1Do8Y1XouDKzVFmDl5Hkq3ZPcSmCmYSw8",
+      "hasNarration": true
+    },
+    {
+      "title": "Few-Shot Learning",
+      "slug": "few-shot-learning",
+      "order": 2,
+      "downloadPath": "/notebooks/prompt-design-principles/02_few_shot_learning.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/19-MNI6CJ6N38B1RGBLUqJb0fWyvrlaec",
+      "hasNarration": true
+    },
+    {
+      "title": "Chain-of-Thought Prompting",
+      "slug": "chain-of-thought",
+      "order": 3,
+      "downloadPath": "/notebooks/prompt-design-principles/03_chain_of_thought.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1I_g1aBRkgJluZIbKSlDFS1sfxPvT9taH",
+      "hasNarration": true
+    },
+    {
+      "title": "Structured Output and Prompt Chaining",
+      "slug": "structured-output-and-prompt-chaining",
+      "order": 4,
+      "downloadPath": "/notebooks/prompt-design-principles/04_structured_output_and_prompt_chaining.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1C5TwGushrx5pSIt5fb7yFnlLxlD5fIvf",
+      "hasNarration": true
+    },
+    {
+      "title": "Prompt Design Capstone",
+      "slug": "prompt-design-capstone",
+      "order": 5,
+      "downloadPath": "/notebooks/prompt-design-principles/05_prompt_design_capstone.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1lg2sSnsTOf7cvLQFyKjCxWktPbYnGTC4",
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "AML Transaction Screening with Prompt Design Principles",
+    "slug": "aml-transaction-screening",
+    "pdfPath": "/case-studies/prompt-design-principles/case_study.pdf",
+    "notebookPath": "/case-studies/prompt-design-principles/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/1BjDyB4zxdQ6USzAfhuUfpS006anVFLx4"
+  },
+  "curator": {
+    "name": "Raj Dandekar",
+    "avatar": "/avatars/raj.png"
+  }
 }

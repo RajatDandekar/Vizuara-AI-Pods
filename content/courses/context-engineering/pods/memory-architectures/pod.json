@@ -1,15 +1,92 @@
 {
-  "title": "Memory Architectures",
+  "title": "Memory Architectures for LLM Applications",
   "slug": "memory-architectures",
   "courseSlug": "context-engineering",
   "order": 4,
-  "description": "Coming soon: Memory Architectures",
+  "description": "How to give your LLM the ability to remember — from simple buffers to hybrid long-term memory systems.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
-  "prerequisites": [],
-  "tags": [],
+  "estimatedHours": 5,
+  "prerequisites": [
+    "context-engineering-for-llms"
+  ],
+  "tags": [
+    "memory",
+    "conversation-buffer",
+    "sliding-window",
+    "summary-memory",
+    "entity-memory",
+    "vector-memory",
+    "FAISS",
+    "hybrid-memory",
+    "embeddings",
+    "cosine-similarity"
+  ],
   "article": {
-    "figureUrls": {}
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1JVAwdzAVcAQuSeKkFoJ_jR9x85Zce8Ro=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1lpexGYu2NDyyAqH5VE3_X5SJssg5TjeL=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1KX3cxSY0nvVL3Bw9vUKSuJ-cu5olJZjI=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1Ayl-u66P96WWJmSh2gWzkP2tCZFIDagU=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1T4YN8JYsM4lk6jfzunDLxFiQGI92JeYS=w2000",
+      "figures/figure_6.png": "https://lh3.googleusercontent.com/d/1W9BAzgWIy9-fNXSmzqxVO8Vl9wTsA4iG=w2000",
+      "figures/figure_7.png": "https://lh3.googleusercontent.com/d/1mZxFRVgwHZ7nx_g1HrkOF2j3ZJZno8Ih=w2000",
+      "figures/figure_8.png": "https://lh3.googleusercontent.com/d/114sQkwDcdjbDltD9B2NEFTIFe6YZwQff=w2000",
+      "figures/figure_9.png": "https://lh3.googleusercontent.com/d/1twIhmWuwyD92LtG47fe10JMJzPL_VWyh=w2000",
+      "figures/figure_10.png": "https://lh3.googleusercontent.com/d/1VQJyuIfHgQvG0fvgjJPh9hSTuey1c6rx=w2000"
+    },
+    "notionUrl": "https://www.notion.so/Memory-Architectures-for-LLM-Applications-31b01fbe477181e38c2de7fabf91d0a4"
   },
-  "notebooks": []
+  "notebooks": [
+    {
+      "title": "Conversation Buffer & Sliding Window Memory",
+      "slug": "conversation-buffer-sliding-window",
+      "order": 1,
+      "downloadPath": "/notebooks/memory-architectures/01_conversation_buffer_and_sliding_window.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1thxKM5XWOYmO7pXH_qe1nJnkQuCTdepW",
+      "hasNarration": true
+    },
+    {
+      "title": "Summary Memory",
+      "slug": "summary-memory",
+      "order": 2,
+      "downloadPath": "/notebooks/memory-architectures/02_summary_memory.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1vQ_rYAUJIEjBryqxS9LHYJtiTukGf8c3",
+      "hasNarration": true
+    },
+    {
+      "title": "Entity Memory",
+      "slug": "entity-memory",
+      "order": 3,
+      "downloadPath": "/notebooks/memory-architectures/03_entity_memory.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1CO74Cr-nD1nfks6mWpRF0BhS7KDiiul4",
+      "hasNarration": true
+    },
+    {
+      "title": "Vector-Backed Memory",
+      "slug": "vector-backed-memory",
+      "order": 4,
+      "downloadPath": "/notebooks/memory-architectures/04_vector_backed_memory.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/11grN3fn5ut9pZZSkffqIXDm6QLoPKn07",
+      "hasNarration": true
+    },
+    {
+      "title": "Hybrid Memory Architecture (Capstone)",
+      "slug": "hybrid-memory-capstone",
+      "order": 5,
+      "downloadPath": "/notebooks/memory-architectures/05_hybrid_memory_capstone.ipynb",
+      "colabUrl": "https://colab.research.google.com/drive/1fBKJF6Jlrrdr0yvny_lKnBOiKDitg4EZ",
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Building a Clinical Memory System for MedFlow AI",
+    "description": "Build a HIPAA-compliant hybrid memory system for an AI clinical assistant that remembers allergies, medications, and diagnoses across patient sessions.",
+    "pdfUrl": "",
+    "notebookUrl": "https://colab.research.google.com/drive/1y0VH4GfE0M0v4c0n9TVHnpK8YWOHfhL7",
+    "driveId": "1y0VH4GfE0M0v4c0n9TVHnpK8YWOHfhL7"
+  },
+  "curator": {
+    "name": "Raj Dandekar",
+    "avatar": "/avatars/raj.png"
+  }
 }
