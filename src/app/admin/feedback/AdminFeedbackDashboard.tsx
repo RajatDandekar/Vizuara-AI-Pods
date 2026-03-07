@@ -345,11 +345,11 @@ export default function AdminFeedbackDashboard() {
                                     <span className="font-medium">To:</span> {f.userName} &lt;{f.userEmail}&gt;
                                   </p>
                                   <p className="text-text-muted mb-2">
-                                    <span className="font-medium">Subject:</span> Re: Your feedback on Vizuara
+                                    <span className="font-medium">Subject:</span> Re: Your feedback on Vizuara AI Pods
                                   </p>
                                   <hr className="mb-2" />
                                   <p>Hi {f.userName},</p>
-                                  <p className="mt-1">Thank you for your feedback on Vizuara. Here&apos;s our response:</p>
+                                  <p className="mt-1">Thank you for your feedback on Vizuara AI Pods. Here&apos;s our response:</p>
                                   <div className="bg-gray-50 border-l-4 border-indigo-500 p-3 my-2 rounded">
                                     <p className="whitespace-pre-wrap">{replyDraft.replyText}</p>
                                   </div>

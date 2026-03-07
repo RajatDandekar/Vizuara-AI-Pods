@@ -98,11 +98,11 @@ export async function PUT(
   }
 
   // Build the email
-  const subject = `Re: Your feedback on Vizuara`;
+  const subject = `Re: Your feedback on Vizuara AI Pods`;
   const html = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
       <p>Hi ${userName},</p>
-      <p>Thank you for your feedback on Vizuara. Here's our response:</p>
+      <p>Thank you for your feedback on Vizuara AI Pods. Here's our response:</p>
       <div style="background: #f8f9fa; border-left: 4px solid #4f46e5; padding: 16px; margin: 16px 0; border-radius: 4px;">
         ${reply.reply_text.replace(/\n/g, '<br>')}
       </div>
