@@ -69,14 +69,14 @@
       "title": "Build LLM from Scratch",
       "description": "From BERT to GPT \u2014 build large language models from first principles.",
       "difficulty": "intermediate",
-      "estimatedHours": 23,
+      "estimatedHours": 28,
       "tags": [
         "language-models",
         "transformers",
         "nlp"
       ],
-      "podCount": 6,
-      "totalNotebooks": 24,
+      "podCount": 7,
+      "totalNotebooks": 29,
       "status": "live",
       "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
     },

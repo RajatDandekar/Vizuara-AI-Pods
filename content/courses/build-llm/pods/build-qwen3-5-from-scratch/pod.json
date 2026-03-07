@@ -1,0 +1,100 @@
+{
+  "title": "Build Qwen3.5 from Scratch",
+  "slug": "build-qwen3-5-from-scratch",
+  "courseSlug": "build-llm",
+  "order": 7,
+  "description": "Hybrid attention, Mixture-of-Experts, and local deployment — build the architecture that lets a 9B model outperform one 13x its size.",
+  "difficulty": "advanced",
+  "estimatedHours": 5,
+  "prerequisites": [
+    "self-attention-first-principles",
+    "gpt-from-scratch"
+  ],
+  "tags": [
+    "qwen3.5",
+    "linear-attention",
+    "gated-deltanet",
+    "mixture-of-experts",
+    "hybrid-attention",
+    "local-deployment"
+  ],
+  "thumbnail": "/courses/build-llm/pods/build-qwen3-5-from-scratch/figures/figure_1.png",
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "From Softmax to Linear Attention",
+      "slug": "01-softmax_to_linear_attention",
+      "objective": "Understand the O(N²) bottleneck of standard attention and derive the linear attention reformulation from first principles.",
+      "colabUrl": "https://colab.research.google.com/drive/1uXhTn0uAYH5jwxKe9j2_861rBCagxhU5",
+      "downloadPath": "/notebooks/build-qwen3-5-from-scratch/01_softmax_to_linear_attention.ipynb",
+      "estimatedMinutes": 90,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "DeltaNet: Error-Correcting Memory",
+      "slug": "02-deltanet_error_correcting_memory",
+      "objective": "Build the delta rule update and compare naive linear attention vs DeltaNet on a retrieval task.",
+      "colabUrl": "https://colab.research.google.com/drive/1btZCWbin7lPmm2GZrvA8pjjDB3OeQO0O",
+      "downloadPath": "/notebooks/build-qwen3-5-from-scratch/02_deltanet_error_correcting_memory.ipynb",
+      "estimatedMinutes": 90,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Gated DeltaNet: The Full Layer",
+      "slug": "03-gated_deltanet_full_layer",
+      "objective": "Implement the complete Gated DeltaNet layer with Conv1D, SiLU, L2 norm, exponential gating, and delta rule updates.",
+      "colabUrl": "https://colab.research.google.com/drive/159SypcUjPLz9ZP2MUEBTG9eY8R3kJAP0",
+      "downloadPath": "/notebooks/build-qwen3-5-from-scratch/03_gated_deltanet_full_layer.ipynb",
+      "estimatedMinutes": 90,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    },
+    {
+      "title": "Hybrid Attention + MoE",
+      "slug": "04-hybrid_attention_moe",
+      "objective": "Assemble the 3:1 hybrid attention pattern and implement fine-grained MoE with top-k routing and a shared expert.",
+      "colabUrl": "https://colab.research.google.com/drive/16QyEuMHJ31GWokkfxAYtjZveeKnK5nqI",
+      "downloadPath": "/notebooks/build-qwen3-5-from-scratch/04_hybrid_attention_moe.ipynb",
+      "estimatedMinutes": 90,
+      "todoCount": 3,
+      "order": 4,
+      "hasNarration": true
+    },
+    {
+      "title": "Build & Run Mini-Qwen3.5 Locally",
+      "slug": "05-build_run_mini_qwen35",
+      "objective": "Build a mini Qwen3.5 from scratch, train it, load official weights, quantize, and run inference locally.",
+      "colabUrl": "https://colab.research.google.com/drive/1I5M-gt9sqUU3utbZ7YHPSlLfyTpG1Mo-",
+      "downloadPath": "/notebooks/build-qwen3-5-from-scratch/05_build_run_mini_qwen35.ipynb",
+      "estimatedMinutes": 120,
+      "todoCount": 3,
+      "order": 5,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": {
+    "title": "Building a Local AI Coding Assistant for a Privacy-Conscious Healthcare Startup",
+    "subtitle": "MedCode Health — HIPAA-Compliant On-Device Code Intelligence",
+    "company": "MedCode Health",
+    "industry": "Healthcare — Software Development",
+    "description": "MedCode Health deploys Qwen3.5-9B locally using llama.cpp to build a HIPAA-compliant coding assistant for their medical records system, achieving $0 API costs and sub-50ms latency.",
+    "pdfPath": "/case-studies/build-qwen3-5-from-scratch/case_study.pdf",
+    "colabUrl": "https://colab.research.google.com/drive/1zqUyeb1OUUXxJx5_OUtmNtVB0JQYZctN",
+    "notebookPath": "/case-studies/build-qwen3-5-from-scratch/case_study_notebook.ipynb"
+  },
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  }
+}

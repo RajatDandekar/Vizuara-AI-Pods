@@ -3,7 +3,7 @@
   "slug": "build-llm",
   "description": "From BERT to GPT \u2014 build large language models from first principles.",
   "difficulty": "intermediate",
-  "estimatedHours": 4,
+  "estimatedHours": 28,
   "tags": [
     "language-models",
     "transformers",
@@ -69,6 +69,16 @@
       "estimatedHours": 4,
       "hasCaseStudy": true,
       "thumbnail": "/courses/build-llm/pods/inference-and-scaling/figures/figure_1.png"
+    },
+    {
+      "slug": "build-qwen3-5-from-scratch",
+      "title": "Build Qwen3.5 from Scratch",
+      "description": "Hybrid attention, Mixture-of-Experts, and local deployment \u2014 build the architecture that lets a 9B model outperform one 13x its size.",
+      "order": 7,
+      "notebookCount": 5,
+      "estimatedHours": 5,
+      "hasCaseStudy": true,
+      "thumbnail": "/courses/build-llm/pods/build-qwen3-5-from-scratch/figures/figure_1.png"
     }
   ],
   "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
