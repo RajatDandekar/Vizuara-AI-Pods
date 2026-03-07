@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Industry Context and Business Problem
+## Section 1: Industry Context and Business Problem
 
 ### The Healthcare Software Compliance Crisis
 
@@ -42,7 +42,7 @@ The CTO has approved a budget of \$15,000 for hardware and \$0 for recurring API
 
 ---
 
-## 2. Technical Problem Formulation
+## Section 2: Technical Problem Formulation
 
 ### 2.1 Problem Statement
 
@@ -109,7 +109,7 @@ Configuration:
 
 ---
 
-## 3. Implementation Details
+## Section 3: Implementation Details
 
 ### 3.1 Hardware Setup
 
@@ -173,7 +173,7 @@ The IDE integration automatically selects the mode: inline completions use non-t
 
 ---
 
-## 4. Results and Business Impact
+## Section 4: Results and Business Impact
 
 ### 4.1 Performance Benchmarks
 
@@ -240,7 +240,7 @@ Even the cheapest cloud option would cost \$1,440/year — more than half the co
 
 ---
 
-## 5. Lessons Learned and Production Considerations
+### Lessons Learned and Production Considerations
 
 ### What Worked Well
 
@@ -274,7 +274,7 @@ Even the cheapest cloud option would cost \$1,440/year — more than half the co
 
 ---
 
-## 6. Companion Notebook Overview
+## Section 5: Companion Notebook Overview
 
 The companion Colab notebook implements a simplified version of MedCode's deployment:
 
