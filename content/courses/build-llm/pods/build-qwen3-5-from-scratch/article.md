@@ -1,5 +1,9 @@
 # Build Qwen3.5 from Scratch: Hybrid Attention, Mixture-of-Experts, and the Future of Local AI
 
+*How three architectural innovations — linear attention, gated memory, and sparse experts — let a 9B model outperform one 13× its size*
+
+---
+
 Let us start with a thought experiment. You download a 5 GB file onto your laptop. You type a question. In under a second, your laptop — with no internet connection, no API key, no cloud server — starts generating a fluent, intelligent response. No data leaves your machine. The model running locally on your hardware just scored higher on a graduate-level science exam than a model 13 times its size running on a billion-dollar data center.
 
 This is not science fiction. This is Qwen3.5.
