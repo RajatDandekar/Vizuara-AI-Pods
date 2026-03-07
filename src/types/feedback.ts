@@ -37,6 +37,17 @@ export interface FeedbackRecord {
   tags?: FeedbackTag[];
   userName?: string;
   userEmail?: string;
+  replies?: FeedbackReply[];
+}
+
+export interface FeedbackReply {
+  id: string;
+  feedbackId: string;
+  replyText: string;
+  repliedBy: string;
+  status: 'draft' | 'sent';
+  sentAt: string | null;
+  createdAt: string;
 }
 
 export interface FeedbackStats {

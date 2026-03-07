@@ -50,6 +50,37 @@ export async function GET(req: NextRequest) {
     }
   }
 
+  // Fetch replies for all feedback items
+  const feedbackIds = (rows ?? []).map(r => r.id);
+  let repliesMap: Record<string, Array<{
+    id: string;
+    feedbackId: string;
+    replyText: string;
+    repliedBy: string;
+    status: string;
+    sentAt: string | null;
+    createdAt: string;
+  }>> = {};
+  if (feedbackIds.length > 0) {
+    const { data: replyRows } = await db
+      .from('feedback_replies')
+      .select('*')
+      .in('feedback_id', feedbackIds)
+      .order('created_at', { ascending: true });
+    for (const row of replyRows ?? []) {
+      if (!repliesMap[row.feedback_id]) repliesMap[row.feedback_id] = [];
+      repliesMap[row.feedback_id].push({
+        id: row.id,
+        feedbackId: row.feedback_id,
+        replyText: row.reply_text,
+        repliedBy: row.replied_by,
+        status: row.status,
+        sentAt: row.sent_at,
+        createdAt: row.created_at,
+      });
+    }
+  }
+
   const feedback = (rows ?? []).map(r => ({
     id: r.id,
     userId: r.user_id,
@@ -67,6 +98,7 @@ export async function GET(req: NextRequest) {
     tags: tagsMap[r.id] || [],
     userName: r.users?.full_name,
     userEmail: r.users?.email,
+    replies: repliesMap[r.id] || [],
   }));
 
   // Compute aggregate stats (unfiltered)
