@@ -18,7 +18,7 @@ export async function sendReplyEmail({ to, toName, subject, html }: SendReplyEma
   const result = await client.transactionalEmails.sendTransacEmail({
     subject,
     htmlContent: html,
-    sender: { name: 'Vizuara', email: 'hello@vizuara.ai' },
+    sender: { name: 'Vizuara', email: 'hello@vizuara.com' },
     to: [{ email: to, name: toName }],
   });
 
