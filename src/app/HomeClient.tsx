@@ -58,10 +58,12 @@ export default function HomeClient({
   const [search, setSearch] = useState('');
   const [browseFiltered, setBrowseFiltered] = useState<CourseCard[]>([]);
   const [bannerDismissed, setBannerDismissed] = useState(true);
+  const [qwenBannerDismissed, setQwenBannerDismissed] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setBannerDismissed(localStorage.getItem('dismiss_context_eng_banner') === '1');
+      setQwenBannerDismissed(localStorage.getItem('dismiss_qwen35_banner') === '1');
     }
   }, []);
 
@@ -292,6 +294,36 @@ export default function HomeClient({
             </Link>
           </FadeIn>
 
+          {/* New pod announcement — Qwen3.5 */}
+          <FadeIn delay={0.07}>
+            <Link href="/courses/build-llm/build-qwen3-5-from-scratch">
+              <div className="relative overflow-hidden rounded-2xl border border-violet-200/60 bg-gradient-to-r from-violet-50 via-white to-purple-50 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.08),transparent_60%)]" />
+                <div className="relative flex items-center gap-5 px-6 py-5">
+                  <div className="hidden sm:block flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-100 text-violet-700 uppercase tracking-wide">New Pod</span>
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Build Qwen3.5 from Scratch &mdash; Hybrid Attention, MoE &amp; Local Deployment</h3>
+                    <p className="text-sm text-slate-500">
+                      Learn how a 9B model outperforms one 13&times; its size. 5 narrated notebooks covering linear attention, Gated DeltaNet, Mixture-of-Experts, and running your own LLM locally.
+                    </p>
+                  </div>
+                  <svg className="w-5 h-5 text-violet-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </FadeIn>
+
           {/* Free Modules — real content, no login required */}
           <FadeIn delay={0.1}>
             <div className="text-center mb-10">
@@ -497,6 +529,54 @@ export default function HomeClient({
                     onClick={() => {
                       setBannerDismissed(true);
                       localStorage.setItem('dismiss_context_eng_banner', '1');
+                    }}
+                    className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+                    aria-label="Dismiss"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </FadeIn>
+          )}
+
+          {/* New Pod Announcement — Qwen3.5 */}
+          {!qwenBannerDismissed && (
+            <FadeIn delay={0.04}>
+              <div className="relative overflow-hidden rounded-2xl border border-violet-200/60 bg-gradient-to-r from-violet-50 via-white to-purple-50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.08),transparent_60%)]" />
+                <div className="relative flex items-start gap-5 px-6 py-5">
+                  <div className="hidden sm:block flex-shrink-0 mt-1">
+                    <div className="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-100 text-violet-700 uppercase tracking-wide">New Pod</span>
+                      <h3 className="font-bold text-slate-900 text-base">Build Qwen3.5 from Scratch &mdash; Now Live</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                      Hybrid attention, Gated DeltaNet, Mixture-of-Experts, and local deployment &mdash; 5 narrated notebooks that show how a 9B model outperforms one 13&times; its size. Includes a full case study.
+                    </p>
+                    <Link
+                      href="/courses/build-llm/build-qwen3-5-from-scratch"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-700 hover:text-violet-900 transition-colors"
+                    >
+                      Start learning
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setQwenBannerDismissed(true);
+                      localStorage.setItem('dismiss_qwen35_banner', '1');
                     }}
                     className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
                     aria-label="Dismiss"
