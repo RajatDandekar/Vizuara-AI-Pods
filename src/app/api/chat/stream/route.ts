@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic';
 
 const CHAT_MODEL = 'gemini-2.5-flash';
 const MAX_RETRIES = 3;
+const MAX_OUTPUT_TOKENS = 65536;
 
 const SYSTEM_PROMPT = `You are an AI teaching assistant for the Vizuara learning platform. You have access to the full content of a Google Colab notebook that a student is currently working through.
 
@@ -82,7 +83,7 @@ export async function POST(request: NextRequest) {
             config: {
               systemInstruction: SYSTEM_PROMPT + truncatedContext,
               temperature: 0.7,
-              maxOutputTokens: 2048,
+              maxOutputTokens: MAX_OUTPUT_TOKENS,
             },
           });
 
