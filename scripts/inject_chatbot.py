@@ -94,18 +94,51 @@ def find_insert_position(cells: list[dict]) -> int:
 # ── Injection ─────────────────────────────────────────────────────────────────
 
 
+def _build_pod_to_course_map() -> dict[str, str]:
+    """Build mapping of pod slug → parent course slug from course manifests."""
+    mapping = {}
+    content_dir = PROJECT_ROOT / "content" / "courses"
+    for course_json in content_dir.glob("*/course.json"):
+        with open(course_json) as f:
+            course = json.load(f)
+        course_slug = course.get("slug") or course_json.parent.name
+        for pod in course.get("pods", []):
+            mapping[pod["slug"]] = course_slug
+    return mapping
+
+
+_POD_TO_COURSE: dict[str, str] | None = None
+
+
+def _get_pod_to_course() -> dict[str, str]:
+    global _POD_TO_COURSE
+    if _POD_TO_COURSE is None:
+        _POD_TO_COURSE = _build_pod_to_course_map()
+    return _POD_TO_COURSE
+
+
 def _detect_slug_and_order(notebook_path: str) -> tuple[str, int]:
-    """Detect course slug and notebook order from the file path.
+    """Detect course/pod slug and notebook order from the file path.
+
+    Returns the full URL path segment: '{courseSlug}/{podSlug}' or just '{slug}'
+    if no parent course is found.
 
     Expects paths like:
       public/notebooks/{slug}/01_topic.ipynb  → (slug, 1)
       public/case-studies/{slug}/case_study_notebook.ipynb → (slug, 0)
+      public/case-studies/{courseSlug}/{podSlug}/case_study_notebook.ipynb → (slug, 0)
     """
     p = Path(notebook_path)
     slug = p.parent.name
     # Try to extract order from filename prefix (e.g. "01_...", "02_...")
     match = __import__("re").match(r"^(\d+)", p.stem)
     order = int(match.group(1)) if match else 0
+
+    # Look up parent course for this pod
+    pod_to_course = _get_pod_to_course()
+    if slug in pod_to_course and pod_to_course[slug] != slug:
+        slug = f"{pod_to_course[slug]}/{slug}"
+
     return slug, order
 
 
