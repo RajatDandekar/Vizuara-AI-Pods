@@ -47,7 +47,7 @@ export default function PaperSummary({
       />
 
       {paper.summary.status === 'error' && (
-        <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-xl">
+        <div className="mt-4 p-3 bg-accent-red-light border border-accent-red/20 rounded-xl">
           <p className="text-sm text-accent-red mb-2">
             Failed to generate summary: {paper.summary.error}
           </p>

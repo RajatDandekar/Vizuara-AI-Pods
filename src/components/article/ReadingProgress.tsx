@@ -27,7 +27,7 @@ export default function ReadingProgress() {
   }, [handleScroll]);
 
   return (
-    <div className="fixed top-14 left-0 right-0 z-40 h-1 bg-gray-100">
+    <div className="fixed top-14 left-0 right-0 z-40 h-1 bg-progress-track">
       <div
         className="h-full bg-accent-blue transition-[width] duration-150 ease-out"
         style={{ width: `${progress}%` }}

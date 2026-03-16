@@ -205,8 +205,8 @@ export default function FigureReviewStep() {
 
         {/* Error banner with retry */}
         {errorCount > 0 && generatingCount === 0 && !autoGenerating && (
-          <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center justify-between">
-            <p className="text-red-600 text-base font-medium">
+          <div className="mb-4 p-4 bg-accent-red-light border border-accent-red/20 rounded-xl flex items-center justify-between">
+            <p className="text-accent-red text-base font-medium">
               {errorCount} figure{errorCount > 1 ? 's' : ''} failed to generate
             </p>
             <button

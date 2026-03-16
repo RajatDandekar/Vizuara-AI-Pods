@@ -24,7 +24,7 @@ export default function CourseCard({ course, completion = 0 }: CourseCardProps) 
       <Link href={`/courses/${course.slug}`}>
         <div className="group bg-card-bg rounded-2xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 cursor-pointer h-full flex flex-col border border-card-border/60">
           {/* Thumbnail */}
-          <div className="relative w-full aspect-[16/9] overflow-hidden bg-gray-100">
+          <div className="relative w-full aspect-[16/9] overflow-hidden bg-surface-tertiary">
             {course.thumbnail ? (
               <Image
                 src={course.thumbnail}
@@ -34,7 +34,7 @@ export default function CourseCard({ course, completion = 0 }: CourseCardProps) 
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-gradient-from to-gradient-to flex items-center justify-center">
                 <svg className="w-12 h-12 text-accent-blue/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
@@ -85,7 +85,7 @@ export default function CourseCard({ course, completion = 0 }: CourseCardProps) 
             {/* Progress bar */}
             {completion > 0 && (
               <div className="mt-3">
-                <div className="w-full h-1 bg-gray-100 rounded-full overflow-hidden">
+                <div className="w-full h-1 bg-progress-track rounded-full overflow-hidden">
                   <div
                     className="h-full bg-accent-green rounded-full transition-all duration-500"
                     style={{ width: `${completion}%` }}

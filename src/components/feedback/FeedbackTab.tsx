@@ -58,7 +58,7 @@ export default function FeedbackTab() {
       {open && (
         <>
           <div className="fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />
-          <div className="fixed right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-2xl z-50 flex flex-col">
+          <div className="fixed right-0 top-0 bottom-0 w-full max-w-sm bg-card-bg shadow-2xl z-50 flex flex-col">
             <div className="flex items-center justify-between p-4 border-b">
               <h2 className="text-sm font-semibold text-foreground">Send Feedback</h2>
               <button
@@ -92,7 +92,7 @@ export default function FeedbackTab() {
                         className={`text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
                           category === value
                             ? 'bg-accent-blue-light border-accent-blue text-accent-blue'
-                            : 'border-gray-200 text-text-muted hover:border-gray-300'
+                            : 'border-card-border text-text-muted hover:border-card-border'
                         }`}
                       >
                         {label}
@@ -109,7 +109,7 @@ export default function FeedbackTab() {
                     value={comment}
                     onChange={e => setComment(e.target.value)}
                     placeholder="Tell us what's on your mind..."
-                    className="flex-1 min-h-[120px] text-sm border border-gray-200 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-accent-blue/30 resize-none"
+                    className="flex-1 min-h-[120px] text-sm border border-card-border rounded-lg p-3 bg-card-bg focus:outline-none focus:ring-2 focus:ring-accent-blue/30 resize-none"
                     required
                   />
                 </div>

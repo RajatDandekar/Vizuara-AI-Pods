@@ -173,7 +173,7 @@ function SectionCard({ section, children }: { section: SectionTab; children: Rea
       >
         <div className={`bg-card-bg border border-card-border border-l-4 ${borderColor} rounded-2xl shadow-sm overflow-hidden`}>
           {/* Section header */}
-          <div className="px-6 py-4 border-b border-card-border bg-gray-50/50">
+          <div className="px-6 py-4 border-b border-card-border bg-surface-secondary/50">
             <div className="flex items-center gap-2.5">
               <span className="text-text-muted">{meta.icon}</span>
               <h2 className="text-base font-semibold text-foreground">{meta.title}</h2>
@@ -204,7 +204,7 @@ function GenerateCTA({ section, onGenerate }: { section: SectionTab; onGenerate:
       transition={{ duration: 0.3 }}
     >
       <div className="bg-card-bg border border-card-border rounded-2xl p-8 sm:p-10 text-center">
-        <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-4 text-text-muted">
+        <div className="w-14 h-14 rounded-2xl bg-surface-tertiary flex items-center justify-center mx-auto mb-4 text-text-muted">
           {meta.icon}
         </div>
         <h3 className="text-lg font-semibold text-foreground mb-2">{meta.title}</h3>

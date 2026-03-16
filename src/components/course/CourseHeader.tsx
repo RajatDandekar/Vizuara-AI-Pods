@@ -52,7 +52,7 @@ export default function CourseHeader({
           </span>
         )}
         {tags.map((tag) => (
-          <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-text-secondary">
+          <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-surface-tertiary text-text-secondary">
             {tag}
           </span>
         ))}

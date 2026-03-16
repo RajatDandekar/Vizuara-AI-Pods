@@ -28,7 +28,7 @@ export default function InlineFeedback({ courseSlug, podSlug, contentType, noteb
           contentType={contentType}
           notebookOrder={notebookOrder}
         />
-        <div className="hidden sm:block w-px h-8 bg-gray-200" />
+        <div className="hidden sm:block w-px h-8 bg-skeleton" />
         <ThumbsRating
           courseSlug={courseSlug}
           podSlug={podSlug}

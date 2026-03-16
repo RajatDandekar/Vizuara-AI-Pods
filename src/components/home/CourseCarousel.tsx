@@ -13,9 +13,9 @@ interface CourseCarouselProps {
 }
 
 const difficultyColor: Record<string, string> = {
-  beginner: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  intermediate: 'bg-blue-50 text-blue-700 border-blue-200',
-  advanced: 'bg-amber-50 text-amber-700 border-amber-200',
+  beginner: 'difficulty-beginner border',
+  intermediate: 'difficulty-intermediate border',
+  advanced: 'difficulty-advanced border',
 };
 
 const HOVER_OPEN_DELAY = 400;   // ms before expanded card appears
@@ -131,7 +131,7 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
       {canScrollLeft && (
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all opacity-0 group-hover/carousel:opacity-100 -translate-x-1/2 cursor-pointer"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card-bg border border-card-border shadow-lg flex items-center justify-center text-text-secondary hover:text-foreground hover:border-card-border transition-all opacity-0 group-hover/carousel:opacity-100 -translate-x-1/2 cursor-pointer"
           aria-label="Scroll left"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -144,7 +144,7 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
       {canScrollRight && (
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 shadow-lg flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-300 transition-all opacity-0 group-hover/carousel:opacity-100 translate-x-1/2 cursor-pointer"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card-bg border border-card-border shadow-lg flex items-center justify-center text-text-secondary hover:text-foreground hover:border-card-border transition-all opacity-0 group-hover/carousel:opacity-100 translate-x-1/2 cursor-pointer"
           aria-label="Scroll right"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -170,7 +170,7 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
               <Link
                 href={course.status === 'upcoming' ? '#' : `/courses/${course.slug}`}
               >
-                <div className="bg-white rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer group border border-blue-200 shadow-sm hover:shadow-lg hover:border-blue-300 hover:-translate-y-1 transition-all duration-300">
+                <div className="bg-card-bg rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer group border border-card-border shadow-sm hover:shadow-lg hover:border-accent-blue/40 hover:-translate-y-1 transition-all duration-300">
                   {/* Thumbnail */}
                   {course.thumbnail ? (
                     <div className="relative w-full aspect-[16/9] overflow-hidden">
@@ -181,11 +181,11 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="280px"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay-from via-gradient-overlay-from/20 to-transparent" />
 
                       {completion > 0 && (
                         <div className="absolute top-2.5 right-2.5">
-                          <div className="bg-emerald-50 backdrop-blur-sm border border-emerald-200 rounded-full px-2 py-0.5 text-[11px] font-bold text-emerald-700">
+                          <div className="bg-accent-green-light backdrop-blur-sm border border-accent-green/30 rounded-full px-2 py-0.5 text-[11px] font-bold text-accent-green">
                             {completion}%
                           </div>
                         </div>
@@ -193,20 +193,20 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
 
                       {course.status === 'upcoming' && (
                         <div className="absolute top-2.5 left-2.5">
-                          <div className="bg-amber-50 backdrop-blur-sm border border-amber-200 rounded-full px-2 py-0.5 text-[11px] font-medium text-amber-700">
+                          <div className="bg-accent-amber-light backdrop-blur-sm border border-accent-amber/30 rounded-full px-2 py-0.5 text-[11px] font-medium text-accent-amber">
                             Coming Soon
                           </div>
                         </div>
                       )}
                     </div>
                   ) : (
-                    <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
-                      <svg className="w-8 h-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <div className="relative w-full aspect-[16/9] bg-gradient-to-br from-gradient-from to-gradient-to flex items-center justify-center">
+                      <svg className="w-8 h-8 text-accent-blue/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                       </svg>
                       {course.status === 'upcoming' && (
                         <div className="absolute top-2.5 left-2.5">
-                          <div className="bg-amber-50 backdrop-blur-sm border border-amber-200 rounded-full px-2 py-0.5 text-[11px] font-medium text-amber-700">
+                          <div className="bg-accent-amber-light backdrop-blur-sm border border-accent-amber/30 rounded-full px-2 py-0.5 text-[11px] font-medium text-accent-amber">
                             Coming Soon
                           </div>
                         </div>
@@ -216,27 +216,27 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
 
                   {/* Content */}
                   <div className="p-4 flex flex-col flex-1">
-                    <h3 className="font-bold text-slate-900 text-lg leading-snug mb-1.5 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    <h3 className="font-bold text-foreground text-lg leading-snug mb-1.5 group-hover:text-accent-blue transition-colors line-clamp-2">
                       {course.title}
                     </h3>
 
-                    <p className="text-base text-slate-700 leading-relaxed mb-3 line-clamp-2">
+                    <p className="text-base text-text-secondary leading-relaxed mb-3 line-clamp-2">
                       {course.description}
                     </p>
 
                     {/* Meta — pushed to bottom */}
-                    <div className="flex items-center gap-2 mt-auto pt-2 border-t border-slate-100">
+                    <div className="flex items-center gap-2 mt-auto pt-2 border-t border-card-border/30">
                       <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${difficultyColor[course.difficulty]}`}>
                         {course.difficulty}
                       </span>
-                      <span className="text-[11px] text-slate-400">~{course.estimatedHours}h</span>
+                      <span className="text-[11px] text-text-muted">~{course.estimatedHours}h</span>
                       {course.podCount > 0 && (
-                        <span className="text-[11px] text-slate-400 ml-auto">
+                        <span className="text-[11px] text-text-muted ml-auto">
                           {course.podCount} pod{course.podCount !== 1 ? 's' : ''}
                         </span>
                       )}
                       {(course.totalNotebooks || course.notebookCount || 0) > 0 && (
-                        <span className="text-[11px] text-slate-400 flex items-center gap-1">
+                        <span className="text-[11px] text-text-muted flex items-center gap-1">
                           <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                           </svg>
@@ -248,7 +248,7 @@ export default function CourseCarousel({ courses, completions = {} }: CourseCaro
                     {/* Progress bar */}
                     {completion > 0 && (
                       <div className="mt-2.5">
-                        <div className="w-full h-1 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="w-full h-1 bg-progress-track rounded-full overflow-hidden">
                           <div
                             className="h-full bg-emerald-500 rounded-full transition-all duration-500"
                             style={{ width: `${completion}%` }}

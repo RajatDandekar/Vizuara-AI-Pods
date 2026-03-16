@@ -81,8 +81,8 @@ export default function PaperNotebook({
   if (paper.notebook.status === 'streaming' || paper.notebook.status === 'loading') {
     return (
       <div className="text-center py-8">
-        <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mx-auto mb-5">
-          <svg className="w-7 h-7 text-emerald-600 animate-spin" viewBox="0 0 24 24" fill="none">
+        <div className="w-16 h-16 rounded-2xl bg-accent-green-light flex items-center justify-center mx-auto mb-5">
+          <svg className="w-7 h-7 text-accent-green animate-spin" viewBox="0 0 24 24" fill="none">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
@@ -93,7 +93,7 @@ export default function PaperNotebook({
         </p>
         {/* Simple progress indicator based on content length */}
         <div className="max-w-xs mx-auto">
-          <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+          <div className="h-1.5 bg-progress-track rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-emerald-500 rounded-full"
               initial={{ width: '5%' }}
@@ -119,8 +119,8 @@ export default function PaperNotebook({
         transition={{ duration: 0.3 }}
         className="text-center py-6"
       >
-        <div className="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mx-auto mb-5">
-          <svg className="w-7 h-7 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <div className="w-16 h-16 rounded-2xl bg-accent-green-light flex items-center justify-center mx-auto mb-5">
+          <svg className="w-7 h-7 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
@@ -167,7 +167,7 @@ export default function PaperNotebook({
   if (paper.notebook.status === 'error') {
     return (
       <div className="text-center py-6">
-        <div className="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mx-auto mb-4">
+        <div className="w-14 h-14 rounded-2xl bg-accent-red-light flex items-center justify-center mx-auto mb-4">
           <svg className="w-6 h-6 text-accent-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
           </svg>

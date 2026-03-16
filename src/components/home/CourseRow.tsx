@@ -52,7 +52,7 @@ export default function CourseRow({ courses, completions = {} }: CourseRowProps)
       {canScrollLeft && (
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm border border-card-border rounded-full shadow-md flex items-center justify-center hover:bg-white transition-all opacity-0 group-hover/row:opacity-100 cursor-pointer hidden md:flex"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-card-bg/90 backdrop-blur-sm border border-card-border rounded-full shadow-md flex items-center justify-center hover:bg-card-bg transition-all opacity-0 group-hover/row:opacity-100 cursor-pointer hidden md:flex"
         >
           <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -78,7 +78,7 @@ export default function CourseRow({ courses, completions = {} }: CourseRowProps)
       {canScrollRight && (
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm border border-card-border rounded-full shadow-md flex items-center justify-center hover:bg-white transition-all opacity-0 group-hover/row:opacity-100 cursor-pointer hidden md:flex"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-card-bg/90 backdrop-blur-sm border border-card-border rounded-full shadow-md flex items-center justify-center hover:bg-card-bg transition-all opacity-0 group-hover/row:opacity-100 cursor-pointer hidden md:flex"
         >
           <svg className="w-5 h-5 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

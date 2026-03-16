@@ -96,9 +96,9 @@ export default function PaperDiscoveryCard({
                   )}
                   {/* Progress dots */}
                   <div className="flex gap-1 ml-1">
-                    <div className={`w-1.5 h-1.5 rounded-full ${summaryDone ? 'bg-accent-green' : 'bg-gray-200'}`} />
-                    <div className={`w-1.5 h-1.5 rounded-full ${archDone ? 'bg-accent-green' : 'bg-gray-200'}`} />
-                    <div className={`w-1.5 h-1.5 rounded-full ${notebookDone ? 'bg-accent-green' : 'bg-gray-200'}`} />
+                    <div className={`w-1.5 h-1.5 rounded-full ${summaryDone ? 'bg-accent-green' : 'bg-skeleton'}`} />
+                    <div className={`w-1.5 h-1.5 rounded-full ${archDone ? 'bg-accent-green' : 'bg-skeleton'}`} />
+                    <div className={`w-1.5 h-1.5 rounded-full ${notebookDone ? 'bg-accent-green' : 'bg-skeleton'}`} />
                   </div>
                 </div>
               ) : (

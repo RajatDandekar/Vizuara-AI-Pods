@@ -13,9 +13,9 @@ const variantStyles = {
   primary:
     'bg-accent-blue text-white hover:bg-blue-700 active:bg-blue-800 shadow-sm',
   secondary:
-    'bg-white text-foreground border border-card-border hover:bg-gray-50 active:bg-gray-100',
+    'bg-card-bg text-foreground border border-card-border hover:bg-surface-hover active:bg-surface-active',
   ghost:
-    'text-text-secondary hover:text-foreground hover:bg-gray-100 active:bg-gray-200',
+    'text-text-secondary hover:text-foreground hover:bg-surface-active active:bg-skeleton',
 };
 
 const sizeStyles = {

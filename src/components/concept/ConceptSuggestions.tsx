@@ -15,10 +15,10 @@ export default function ConceptSuggestions({ onSelect }: ConceptSuggestionsProps
           onClick={() => onSelect(concept)}
           className="
             px-3.5 py-1.5 text-sm font-medium
-            bg-white border border-card-border rounded-full
+            bg-card-bg border border-card-border rounded-full
             text-text-secondary
             hover:border-accent-blue hover:text-accent-blue hover:bg-accent-blue-light
-            active:bg-blue-100
+            active:bg-accent-blue-light
             transition-all duration-200 cursor-pointer
           "
         >

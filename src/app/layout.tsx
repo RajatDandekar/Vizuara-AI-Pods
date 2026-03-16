@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { AuthProvider } from '@/context/AuthContext';
 import { SubscriptionProvider } from '@/context/SubscriptionContext';
+import { ThemeProvider } from '@/context/ThemeContext';
 import FeedbackTab from '@/components/feedback/FeedbackTab';
 
 const figtree = Figtree({
@@ -31,17 +32,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('vizuara-theme');if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body
         className={`${figtree.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col font-light`}
         style={{ fontFamily: 'var(--font-figtree), system-ui, sans-serif' }}
       >
         <AuthProvider>
           <SubscriptionProvider>
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <FeedbackTab />
+            <ThemeProvider>
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <FeedbackTab />
+            </ThemeProvider>
           </SubscriptionProvider>
         </AuthProvider>
       </body>

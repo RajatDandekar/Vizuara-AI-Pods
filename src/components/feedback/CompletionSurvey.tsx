@@ -84,7 +84,7 @@ export default function CompletionSurvey({ courseSlug, podSlug, contentType }: P
                   className={`text-xs px-3 py-1.5 rounded-full border transition-colors cursor-pointer ${
                     answers[key] === option
                       ? 'bg-accent-blue-light border-accent-blue text-accent-blue'
-                      : 'border-gray-200 text-text-muted hover:border-gray-300'
+                      : 'border-card-border text-text-muted hover:border-card-border'
                   } ${done ? 'opacity-75' : ''}`}
                 >
                   {option}

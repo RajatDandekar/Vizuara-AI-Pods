@@ -74,8 +74,8 @@ export default function ThumbsRating({ courseSlug, podSlug, contentType, noteboo
           disabled={submitting}
           className={`p-2 rounded-lg transition-all cursor-pointer ${
             selected === 1
-              ? 'bg-green-50 text-accent-green'
-              : 'text-text-muted hover:bg-gray-100 hover:text-foreground'
+              ? 'bg-accent-green-light text-accent-green'
+              : 'text-text-muted hover:bg-surface-active hover:text-foreground'
           }`}
           title="Helpful"
         >
@@ -88,8 +88,8 @@ export default function ThumbsRating({ courseSlug, podSlug, contentType, noteboo
           disabled={submitting}
           className={`p-2 rounded-lg transition-all cursor-pointer ${
             selected === 0
-              ? 'bg-red-50 text-red-500'
-              : 'text-text-muted hover:bg-gray-100 hover:text-foreground'
+              ? 'bg-accent-red-light text-accent-red'
+              : 'text-text-muted hover:bg-surface-active hover:text-foreground'
           }`}
           title="Not helpful"
         >
@@ -108,7 +108,7 @@ export default function ThumbsRating({ courseSlug, podSlug, contentType, noteboo
               className={`text-xs px-2.5 py-1 rounded-full border transition-colors cursor-pointer ${
                 tags.includes(value)
                   ? 'bg-accent-blue-light border-accent-blue text-accent-blue'
-                  : 'border-gray-200 text-text-muted hover:border-gray-300'
+                  : 'border-card-border text-text-muted hover:border-card-border'
               }`}
             >
               {label}

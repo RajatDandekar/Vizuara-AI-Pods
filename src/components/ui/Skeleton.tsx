@@ -12,7 +12,7 @@ export default function Skeleton({ className = '', lines = 1 }: SkeletonProps) {
         {Array.from({ length: lines }).map((_, i) => (
           <div
             key={i}
-            className={`animate-pulse bg-gray-200 rounded-lg h-4 ${
+            className={`animate-pulse bg-skeleton rounded-lg h-4 ${
               i === lines - 1 ? 'w-3/4' : 'w-full'
             } ${className}`}
           />
@@ -23,7 +23,7 @@ export default function Skeleton({ className = '', lines = 1 }: SkeletonProps) {
 
   return (
     <div
-      className={`animate-pulse bg-gray-200 rounded-lg ${className}`}
+      className={`animate-pulse bg-skeleton rounded-lg ${className}`}
     />
   );
 }
@@ -32,11 +32,11 @@ export function PaperCardSkeleton() {
   return (
     <div className="bg-card-bg border border-card-border rounded-2xl p-6 space-y-3">
       <div className="flex items-center gap-3">
-        <div className="animate-pulse bg-gray-200 rounded-full h-6 w-14" />
-        <div className="animate-pulse bg-gray-200 rounded-lg h-5 w-48" />
+        <div className="animate-pulse bg-skeleton rounded-full h-6 w-14" />
+        <div className="animate-pulse bg-skeleton rounded-lg h-5 w-48" />
       </div>
-      <div className="animate-pulse bg-gray-200 rounded-lg h-4 w-full" />
-      <div className="animate-pulse bg-gray-200 rounded-lg h-4 w-3/4" />
+      <div className="animate-pulse bg-skeleton rounded-lg h-4 w-full" />
+      <div className="animate-pulse bg-skeleton rounded-lg h-4 w-3/4" />
     </div>
   );
 }

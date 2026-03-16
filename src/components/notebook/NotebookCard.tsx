@@ -36,7 +36,7 @@ export default function NotebookCard({ notebook, courseSlug, podSlug, status }: 
               ? 'bg-accent-green text-white'
               : status === 'current'
                 ? 'bg-accent-blue text-white'
-                : 'bg-gray-200 text-text-muted'
+                : 'bg-skeleton text-text-muted'
             }
           `}
         >

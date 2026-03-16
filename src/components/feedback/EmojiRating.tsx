@@ -53,7 +53,7 @@ export default function EmojiRating({ courseSlug, podSlug, contentType, notebook
           className={`text-2xl p-1.5 rounded-lg transition-all cursor-pointer ${
             selected === value
               ? 'bg-accent-amber-light scale-110'
-              : 'hover:bg-gray-100 opacity-60 hover:opacity-100'
+              : 'hover:bg-surface-active opacity-60 hover:opacity-100'
           }`}
         >
           {emoji}

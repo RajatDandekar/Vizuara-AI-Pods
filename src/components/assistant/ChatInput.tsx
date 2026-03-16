@@ -37,7 +37,7 @@ export default function ChatInput({
   }
 
   return (
-    <div className="flex items-end gap-2 p-3 border-t border-card-border bg-white">
+    <div className="flex items-end gap-2 p-3 border-t border-card-border bg-card-bg">
       <textarea
         ref={textareaRef}
         value={value}
@@ -46,7 +46,7 @@ export default function ChatInput({
         placeholder="Ask about concepts, code, exercises..."
         disabled={disabled}
         rows={1}
-        className="flex-1 resize-none rounded-xl border border-card-border px-4 py-2.5 text-sm leading-relaxed outline-none transition-colors focus:border-accent-blue disabled:opacity-50 bg-white"
+        className="flex-1 resize-none rounded-xl border border-card-border px-4 py-2.5 text-sm leading-relaxed outline-none transition-colors focus:border-accent-blue disabled:opacity-50 bg-card-bg"
       />
       {isStreaming ? (
         <button

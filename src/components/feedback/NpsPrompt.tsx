@@ -78,7 +78,7 @@ export default function NpsPrompt({ courseSlug, podSlug, contentType }: Props) {
                   : value >= 7
                     ? 'bg-accent-amber text-white'
                     : 'bg-red-500 text-white'
-                : 'bg-gray-100 text-text-secondary hover:bg-gray-200'
+                : 'bg-surface-tertiary text-text-secondary hover:bg-skeleton'
             }`}
           >
             {value}
@@ -96,7 +96,7 @@ export default function NpsPrompt({ courseSlug, podSlug, contentType }: Props) {
             value={comment}
             onChange={e => setComment(e.target.value)}
             placeholder="Any additional thoughts? (optional)"
-            className="w-full text-sm border border-gray-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-accent-blue/30 resize-none"
+            className="w-full text-sm border border-card-border rounded-lg p-2.5 bg-card-bg focus:outline-none focus:ring-2 focus:ring-accent-blue/30 resize-none"
             rows={2}
             disabled={done}
           />

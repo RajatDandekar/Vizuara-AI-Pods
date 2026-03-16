@@ -43,7 +43,7 @@ export default function CoursePhase({
         onClick={isClickable ? onToggle : undefined}
         className={`
           w-full flex items-center gap-4 p-5 text-left transition-colors
-          ${isClickable ? 'cursor-pointer hover:bg-gray-50/50' : 'cursor-default'}
+          ${isClickable ? 'cursor-pointer hover:bg-surface-hover/50' : 'cursor-default'}
         `}
       >
         {/* Phase indicator */}
@@ -52,7 +52,7 @@ export default function CoursePhase({
             w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-sm font-bold
             ${status === 'completed' ? 'bg-accent-green-light text-accent-green' : ''}
             ${status === 'current' ? 'bg-accent-blue-light text-accent-blue' : ''}
-            ${status === 'locked' ? 'bg-gray-100 text-text-muted' : ''}
+            ${status === 'locked' ? 'bg-surface-tertiary text-text-muted' : ''}
           `}
         >
           {status === 'completed' ? (

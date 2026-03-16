@@ -84,7 +84,7 @@ export default function CourseExpandedCard({
     <div className="fixed inset-0 z-40 flex items-center justify-center p-4 pointer-events-none">
       {/* Card — only the card itself captures pointer events */}
       <motion.div
-        className="relative w-full max-w-2xl rounded-2xl overflow-hidden bg-white shadow-2xl flex flex-col max-h-[85vh] pointer-events-auto ring-1 ring-black/5"
+        className="relative w-full max-w-2xl rounded-2xl overflow-hidden bg-card-bg shadow-2xl flex flex-col max-h-[85vh] pointer-events-auto ring-1 ring-black/5"
         initial={{ opacity: 0, scale: 0.92, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -114,9 +114,9 @@ export default function CourseExpandedCard({
                   priority
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-gradient-from to-gradient-to flex items-center justify-center">
                   <svg
-                    className="w-16 h-16 text-blue-300"
+                    className="w-16 h-16 text-accent-blue/40"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -167,11 +167,11 @@ export default function CourseExpandedCard({
 
         {/* Content */}
         <div className="p-6 overflow-y-auto flex-1">
-          <h2 className="text-xl font-bold text-slate-900 mb-2 leading-snug">
+          <h2 className="text-xl font-bold text-foreground mb-2 leading-snug">
             {course.title}
           </h2>
 
-          <p className="text-base text-slate-600 leading-relaxed mb-4">
+          <p className="text-base text-text-secondary leading-relaxed mb-4">
             {course.description}
           </p>
 
@@ -181,7 +181,7 @@ export default function CourseExpandedCard({
               {course.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2.5 py-1 text-xs font-medium text-slate-500 bg-slate-100 rounded-full"
+                  className="px-2.5 py-1 text-xs font-medium text-text-muted bg-surface-tertiary rounded-full"
                 >
                   {tag}
                 </span>
@@ -194,14 +194,14 @@ export default function CourseExpandedCard({
             <Badge variant={difficultyVariant[course.difficulty]} size="sm">
               {course.difficulty}
             </Badge>
-            <span className="text-sm text-slate-400">~{course.estimatedHours}h</span>
+            <span className="text-sm text-text-muted">~{course.estimatedHours}h</span>
             {course.podCount > 0 && (
-              <span className="text-sm text-slate-400">
+              <span className="text-sm text-text-muted">
                 {course.podCount} pod{course.podCount !== 1 ? 's' : ''}
               </span>
             )}
             {(course.totalNotebooks || course.notebookCount || 0) > 0 && (
-              <span className="text-sm text-slate-400 flex items-center gap-1">
+              <span className="text-sm text-text-muted flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                 </svg>
@@ -221,7 +221,7 @@ export default function CourseExpandedCard({
           {/* Progress bar */}
           {completion > 0 && !isUpcoming && (
             <div className="mb-5">
-              <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div className="w-full h-1.5 bg-progress-track rounded-full overflow-hidden">
                 <div
                   className="h-full bg-emerald-500 rounded-full transition-all duration-500"
                   style={{ width: `${completion}%` }}
@@ -234,7 +234,7 @@ export default function CourseExpandedCard({
           {isUpcoming ? (
             <div className="flex items-center gap-3">
               <NotifyMeButton courseSlug={course.slug} size="md" />
-              <span className="text-sm text-slate-400">Get notified when this launches</span>
+              <span className="text-sm text-text-muted">Get notified when this launches</span>
             </div>
           ) : (
             <button

@@ -1,10 +1,13 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
   const pathname = usePathname();
-  const isDark = pathname === '/about' || pathname === '/letter';
+  const { theme } = useTheme();
+  const isLandingPage = pathname === '/about' || pathname === '/letter';
+  const isDark = isLandingPage || theme === 'dark';
 
   return (
     <footer className={`border-t mt-auto ${isDark ? 'border-white/5 bg-[#020617]' : 'border-card-border'}`}>

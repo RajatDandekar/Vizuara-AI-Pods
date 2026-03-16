@@ -4,23 +4,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { useTheme } from '@/context/ThemeContext';
 import UserDropdown from '@/components/auth/UserDropdown';
+import ThemeToggle from '@/components/layout/ThemeToggle';
 
 const VIZUARA_URL = process.env.NEXT_PUBLIC_VIZUARA_URL || 'https://vizuara.ai';
 const PODS_CALLBACK_URL = process.env.NEXT_PUBLIC_PODS_CALLBACK_URL || 'https://pods.vizuara.ai/api/auth/session';
-const darkPages = ['/about', '/letter'];
+const landingPages = ['/about', '/letter'];
 
 export default function Header() {
   const pathname = usePathname();
   const { user, loading } = useAuth();
-  const isDark = darkPages.includes(pathname);
+  const { theme } = useTheme();
+  const isLandingPage = landingPages.includes(pathname);
+  const isDark = isLandingPage || theme === 'dark';
 
   return (
     <header
       className={`sticky top-0 z-50 backdrop-blur-md border-b transition-colors ${
         isDark
           ? 'bg-slate-900/80 border-white/10'
-          : 'bg-white/80 border-card-border'
+          : 'bg-card-bg/80 border-card-border'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
@@ -81,6 +85,8 @@ export default function Header() {
           >
             Pricing
           </Link>
+
+          {!isLandingPage && <ThemeToggle />}
 
           {/* Auth section */}
           {!loading && (

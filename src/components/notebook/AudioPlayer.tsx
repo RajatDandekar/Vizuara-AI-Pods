@@ -88,7 +88,7 @@ export default function AudioPlayer({ src, title }: AudioPlayerProps) {
               max={duration || 0}
               value={currentTime}
               onChange={handleSeek}
-              className="flex-1 h-1.5 bg-gray-200 rounded-full appearance-none cursor-pointer accent-accent-blue"
+              className="flex-1 h-1.5 bg-skeleton rounded-full appearance-none cursor-pointer accent-accent-blue"
             />
             <span className="text-xs text-text-muted whitespace-nowrap">
               {formatTime(currentTime)} / {formatTime(duration)}

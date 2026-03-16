@@ -24,7 +24,7 @@ export default function SearchBar({ value, onChange, placeholder = 'Search cours
         className={`w-full pl-10 pr-4 py-2.5 text-sm rounded-xl focus:outline-none focus:ring-2 transition-all duration-200 ${
           dark
             ? 'text-white bg-white/5 border border-white/10 placeholder:text-slate-500 focus:ring-blue-500/30 focus:border-blue-500/50'
-            : 'text-foreground bg-white border border-card-border placeholder:text-text-muted focus:ring-accent-blue/30 focus:border-accent-blue'
+            : 'text-foreground bg-card-bg border border-card-border placeholder:text-text-muted focus:ring-accent-blue/30 focus:border-accent-blue'
         }`}
       />
       {value && (

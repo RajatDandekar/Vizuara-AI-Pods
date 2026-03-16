@@ -2,6 +2,8 @@
 @import "tailwindcss";
 @import "highlight.js/styles/github.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #fafafa;
   --foreground: #171717;
@@ -17,6 +19,69 @@
   --accent-amber-light: #fef3c7;
   --accent-red: #dc2626;
   --timeline-line: #d4d4d8;
+
+  /* New variables for dark mode migration */
+  --surface-secondary: #f9fafb;
+  --surface-tertiary: #f3f4f6;
+  --surface-hover: #f9fafb;
+  --surface-active: #f3f4f6;
+  --border-secondary: #e5e7eb;
+  --skeleton: #e5e7eb;
+  --progress-track: #f3f4f6;
+  --gradient-from: #eff6ff;
+  --gradient-to: #e0e7ff;
+  --gradient-overlay-from: #ffffff;
+  --accent-red-light: #fef2f2;
+
+  /* Fallback --dl-* vars so glass-card works outside landing pages */
+  --dl-bg: #fafafa;
+  --dl-surface: #ffffff;
+  --dl-surface-hover: #f8fafc;
+  --dl-border: #cbd5e1;
+  --dl-border-hover: #94a3b8;
+  --dl-text: #0f172a;
+  --dl-text-secondary: #475569;
+  --dl-text-muted: #94a3b8;
+  --dl-accent: #2563eb;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-blue-light: #1e3a5f;
+  --accent-green: #22c55e;
+  --accent-green-light: #14532d;
+  --accent-amber: #f59e0b;
+  --accent-amber-light: #451a03;
+  --accent-red: #ef4444;
+  --timeline-line: #334155;
+
+  --surface-secondary: #1e293b;
+  --surface-tertiary: #253349;
+  --surface-hover: #253349;
+  --surface-active: #334155;
+  --border-secondary: #334155;
+  --skeleton: #334155;
+  --progress-track: #253349;
+  --gradient-from: #1e293b;
+  --gradient-to: #253349;
+  --gradient-overlay-from: #1e293b;
+  --accent-red-light: #451a1a;
+
+  --dl-bg: #0f172a;
+  --dl-surface: rgba(255, 255, 255, 0.05);
+  --dl-surface-hover: rgba(255, 255, 255, 0.08);
+  --dl-border: rgba(255, 255, 255, 0.1);
+  --dl-border-hover: rgba(255, 255, 255, 0.18);
+  --dl-text: #f8fafc;
+  --dl-text-secondary: #cbd5e1;
+  --dl-text-muted: #64748b;
+  --dl-accent: #3b82f6;
 }
 
 @theme inline {
@@ -33,7 +98,18 @@
   --color-accent-amber: var(--accent-amber);
   --color-accent-amber-light: var(--accent-amber-light);
   --color-accent-red: var(--accent-red);
+  --color-accent-red-light: var(--accent-red-light);
   --color-timeline-line: var(--timeline-line);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-tertiary: var(--surface-tertiary);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-active: var(--surface-active);
+  --color-border-secondary: var(--border-secondary);
+  --color-skeleton: var(--skeleton);
+  --color-progress-track: var(--progress-track);
+  --color-gradient-from: var(--gradient-from);
+  --color-gradient-to: var(--gradient-to);
+  --color-gradient-overlay-from: var(--gradient-overlay-from);
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -162,6 +238,62 @@ pre code.hljs {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+/* Dark mode highlight.js overrides */
+.dark pre code.hljs {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+.dark .hljs-keyword { color: #c084fc; }
+.dark .hljs-string { color: #86efac; }
+.dark .hljs-number { color: #fdba74; }
+.dark .hljs-comment { color: #64748b; }
+.dark .hljs-function { color: #7dd3fc; }
+.dark .hljs-title { color: #93c5fd; }
+.dark .hljs-built_in { color: #fca5a5; }
+.dark .hljs-type { color: #fde68a; }
+.dark .hljs-attr { color: #93c5fd; }
+.dark .hljs-variable { color: #e2e8f0; }
+.dark .hljs-params { color: #fdba74; }
+.dark .hljs-meta { color: #64748b; }
+.dark .hljs-literal { color: #fdba74; }
+.dark .hljs-selector-class { color: #7dd3fc; }
+.dark .hljs-selector-tag { color: #c084fc; }
+.dark .hljs-attribute { color: #93c5fd; }
+
+/* Difficulty badge classes with dark mode overrides */
+.difficulty-beginner {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+.dark .difficulty-beginner {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.difficulty-intermediate {
+  background: #dbeafe;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+.dark .difficulty-intermediate {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.difficulty-advanced {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+.dark .difficulty-advanced {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fde68a;
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
 /* Markdown content styling */

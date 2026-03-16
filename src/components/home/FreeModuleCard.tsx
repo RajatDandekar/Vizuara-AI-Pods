@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 import type { FreePodShowcase } from '@/types/course';
 
 const difficultyColor: Record<string, string> = {
-  beginner: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  intermediate: 'bg-blue-50 text-blue-700 border-blue-200',
-  advanced: 'bg-amber-50 text-amber-700 border-amber-200',
+  beginner: 'difficulty-beginner border',
+  intermediate: 'difficulty-intermediate border',
+  advanced: 'difficulty-advanced border',
 };
 
 const tabs = ['article', 'notebooks', 'case-study'] as const;
@@ -60,12 +60,12 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
 
   return (
     <motion.div
-      className={`bg-white rounded-2xl overflow-hidden flex flex-col border border-slate-200 shadow-sm hover:shadow-xl hover:ring-2 ${accent.ring} transition-all duration-300`}
+      className={`bg-card-bg rounded-2xl overflow-hidden flex flex-col border border-card-border shadow-sm hover:shadow-xl hover:ring-2 ${accent.ring} transition-all duration-300`}
       whileHover={{ y: -4 }}
       transition={{ type: 'spring', stiffness: 300, damping: 25 }}
     >
       {/* Hero image */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-50">
+      <div className="relative w-full aspect-[16/9] overflow-hidden bg-surface-secondary">
         {pod.thumbnail ? (
           <Image
             src={pod.thumbnail}
@@ -75,9 +75,9 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
             sizes="(max-width: 640px) 90vw, 380px"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-slate-100 to-slate-50" />
+          <div className="w-full h-full bg-gradient-to-br from-surface-tertiary to-surface-secondary" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gradient-overlay-from/80 via-transparent to-transparent" />
 
         {/* FREE badge */}
         <div className="absolute top-3 left-3">
@@ -89,23 +89,23 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
 
       {/* Header */}
       <div className="px-5 pt-4 pb-2">
-        <p className="text-[11px] text-slate-400 font-medium mb-1">{pod.courseTitle}</p>
-        <h3 className="font-bold text-slate-900 text-lg leading-snug mb-2">{pod.title}</h3>
+        <p className="text-[11px] text-text-muted font-medium mb-1">{pod.courseTitle}</p>
+        <h3 className="font-bold text-foreground text-lg leading-snug mb-2">{pod.title}</h3>
         <div className="flex items-center gap-2 flex-wrap">
           <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${difficultyColor[pod.difficulty]}`}>
             {pod.difficulty}
           </span>
-          <span className="text-[11px] text-slate-400">~{pod.estimatedHours}h</span>
-          <span className="text-[11px] text-slate-400">{pod.notebooks.length} notebooks</span>
+          <span className="text-[11px] text-text-muted">~{pod.estimatedHours}h</span>
+          <span className="text-[11px] text-text-muted">{pod.notebooks.length} notebooks</span>
           {pod.caseStudy && (
-            <span className="text-[11px] text-slate-400">+ case study</span>
+            <span className="text-[11px] text-text-muted">+ case study</span>
           )}
         </div>
       </div>
 
       {/* Tab bar */}
       <div className="px-5 pt-3">
-        <div className="flex gap-1 bg-slate-100 rounded-lg p-0.5">
+        <div className="flex gap-1 bg-surface-tertiary rounded-lg p-0.5">
           {tabs.map((tab) => {
             if (tab === 'case-study' && !pod.caseStudy) return null;
             return (
@@ -113,7 +113,7 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 text-[12px] font-medium py-1.5 rounded-md transition-all ${
-                  activeTab === tab ? accent.tab : 'text-slate-500 hover:text-slate-700'
+                  activeTab === tab ? accent.tab : 'text-text-muted hover:text-foreground'
                 }`}
               >
                 {tabLabels[tab]}
@@ -127,7 +127,7 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
       <div className="px-5 pt-3 pb-4 flex-1 flex flex-col min-h-[180px]">
         {activeTab === 'article' && (
           <div className="flex flex-col flex-1">
-            <p className="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+            <p className="text-sm text-text-secondary leading-relaxed mb-4 line-clamp-3">
               {pod.description}
             </p>
             <div className="mt-auto">
@@ -156,7 +156,7 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
                     href={nb.colabUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-slate-700 hover:text-blue-600 transition-colors leading-snug"
+                    className="text-sm text-text-secondary hover:text-blue-600 transition-colors leading-snug"
                   >
                     {nb.title}
                   </a>
@@ -182,7 +182,7 @@ export default function FreeModuleCard({ pod, accentColor }: FreeModuleCardProps
             <p className="text-[11px] font-semibold text-amber-600 uppercase tracking-wider mb-1">
               {pod.caseStudy.company} &middot; {pod.caseStudy.industry}
             </p>
-            <p className="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+            <p className="text-sm text-text-secondary leading-relaxed mb-4 line-clamp-3">
               {pod.caseStudy.description}
             </p>
             <div className="mt-auto">

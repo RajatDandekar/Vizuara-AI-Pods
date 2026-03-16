@@ -83,7 +83,7 @@ export default function CourseProgressBar({
   });
 
   return (
-    <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-sm border-b border-card-border">
+    <div className="sticky top-0 z-30 bg-card-bg/95 backdrop-blur-sm border-b border-card-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Course title row */}
         <div className="flex items-center gap-2 pt-2 pb-1">
@@ -115,8 +115,8 @@ export default function CourseProgressBar({
                       : step.status === 'completed'
                         ? 'bg-accent-green-light text-accent-green'
                         : step.status === 'current'
-                          ? 'bg-gray-100 text-text-secondary hover:bg-gray-200'
-                          : 'bg-gray-50 text-text-muted/50'
+                          ? 'bg-surface-tertiary text-text-secondary hover:bg-skeleton'
+                          : 'bg-surface-secondary text-text-muted/50'
                     }
                   `}
                 >

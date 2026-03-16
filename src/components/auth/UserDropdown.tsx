@@ -68,7 +68,7 @@ export default function UserDropdown({ isHome = false }: UserDropdownProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.95 }}
             transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
-            className="absolute right-0 top-full mt-2 w-56 bg-white border border-card-border rounded-xl shadow-lg overflow-hidden z-50"
+            className="absolute right-0 top-full mt-2 w-56 bg-card-bg border border-card-border rounded-xl shadow-lg overflow-hidden z-50"
           >
             {/* User info */}
             <div className="px-4 py-3 border-b border-card-border/50">
@@ -84,7 +84,7 @@ export default function UserDropdown({ isHome = false }: UserDropdownProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-gray-50 hover:text-foreground transition-colors"
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-surface-hover hover:text-foreground transition-colors"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
@@ -96,7 +96,7 @@ export default function UserDropdown({ isHome = false }: UserDropdownProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-gray-50 hover:text-foreground transition-colors"
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-surface-hover hover:text-foreground transition-colors"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
@@ -111,7 +111,7 @@ export default function UserDropdown({ isHome = false }: UserDropdownProps) {
             <div className="border-t border-card-border/50 py-1">
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-accent-red hover:bg-red-50 transition-colors cursor-pointer"
+                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-accent-red hover:bg-accent-red/10 transition-colors cursor-pointer"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />

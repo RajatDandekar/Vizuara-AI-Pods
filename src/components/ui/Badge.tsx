@@ -9,11 +9,11 @@ interface BadgeProps {
 }
 
 const variantStyles = {
-  default: 'bg-gray-100 text-text-secondary',
+  default: 'bg-surface-tertiary text-text-secondary',
   blue: 'bg-accent-blue-light text-accent-blue',
   green: 'bg-accent-green-light text-accent-green',
   amber: 'bg-accent-amber-light text-accent-amber',
-  red: 'bg-red-50 text-accent-red',
+  red: 'bg-accent-red-light text-accent-red',
 };
 
 const sizeStyles = {

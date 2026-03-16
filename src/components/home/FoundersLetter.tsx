@@ -12,15 +12,15 @@ export default function FoundersLetter() {
         {/* Subtle accent glow */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
 
-        <p className="text-base font-medium text-blue-600 tracking-wider uppercase mb-6">
+        <p className="text-base font-medium text-accent-blue tracking-wider uppercase mb-6">
           A Letter from the Founders
         </p>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8 leading-tight max-w-2xl">
+        <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 leading-tight max-w-2xl">
           Why we built Vizuara AI Pods
         </h2>
 
-        <div className="space-y-5 text-slate-700 leading-relaxed text-base sm:text-lg max-w-3xl">
+        <div className="space-y-5 text-text-secondary leading-relaxed text-base sm:text-lg max-w-3xl">
           <p>
             The field of AI is evolving at a pace unlike anything we have seen before.
             New concepts emerge every week &mdash; just look at 2025 alone: DeepSeek
@@ -38,7 +38,7 @@ export default function FoundersLetter() {
             behind on everything else.
           </p>
 
-          <p className="text-slate-900 font-medium">
+          <p className="text-foreground font-medium">
             Vizuara AI Pods was built to solve exactly this problem.
           </p>
 
@@ -64,7 +64,7 @@ export default function FoundersLetter() {
             from scratch, without having to pay for each topic individually. Vizuara AI Pods is
             that place &mdash; a subscription-based platform that stays up to date with
             the evolving landscape of AI, delivering each concept through our{' '}
-            <span className="text-blue-600 font-medium">FPR framework</span>: Fundamentals,
+            <span className="text-accent-blue font-medium">FPR framework</span>: Fundamentals,
             Practicals, and Research.
           </p>
 
@@ -74,7 +74,7 @@ export default function FoundersLetter() {
         </div>
 
         {/* Founders */}
-        <div className="mt-10 pt-8 border-t border-slate-100">
+        <div className="mt-10 pt-8 border-t border-card-border/30">
           <div className="flex flex-wrap items-center gap-6">
             {[
               { name: 'Dr Raj Dandekar', image: '/founders/raj.png' },
@@ -82,7 +82,7 @@ export default function FoundersLetter() {
               { name: 'Dr Sreedath Panat', image: '/founders/sreedath.jpg' },
             ].map((founder) => (
               <div key={founder.name} className="flex items-center gap-3">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-slate-200">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-card-border">
                   <Image
                     src={founder.image}
                     alt={founder.name}
@@ -92,11 +92,11 @@ export default function FoundersLetter() {
                     unoptimized
                   />
                 </div>
-                <span className="text-base text-slate-700">{founder.name}</span>
+                <span className="text-base text-text-secondary">{founder.name}</span>
               </div>
             ))}
           </div>
-          <p className="text-sm text-slate-400 mt-4">
+          <p className="text-sm text-text-muted mt-4">
             Founders, Vizuara &mdash; IIT Madras, MIT, Purdue
           </p>
         </div>

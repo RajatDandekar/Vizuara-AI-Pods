@@ -43,7 +43,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
                   ? 'bg-accent-green text-white'
                   : !articleDone && progress.completedNotebooks.length === 0
                     ? 'bg-accent-blue text-white ring-4 ring-accent-blue/20'
-                    : 'bg-gray-200 text-text-muted'
+                    : 'bg-skeleton text-text-muted'
               }`}
             >
               {articleDone ? (
@@ -69,7 +69,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
                 className={`w-8 sm:w-12 h-0.5 ${
                   status === 'completed' ? 'bg-accent-green' :
                   status === 'current' ? 'bg-accent-blue' :
-                  'bg-gray-200'
+                  'bg-skeleton'
                 }`}
               />
               <div className="flex flex-col items-center">
@@ -79,7 +79,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
                       ? 'bg-accent-green text-white'
                       : status === 'current'
                         ? 'bg-accent-blue text-white ring-4 ring-accent-blue/20'
-                        : 'bg-gray-200 text-text-muted'
+                        : 'bg-skeleton text-text-muted'
                   }`}
                 >
                   {status === 'completed' ? (
@@ -104,7 +104,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
             <div
               className={`w-8 sm:w-12 h-0.5 ${
                 caseStudyStatus === 'completed' ? 'bg-accent-green' :
-                caseStudyStatus === 'current' ? 'bg-accent-amber' : 'bg-gray-200'
+                caseStudyStatus === 'current' ? 'bg-accent-amber' : 'bg-skeleton'
               }`}
             />
             <div className="flex flex-col items-center">
@@ -114,7 +114,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
                     ? 'bg-accent-green text-white'
                     : caseStudyStatus === 'current'
                       ? 'bg-accent-amber text-white ring-4 ring-accent-amber/20'
-                      : 'bg-gray-200 text-text-muted'
+                      : 'bg-skeleton text-text-muted'
                 }`}
               >
                 {caseStudyStatus === 'completed' ? (
@@ -136,7 +136,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
         <div className="flex items-center">
           <div
             className={`w-8 sm:w-12 h-0.5 ${
-              certificateStatus === 'current' ? 'bg-accent-amber' : 'bg-gray-200'
+              certificateStatus === 'current' ? 'bg-accent-amber' : 'bg-skeleton'
             }`}
           />
           <div className="flex flex-col items-center">
@@ -144,7 +144,7 @@ export default function LearningPath({ notebooks, progress, hasCaseStudy }: Lear
               className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all ${
                 certificateStatus === 'current'
                   ? 'bg-accent-amber text-white ring-4 ring-accent-amber/20'
-                  : 'bg-gray-200 text-text-muted'
+                  : 'bg-skeleton text-text-muted'
               }`}
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

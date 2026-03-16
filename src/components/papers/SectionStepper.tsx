@@ -49,7 +49,7 @@ export default function SectionStepper({ steps, activeKey, onStepClick }: Sectio
                           ? 'bg-accent-blue text-white ring-4 ring-accent-blue/20'
                           : step.generated
                             ? 'bg-accent-blue/10 text-accent-blue group-hover:bg-accent-blue/20'
-                            : 'bg-gray-100 text-text-muted group-hover:bg-gray-200'
+                            : 'bg-surface-tertiary text-text-muted group-hover:bg-skeleton'
                   }
                 `}
               >
@@ -80,7 +80,7 @@ export default function SectionStepper({ steps, activeKey, onStepClick }: Sectio
 
             {/* Connector line */}
             {i < steps.length - 1 && (
-              <div className="flex-1 mx-3 h-0.5 rounded-full bg-gray-200 relative overflow-hidden mt-[-20px]">
+              <div className="flex-1 mx-3 h-0.5 rounded-full bg-skeleton relative overflow-hidden mt-[-20px]">
                 <div
                   className={`absolute inset-y-0 left-0 rounded-full transition-all duration-700 ${
                     isDone ? 'w-full bg-accent-green' : isStreaming ? 'w-1/2 bg-accent-blue' : 'w-0'

@@ -69,7 +69,7 @@ export default function PodExpandedCard({
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center p-4 pointer-events-none">
       <motion.div
-        className="relative w-full max-w-2xl rounded-2xl overflow-hidden bg-white shadow-2xl flex flex-col max-h-[85vh] pointer-events-auto ring-1 ring-black/5"
+        className="relative w-full max-w-2xl rounded-2xl overflow-hidden bg-card-bg shadow-2xl flex flex-col max-h-[85vh] pointer-events-auto ring-1 ring-black/5"
         initial={{ opacity: 0, scale: 0.92, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -97,8 +97,8 @@ export default function PodExpandedCard({
                   priority
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
-                  <span className="text-5xl font-bold text-blue-300/60">{pod.order}</span>
+                <div className="w-full h-full bg-gradient-to-br from-gradient-from to-gradient-to flex items-center justify-center">
+                  <span className="text-5xl font-bold text-accent-blue/30">{pod.order}</span>
                 </div>
               )}
             </motion.div>
@@ -128,21 +128,21 @@ export default function PodExpandedCard({
         {/* Content */}
         <div className="p-6 overflow-y-auto flex-1">
           {/* Course breadcrumb */}
-          <p className="text-xs font-medium text-blue-600 mb-1.5">{courseTitle}</p>
+          <p className="text-xs font-medium text-accent-blue mb-1.5">{courseTitle}</p>
 
-          <h2 className="text-xl font-bold text-slate-900 mb-2 leading-snug">
+          <h2 className="text-xl font-bold text-foreground mb-2 leading-snug">
             {pod.title}
           </h2>
 
-          <p className="text-base text-slate-600 leading-relaxed mb-4">
+          <p className="text-base text-text-secondary leading-relaxed mb-4">
             {pod.description}
           </p>
 
           {/* Meta row */}
           <div className="flex items-center gap-3 flex-wrap mb-5">
-            <span className="text-sm text-slate-400">~{pod.estimatedHours}h</span>
+            <span className="text-sm text-text-muted">~{pod.estimatedHours}h</span>
             {pod.notebookCount > 0 && (
-              <span className="text-sm text-slate-400 flex items-center gap-1">
+              <span className="text-sm text-text-muted flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                 </svg>
@@ -150,7 +150,7 @@ export default function PodExpandedCard({
               </span>
             )}
             {pod.hasCaseStudy && (
-              <span className="text-sm text-slate-400 flex items-center gap-1">
+              <span className="text-sm text-text-muted flex items-center gap-1">
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
                 </svg>
@@ -160,21 +160,21 @@ export default function PodExpandedCard({
           </div>
 
           {/* What you'll learn */}
-          <div className="bg-slate-50 rounded-xl p-4 mb-5">
-            <h3 className="text-sm font-semibold text-slate-700 mb-2">What you&apos;ll get</h3>
+          <div className="bg-surface-secondary rounded-xl p-4 mb-5">
+            <h3 className="text-sm font-semibold text-foreground mb-2">What you&apos;ll get</h3>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-slate-600">
-                <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3 h-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <div className="flex items-center gap-2 text-sm text-text-secondary">
+                <div className="w-5 h-5 rounded-full bg-accent-blue-light flex items-center justify-center flex-shrink-0">
+                  <svg className="w-3 h-3 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
                 In-depth article with figures and equations
               </div>
               {pod.notebookCount > 0 && (
-                <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <div className="flex items-center gap-2 text-sm text-text-secondary">
+                  <div className="w-5 h-5 rounded-full bg-accent-green-light flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>
@@ -182,9 +182,9 @@ export default function PodExpandedCard({
                 </div>
               )}
               {pod.hasCaseStudy && (
-                <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-3 h-3 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <div className="flex items-center gap-2 text-sm text-text-secondary">
+                  <div className="w-5 h-5 rounded-full bg-accent-amber-light flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 text-accent-amber" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>

@@ -18,7 +18,7 @@ export default function SuggestedQuestions({ onSelect }: SuggestedQuestionsProps
         <button
           key={q}
           onClick={() => onSelect(q)}
-          className="px-3.5 py-1.5 rounded-full text-xs font-medium border border-card-border text-text-secondary bg-white hover:border-accent-blue hover:text-accent-blue transition-colors cursor-pointer"
+          className="px-3.5 py-1.5 rounded-full text-xs font-medium border border-card-border text-text-secondary bg-card-bg hover:border-accent-blue hover:text-accent-blue transition-colors cursor-pointer"
         >
           {q}
         </button>
