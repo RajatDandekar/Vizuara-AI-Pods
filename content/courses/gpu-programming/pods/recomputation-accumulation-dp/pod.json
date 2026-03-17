@@ -1,0 +1,63 @@
+{
+  "title": "Activation Recomputation, Gradient Accumulation, and Data Parallelism",
+  "slug": "recomputation-accumulation-dp",
+  "description": "Three foundational techniques that reduce memory and scale training: recomputing activations, accumulating gradients, and replicating your model across GPUs.",
+  "difficulty": "beginner",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "Activation Recomputation (Gradient Checkpointing)",
+    "Gradient Accumulation: Big Batches Without Big Memory",
+    "Data Parallelism from Scratch",
+    "Data Parallelism Optimizations: Overlap, Bucketing, and Scaling"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Activation Checkpointing",
+      "slug": "01-activation-checkpointing",
+      "objective": "Understand why activations dominate GPU memory, implement activation checkpointing from scratch, use PyTorch's built-in checkpoint API, measure memory savings and compute overhead, and compare full vs selective checkpointing.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/recomputation-accumulation-dp/01_activation_checkpointing.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Gradient Accumulation",
+      "slug": "02-gradient-accumulation",
+      "objective": "Prove the mathematical equivalence between large-batch and accumulated micro-batch gradients, implement gradient accumulation in a clean training loop, identify common pitfalls, and combine accumulation with activation checkpointing.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/recomputation-accumulation-dp/02_gradient_accumulation.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Data Parallelism",
+      "slug": "03-data-parallelism",
+      "objective": "Simulate multi-GPU data parallelism on a single GPU, implement manual AllReduce gradient synchronization, verify that data parallel training matches single-GPU results, analyze communication overhead and scaling efficiency, and combine all three memory techniques.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/recomputation-accumulation-dp/03_data_parallelism.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 3
+}

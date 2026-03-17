@@ -1,0 +1,63 @@
+{
+  "title": "Expert Parallelism",
+  "slug": "expert-parallelism",
+  "description": "Mixture of Experts models activate only a fraction of parameters per token — learn how experts are distributed across GPUs and kept balanced.",
+  "difficulty": "beginner",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "Mixture of Experts: Sparse Models from Scratch",
+    "Token Routing: How Tokens Choose Their Experts",
+    "Expert Parallelism: Distributing Experts Across GPUs",
+    "Load Balancing, Auxiliary Losses, and Scaling MoE"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Mixture of Experts from Scratch",
+      "slug": "01-mixture_of_experts",
+      "objective": "Build a complete MoE layer from scratch — implement the router, expert MLPs, top-k selection, and weighted combination to understand the parameter-vs-compute trade-off.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/expert-parallelism/01_mixture_of_experts.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Expert Parallelism Simulation",
+      "slug": "02-expert_parallelism_simulation",
+      "objective": "Simulate expert parallelism across multiple GPUs — implement All-to-All dispatch and combine, measure communication costs, and compare with AllReduce.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/expert-parallelism/02_expert_parallelism_simulation.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Load Balancing and the 5D Grid",
+      "slug": "03-load_balancing_and_5d_grid",
+      "objective": "Implement the auxiliary load balancing loss, explore capacity-based token dropping, and build a 5D parallelism configuration calculator for real-world deployments.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/expert-parallelism/03_load_balancing_and_5d_grid.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 10
+}

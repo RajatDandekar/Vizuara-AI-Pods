@@ -1,0 +1,62 @@
+{
+  "title": "Sequence Parallelism",
+  "slug": "sequence-parallelism",
+  "description": "Why LayerNorm and dropout waste memory in tensor parallelism, and how sequence parallelism fixes it by splitting the sequence dimension.",
+  "difficulty": "beginner",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "Why LayerNorm and Dropout Waste Memory in TP",
+    "Sequence Parallelism from Scratch",
+    "TP + SP Combined: Memory Savings and Communication Analysis"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "The LayerNorm Problem",
+      "slug": "01-the-layernorm-problem",
+      "objective": "Measure activation memory waste from replicated LayerNorm and dropout in tensor parallelism, understand why these operations cannot be split along the hidden dimension, and quantify the waste across different model sizes.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/sequence-parallelism/01_the_layernorm_problem.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 1,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Sequence Parallelism Implementation",
+      "slug": "02-sequence-parallelism-impl",
+      "objective": "Implement sequence parallelism from scratch with AllGather and Reduce-Scatter primitives, verify the communication cost equivalence with AllReduce, and build a complete SP forward pass for a transformer sub-block.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/sequence-parallelism/02_sequence_parallelism_impl.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 1,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "TP + SP Combined",
+      "slug": "03-tp-plus-sp-combined",
+      "objective": "Build a full transformer layer combining tensor parallelism and sequence parallelism, profile GPU memory usage for both approaches, and measure end-to-end memory savings at realistic model scales.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/sequence-parallelism/03_tp_plus_sp_combined.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 1,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 7
+}

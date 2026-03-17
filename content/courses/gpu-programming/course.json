@@ -1,116 +1,116 @@
 {
-  "title": "GPU Programming from Scratch",
+  "title": "GPU Parallelism for Large Language Models",
   "slug": "gpu-programming",
-  "description": "From CUDA basics to distributed GPU systems \u2014 master GPU programming for deep learning.",
-  "difficulty": "intermediate",
-  "estimatedHours": 17,
+  "description": "From a single GPU to thousands — understand every parallelism strategy used to train modern LLMs, one day at a time.",
+  "difficulty": "beginner",
+  "estimatedHours": 38,
   "tags": [
-    "gpu",
-    "cuda",
+    "gpu-parallelism",
     "distributed-training",
-    "systems"
+    "llm-training",
+    "deep-learning-systems"
   ],
   "pods": [
     {
-      "slug": "5d-parallelism-from-scratch",
-      "title": "5D Parallelism from Scratch",
-      "description": "How modern LLMs are trained across thousands of GPUs \u2014 understanding Data, Tensor, Pipeline, Sequence, and Expert Parallelism from first principles.",
+      "slug": "intro-gpus-and-parallelism",
+      "title": "Intro to GPUs and GPU Parallelism for LLMs",
+      "description": "What GPUs are, why they matter for deep learning, and a bird's-eye view of the five parallelism strategies that make LLM training possible.",
       "order": 1,
-      "notebookCount": 6,
-      "estimatedHours": 17,
-      "hasCaseStudy": true,
-      "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
+      "notebookCount": 0,
+      "estimatedHours": 3,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/gpu-programming/pods/intro-gpus-and-parallelism/figures/figure_1.png"
     },
     {
-      "slug": "gpu-architecture-deep-dive",
-      "title": "GPU Architecture Deep Dive",
-      "description": "Coming soon: GPU Architecture Deep Dive",
+      "slug": "gpu-memory-components",
+      "title": "GPU Memory — The Four Major Components",
+      "description": "Understand where your GPU memory actually goes: weights, gradients, optimizer states, and activations — the four components that determine whether your model fits.",
       "order": 2,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 3,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/gpu-architecture-deep-dive/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/gpu-memory-components/figures/figure_1.png"
     },
     {
-      "slug": "cuda-programming-from-scratch",
-      "title": "CUDA Programming Model from Scratch",
-      "description": "Coming soon: CUDA Programming Model from Scratch",
+      "slug": "recomputation-accumulation-dp",
+      "title": "Activation Recomputation, Gradient Accumulation, and Data Parallelism",
+      "description": "Three foundational techniques that reduce memory and scale training: recomputing activations, accumulating gradients, and replicating your model across GPUs.",
       "order": 3,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 4,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/cuda-programming-from-scratch/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/recomputation-accumulation-dp/figures/figure_1.png"
     },
     {
-      "slug": "memory-hierarchy-optimization",
-      "title": "Memory Hierarchy Optimization",
-      "description": "Coming soon: Memory Hierarchy Optimization",
+      "slug": "allreduce-batchsize-profiling",
+      "title": "Ring-AllReduce, Choosing Batch Size, and TensorBoard GPU Profiling",
+      "description": "How GPUs communicate, how to pick the right batch size, and how to profile your training runs to find bottlenecks.",
       "order": 4,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 5,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/memory-hierarchy-optimization/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/allreduce-batchsize-profiling/figures/figure_1.png"
     },
     {
-      "slug": "memory-coalescing-throughput",
-      "title": "Memory Coalescing, Bank Conflicts & Throughput",
-      "description": "Coming soon: Memory Coalescing, Bank Conflicts & Throughput",
+      "slug": "zero-optimizer",
+      "title": "ZeRO-1, 2, 3 — Zero Redundancy Optimizer",
+      "description": "The elegant idea behind ZeRO: instead of replicating everything on every GPU, partition optimizer states, gradients, and parameters across GPUs.",
       "order": 5,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 4,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/memory-coalescing-throughput/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/zero-optimizer/figures/figure_1.png"
     },
     {
-      "slug": "high-performance-cuda-kernels",
-      "title": "Writing High-Performance CUDA Kernels",
-      "description": "Coming soon: Writing High-Performance CUDA Kernels",
+      "slug": "tensor-parallelism",
+      "title": "Tensor Parallelism",
+      "description": "Split individual weight matrices across GPUs — column-linear, row-linear, and how tensor parallelism works inside a transformer block.",
       "order": 6,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 4,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/high-performance-cuda-kernels/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/tensor-parallelism/figures/figure_1.png"
     },
     {
-      "slug": "kernel-fusion-optimization",
-      "title": "Kernel Fusion & Operator Optimization",
-      "description": "Coming soon: Kernel Fusion & Operator Optimization",
+      "slug": "sequence-parallelism",
+      "title": "Sequence Parallelism",
+      "description": "Why LayerNorm and dropout waste memory in tensor parallelism, and how sequence parallelism fixes it by splitting the sequence dimension.",
       "order": 7,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 3,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/kernel-fusion-optimization/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/sequence-parallelism/figures/figure_1.png"
     },
     {
-      "slug": "mixed-precision-tensor-cores",
-      "title": "Mixed Precision & Tensor Cores",
-      "description": "Coming soon: Mixed Precision & Tensor Cores",
+      "slug": "context-parallelism",
+      "title": "Context Parallelism",
+      "description": "Training with million-token contexts by splitting the sequence across GPUs using Ring Attention and its optimized variants.",
       "order": 8,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 3,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/mixed-precision-tensor-cores/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/context-parallelism/figures/figure_1.png"
     },
     {
-      "slug": "profiling-debugging",
-      "title": "Profiling & Debugging",
-      "description": "Coming soon: Profiling & Debugging",
+      "slug": "pipeline-parallelism",
+      "title": "Pipeline Parallelism",
+      "description": "Split transformer layers across GPUs like an assembly line — from naive schedules to 1F1B, minimizing the pipeline bubble.",
       "order": 9,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 5,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/profiling-debugging/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/pipeline-parallelism/figures/figure_1.png"
     },
     {
-      "slug": "distributed-gpu-systems",
-      "title": "Distributed GPU Systems",
-      "description": "Coming soon: Distributed GPU Systems",
+      "slug": "expert-parallelism",
+      "title": "Expert Parallelism",
+      "description": "Mixture of Experts models activate only a fraction of parameters per token — learn how experts are distributed across GPUs and kept balanced.",
       "order": 10,
       "notebookCount": 0,
-      "estimatedHours": 1,
+      "estimatedHours": 4,
       "hasCaseStudy": false,
-      "thumbnail": "/courses/gpu-programming/pods/distributed-gpu-systems/figures/figure_1.png"
+      "thumbnail": "/courses/gpu-programming/pods/expert-parallelism/figures/figure_1.png"
     }
   ],
-  "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
+  "thumbnail": "/courses/gpu-programming/pods/intro-gpus-and-parallelism/figures/figure_1.png"
 }

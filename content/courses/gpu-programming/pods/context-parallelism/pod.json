@@ -1,0 +1,62 @@
+{
+  "title": "Context Parallelism",
+  "slug": "context-parallelism",
+  "description": "Training with million-token contexts by splitting the sequence across GPUs using Ring Attention and its optimized variants.",
+  "difficulty": "beginner",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "The Long-Context Problem: Why We Need Context Parallelism",
+    "Ring Attention from Scratch",
+    "Striped Attention and Load Balancing"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Attention Memory Scaling",
+      "slug": "attention-memory-scaling",
+      "objective": "Measure attention memory at different sequence lengths, verify the O(S^2) scaling law, and implement chunked attention with online softmax.",
+      "colabUrl": "",
+      "downloadPath": "/notebooks/context-parallelism/01_attention_memory_scaling.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Ring Attention",
+      "slug": "ring-attention",
+      "objective": "Implement Ring Attention with virtual GPUs, trace KV rotation step by step, and analyze communication-computation overlap.",
+      "colabUrl": "",
+      "downloadPath": "/notebooks/context-parallelism/02_ring_attention.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Striped Attention for Causal LM",
+      "slug": "striped-attention",
+      "objective": "Implement striped (round-robin) token assignment, build Striped Ring Attention, and compare load balance against contiguous chunking.",
+      "colabUrl": "",
+      "downloadPath": "/notebooks/context-parallelism/03_striped_attention.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 8
+}

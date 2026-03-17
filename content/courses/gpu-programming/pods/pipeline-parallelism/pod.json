@@ -1,0 +1,64 @@
+{
+  "title": "Pipeline Parallelism",
+  "slug": "pipeline-parallelism",
+  "description": "Split transformer layers across GPUs like an assembly line — from naive schedules to 1F1B, minimizing the pipeline bubble.",
+  "difficulty": "beginner",
+  "estimatedHours": 5,
+  "prerequisites": [],
+  "tags": [
+    "Pipeline Parallelism Basics: Splitting Layers Across GPUs",
+    "The Naive AFAB Schedule",
+    "Microbatching: Reducing the Bubble",
+    "The 1F1B Schedule: One Forward One Backward",
+    "Pipeline Parallelism in Practice: Balancing Layers and Choosing Microbatches"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Pipeline Bubble",
+      "slug": "01-pipeline_bubble",
+      "objective": "Simulate the naive pipeline schedule, measure bubble fractions analytically and via simulation, and visualize pipeline timelines.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/pipeline-parallelism/01_pipeline_bubble.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "GPipe and 1F1B",
+      "slug": "02-gpipe_and_1f1b",
+      "objective": "Implement GPipe and 1F1B schedulers from scratch, compare their identical bubble fractions, and discover 1F1B's dramatic memory advantage.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/pipeline-parallelism/02_gpipe_and_1f1b.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Interleaved Pipeline",
+      "slug": "03-interleaved_pipeline",
+      "objective": "Build the interleaved 1F1B schedule with virtual pipeline stages, verify the v-factor bubble reduction, and analyze communication trade-offs.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/pipeline-parallelism/03_interleaved_pipeline.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 9
+}

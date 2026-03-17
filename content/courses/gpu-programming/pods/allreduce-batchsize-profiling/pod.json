@@ -1,0 +1,64 @@
+{
+  "title": "Ring-AllReduce, Choosing Batch Size, and TensorBoard GPU Profiling",
+  "slug": "allreduce-batchsize-profiling",
+  "description": "How GPUs communicate, how to pick the right batch size, and how to profile your training runs to find bottlenecks.",
+  "difficulty": "beginner",
+  "estimatedHours": 5,
+  "prerequisites": [],
+  "tags": [
+    "Communication Primitives: Broadcast, Scatter, Gather, Reduce",
+    "Ring-AllReduce from Scratch",
+    "How to Choose the Right Batch Size",
+    "GPU Profiling with PyTorch Profiler and TensorBoard",
+    "Optimizing a Training Run: From Profile to Fix"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Ring-AllReduce Simulation",
+      "slug": "01-ring-allreduce-simulation",
+      "objective": "Simulate ring-allreduce in pure Python, compare it with naive allreduce, visualize the scatter-reduce and allgather phases step by step, and analyze bandwidth scaling to understand why ring-allreduce is optimal.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/allreduce-batchsize-profiling/01_ring_allreduce_simulation.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Batch Size Experiments",
+      "slug": "02-batch-size-experiments",
+      "objective": "Train models with different batch sizes, apply linear and square root learning rate scaling rules, measure the importance of warmup, analyze gradient noise, and find the practical batch size sweet spot.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/allreduce-batchsize-profiling/02_batch_size_experiments.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "GPU Profiling with PyTorch Profiler",
+      "slug": "03-gpu-profiling",
+      "objective": "Use torch.profiler and record_function to capture detailed training timelines, analyze CUDA kernel breakdowns, compare DataLoader configurations, benchmark mixed precision, and identify compute vs memory vs communication bottlenecks.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/allreduce-batchsize-profiling/03_gpu_profiling.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 4
+}

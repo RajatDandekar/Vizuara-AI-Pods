@@ -1,41 +1,9 @@
 {
   "courses": [
     {
-      "slug": "diffusion-models",
-      "title": "Principles of Diffusion Models",
-      "description": "From variational autoencoders to video generation \u2014 understanding diffusion models from first principles.",
-      "difficulty": "intermediate",
-      "estimatedHours": 23,
-      "tags": [
-        "diffusion",
-        "generative-models",
-        "video-generation"
-      ],
-      "podCount": 6,
-      "totalNotebooks": 22,
-      "status": "live",
-      "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png"
-    },
-    {
-      "slug": "rl-from-scratch",
-      "title": "RL From Scratch",
-      "description": "From Q-learning to GRPO \u2014 build reinforcement learning from first principles.",
-      "difficulty": "intermediate",
-      "estimatedHours": 21,
-      "tags": [
-        "reinforcement-learning",
-        "reasoning",
-        "rlhf"
-      ],
-      "podCount": 8,
-      "totalNotebooks": 28,
-      "status": "live",
-      "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png"
-    },
-    {
       "slug": "ai-in-production",
       "title": "AI in Production",
-      "description": "Deploy, monitor, and govern ML systems \u2014 from model serving to CI/CD for ML.",
+      "description": "Deploy, monitor, and govern ML systems — from model serving to CI/CD for ML.",
       "difficulty": "intermediate",
       "estimatedHours": 5,
       "tags": [
@@ -49,25 +17,24 @@
       "thumbnail": "/courses/ai-in-production/thumbnail.png"
     },
     {
-      "slug": "vlms-from-scratch",
-      "title": "VLMs from Scratch",
-      "description": "Build vision-language models from first principles \u2014 from ViT to multimodal instruction tuning.",
+      "slug": "build-diffusion-llm",
+      "title": "Build Diffusion LLM from Scratch",
+      "description": "What if language models could generate all tokens at once — like image diffusion, but for text?",
       "difficulty": "intermediate",
-      "estimatedHours": 24,
+      "estimatedHours": 4,
       "tags": [
-        "vision-language",
-        "transformers",
-        "multimodal"
+        "diffusion",
+        "language-models"
       ],
-      "podCount": 6,
-      "totalNotebooks": 18,
+      "podCount": 1,
+      "totalNotebooks": 4,
       "status": "live",
-      "thumbnail": "/courses/vlms-from-scratch/pods/vision-encoders/figures/figure_1.png"
+      "thumbnail": "/courses/build-diffusion-llm/pods/diffusion-llms-from-scratch/figures/figure_1.png"
     },
     {
       "slug": "build-llm",
       "title": "Build LLM from Scratch",
-      "description": "From BERT to GPT \u2014 build large language models from first principles.",
+      "description": "From BERT to GPT — build large language models from first principles.",
       "difficulty": "intermediate",
       "estimatedHours": 28,
       "tags": [
@@ -81,84 +48,22 @@
       "thumbnail": "/courses/build-llm/pods/understanding-bert-from-scratch/figures/figure_1.png"
     },
     {
-      "slug": "build-diffusion-llm",
-      "title": "Build Diffusion LLM from Scratch",
-      "description": "What if language models could generate all tokens at once \u2014 like image diffusion, but for text?",
+      "slug": "claude-certified-architect",
+      "title": "Claude Certified Architect Prep",
+      "description": "Master the five domains of the Anthropic Claude Certified Architect — Foundations exam with hands-on practice and a full-length practice test.",
       "difficulty": "intermediate",
-      "estimatedHours": 4,
+      "estimatedHours": 6,
       "tags": [
-        "diffusion",
-        "language-models"
+        "certification",
+        "claude",
+        "anthropic",
+        "architect",
+        "agentic-ai"
       ],
-      "podCount": 1,
-      "totalNotebooks": 4,
+      "podCount": 6,
+      "totalNotebooks": 22,
       "status": "live",
-      "thumbnail": "/courses/build-diffusion-llm/pods/diffusion-llms-from-scratch/figures/figure_1.png"
-    },
-    {
-      "slug": "gpu-programming",
-      "title": "GPU Programming from Scratch",
-      "description": "From CUDA basics to distributed GPU systems \u2014 master GPU programming for deep learning.",
-      "difficulty": "intermediate",
-      "estimatedHours": 17,
-      "tags": [
-        "gpu",
-        "cuda",
-        "distributed-training",
-        "systems"
-      ],
-      "podCount": 10,
-      "totalNotebooks": 6,
-      "status": "live",
-      "thumbnail": "/courses/gpu-programming/pods/5d-parallelism-from-scratch/figures/figure_1.png"
-    },
-    {
-      "slug": "modern-robot-learning",
-      "title": "Modern Robot Learning",
-      "description": "From world models to VLAs \u2014 build modern robot learning systems from scratch.",
-      "difficulty": "intermediate",
-      "estimatedHours": 3,
-      "tags": [
-        "robotics",
-        "world-models",
-        "vla"
-      ],
-      "podCount": 7,
-      "totalNotebooks": 4,
-      "status": "live",
-      "thumbnail": "/courses/modern-robot-learning/pods/world-models/figures/figure_1.png"
-    },
-    {
-      "slug": "vlas-autonomous-driving",
-      "title": "VLAs for Autonomous Driving",
-      "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving.",
-      "difficulty": "advanced",
-      "estimatedHours": 5,
-      "tags": [
-        "autonomous-driving",
-        "vla",
-        "robotics"
-      ],
-      "podCount": 1,
-      "totalNotebooks": 4,
-      "status": "live",
-      "thumbnail": "/courses/vlas-autonomous-driving/thumbnail.png"
-    },
-    {
-      "slug": "tiny-recursive-models",
-      "title": "Tiny Recursive Models",
-      "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks.",
-      "difficulty": "beginner",
-      "estimatedHours": 3,
-      "tags": [
-        "reasoning",
-        "efficiency",
-        "recursive-models"
-      ],
-      "podCount": 1,
-      "totalNotebooks": 4,
-      "status": "live",
-      "thumbnail": "/courses/tiny-recursive-models/pods/tiny-recursive-models/figures/figure_2.png"
+      "thumbnail": "/courses/claude-certified-architect/pods/tool-design-mcp/figures/figure_1.png"
     },
     {
       "slug": "context-engineering",
@@ -177,6 +82,135 @@
       "thumbnail": "/courses/context-engineering/pods/context-engineering-for-llms/figures/figure_1.png"
     },
     {
+      "slug": "gpu-programming",
+      "title": "GPU Parallelism for Large Language Models",
+      "description": "From a single GPU to thousands — understand every parallelism strategy used to train modern LLMs, one day at a time.",
+      "difficulty": "beginner",
+      "estimatedHours": 38,
+      "tags": [
+        "gpu-parallelism",
+        "distributed-training",
+        "llm-training",
+        "deep-learning-systems"
+      ],
+      "podCount": 10,
+      "totalNotebooks": 30,
+      "status": "live",
+      "thumbnail": "/courses/gpu-programming/pods/intro-gpus-and-parallelism/figures/figure_1.png"
+    },
+    {
+      "slug": "llm-evaluation",
+      "title": "LLM Evaluation",
+      "description": "Benchmark, evaluate, and audit large language models — from reasoning to safety.",
+      "difficulty": "intermediate",
+      "estimatedHours": 4,
+      "tags": [
+        "evaluation",
+        "benchmarking",
+        "safety"
+      ],
+      "podCount": 4,
+      "totalNotebooks": 0,
+      "status": "draft",
+      "thumbnail": "/courses/llm-evaluation/thumbnail.png"
+    },
+    {
+      "slug": "modern-robot-learning",
+      "title": "Modern Robot Learning",
+      "description": "From world models to VLAs — build modern robot learning systems from scratch.",
+      "difficulty": "intermediate",
+      "estimatedHours": 3,
+      "tags": [
+        "robotics",
+        "world-models",
+        "vla"
+      ],
+      "podCount": 7,
+      "totalNotebooks": 4,
+      "status": "live",
+      "thumbnail": "/courses/modern-robot-learning/pods/world-models/figures/figure_1.png"
+    },
+    {
+      "slug": "diffusion-models",
+      "title": "Principles of Diffusion Models",
+      "description": "From variational autoencoders to video generation — understanding diffusion models from first principles.",
+      "difficulty": "intermediate",
+      "estimatedHours": 23,
+      "tags": [
+        "diffusion",
+        "generative-models",
+        "video-generation"
+      ],
+      "podCount": 6,
+      "totalNotebooks": 22,
+      "status": "live",
+      "thumbnail": "/courses/diffusion-models/pods/intro-ddpm/figures/figure_1.png"
+    },
+    {
+      "slug": "rl-from-scratch",
+      "title": "RL From Scratch",
+      "description": "From Q-learning to GRPO — build reinforcement learning from first principles.",
+      "difficulty": "intermediate",
+      "estimatedHours": 21,
+      "tags": [
+        "reinforcement-learning",
+        "reasoning",
+        "rlhf"
+      ],
+      "podCount": 8,
+      "totalNotebooks": 28,
+      "status": "live",
+      "thumbnail": "/courses/rl-from-scratch/pods/basics-of-rl/figures/figure_1.png"
+    },
+    {
+      "slug": "tiny-recursive-models",
+      "title": "Tiny Recursive Models",
+      "description": "How a 7-million parameter network outperforms trillion-parameter LLMs on reasoning benchmarks.",
+      "difficulty": "beginner",
+      "estimatedHours": 3,
+      "tags": [
+        "reasoning",
+        "efficiency",
+        "recursive-models"
+      ],
+      "podCount": 1,
+      "totalNotebooks": 4,
+      "status": "live",
+      "thumbnail": "/courses/tiny-recursive-models/pods/tiny-recursive-models/figures/figure_2.png"
+    },
+    {
+      "slug": "vlas-autonomous-driving",
+      "title": "VLAs for Autonomous Driving",
+      "description": "How combining vision, language understanding, and action generation is reshaping autonomous driving.",
+      "difficulty": "advanced",
+      "estimatedHours": 5,
+      "tags": [
+        "autonomous-driving",
+        "vla",
+        "robotics"
+      ],
+      "podCount": 1,
+      "totalNotebooks": 4,
+      "status": "live",
+      "thumbnail": "/courses/vlas-autonomous-driving/thumbnail.png"
+    },
+    {
+      "slug": "vlms-from-scratch",
+      "title": "VLMs from Scratch",
+      "description": "Build vision-language models from first principles — from ViT to multimodal instruction tuning.",
+      "difficulty": "intermediate",
+      "estimatedHours": 24,
+      "tags": [
+        "vision-language",
+        "transformers",
+        "multimodal"
+      ],
+      "podCount": 6,
+      "totalNotebooks": 18,
+      "status": "live",
+      "thumbnail": "/courses/vlms-from-scratch/pods/vision-encoders/figures/figure_1.png"
+    },
+    {
       "slug": "voice-ai-agents",
       "title": "Voice AI Agents from Scratch",
       "description": "Build real-time voice AI agents with speech pipelines and conversational state management.",
@@ -191,22 +225,6 @@
       "totalNotebooks": 0,
       "status": "draft",
       "thumbnail": "/courses/voice-ai-agents/thumbnail.png"
-    },
-    {
-      "slug": "llm-evaluation",
-      "title": "LLM Evaluation",
-      "description": "Benchmark, evaluate, and audit large language models \u2014 from reasoning to safety.",
-      "difficulty": "intermediate",
-      "estimatedHours": 4,
-      "tags": [
-        "evaluation",
-        "benchmarking",
-        "safety"
-      ],
-      "podCount": 4,
-      "totalNotebooks": 0,
-      "status": "draft",
-      "thumbnail": "/courses/llm-evaluation/thumbnail.png"
     }
   ]
 }

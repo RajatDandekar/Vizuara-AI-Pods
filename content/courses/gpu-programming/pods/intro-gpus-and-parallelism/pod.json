@@ -1,0 +1,62 @@
+{
+  "title": "Intro to GPUs and GPU Parallelism for LLMs",
+  "slug": "intro-gpus-and-parallelism",
+  "description": "What GPUs are, why they matter for deep learning, and a bird's-eye view of the five parallelism strategies that make LLM training possible.",
+  "difficulty": "beginner",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "What Is a GPU? CPUs vs GPUs for Deep Learning",
+    "Why a Single GPU Is Never Enough for LLMs",
+    "The Five Parallelism Strategies: A Visual Overview"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "GPU Architecture Basics",
+      "slug": "01-gpu-architecture-basics",
+      "objective": "Explore GPU hardware specifications programmatically, benchmark CPU vs GPU performance on element-wise operations and matrix multiplications, examine GPU memory usage, and measure data transfer costs between CPU and GPU.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/intro-gpus-and-parallelism/01_gpu_architecture_basics.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 2,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "Why GPUs for Deep Learning",
+      "slug": "02-why-gpus-for-deep-learning",
+      "objective": "Understand why neural networks are dominated by matrix multiplication, benchmark real PyTorch layers on CPU vs GPU, profile full training steps, and calculate memory footprints to see why single GPUs run out of memory.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/intro-gpus-and-parallelism/02_why_gpus_for_deep_learning.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "Parallelism Strategies Overview",
+      "slug": "03-parallelism-strategies-overview",
+      "objective": "Explore all five GPU parallelism strategies (data, tensor, pipeline, sequence, expert) through conceptual visualizations and simulated demos, and understand when to use each strategy.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/intro-gpus-and-parallelism/03_parallelism_strategies_overview.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 2,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 1
+}

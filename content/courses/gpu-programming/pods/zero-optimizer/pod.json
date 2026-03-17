@@ -1,0 +1,63 @@
+{
+  "title": "ZeRO-1, 2, 3 — Zero Redundancy Optimizer",
+  "slug": "zero-optimizer",
+  "description": "The elegant idea behind ZeRO: instead of replicating everything on every GPU, partition optimizer states, gradients, and parameters across GPUs.",
+  "difficulty": "beginner",
+  "estimatedHours": 4,
+  "prerequisites": [],
+  "tags": [
+    "The Memory Redundancy Problem in Data Parallelism",
+    "ZeRO Stage 1: Partitioning Optimizer States",
+    "ZeRO Stage 2: Adding Gradient Partitioning",
+    "ZeRO Stage 3 (FSDP): Partitioning Everything"
+  ],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "ZeRO Memory Calculator",
+      "slug": "01-zero-memory-calculator",
+      "objective": "Derive and implement memory formulas for each ZeRO stage, build visualizations comparing per-GPU memory across stages, compute communication costs, and create a complete memory planner that combines model states with activation estimates.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/zero-optimizer/01_zero_memory_calculator.ipynb",
+      "estimatedMinutes": 45,
+      "todoCount": 3,
+      "order": 1,
+      "hasNarration": true
+    },
+    {
+      "title": "ZeRO from Scratch",
+      "slug": "02-zero-from-scratch",
+      "objective": "Implement simplified ZeRO Stage 1 and Stage 2 optimizers in pure PyTorch, simulate multi-GPU communication primitives (allreduce, reduce-scatter, allgather), verify that ZeRO produces identical results to standard data parallelism, and analyze memory and communication trade-offs.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/zero-optimizer/02_zero_from_scratch.ipynb",
+      "estimatedMinutes": 55,
+      "todoCount": 3,
+      "order": 2,
+      "hasNarration": true
+    },
+    {
+      "title": "DeepSpeed ZeRO Training",
+      "slug": "03-deepspeed-zero",
+      "objective": "Use Microsoft DeepSpeed to train a Transformer model with ZeRO Stages 1, 2, and 3, compare memory usage and training curves across stages, configure CPU offloading, and build a decision matrix for choosing the optimal ZeRO stage.",
+      "colabUrl": null,
+      "downloadPath": "/notebooks/zero-optimizer/03_deepspeed_zero.ipynb",
+      "estimatedMinutes": 50,
+      "todoCount": 3,
+      "order": 3,
+      "hasNarration": true
+    }
+  ],
+  "caseStudy": null,
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": null,
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "gpu-programming",
+  "order": 5
+}
