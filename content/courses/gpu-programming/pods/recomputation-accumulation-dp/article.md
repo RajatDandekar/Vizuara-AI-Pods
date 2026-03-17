@@ -1,6 +1,8 @@
-Activation Recomputation, Gradient Accumulation, and Data Parallelism
-Three foundational techniques that reduce memory and scale training: recomputing activations, accumulating gradients, and replicating your model across GPUs.
-Vizuara AI
+# Activation Recomputation, Gradient Accumulation, and Data Parallelism
+
+*Three foundational techniques that reduce memory and scale training: recomputing activations, accumulating gradients, and replicating your model across GPUs.*
+
+---
 
 ## (1) The Memory Wall
 
