@@ -16,7 +16,7 @@
       "title": "Intro to GPUs and GPU Parallelism for LLMs",
       "description": "What GPUs are, why they matter for deep learning, and a bird's-eye view of the five parallelism strategies that make LLM training possible.",
       "order": 1,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/intro-gpus-and-parallelism/figures/figure_1.png"
@@ -26,7 +26,7 @@
       "title": "GPU Memory — The Four Major Components",
       "description": "Understand where your GPU memory actually goes: weights, gradients, optimizer states, and activations — the four components that determine whether your model fits.",
       "order": 2,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/gpu-memory-components/figures/figure_1.png"
@@ -36,7 +36,7 @@
       "title": "Activation Recomputation, Gradient Accumulation, and Data Parallelism",
       "description": "Three foundational techniques that reduce memory and scale training: recomputing activations, accumulating gradients, and replicating your model across GPUs.",
       "order": 3,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 4,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/recomputation-accumulation-dp/figures/figure_1.png"
@@ -46,7 +46,7 @@
       "title": "Ring-AllReduce, Choosing Batch Size, and TensorBoard GPU Profiling",
       "description": "How GPUs communicate, how to pick the right batch size, and how to profile your training runs to find bottlenecks.",
       "order": 4,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 5,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/allreduce-batchsize-profiling/figures/figure_1.png"
@@ -56,7 +56,7 @@
       "title": "ZeRO-1, 2, 3 — Zero Redundancy Optimizer",
       "description": "The elegant idea behind ZeRO: instead of replicating everything on every GPU, partition optimizer states, gradients, and parameters across GPUs.",
       "order": 5,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 4,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/zero-optimizer/figures/figure_1.png"
@@ -66,7 +66,7 @@
       "title": "Tensor Parallelism",
       "description": "Split individual weight matrices across GPUs — column-linear, row-linear, and how tensor parallelism works inside a transformer block.",
       "order": 6,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 4,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/tensor-parallelism/figures/figure_1.png"
@@ -76,7 +76,7 @@
       "title": "Sequence Parallelism",
       "description": "Why LayerNorm and dropout waste memory in tensor parallelism, and how sequence parallelism fixes it by splitting the sequence dimension.",
       "order": 7,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/sequence-parallelism/figures/figure_1.png"
@@ -86,7 +86,7 @@
       "title": "Context Parallelism",
       "description": "Training with million-token contexts by splitting the sequence across GPUs using Ring Attention and its optimized variants.",
       "order": 8,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/context-parallelism/figures/figure_1.png"
@@ -96,7 +96,7 @@
       "title": "Pipeline Parallelism",
       "description": "Split transformer layers across GPUs like an assembly line — from naive schedules to 1F1B, minimizing the pipeline bubble.",
       "order": 9,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 5,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/pipeline-parallelism/figures/figure_1.png"
@@ -106,7 +106,7 @@
       "title": "Expert Parallelism",
       "description": "Mixture of Experts models activate only a fraction of parameters per token — learn how experts are distributed across GPUs and kept balanced.",
       "order": 10,
-      "notebookCount": 0,
+      "notebookCount": 3,
       "estimatedHours": 4,
       "hasCaseStudy": false,
       "thumbnail": "/courses/gpu-programming/pods/expert-parallelism/figures/figure_1.png"
