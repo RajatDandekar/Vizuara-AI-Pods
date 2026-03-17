@@ -124,7 +124,7 @@ Let us define four categories that cover virtually every tool failure:
 
 **3. Business errors** — The request violated a business rule. The refund was denied because the return window expired, or the customer has already received a refund for this order. These are NOT retryable — the policy will not change.
 
-**4. Permission errors** — The agent lacks authorization for this action. A refund above $500 requires manager approval, or the customer's account is restricted. These need escalation.
+**4. Permission errors** — The agent lacks authorization for this action. A refund above \$500 requires manager approval, or the customer's account is restricted. These need escalation.
 
 
 ![Error response taxonomy — transient, validation, business, and permission errors with recovery actions](figures/figure_2.png)

@@ -263,7 +263,7 @@ def enforce_refund_policy(tool_name, tool_input):
     return {"blocked": False}
 ```
 
-Why not just tell the model "never process refunds over $500"? Because prompts are probabilistic. The model might process a $750 refund if the customer provides a compelling reason. A hook is deterministic — it will block that refund 100% of the time, regardless of what the model wants to do.
+Why not just tell the model "never process refunds over \$500"? Because prompts are probabilistic. The model might process a \$750 refund if the customer provides a compelling reason. A hook is deterministic — it will block that refund 100% of the time, regardless of what the model wants to do.
 
 This is the key exam insight: **hooks are for guaranteed compliance; prompts are for best-effort guidance.**
 

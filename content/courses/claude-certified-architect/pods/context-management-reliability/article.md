@@ -22,7 +22,7 @@ Let us understand the two core risks.
 
 **Risk 1: Progressive Summarization Loses Critical Details.** A common approach to handling long documents is progressive summarization -- take a 50-page document, summarize it to 5 pages, then summarize again to 1 page. The problem? Each summarization step is lossy. A specific policy exclusion buried on page 37 might be the single most important fact for a customer's claim, and progressive summarization can silently drop it.
 
-Consider this scenario. The agent reads the first 10 pages and summarizes them: *"Customer filed a claim on March 5 for water damage. Policy covers structural repairs."* Then it reads pages 11-20 and summarizes: *"Contractor estimates $45,000 in repairs. Adjuster visited on March 12."*
+Consider this scenario. The agent reads the first 10 pages and summarizes them: *"Customer filed a claim on March 5 for water damage. Policy covers structural repairs."* Then it reads pages 11-20 and summarizes: *"Contractor estimates \$45,000 in repairs. Adjuster visited on March 12."*
 
 The problem? The original document on page 7 mentioned a **policy exclusion for pre-existing foundation cracks** -- a critical detail that the summary quietly dropped. When the agent later recommends full approval, it has made a decision based on incomplete information. This is the fundamental risk: each summarization step is lossy, and critical details can vanish without warning.
 
@@ -117,7 +117,7 @@ Vague rules like "escalate when things get complex" are useless in production. T
 |---|---|---|
 | **Safety concerns** | Threats of harm, legal action, or urgent situations | Keyword detection + sentiment analysis |
 | **Customer request** | Customer explicitly asks for a human | Any mention of "manager," "human," "supervisor" |
-| **High-value decisions** | Financial decisions above a threshold | Claim value > $100,000 |
+| **High-value decisions** | Financial decisions above a threshold | Claim value > \$100,000 |
 | **Policy gaps** | No authoritative source covers this situation | Confidence score < 0.7 on policy match |
 | **Repeated failures** | Agent has failed to resolve after N attempts | 3 consecutive unsuccessful attempts |
 

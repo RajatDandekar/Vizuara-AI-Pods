@@ -243,7 +243,7 @@ This is exactly what we want for extraction pipelines.
 
 But here is the catch — and this is a point the exam tests specifically: **strict schemas eliminate syntax errors but NOT semantic errors.** The JSON will always be valid. The field types will always match. But the model can still produce semantically wrong values.
 
-For example, an invoice with three line items at $100, $200, and $150 should have a `total_amount` of $450. But the model might extract `total_amount: 500` if the document is ambiguous or if it misreads a number. The schema guarantees that `total_amount` is a number — but it cannot guarantee that the number is the correct sum of line items.
+For example, an invoice with three line items at \$100, \$200, and \$150 should have a `total_amount` of \$450. But the model might extract `total_amount: 500` if the document is ambiguous or if it misreads a number. The schema guarantees that `total_amount` is a number — but it cannot guarantee that the number is the correct sum of line items.
 
 There are several schema design patterns that reduce semantic errors:
 
