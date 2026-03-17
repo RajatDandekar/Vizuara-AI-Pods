@@ -3,7 +3,7 @@
   "slug": "claude-certified-architect",
   "description": "Master the five domains of the Anthropic Claude Certified Architect — Foundations exam with hands-on practice and a full-length practice test.",
   "difficulty": "intermediate",
-  "estimatedHours": 6,
+  "estimatedHours": 16,
   "tags": [
     "certification",
     "claude",
@@ -18,7 +18,7 @@
       "description": "Design production agentic loops, multi-agent coordinator patterns, and session management — the largest exam domain at 27%.",
       "order": 1,
       "notebookCount": 5,
-      "estimatedHours": 2,
+      "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/claude-certified-architect/pods/tool-design-mcp/figures/figure_1.png"
     },
@@ -48,7 +48,7 @@
       "description": "Apply explicit criteria, few-shot prompting, tool_use schemas, validation-retry loops, and the Batch API — 20% of the exam.",
       "order": 4,
       "notebookCount": 4,
-      "estimatedHours": 2,
+      "estimatedHours": 3,
       "hasCaseStudy": false,
       "thumbnail": "/courses/claude-certified-architect/pods/claude-code-workflows/figures/figure_1.png"
     },

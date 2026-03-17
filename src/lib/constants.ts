@@ -16,7 +16,15 @@ export const SUGGESTED_CONCEPTS = [
 export const FREE_POD_SLUGS = new Set(['intro-ddpm', 'basics-of-rl', 'vision-encoders']);
 
 // Pods that are free but require login (no subscription needed)
-export const FREE_WITH_LOGIN_POD_SLUGS = new Set(['openclaw-rl']);
+export const FREE_WITH_LOGIN_POD_SLUGS = new Set([
+  'openclaw-rl',
+  'agentic-architecture',
+  'tool-design-mcp',
+  'claude-code-workflows',
+  'prompt-engineering-structured-output',
+  'context-management-reliability',
+  'certification-practice-exam',
+]);
 
 export const FREE_POD_SPECS = [
   { courseSlug: 'diffusion-models', podSlug: 'intro-ddpm' },

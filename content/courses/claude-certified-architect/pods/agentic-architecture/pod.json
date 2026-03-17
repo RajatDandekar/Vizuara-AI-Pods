@@ -3,7 +3,7 @@
   "slug": "agentic-architecture",
   "description": "Design production agentic loops, multi-agent coordinator patterns, and session management — the largest exam domain at 27%.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
+  "estimatedHours": 3,
   "prerequisites": [],
   "tags": [],
   "article": {
@@ -67,6 +67,13 @@
       "order": 5
     }
   ],
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
   "courseSlug": "claude-certified-architect",
   "order": 1
 }

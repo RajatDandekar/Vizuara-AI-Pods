@@ -59,11 +59,13 @@ export default function HomeClient({
   const [browseFiltered, setBrowseFiltered] = useState<CourseCard[]>([]);
   const [bannerDismissed, setBannerDismissed] = useState(true);
   const [qwenBannerDismissed, setQwenBannerDismissed] = useState(true);
+  const [certBannerDismissed, setCertBannerDismissed] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setBannerDismissed(localStorage.getItem('dismiss_context_eng_banner') === '1');
       setQwenBannerDismissed(localStorage.getItem('dismiss_qwen35_banner') === '1');
+      setCertBannerDismissed(localStorage.getItem('dismiss_cert_banner') === '1');
     }
   }, []);
 
@@ -263,6 +265,36 @@ export default function HomeClient({
       {/* ================================================================ */}
       {!user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-16" style={{ zIndex: 1 }}>
+
+          {/* Free course announcement — Claude Certified Architect */}
+          <FadeIn delay={0.03}>
+            <Link href="/courses/claude-certified-architect">
+              <div className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-r from-amber-50 via-white to-orange-50 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_60%)]" />
+                <div className="relative flex items-center gap-5 px-6 py-5">
+                  <div className="hidden sm:block flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-700 uppercase tracking-wide">Free Course</span>
+                    </div>
+                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Claude Certified Architect Prep &mdash; 100% Free</h3>
+                    <p className="text-sm text-slate-500">
+                      6 pods, 22 narrated notebooks, and a 60-question practice exam. Create a free account to start preparing for Anthropic&apos;s certification.
+                    </p>
+                  </div>
+                  <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </FadeIn>
 
           {/* New course announcement */}
           <FadeIn delay={0.05}>
@@ -493,6 +525,54 @@ export default function HomeClient({
       {/* ================================================================ */}
       {user && (
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-12" style={{ zIndex: 1 }}>
+
+          {/* Free Course Banner — Claude Certified Architect */}
+          {!certBannerDismissed && (
+            <FadeIn delay={0.01}>
+              <div className="relative overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-r from-amber-50 via-white to-orange-50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.08),transparent_60%)]" />
+                <div className="relative flex items-start gap-5 px-6 py-5">
+                  <div className="hidden sm:block flex-shrink-0 mt-1">
+                    <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-700 uppercase tracking-wide">Free Course</span>
+                      <h3 className="font-bold text-slate-900 text-base">Claude Certified Architect Prep &mdash; 100% Free</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                      Prepare for Anthropic&apos;s Claude Certified Architect &mdash; Foundations exam with 6 structured pods, 22 narrated notebooks, and a 60-question practice exam. No subscription needed.
+                    </p>
+                    <Link
+                      href="/courses/claude-certified-architect"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 transition-colors"
+                    >
+                      Start learning
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setCertBannerDismissed(true);
+                      localStorage.setItem('dismiss_cert_banner', '1');
+                    }}
+                    className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+                    aria-label="Dismiss"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </FadeIn>
+          )}
 
           {/* New Course Announcement Banner */}
           {!bannerDismissed && (

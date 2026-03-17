@@ -68,6 +68,33 @@ export default function CourseOverviewClient({
         />
       </FadeIn>
 
+      {/* Free Course Banner — only for Claude Certified Architect */}
+      {courseSlug === 'claude-certified-architect' && (
+        <FadeIn delay={0.05}>
+          <div className="relative overflow-hidden rounded-xl border border-emerald-200/60 bg-gradient-to-r from-emerald-50 via-white to-teal-50 mb-6">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_60%)]" />
+            <div className="relative flex items-center gap-4 px-5 py-4">
+              <div className="hidden sm:block flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-700 uppercase tracking-wide">Free</span>
+                  <span className="text-sm font-semibold text-slate-900">This entire course is free</span>
+                </div>
+                <p className="text-xs text-slate-500">
+                  All 6 pods, 22 notebooks, and the practice exam &mdash; no subscription required. Just log in to start.
+                </p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      )}
+
       {/* Course Header */}
       <FadeIn delay={0.1}>
         <div className="mb-8">

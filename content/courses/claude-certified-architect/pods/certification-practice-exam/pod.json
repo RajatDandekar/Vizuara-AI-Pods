@@ -3,7 +3,7 @@
   "slug": "certification-practice-exam",
   "description": "A full-length 60-question practice exam mirroring the real test format, with detailed answer explanations and an auto-scoring Colab notebook.",
   "difficulty": "intermediate",
-  "estimatedHours": 1,
+  "estimatedHours": 2,
   "prerequisites": [],
   "tags": [],
   "article": {
@@ -23,6 +23,13 @@
       "order": 1
     }
   ],
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
   "courseSlug": "claude-certified-architect",
   "order": 6
 }
