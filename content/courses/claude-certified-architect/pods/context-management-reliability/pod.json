@@ -1,0 +1,61 @@
+{
+  "title": "Context Management & Reliability",
+  "slug": "context-management-reliability",
+  "description": "Handle context window limits, escalation criteria, crash recovery, and information provenance — 15% of the exam.",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: Context Window Management",
+      "slug": "01-context_window_management",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1kDazJGDs5ykwrh83Dd1yC7-WeLJKjCWE",
+      "downloadPath": "/notebooks/context-management-reliability/01_context_window_management.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 50,
+      "todoCount": 1,
+      "order": 1
+    },
+    {
+      "title": "Notebook 2: Escalation & Human-in-the-Loop",
+      "slug": "02-escalation_human_in_the_loop",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1iO-0U4lOETNm4C0_Jq7vW7oR2iqW5m8F",
+      "downloadPath": "/notebooks/context-management-reliability/02_escalation_human_in_the_loop.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 76,
+      "todoCount": 5,
+      "order": 2
+    },
+    {
+      "title": "Notebook 3: Error Propagation & Crash Recovery",
+      "slug": "03-error_propagation_crash_recovery",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1EDvXdNyvQ1OZOZKXpJ_TLGKuId8XD14b",
+      "downloadPath": "/notebooks/context-management-reliability/03_error_propagation_crash_recovery.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 60,
+      "todoCount": 2,
+      "order": 3
+    },
+    {
+      "title": "Notebook 4: Information Provenance & Scratchpads",
+      "slug": "04-information_provenance_scratchpads",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1_jJ2BhQtJE8-k-QFE27EgHAq4fiDw9ho",
+      "downloadPath": "/notebooks/context-management-reliability/04_information_provenance_scratchpads.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 66,
+      "todoCount": 3,
+      "order": 4
+    }
+  ],
+  "courseSlug": "claude-certified-architect",
+  "order": 5
+}

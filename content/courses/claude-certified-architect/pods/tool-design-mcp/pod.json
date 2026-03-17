@@ -1,0 +1,77 @@
+{
+  "title": "Tool Design & MCP Integration",
+  "slug": "tool-design-mcp",
+  "description": "Craft tool descriptions that guide reliable selection, structure error responses for intelligent recovery, and configure MCP servers for production agent workflows",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "tool-design",
+    "mcp",
+    "error-handling",
+    "tool-selection"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Tool-Design-MCP-Integration-32501fbe4771817d85c9e80db85e95f9",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1fH-c8KMs8xknhtgfVjXHtR5hLIEhpfft=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/145qqyWPaI9-LujCtel8ArhygvOCMFHmU=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1zSAJRqKkNhPmZM7fFO5UdOmEzR-7Cg9V=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/1lRAK6LyG2n_RKVRpfSJH1ARguxlR1hiG=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: Crafting Effective Tool Descriptions",
+      "slug": "01-crafting_effective_tool_descriptions",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1mI3afS3dif3yCt-Wiw7BS_KPMsYt9Maz",
+      "downloadPath": "/notebooks/tool-design-mcp/01_crafting_effective_tool_descriptions.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 90,
+      "todoCount": 2,
+      "order": 1
+    },
+    {
+      "title": "Notebook 2: Structured Error Responses",
+      "slug": "02-structured_error_responses",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1PrNP2z9UqA5PpoM1wS8Y7SfZB_uoNydk",
+      "downloadPath": "/notebooks/tool-design-mcp/02_structured_error_responses.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 64,
+      "todoCount": 2,
+      "order": 2
+    },
+    {
+      "title": "Notebook 3: Tool Distribution & tool_choice",
+      "slug": "03-tool_distribution_and_tool_choice",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1K51lY0t_lVL0ZhtIWczXF2umT0U35RW4",
+      "downloadPath": "/notebooks/tool-design-mcp/03_tool_distribution_and_tool_choice.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 42,
+      "todoCount": 1,
+      "order": 3
+    },
+    {
+      "title": "Notebook 4: MCP Server Configuration & Built-in Tools",
+      "slug": "04-mcp_server_configuration",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/10W0LKLg52cdGmz4athIzeFKNmc0BGLhY",
+      "downloadPath": "/notebooks/tool-design-mcp/04_mcp_server_configuration.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 60,
+      "todoCount": 4,
+      "order": 4
+    }
+  ],
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "claude-certified-architect"
+}

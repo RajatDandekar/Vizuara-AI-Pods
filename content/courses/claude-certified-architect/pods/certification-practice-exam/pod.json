@@ -1,0 +1,28 @@
+{
+  "title": "Certification Practice Exam",
+  "slug": "certification-practice-exam",
+  "description": "A full-length 60-question practice exam mirroring the real test format, with detailed answer explanations and an auto-scoring Colab notebook.",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: Full Practice Exam (60 Questions)",
+      "slug": "01-practice_exam",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1dJYD0b_2kAHNFdiwRHtw5aZ141uIn2Wo",
+      "downloadPath": "/notebooks/certification-practice-exam/01_practice_exam.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 272,
+      "todoCount": 0,
+      "order": 1
+    }
+  ],
+  "courseSlug": "claude-certified-architect",
+  "order": 6
+}

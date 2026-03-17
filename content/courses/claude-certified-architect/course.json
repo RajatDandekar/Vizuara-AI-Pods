@@ -1,0 +1,77 @@
+{
+  "title": "Claude Certified Architect Prep",
+  "slug": "claude-certified-architect",
+  "description": "Master the five domains of the Anthropic Claude Certified Architect — Foundations exam with hands-on practice and a full-length practice test.",
+  "difficulty": "intermediate",
+  "estimatedHours": 6,
+  "tags": [
+    "certification",
+    "claude",
+    "anthropic",
+    "architect",
+    "agentic-ai"
+  ],
+  "pods": [
+    {
+      "slug": "agentic-architecture",
+      "title": "Agentic Architecture & Orchestration",
+      "description": "Design production agentic loops, multi-agent coordinator patterns, and session management — the largest exam domain at 27%.",
+      "order": 1,
+      "notebookCount": 5,
+      "estimatedHours": 2,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/tool-design-mcp/figures/figure_1.png"
+    },
+    {
+      "slug": "tool-design-mcp",
+      "title": "Tool Design & MCP Integration",
+      "description": "Craft tool descriptions that guide reliable selection, structure error responses for intelligent recovery, and configure MCP servers for production agent workflows",
+      "order": 2,
+      "notebookCount": 4,
+      "estimatedHours": 3,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/tool-design-mcp/figures/figure_1.png"
+    },
+    {
+      "slug": "claude-code-workflows",
+      "title": "Claude Code Configuration & Workflows",
+      "description": "Master the layered configuration hierarchy, custom commands, execution strategies, and CI/CD patterns that turn Claude Code from a generic assistant into a team-aligned development partner",
+      "order": 3,
+      "notebookCount": 4,
+      "estimatedHours": 3,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/claude-code-workflows/figures/figure_1.png"
+    },
+    {
+      "slug": "prompt-engineering-structured-output",
+      "title": "Prompt Engineering & Structured Output",
+      "description": "Apply explicit criteria, few-shot prompting, tool_use schemas, validation-retry loops, and the Batch API — 20% of the exam.",
+      "order": 4,
+      "notebookCount": 4,
+      "estimatedHours": 2,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/claude-code-workflows/figures/figure_1.png"
+    },
+    {
+      "slug": "context-management-reliability",
+      "title": "Context Management & Reliability",
+      "description": "Handle context window limits, escalation criteria, crash recovery, and information provenance — 15% of the exam.",
+      "order": 5,
+      "notebookCount": 4,
+      "estimatedHours": 2,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/context-management-reliability/figures/figure_1.png"
+    },
+    {
+      "slug": "certification-practice-exam",
+      "title": "Certification Practice Exam",
+      "description": "A full-length 60-question practice exam mirroring the real test format, with detailed answer explanations and an auto-scoring Colab notebook.",
+      "order": 6,
+      "notebookCount": 1,
+      "estimatedHours": 2,
+      "hasCaseStudy": false,
+      "thumbnail": "/courses/claude-certified-architect/pods/context-management-reliability/figures/figure_1.png"
+    }
+  ],
+  "thumbnail": "/courses/claude-certified-architect/pods/tool-design-mcp/figures/figure_1.png"
+}

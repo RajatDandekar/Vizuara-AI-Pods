@@ -1,0 +1,72 @@
+{
+  "title": "Agentic Architecture & Orchestration",
+  "slug": "agentic-architecture",
+  "description": "Design production agentic loops, multi-agent coordinator patterns, and session management — the largest exam domain at 27%.",
+  "difficulty": "intermediate",
+  "estimatedHours": 1,
+  "prerequisites": [],
+  "tags": [],
+  "article": {
+    "notionUrl": null,
+    "figureUrls": {}
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: Agentic Loop Fundamentals",
+      "slug": "01-agentic_loop_fundamentals",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1H6E5E3DH814goNOezKg0ukq_8r_ynDjY",
+      "downloadPath": "/notebooks/agentic-architecture/01_agentic_loop_fundamentals.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 64,
+      "todoCount": 3,
+      "order": 1
+    },
+    {
+      "title": "Notebook 2: Multi-Agent Coordinator Patterns",
+      "slug": "02-multi_agent_coordinator_patterns",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1xhRMtx7yRIWMaNAgfssF0mAgaMKv5cj4",
+      "downloadPath": "/notebooks/agentic-architecture/02_multi_agent_coordinator_patterns.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 56,
+      "todoCount": 3,
+      "order": 2
+    },
+    {
+      "title": "Notebook 3: Agent SDK Hooks & Enforcement",
+      "slug": "03-agent_sdk_hooks_enforcement",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1nod6_gRVehv63PmtSA9LgvWTTLGdG1XO",
+      "downloadPath": "/notebooks/agentic-architecture/03_agent_sdk_hooks_enforcement.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 86,
+      "todoCount": 5,
+      "order": 3
+    },
+    {
+      "title": "Notebook 4: Task Decomposition Strategies",
+      "slug": "04-task_decomposition_strategies",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1FlKKjigNZkDt_mcgHlIdAlRj_WERfWja",
+      "downloadPath": "/notebooks/agentic-architecture/04_task_decomposition_strategies.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 80,
+      "todoCount": 4,
+      "order": 4
+    },
+    {
+      "title": "Notebook 5: Session Management & Forking",
+      "slug": "05-session_management_forking",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1USevP0BnZEF8CDc4O8PgJJo0UieS46mi",
+      "downloadPath": "/notebooks/agentic-architecture/05_session_management_forking.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 80,
+      "todoCount": 5,
+      "order": 5
+    }
+  ],
+  "courseSlug": "claude-certified-architect",
+  "order": 1
+}

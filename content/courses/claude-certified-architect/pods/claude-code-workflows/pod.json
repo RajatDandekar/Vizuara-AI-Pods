@@ -1,0 +1,78 @@
+{
+  "title": "Claude Code Configuration & Workflows",
+  "slug": "claude-code-workflows",
+  "description": "Master the layered configuration hierarchy, custom commands, execution strategies, and CI/CD patterns that turn Claude Code from a generic assistant into a team-aligned development partner",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "claude-code",
+    "claude-md",
+    "ci-cd",
+    "plan-mode",
+    "skills"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Claude-Code-Configuration-Workflows-32501fbe4771814c9312e35218489482",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/1rk6NshmOqFu6RnDIx_8SjsOgEKWqiicp=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/1-hHDSiehz4BbyvA1IX-Gl-2-l28nvI7H=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1LWvtwQbYpeLogMwJwmJASqlS79S4QuK7=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/120_77z3RppKQ54wBs7imH9ahh35Wjnqc=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: CLAUDE.md Hierarchy & Rules",
+      "slug": "01-claude_md_hierarchy",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1s7sD1t_4Bhv1clS5ll5PTxsuEXBo6VpV",
+      "downloadPath": "/notebooks/claude-code-workflows/01_claude_md_hierarchy.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 52,
+      "todoCount": 2,
+      "order": 1
+    },
+    {
+      "title": "Notebook 2: Custom Slash Commands & Skills",
+      "slug": "02-commands_and_skills",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/17hVx0BFURmDGziVmNsELCIiMSVtOYQ_w",
+      "downloadPath": "/notebooks/claude-code-workflows/02_commands_and_skills.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 38,
+      "todoCount": 1,
+      "order": 2
+    },
+    {
+      "title": "Notebook 3: Plan Mode & Iterative Refinement",
+      "slug": "03-plan_mode_refinement",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1R3aGveMJB7FT7BXxjt6rI8mUbZyeQl0J",
+      "downloadPath": "/notebooks/claude-code-workflows/03_plan_mode_refinement.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 46,
+      "todoCount": 1,
+      "order": 3
+    },
+    {
+      "title": "Notebook 4: CI/CD Integration",
+      "slug": "04-cicd_integration",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/10gPgy_vQFbvxv2694Kq3N5fWyWYD8AWB",
+      "downloadPath": "/notebooks/claude-code-workflows/04_cicd_integration.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 40,
+      "todoCount": 1,
+      "order": 4
+    }
+  ],
+  "curator": {
+    "name": "Dr. Rajat Dandekar",
+    "title": "Course Instructor",
+    "bio": "Dr. Rajat Dandekar is a researcher and educator specializing in AI/ML, with a passion for making complex concepts accessible through intuitive explanations and hands-on learning.",
+    "videoUrl": "https://drive.google.com/file/d/1xgSDKFZLU25MjUogCs4siGb5PJKSQGJN/view?usp=sharing",
+    "imageUrl": "/founders/rajat.jpg"
+  },
+  "courseSlug": "claude-certified-architect"
+}

@@ -1,0 +1,73 @@
+{
+  "title": "Prompt Engineering & Structured Output",
+  "slug": "prompt-engineering-structured-output",
+  "description": "Apply explicit criteria, few-shot prompting, tool_use schemas, validation-retry loops, and the Batch API — 20% of the exam.",
+  "difficulty": "intermediate",
+  "estimatedHours": 3,
+  "prerequisites": [],
+  "tags": [
+    "prompt-engineering",
+    "structured-output",
+    "json-schema",
+    "batch-api",
+    "few-shot"
+  ],
+  "article": {
+    "notionUrl": "https://www.notion.so/Prompt-Engineering-Structured-Output-32501fbe47718174b472cb43cb02366e",
+    "figureUrls": {
+      "figures/figure_1.png": "https://lh3.googleusercontent.com/d/15aDWF1Yx66RYBvG3MuMGBmWn7stYf1A3=w2000",
+      "figures/figure_2.png": "https://lh3.googleusercontent.com/d/13osAIeXm-dI12n-IpYwcMQmMbnv4ZfFN=w2000",
+      "figures/figure_3.png": "https://lh3.googleusercontent.com/d/1nyj48_F22LXIBJjTG8RHcijgUfPB5KrU=w2000",
+      "figures/figure_4.png": "https://lh3.googleusercontent.com/d/137or9UReRQ6v85Vc3JqSXSp7Zcz7kezx=w2000",
+      "figures/figure_5.png": "https://lh3.googleusercontent.com/d/1RR_Xj3CUVC7XQAzOpsGwFAQTa71h8lWe=w2000"
+    }
+  },
+  "notebooks": [
+    {
+      "title": "Notebook 1: Explicit Criteria & Few-Shot Prompting",
+      "slug": "01-explicit_criteria_and_few_shot_prompting",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1YI-wcj290TiIxkDODnDdmDRgLI9qT_Gr",
+      "downloadPath": "/notebooks/prompt-engineering-structured-output/01_explicit_criteria_and_few_shot_prompting.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 92,
+      "todoCount": 12,
+      "order": 1
+    },
+    {
+      "title": "Notebook 2: Structured Output with tool_use",
+      "slug": "02-structured_output_with_tool_use",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/17vLT5Wajtyzo5TiAUwZgjrpgJyTXZbCP",
+      "downloadPath": "/notebooks/prompt-engineering-structured-output/02_structured_output_with_tool_use.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 72,
+      "todoCount": 10,
+      "order": 2
+    },
+    {
+      "title": "Notebook 3: Validation-Retry Loops",
+      "slug": "03-validation_retry_loops",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1XLxoR7LTgvkjToGO9eXgUS-VPzZaOP6U",
+      "downloadPath": "/notebooks/prompt-engineering-structured-output/03_validation_retry_loops.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 62,
+      "todoCount": 14,
+      "order": 3
+    },
+    {
+      "title": "Notebook 4: Batch API & Multi-Pass Review",
+      "slug": "04-batch_api_and_multi_pass_review",
+      "objective": "---",
+      "colabUrl": "https://colab.research.google.com/drive/1g4676FJjk7edGKPHP1Ca9BJlV3SHMnLm",
+      "downloadPath": "/notebooks/prompt-engineering-structured-output/04_batch_api_and_multi_pass_review.ipynb",
+      "hasNarration": true,
+      "estimatedMinutes": 54,
+      "todoCount": 9,
+      "order": 4
+    }
+  ],
+  "courseSlug": "claude-certified-architect",
+  "order": 4
+}
