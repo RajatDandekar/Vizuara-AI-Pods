@@ -69,9 +69,9 @@
   "caseStudy": {
     "title": "Building a Regulatory Compliance Assistant with RAG",
     "description": "Build a RAG-powered compliance Q&A system for a fintech company using the CUAD legal dataset.",
-    "pdfUrl": "",
-    "notebookUrl": "https://colab.research.google.com/drive/1VicCgo_eYrNeDGImLWjnJEEy29Fec2rJ",
-    "driveId": "1VicCgo_eYrNeDGImLWjnJEEy29Fec2rJ"
+    "pdfPath": "/case-studies/rag-systems/case_study.pdf",
+    "notebookPath": "/case-studies/rag-systems/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/1VicCgo_eYrNeDGImLWjnJEEy29Fec2rJ"
   },
   "curator": {
     "name": "Raj Dandekar",

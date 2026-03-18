@@ -277,7 +277,11 @@ Mini-batch 1 gradients: [0.1, -0.3, 0.2]
 Mini-batch 2 gradients: [0.3, -0.1, 0.4]
 ```
 
-Accumulated gradient (averaged): $$\left[\frac{0.1 + 0.3}{2},\; \frac{-0.3 + (-0.1)}{2},\; \frac{0.2 + 0.4}{2}\right] = [0.2,\; -0.2,\; 0.3]$$
+Accumulated gradient (averaged):
+
+$$
+\left[\frac{0.1 + 0.3}{2},\; \frac{-0.3 + (-0.1)}{2},\; \frac{0.2 + 0.4}{2}\right] = [0.2,\; -0.2,\; 0.3]
+$$
 
 This is exactly what we would get if we had processed all 64 samples in a single batch — smoother, more reliable updates without needing the GPU memory for the full batch.
 

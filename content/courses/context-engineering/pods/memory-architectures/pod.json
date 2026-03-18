@@ -81,9 +81,9 @@
   "caseStudy": {
     "title": "Building a Clinical Memory System for MedFlow AI",
     "description": "Build a HIPAA-compliant hybrid memory system for an AI clinical assistant that remembers allergies, medications, and diagnoses across patient sessions.",
-    "pdfUrl": "",
-    "notebookUrl": "https://colab.research.google.com/drive/1y0VH4GfE0M0v4c0n9TVHnpK8YWOHfhL7",
-    "driveId": "1y0VH4GfE0M0v4c0n9TVHnpK8YWOHfhL7"
+    "pdfPath": "/case-studies/memory-architectures/case_study.pdf",
+    "notebookPath": "/case-studies/memory-architectures/case_study_notebook.ipynb",
+    "colabUrl": "https://colab.research.google.com/drive/1y0VH4GfE0M0v4c0n9TVHnpK8YWOHfhL7"
   },
   "curator": {
     "name": "Raj Dandekar",

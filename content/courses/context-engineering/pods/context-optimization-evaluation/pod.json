@@ -80,9 +80,9 @@
   "caseStudy": {
     "title": "Optimizing Context Quality for MedAssist AI — A Clinical Decision Support System",
     "description": "Build a complete context optimization and evaluation pipeline for a clinical AI system that serves 45 hospitals, addressing faithfulness degradation, token bloat, and latency issues.",
-    "pdfUrl": "",
-    "notebookUrl": "",
-    "driveId": ""
+    "pdfPath": "/case-studies/context-optimization-evaluation/case_study.pdf",
+    "notebookPath": "/case-studies/context-optimization-evaluation/case_study_notebook.ipynb",
+    "colabUrl": ""
   },
   "curator": {
     "name": "Raj Dandekar",
