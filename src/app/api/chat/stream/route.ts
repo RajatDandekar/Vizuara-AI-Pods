@@ -4,7 +4,7 @@ import { sleep, getRetryDelay, isRateLimitError } from '@/lib/retry';
 
 export const dynamic = 'force-dynamic';
 
-const CHAT_MODEL = 'gemini-2.5-flash';
+const CHAT_MODEL = 'gemini-2.0-flash';
 const MAX_RETRIES = 3;
 const MAX_OUTPUT_TOKENS = 65536;
 
@@ -52,14 +52,15 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  if (!process.env.GEMINI_API_KEY) {
+  const apiKey = process.env.GEMINI_CHAT_API_KEY || process.env.GEMINI_API_KEY;
+  if (!apiKey) {
     return new Response(
       JSON.stringify({ error: 'API key not configured' }),
       { status: 503, headers: { 'Content-Type': 'application/json' } }
     );
   }
 
-  const genai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+  const genai = new GoogleGenAI({ apiKey });
   const encoder = new TextEncoder();
   const truncatedContext = context.slice(0, 100_000);
 

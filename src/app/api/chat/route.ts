@@ -1,9 +1,11 @@
 import { NextRequest } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import { sleep, getRetryDelay, isRateLimitError } from '@/lib/retry';
 
 export const dynamic = 'force-dynamic';
 
-const CHAT_MODEL = 'gemini-2.5-flash';
+const CHAT_MODEL = 'gemini-2.0-flash';
+const MAX_RETRIES = 3;
 const MAX_OUTPUT_TOKENS = 65536;
 
 const SYSTEM_PROMPT = `You are an AI teaching assistant for the Vizuara learning platform. You have access to the full content of a Google Colab notebook that a student is currently working through.
@@ -32,6 +34,10 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
+function getChatApiKey(): string | undefined {
+  return process.env.GEMINI_CHAT_API_KEY || process.env.GEMINI_API_KEY;
+}
+
 export async function POST(request: NextRequest) {
   let body: Record<string, unknown>;
   try {
@@ -57,14 +63,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.GEMINI_API_KEY) {
+    const apiKey = getChatApiKey();
+    if (!apiKey) {
       return new Response(
         JSON.stringify({ error: 'API key not configured' }),
         { status: 503, headers: { 'Content-Type': 'application/json', ...CORS_HEADERS } }
       );
     }
 
-    const genai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const genai = new GoogleGenAI({ apiKey });
 
     // Truncate context to stay within token limits
     const truncatedContext = context.slice(0, 100000);
@@ -82,21 +89,38 @@ export async function POST(request: NextRequest) {
       parts: [{ text: question }],
     });
 
-    const response = await genai.models.generateContent({
-      model: CHAT_MODEL,
-      contents,
-      config: {
-        systemInstruction: SYSTEM_PROMPT + truncatedContext,
-        temperature: 0.7,
-        maxOutputTokens: MAX_OUTPUT_TOKENS,
-      },
-    });
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const response = await genai.models.generateContent({
+          model: CHAT_MODEL,
+          contents,
+          config: {
+            systemInstruction: SYSTEM_PROMPT + truncatedContext,
+            temperature: 0.7,
+            maxOutputTokens: MAX_OUTPUT_TOKENS,
+          },
+        });
 
-    const answer = response.text || 'I could not generate a response. Please try again.';
+        const answer = response.text || 'I could not generate a response. Please try again.';
+
+        return new Response(
+          JSON.stringify({ answer }),
+          { status: 200, headers: { 'Content-Type': 'application/json', ...CORS_HEADERS } }
+        );
+      } catch (error) {
+        if (isRateLimitError(error) && attempt < MAX_RETRIES) {
+          const delay = getRetryDelay(error);
+          console.log(`Chat rate limited. Retrying in ${delay}ms (attempt ${attempt + 1})...`);
+          await sleep(delay);
+          continue;
+        }
+        throw error;
+      }
+    }
 
     return new Response(
-      JSON.stringify({ answer }),
-      { status: 200, headers: { 'Content-Type': 'application/json', ...CORS_HEADERS } }
+      JSON.stringify({ error: 'Rate limit exceeded after retries. Please wait a minute and try again.' }),
+      { status: 429, headers: { 'Content-Type': 'application/json', ...CORS_HEADERS } }
     );
   } catch (error) {
     console.error('Chat error:', error);
