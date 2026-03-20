@@ -16,6 +16,7 @@ import SearchBar from '@/components/home/SearchBar';
 import PodExpandedCard from '@/components/home/PodExpandedCard';
 import FreeModuleCard from '@/components/home/FreeModuleCard';
 import ScrollableRow from '@/components/home/ScrollableRow';
+import BookSection from '@/components/home/BookSection';
 import { useAuth } from '@/context/AuthContext';
 import type { CourseCard, PodCard, FreePodShowcase } from '@/types/course';
 import { getCourseCompletion } from '@/lib/progress';
@@ -381,6 +382,9 @@ export default function HomeClient({
               + {liveCourses.length} courses with {totalNotebooks}+ notebooks available with a subscription
             </p>
           </FadeIn>
+
+          {/* Visual AI Book */}
+          <BookSection />
 
           {/* Topics sneak peek */}
           <FadeIn delay={0.15}>
@@ -908,6 +912,9 @@ export default function HomeClient({
               </div>
             )}
           </FadeIn>
+
+          {/* Visual AI Book */}
+          <BookSection />
 
           {/* Coming Soon — aggregated upcoming pods + draft courses */}
           {(comingSoonPods.length > 0 || draftCourses.length > 0) && (

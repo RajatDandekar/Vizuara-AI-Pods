@@ -66,6 +66,16 @@ export default function Header() {
             Discover
           </Link>
           <Link
+            href="/book"
+            className={`text-sm transition-colors ${
+              pathname === '/book'
+                ? isDark ? 'text-white font-medium' : 'text-foreground font-medium'
+                : isDark ? 'text-blue-200/60 hover:text-white' : 'text-text-muted hover:text-foreground'
+            }`}
+          >
+            Book
+          </Link>
+          <Link
             href="/about"
             className={`text-sm transition-colors ${
               pathname === '/about'

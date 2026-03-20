@@ -14,6 +14,7 @@ const FEATURES = [
   'Real-world case studies',
   'Practice problems with AI assistant',
   'Course completion certificates',
+  '400+ page Visual AI Book (PDF)',
   'New courses added every month',
 ];
 
