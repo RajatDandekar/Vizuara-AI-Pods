@@ -139,30 +139,24 @@ export default function BookSection() {
             See how every concept is explained visually, step by step.
           </p>
 
-          {/* Fanned sample pages */}
-          <div className="flex justify-center mb-6">
-            <div className="relative h-[200px] sm:h-[260px] w-full max-w-md">
-              {[1, 2, 3].map((n, i) => (
-                <motion.div
-                  key={n}
-                  className="absolute top-0 left-1/2 w-[160px] sm:w-[200px] aspect-[3/4] rounded-lg overflow-hidden shadow-lg border border-slate-200 bg-white"
-                  style={{
-                    transform: `translateX(-50%) rotate(${(i - 1) * 6}deg) translateX(${(i - 1) * 40}px)`,
-                    zIndex: 3 - i,
-                  }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Image
-                    src={`/book/sample-${n}.png`}
-                    alt={`Sample page ${n} from Chapter 1`}
-                    fill
-                    className="object-cover"
-                    sizes="200px"
-                  />
-                </motion.div>
-              ))}
-            </div>
+          {/* Sample pages side by side */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            {[1, 2, 3].map((n) => (
+              <motion.div
+                key={n}
+                className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg border border-slate-200 bg-white"
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Image
+                  src={`/book/sample-${n}.png`}
+                  alt={`Sample page ${n} from Chapter 1`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+              </motion.div>
+            ))}
           </div>
 
           {/* Chapter 1 topics */}

@@ -58,14 +58,12 @@ export default function HomeClient({
   const [completions, setCompletions] = useState<Record<string, number>>({});
   const [search, setSearch] = useState('');
   const [browseFiltered, setBrowseFiltered] = useState<CourseCard[]>([]);
-  const [bannerDismissed, setBannerDismissed] = useState(true);
-  const [qwenBannerDismissed, setQwenBannerDismissed] = useState(true);
+  const [bookBannerDismissed, setBookBannerDismissed] = useState(true);
   const [certBannerDismissed, setCertBannerDismissed] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setBannerDismissed(localStorage.getItem('dismiss_context_eng_banner') === '1');
-      setQwenBannerDismissed(localStorage.getItem('dismiss_qwen35_banner') === '1');
+      setBookBannerDismissed(localStorage.getItem('dismiss_book_banner') === '1');
       setCertBannerDismissed(localStorage.getItem('dismiss_cert_banner') === '1');
     }
   }, []);
@@ -297,59 +295,29 @@ export default function HomeClient({
             </Link>
           </FadeIn>
 
-          {/* New course announcement */}
+          {/* New — Visual AI Book announcement */}
           <FadeIn delay={0.05}>
-            <Link href="/courses/context-engineering">
-              <div className="relative overflow-hidden rounded-2xl border border-teal-200/60 bg-gradient-to-r from-teal-50 via-white to-cyan-50 hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
+            <Link href="/book">
+              <div className="relative overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50 via-white to-violet-50 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.08),transparent_60%)]" />
                 <div className="relative flex items-center gap-5 px-6 py-5">
                   <div className="hidden sm:block flex-shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-400 to-cyan-500 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-400 to-violet-500 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                       </svg>
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-teal-100 text-teal-700 uppercase tracking-wide">New Course</span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-100 text-indigo-700 uppercase tracking-wide">New</span>
                     </div>
-                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Context Engineering from Scratch &mdash; Now Complete</h3>
+                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Vizuara: A Complete Visual Guide to AI &mdash; Free PDF for Subscribers</h3>
                     <p className="text-sm text-slate-500">
-                      5 pods, 25 notebooks, 5 case studies. Master prompt design, RAG, memory architectures, and production evaluation.
+                      400+ pages, 13 chapters, 200+ hand-crafted diagrams. Master modern AI and LLMs visually &mdash; from neural networks to production systems.
                     </p>
                   </div>
-                  <svg className="w-5 h-5 text-teal-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-          </FadeIn>
-
-          {/* New pod announcement — Qwen3.5 */}
-          <FadeIn delay={0.07}>
-            <Link href="/courses/build-llm/build-qwen3-5-from-scratch">
-              <div className="relative overflow-hidden rounded-2xl border border-violet-200/60 bg-gradient-to-r from-violet-50 via-white to-purple-50 hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.08),transparent_60%)]" />
-                <div className="relative flex items-center gap-5 px-6 py-5">
-                  <div className="hidden sm:block flex-shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-100 text-violet-700 uppercase tracking-wide">New Pod</span>
-                    </div>
-                    <h3 className="font-bold text-slate-900 text-base mb-0.5">Build Qwen3.5 from Scratch &mdash; Hybrid Attention, MoE &amp; Local Deployment</h3>
-                    <p className="text-sm text-slate-500">
-                      Learn how a 9B model outperforms one 13&times; its size. 5 narrated notebooks covering linear attention, Gated DeltaNet, Mixture-of-Experts, and running your own LLM locally.
-                    </p>
-                  </div>
-                  <svg className="w-5 h-5 text-violet-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
                 </div>
@@ -578,32 +546,32 @@ export default function HomeClient({
             </FadeIn>
           )}
 
-          {/* New Course Announcement Banner */}
-          {!bannerDismissed && (
+          {/* New — Visual AI Book Announcement Banner */}
+          {!bookBannerDismissed && (
             <FadeIn delay={0.02}>
-              <div className="relative overflow-hidden rounded-2xl border border-teal-200/60 bg-gradient-to-r from-teal-50 via-white to-emerald-50">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(20,184,166,0.08),transparent_60%)]" />
+              <div className="relative overflow-hidden rounded-2xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50 via-white to-violet-50">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.08),transparent_60%)]" />
                 <div className="relative flex items-start gap-5 px-6 py-5">
                   <div className="hidden sm:block flex-shrink-0 mt-1">
-                    <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                    <div className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                       </svg>
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-teal-100 text-teal-700 uppercase tracking-wide">New Course</span>
-                      <h3 className="font-bold text-slate-900 text-base">Context Engineering from Scratch &mdash; All 5 Pods Now Live</h3>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-100 text-indigo-700 uppercase tracking-wide">New</span>
+                      <h3 className="font-bold text-slate-900 text-base">Vizuara: A Complete Visual Guide to AI &mdash; Free PDF for Subscribers</h3>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed mb-3">
-                      From prompt design to production monitoring &mdash; 25 hands-on notebooks and 5 industry case studies. Complete all pods to earn your course certificate.
+                      400+ pages, 13 chapters, 200+ hand-crafted diagrams. Master modern AI and LLMs visually &mdash; from neural networks to production systems.
                     </p>
                     <Link
-                      href="/courses/context-engineering"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:text-teal-900 transition-colors"
+                      href="/book"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 hover:text-indigo-900 transition-colors"
                     >
-                      Start learning
+                      Learn more &amp; download
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                       </svg>
@@ -611,56 +579,8 @@ export default function HomeClient({
                   </div>
                   <button
                     onClick={() => {
-                      setBannerDismissed(true);
-                      localStorage.setItem('dismiss_context_eng_banner', '1');
-                    }}
-                    className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
-                    aria-label="Dismiss"
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </FadeIn>
-          )}
-
-          {/* New Pod Announcement — Qwen3.5 */}
-          {!qwenBannerDismissed && (
-            <FadeIn delay={0.04}>
-              <div className="relative overflow-hidden rounded-2xl border border-violet-200/60 bg-gradient-to-r from-violet-50 via-white to-purple-50">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.08),transparent_60%)]" />
-                <div className="relative flex items-start gap-5 px-6 py-5">
-                  <div className="hidden sm:block flex-shrink-0 mt-1">
-                    <div className="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-violet-100 text-violet-700 uppercase tracking-wide">New Pod</span>
-                      <h3 className="font-bold text-slate-900 text-base">Build Qwen3.5 from Scratch &mdash; Now Live</h3>
-                    </div>
-                    <p className="text-sm text-slate-600 leading-relaxed mb-3">
-                      Hybrid attention, Gated DeltaNet, Mixture-of-Experts, and local deployment &mdash; 5 narrated notebooks that show how a 9B model outperforms one 13&times; its size. Includes a full case study.
-                    </p>
-                    <Link
-                      href="/courses/build-llm/build-qwen3-5-from-scratch"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-700 hover:text-violet-900 transition-colors"
-                    >
-                      Start learning
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                      </svg>
-                    </Link>
-                  </div>
-                  <button
-                    onClick={() => {
-                      setQwenBannerDismissed(true);
-                      localStorage.setItem('dismiss_qwen35_banner', '1');
+                      setBookBannerDismissed(true);
+                      localStorage.setItem('dismiss_book_banner', '1');
                     }}
                     className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
                     aria-label="Dismiss"

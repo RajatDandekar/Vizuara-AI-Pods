@@ -239,29 +239,23 @@ export default function BookClient() {
             <h2 className="text-2xl font-bold text-slate-900 mb-2 text-center">Sample Pages from Chapter 1</h2>
             <p className="text-sm text-slate-500 text-center mb-8">See how every concept is explained visually</p>
 
-            <div className="flex justify-center">
-              <div className="relative h-[240px] sm:h-[320px] w-full max-w-lg">
-                {[1, 2, 3].map((n, i) => (
-                  <motion.div
-                    key={n}
-                    className="absolute top-0 left-1/2 w-[180px] sm:w-[240px] aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-white"
-                    style={{
-                      transform: `translateX(-50%) rotate(${(i - 1) * 6}deg) translateX(${(i - 1) * 50}px)`,
-                      zIndex: 3 - i,
-                    }}
-                    whileHover={{ y: -12, scale: 1.03 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <Image
-                      src={`/book/sample-${n}.png`}
-                      alt={`Sample page ${n}`}
-                      fill
-                      className="object-cover"
-                      sizes="240px"
-                    />
-                  </motion.div>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {[1, 2, 3].map((n) => (
+                <motion.div
+                  key={n}
+                  className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-white"
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <Image
+                    src={`/book/sample-${n}.png`}
+                    alt={`Sample page ${n}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
         </FadeIn>
