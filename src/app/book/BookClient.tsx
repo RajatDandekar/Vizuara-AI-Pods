@@ -239,12 +239,12 @@ export default function BookClient() {
             <h2 className="text-2xl font-bold text-slate-900 mb-2 text-center">Sample Pages from Chapter 1</h2>
             <p className="text-sm text-slate-500 text-center mb-8">See how every concept is explained visually</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {[1, 2, 3].map((n) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
                 <motion.div
                   key={n}
                   className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-white"
-                  whileHover={{ y: -6, scale: 1.02 }}
+                  whileHover={{ y: -6, scale: 1.03 }}
                   transition={{ duration: 0.25 }}
                 >
                   <Image
@@ -252,7 +252,7 @@ export default function BookClient() {
                     alt={`Sample page ${n}`}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 20vw"
                   />
                 </motion.div>
               ))}

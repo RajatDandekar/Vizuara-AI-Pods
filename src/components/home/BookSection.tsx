@@ -139,25 +139,28 @@ export default function BookSection() {
             See how every concept is explained visually, step by step.
           </p>
 
-          {/* Sample pages side by side */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            {[1, 2, 3].map((n) => (
-              <motion.div
-                key={n}
-                className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg border border-slate-200 bg-white"
-                whileHover={{ y: -4, scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Image
-                  src={`/book/sample-${n}.png`}
-                  alt={`Sample page ${n} from Chapter 1`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                />
-              </motion.div>
-            ))}
+          {/* Horizontally scrollable sample pages */}
+          <div className="relative -mx-8 sm:-mx-10 px-8 sm:px-10 overflow-x-auto pb-4 mb-4 scrollbar-hide">
+            <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+                <motion.div
+                  key={n}
+                  className="relative w-[150px] sm:w-[180px] aspect-[3/4] rounded-lg overflow-hidden shadow-lg border border-slate-200 bg-white flex-shrink-0"
+                  whileHover={{ y: -4, scale: 1.03 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Image
+                    src={`/book/sample-${n}.png`}
+                    alt={`Sample page ${n}`}
+                    fill
+                    className="object-cover"
+                    sizes="180px"
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
+          <p className="text-xs text-slate-400 text-center mb-4">Scroll to see more pages →</p>
 
           {/* Chapter 1 topics */}
           <div className="flex flex-wrap justify-center gap-2 mb-4">
